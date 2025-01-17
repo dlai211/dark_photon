@@ -1,0 +1,1548 @@
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+Info in <TCanvas::Print>: png file Plots/puWeight_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/actualIntPerXing_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "mt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(mt/1000*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "mt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(mt/1000*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "mt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(mt/1000*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "mt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(mt/1000*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "mt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(mt/1000*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "mt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(mt/1000*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "mt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(mt/1000*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "mt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(mt/1000*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Info in <TCanvas::Print>: png file Plots/mt_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Plotting variable puWeight in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.8622670546174
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.33188906312
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13303.03976905346
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.93082857132
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.509400464594
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226921.82920074463
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206717.45998857787
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171588114.05948544
+Plotting variable actualIntPerXing in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.86230868933217
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.3322987791325
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13303.01702997362
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.900898234802
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.52537077712
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226839.14004025608
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206757.0377975665
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171588541.95071152
+Plotting variable mt in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 0.0
+Plotting variable metsig in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.83902822434902
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1281.636790394783
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13144.780410766602
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11698.62349319458
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16603.679735183716
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226875.70395451784
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206701.50209802017
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Info in <TCanvas::Print>: png file Plots/metsig_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/metsigres_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/met_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/met_noJVT_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+dijet 171586110.75873876
+Plotting variable metsigres in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.76788849756122
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1284.6893813759089
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13301.156210571527
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11734.352909743786
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16626.02710211277
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226505.94416809082
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206156.30108261108
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171589745.80095434
+Plotting variable met in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 188.52672354876995
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1256.0012370347977
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 12772.479267120361
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11407.111684799194
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16442.596879959106
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226872.7668645382
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206587.74180793762
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171587468.5004177
+Plotting variable met_noJVT in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 188.49366807565093
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1255.7908964138478
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 12771.312663625926
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11408.688844982535
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16437.35640565562
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226840.463242352
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206599.82150363922
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171588134.08094612
+Plotting variable met_cst in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 188.50396158918738
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1255.8485619612038
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 12772.098202364054
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11410.239820495248
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16435.679498910904
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226866.59981417656
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206614.84601974487
+Info in <TCanvas::Print>: png file Plots/met_cst_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/met_track_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/dmet_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/ph_pt_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171588042.94314602
+Plotting variable met_track in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.86231460422277
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1271.4687265753746
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13302.57772172615
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.277105757967
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.207589880563
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226926.1338032037
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206755.33100157976
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171589019.25164038
+Plotting variable dmet in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.86238655645866
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1284.6990990757477
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13298.56152177602
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.040552064776
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16629.27804046683
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226791.3419548273
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206517.58992350101
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171578859.52273783
+Plotting variable ph_pt in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 189.8635244295001
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1259.4405683279037
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 12971.10451889038
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11460.105758666992
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16468.436779022217
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 224597.6920928955
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 204754.75300598145
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 140513755.4752655
+Plotting variable ph_eta in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.86233282089233
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.3310999238165
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13302.698699951172
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.830047607422
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.50469970703
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226797.3170852661
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+Info in <TCanvas::Print>: png file Plots/ph_eta_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/ph_phi_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/jet_central_eta_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/jet_central_pt1_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206716.044921875
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171586984.26513672
+Plotting variable ph_phi in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.8623034954071
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.332197189331
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13302.957168579102
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.900985717773
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.517700195312
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226957.17553710938
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206769.59155273438
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171589599.31054688
+Plotting variable jet_central_eta in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 161.5725907087326
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 919.6488637924194
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 9291.476890563965
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 9519.269737243652
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 11742.242767333984
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 159952.70642089844
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 155576.10778808594
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 117066273.45306396
+Plotting variable jet_central_pt1 in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 152.85770252346992
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 872.4868228435516
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 8961.997034072876
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 8929.84792137146
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 11149.019191741943
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 158860.2301902771
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 142695.60760498047
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 117038109.9354248
+Plotting variable jet_central_pt2 in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 97.8227714560926
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 513.524765431881
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 4734.644154787064
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 6041.2677121162415
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 6288.937912464142
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+Info in <TCanvas::Print>: png file Plots/jet_central_pt2_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/jet_central_pt_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/dphi_met_phterm_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/dphi_met_ph_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 74396.19404625893
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 95765.70538330078
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 31759766.227005005
+Plotting variable jet_central_pt in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 295.1280869245529
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1642.5978791713715
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 15743.801620483398
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 18160.801624298096
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 20412.022918701172
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 260231.57976913452
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 295982.5661010742
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 180020406.4835205
+Plotting variable dphi_met_phterm in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.86231572926044
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.334668636322
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13301.568836450577
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.769087791443
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.5050945282
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226557.28492736816
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206704.98358154297
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171585496.33567047
+Plotting variable dphi_met_ph in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.86231184192002
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.3324027061462
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13302.678141236305
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.85712480545
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.500410079956
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226739.01155090332
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206753.77752685547
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171588451.7995262
+Plotting variable dphi_met_jetterm in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.86234065890312
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.3299160003662
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13302.21996307373
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.838676452637
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+Info in <TCanvas::Print>: png file Plots/dphi_met_jetterm_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/dphi_phterm_jetterm_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/dphi_ph_centraljet1_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/dphi_ph_jet1_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.489837646484
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226937.43090820312
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206747.24829101562
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171586533.3701172
+Plotting variable dphi_phterm_jetterm in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 182.8453362584114
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1116.3944611549377
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 10450.649744033813
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 10431.490619659424
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 13814.263639450073
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 193601.23608398438
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 198661.9691772461
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 119580878.53088379
+Plotting variable dphi_ph_centraljet1 in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 161.5725872516632
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 919.6487483978271
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 9291.48934173584
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 9519.273086547852
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 11742.245101928711
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 159936.0167236328
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 155579.3309326172
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 117065435.80969238
+Plotting variable dphi_ph_jet1 in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 161.5725872516632
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 919.6487483978271
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 9291.48934173584
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 9519.273086547852
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 11742.245101928711
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 159936.0167236328
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 155579.3309326172
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 117065435.80969238
+Plotting variable dphi_central_jet1_jet2 in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 98.10794001817703
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 522.1734852790833
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 4783.5507736206055
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+Info in <TCanvas::Print>: png file Plots/dphi_central_jet1_jet2_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/metplusph_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/failJVT_jet_pt_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/failJVT_jet_pt1_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "jet_jvt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(jet_jvt*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "jet_jvt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(jet_jvt*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "jet_jvt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(jet_jvt*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 6110.170478820801
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 6359.324111938477
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 74470.50775146484
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 100905.8637084961
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 31765655.124908447
+Plotting variable metplusph in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 172.90274024009705
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1032.27121925354
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 9635.692794799805
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 8993.190460205078
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 14038.46240234375
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 212622.3536376953
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 196094.65844726562
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 112032772.78204346
+Plotting variable failJVT_jet_pt in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 71.94005131721497
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 516.0382556915283
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 3505.7304496765137
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 3737.061279296875
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 5740.718994140625
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 187202.041015625
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 122153.19140625
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 31646364.54296875
+Plotting variable failJVT_jet_pt1 in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 71.94001444429159
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 516.0385715961456
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 3505.7870683670044
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 3737.072187423706
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 5740.724103927612
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 187225.53283691406
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 122165.154296875
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 31646907.901657104
+Plotting variable jet_jvt in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 0.0
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "jet_jvt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(jet_jvt*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "jet_jvt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(jet_jvt*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "jet_jvt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(jet_jvt*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "jet_jvt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(jet_jvt*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Error in <TTreeFormula::Compile>:  Bad numerical expression : "jet_jvt"
+Info in <TSelectorDraw::AbortProcess>: Variable compilation failed: {(jet_jvt*1) ,(met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000) * ((mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5)}
+Info in <TCanvas::Print>: png file Plots/jet_jvt_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/softerm_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/jetterm_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/jetterm_sumet_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 0.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 0.0
+Plotting variable softerm in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.8623899873346
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.3306627447018
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13302.733872078818
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.815037067048
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.505650869512
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226834.4157394064
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206729.66344961274
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171586759.5734863
+Plotting variable jetterm in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 178.82965153455734
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1254.5517554283142
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13037.910413742065
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11226.762535095215
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16141.222164154053
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 225790.5990409851
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 205201.06936645508
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171587274.31079102
+Plotting variable jetterm_sumet in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 160.5492401123047
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1105.338240146637
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 12158.128885161132
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 9834.011359035969
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 14525.135681152344
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 214138.09085083008
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 155210.18524169922
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 168918816.08110046
+Plotting variable n_jet in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 189.11140245199203
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1265.4998936653137
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+Info in <TCanvas::Print>: png file Plots/n_jet_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/n_jet_central_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/n_jet_fwd_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/vertex_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13254.10210609436
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11665.556087493896
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16477.430938720703
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 221866.00170898438
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 199984.97631835938
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171585010.038208
+Plotting variable n_jet_central in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.8622628301382
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1284.976821064949
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13300.880382061005
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11732.220820903778
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16627.994502544403
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226810.61211395264
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206600.79832458496
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171588111.61975098
+Plotting variable n_jet_fwd in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 189.89438557624817
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1277.2012922763824
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13283.813644886017
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11716.638586997986
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16569.20618247986
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 223968.12579345703
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 203931.0841064453
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171582609.02378082
+Plotting variable vertex in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.8622589111328
+ggHyyd 1.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.315185546875
+Zjets 1.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13297.5654296875
+Zgamma 1.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.080078125
+Wgamma 1.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.255859375
+Wjets 1.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226372.125
+gammajet_direct 1.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206503.03125
+gammajet_frag 1.0
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171576336.0
+dijet 1.0
+Plotting variable goodPV in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.86251831054688
+ggHyyd 0.6577793214557361
+Info in <TCanvas::Print>: png file Plots/goodPV_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/dphi_met_central_jet_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/counts_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/jet_central_timing1_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.3296813964844
+Zjets 0.7906370348055471
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13300.9775390625
+Zgamma 0.6231167954129311
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.513671875
+Wgamma 0.7475334866806367
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.3349609375
+Wjets 0.6556077345292592
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226778.396484375
+gammajet_direct 0.09256347522424299
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206625.1171875
+gammajet_frag 0.39977983224828023
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171589654.4375
+dijet 0.005634596331984352
+Plotting variable dphi_met_central_jet in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 161.57257264852524
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 919.6485185623169
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 9291.477523803711
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 9519.262535095215
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 11742.24642944336
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 159904.7091064453
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 155578.509765625
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 117065333.53253174
+Plotting variable counts in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.8622589111328
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.315185546875
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13297.5654296875
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.080078125
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.255859375
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226372.125
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206503.03125
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171576336.0
+Plotting variable jet_central_timing1 in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 161.5420802978333
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 919.6329200584441
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 9290.439660649747
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 9518.884616456926
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 11741.433461068198
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 159942.98600769043
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 155427.7160264145
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 117065688.85628319
+Plotting variable jet_central_timing in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+Info in <TCanvas::Print>: png file Plots/jet_central_timing_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/jet_central_emfrac_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/jet_central_emfrac1_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 304.0963831206152
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1698.8853506910382
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 16122.623810485005
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 18821.53472354263
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 21078.47726207599
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 260188.85829162598
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 313770.1333158429
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 180039973.19877476
+Plotting variable jet_central_emfrac in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 304.1505754292011
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1698.9589270681608
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 16124.850845676847
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 18822.99528351426
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 21079.81202697754
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 261073.42931544082
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 314250.51722863957
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 180049192.7997972
+Plotting variable jet_central_emfrac1 in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 161.57259158790112
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 919.6483449124333
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 9291.39207167644
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 9519.24459965527
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 11742.22409915924
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 159815.18325969204
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 155557.53161621094
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 117065569.69511369
+Plotting variable balance in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.86224452685565
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1277.1091630235314
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13223.49596619606
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11713.958617925644
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16607.438256010413
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226933.3326497078
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206741.11851551512
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet Info in <TCanvas::Print>: png file Plots/balance_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/balance_sumet_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/central_jets_fraction_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+Info in <TCanvas::Print>: png file Plots/trigger_met100phPT50_.png has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: c
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hbkg (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hsig (Potential memory leak).
+TROOT::Append:0: RuntimeWarning: Replacing existing TH1: hdata (Potential memory leak).
+171588324.72916612
+Plotting variable balance_sumet in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.86223768256605
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.329033624252
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13302.453128465451
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.790595799626
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.466628962895
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226963.11004131768
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206631.8526913541
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171581369.2750173
+Plotting variable central_jets_fraction in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.8624245673418
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.3311245448422
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13302.351310642436
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.742782354355
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.50528332591
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226644.31052492443
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206719.91938972473
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171584367.00960755
+Plotting variable trigger in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.8622589111328
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.315185546875
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13297.5654296875
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.080078125
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.255859375
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226372.125
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206503.03125
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171576336.0
+Plotting variable dphi_jj in region met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000 ... 
+['ggHyyd', 'Zjets', 'Zgamma', 'Wgamma', 'Wjets', 'gammajet_direct', 'gammajet_frag', 'dijet']
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*0.052*pu_weight*jvt_weight*filter_eff_ami*kfactor_ami*25767.5*1000*0.01
+ggHyyd 190.86253929138184
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zjets 1285.3314895629883
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Zgamma 13301.332550048828
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wgamma 11735.757598876953
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+Wjets 16631.436126708984
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_direct 226805.60620117188
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+gammajet_frag 206749.95239257812
+Info in <TCanvas::Print>: png file Plots/dphi_jj_met100phPT50_.png has been created
+met_tst_et > 100000 && trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && ph_pt[0]>50000
+(mconly_weight/mc_weight_sum)*xsec_ami*filter_eff_ami*kfactor_ami*pu_weight*jvt_weight*1000*25767.5
+dijet 171589442.73608398
