@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mc23d Plots</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        
+        p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Geant4_10muon_100GeV</h2>
+    <section>
+        <h1>Plots</h1>
+        <div class="wrapper">
+            <!-- Images will be dynamically added here -->
+        </div>
+    </section>
+
+    <script>
+        // Example of dynamically including all PNG files in a directory
+        const images = [
+    "Plots/actualIntPerXing_met100phPT50_.png",
+    "Plots/jet_central_timing1_met100phPT50_.png",
+    "Plots/balance_met100phPT50_.png",
+    "Plots/jet_central_timing_met100phPT50_.png",
+    "Plots/balance_sumet_met100phPT50_.png",
+    "Plots/jet_jvt_met100phPT50_.png",
+    "Plots/central_jets_fraction_met100phPT50_.png",
+    "Plots/jetterm_met100phPT50_.png",
+    "Plots/counts_met100phPT50_.png",
+    "Plots/jetterm_sumet_met100phPT50_.png",
+    "Plots/dmet_met100phPT50_.png",
+    "Plots/met_cst_met100phPT50_.png",
+    "Plots/dphi_central_jet1_jet2_met100phPT50_.png",
+    "Plots/met_met100phPT50_.png",
+    "Plots/dphi_jj_met100phPT50_.png",
+    "Plots/met_noJVT_met100phPT50_.png",
+    "Plots/dphi_met_central_jet_met100phPT50_.png",
+    "Plots/metplusph_met100phPT50_.png",
+    "Plots/dphi_met_jetterm_met100phPT50_.png",
+    "Plots/metsig_met100phPT50_.png",
+    "Plots/dphi_met_ph_met100phPT50_.png",
+    "Plots/metsigres_met100phPT50_.png",
+    "Plots/dphi_met_phterm_met100phPT50_.png",
+    "Plots/met_track_met100phPT50_.png",
+    "Plots/dphi_ph_centraljet1_met100phPT50_.png",
+    "Plots/mt_met100phPT50_.png",
+    "Plots/dphi_ph_jet1_met100phPT50_.png",
+    "Plots/n_jet_central_met100phPT50_.png",
+    "Plots/dphi_phterm_jetterm_met100phPT50_.png",
+    "Plots/n_jet_fwd_met100phPT50_.png",
+    "Plots/failJVT_jet_pt1_met100phPT50_.png",
+    "Plots/n_jet_met100phPT50_.png",
+    "Plots/failJVT_jet_pt_met100phPT50_.png",
+    "Plots/ph_eta_met100phPT50_.png",
+    "Plots/goodPV_met100phPT50_.png",
+    "Plots/ph_phi_met100phPT50_.png",
+    "Plots/jet_central_emfrac1_met100phPT50_.png",
+    "Plots/ph_pt_met100phPT50_.png",
+    "Plots/jet_central_emfrac_met100phPT50_.png",
+    "Plots/puWeight_met100phPT50_.png",
+    "Plots/jet_central_eta_met100phPT50_.png",
+    "Plots/softerm_met100phPT50_.png",
+    "Plots/jet_central_pt1_met100phPT50_.png",
+    "Plots/trigger_met100phPT50_.png",
+    "Plots/jet_central_pt2_met100phPT50_.png",
+    "Plots/vertex_met100phPT50_.png",
+    "Plots/jet_central_pt_met100phPT50_.png"
+        ];
+
+        const wrapper = document.querySelector('.wrapper');
+        images.forEach(img => {
+            const imgElement = document.createElement('img');
+            imgElement.src = img;
+            imgElement.width = 600;
+            imgElement.height = 400;
+            wrapper.appendChild(imgElement);
+        });
+    </script>
+</body>
+</html>
