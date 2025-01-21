@@ -4,53 +4,54 @@ import ROOT
 
 def getVarDict():
     dict = {}
-    dict['puWeight']=               {'var':'pu_weight','bins':[50,0,2], 'title': 'PU weight', 'shift':'+0'}#150*(1-1/0.7)'}
-    dict['actualIntPerXing']=       {'var':'actualIntPerXing','bins':[50,0,100], 'title': '<#mu>', 'shift':'+0'}#150*(1-1/0.7)'}
-    dict['mt']=                     {'var':'(mt/1000)','bins':[15,0,300], 'title': 'm_{T} [GeV]', 'shift':'+0'}#150*(1-1/0.7)'}
-    dict['metsig']=                 {'var':'met_tst_sig','bins':[15,0,30], 'title': 'E_{T}^{miss} significance', 'shift':'*1'}#((met_tst_et+50000)/met_tst_et)'}
-    dict['metsigres']=              {'var':'met_tst_et/met_tst_sig','bins':[50,0,100000], 'title': 'E_{T}^{miss} significance', 'shift':'*1'}
-    dict['met']=                    {'var':'met_tst_et','bins':[50,0,300000], 'title': 'E_{T}^{miss} [GeV]','shift':'+50000'}
-    dict['met_noJVT']=              {'var':'met_tst_noJVT_et','bins':[50,0,300000], 'title': 'E_{T}^{miss} [GeV]'}
-    dict['met_cst']=                {'var':'met_cst_et','bins':[50,0,300000], 'title': 'E_{T}^{miss} CST [GeV]'}
-    dict['met_track']=              {'var':'met_track_et','bins':[50,0,300000], 'title': 'E_{T}^{miss} Track [GeV]'}
-    dict['dmet']=                   {'var':'(met_tst_noJVT_et-met_tst_et)','bins':[20,-100000,100000], 'title': 'E_{T,noJVT}^{miss}-E_{T}^{miss} [GeV]', 'shift':'*1'}  
-    dict['ph_pt']=                  {'var':'ph_pt[0]','bins':[50,0,300000],'title': 'p_{T}^{#gamma} [GeV]', 'shift':'-150000'}
-    dict['ph_eta']=                 {'var':'abs(ph_eta)[0]','bins':[16,0,4],'title': '#eta^{#gamma}'}
-    dict['ph_phi']=                 {'var':'ph_phi[0]','bins':[50,-4,4],'title': '#eta^{#gamma}'}
-    dict['jet_central_eta']=        {'var':'jet_central_eta[0]','bins':[50,-4,4],'title': '#eta^{#jets}'}
-    dict['jet_central_pt1']=        {'var':'jet_central_pt[0]','bins':[50,0,300000], 'title': 'p_{T}^{j1} [GeV]'}
-    dict['jet_central_pt2']=        {'var':'jet_central_pt[1]','bins':[50,0,300000], 'title': 'p_{T}^{j2} [GeV]'}
-    dict['jet_central_pt']=         {'var':'jet_central_pt','bins':[50,0,300000], 'title': 'p_{T}^{j} [GeV]'}
-    dict['dphi_met_phterm']=        {'var':'acos(cos(met_tst_phi-met_phterm_phi))','bins':[16,0,4], 'title': '#Delta#phi(E_{T}^{miss},E_{T}^{#gamma})','shift':'+0'}
-    dict['dphi_met_ph']=            {'var':'acos(cos(met_tst_phi-ph_phi[0]))','bins':[50,0,4], 'title': '#Delta#phi(E_{T}^{miss},E_{T}^{#gamma})'}
-    dict['dphi_met_jetterm']=       {'var':'((met_jetterm_et!=0)*Alt$(acos(cos(met_tst_phi-met_jetterm_phi)),0)+(met_jetterm_et==0)*0)','bins':[16,0,4], 'title': '#Delta#phi(E_{T}^{miss},E_{T}^{#jet})'}
-    dict['dphi_phterm_jetterm']=    {'var':'((met_jetterm_et>0)*(acos(cos(met_phterm_phi-met_jetterm_phi))) + (met_jetterm_et==0)*4)','bins':[50,0,4], 'title': '#Delta#phi(E_{T}^{#gamma},E_{T}^{jet})'}
-    dict['dphi_ph_centraljet1']=    {'var':'acos(cos(ph_phi[0]-jet_central_phi[0]))','bins':[50,0,4], 'title': '#Delta#phi(#gamma,j1)'}
-    dict['dphi_ph_jet1']=           {'var':'acos(cos(ph_phi[0]-jet_central_phi[0]))','bins':[50,0,4], 'title': '#Delta#phi(#gamma,j1)'}
-    dict['dphi_central_jet1_jet2']= {'var':'acos(cos(jet_central_phi[0]-jet_central_phi[1]))','bins':[50,0,4], 'title': '#Delta#phi(j1,j2)'}
-    dict['metplusph']=              {'var':'(met_tst_et+ph_pt[0])','bins':[50,0,300000], 'title':'E_{T}^{miss}+p_{T}^{#gamma} [GeV]'}
-    dict['failJVT_jet_pt']=         {'var':'failJVT_jet_pt','bins':[50,0,300000], 'title':'p_{T}^{noJVT jet} [GeV]'}
-    dict['failJVT_jet_pt1']=        {'var':'failJVT_jet_pt[0]','bins':[40,20000,60000], 'title':'p_{T}^{noJVT jet1} [GeV]'}
-    dict['jet_jvt']=                {'var':'jet_jvt','bins':[50,0,300000], 'title':'Jet JVT'}
-    dict['softerm']=                {'var':'met_softerm_tst_et','bins':[50,0,100000], 'title': 'E_{T}^{soft} [GeV]'}
-    dict['jetterm']=                {'var':'met_jetterm_et','bins':[50,0,300000], 'title': 'E_{T}^{jet} [GeV]'}
-    dict['jetterm_sumet']=          {'var':'met_jetterm_sumet','bins':[50,0,300000], 'title': 'E_{T}^{jet} [GeV]'}
-    dict['n_jet']=                  {'var':'n_jet','bins':[10,0,10], 'title': 'N_{jet}'}
-    dict['n_jet_central']=          {'var':'n_jet_central','bins':[10,0,10], 'title': 'N_{jet}'}
-    dict['n_jet_fwd']=              {'var':'n_jet-n_jet_central','bins':[10,0,10], 'title': 'N_{jet}'}
-    dict['vertex']=                 {'var':'(abs(pv_truth_z[0]-pv_z[0]) == Min$(abs(pv_truth_z[0]-pv_z)))','bins':[2,0,2], 'title': 'good PV'}
-    dict['goodPV']=                 {'var':'(abs(pv_truth_z[0]-pv_z[0]) <= 0.5)','bins':[2,0,2], 'title': 'good PV'}
-    dict['dphi_met_central_jet']=   {'var':'acos(cos(met_tst_phi-jet_central_phi[0]))','bins':[50,0,4], 'title': '#Delta#phi(E_{T}^{miss},jet)'}
-    dict['counts']=                 {'var':'0.5','bins':[1,0,1], 'title': ''}
-    dict['jet_central_timing1']=    {'var':'jet_central_timing[0]','bins':[50,-40,40], 'title': 'Jet timing'}
-    dict['jet_central_timing']=     {'var':'jet_central_timing','bins':[50,-40,40], 'title': 'Jet timing'}
-    dict['jet_central_emfrac']=     {'var':'jet_central_emfrac','bins':[50,-1,2], 'title': 'Jet EM fraction'}
-    dict['jet_central_emfrac1']=    {'var':'jet_central_emfrac[0]','bins':[50,-1,2], 'title': 'Jet EM fraction'}
-    dict['balance']=                {'var':'(met_tst_et+ph_pt[0])/Sum$(jet_central_pt)','bins':[100,0,20], 'title': 'balance'}
-    dict['balance_sumet']=          {'var':'(met_tst_et+ph_pt[0])/met_jetterm_sumet','bins':[80,0,80], 'title': 'balance'}
-    dict['central_jets_fraction']=  {'var':'(n_jet>0)*(n_jet_central/n_jet)+(n_jet==0)*(-1)','bins':[50,-1,2], 'title': 'Central jets fraction'}#Alt$(Sum$(jet_central_pt)/met_jetterm_sumet,1.5)
-    dict['trigger'] =               {'var':'trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M','bins':[2,0,2], 'title': 'Pass Trigger'}
-    dict['dphi_jj']=                {'var':'Alt$(acos(cos(jet_central_phi[1]-jet_central_phi[0])),-1)','bins':[20,-1, 4], 'title': '#Delta#phi(j1,j2)'}
+    dict['vtx_sumPt']=              {'var':'vtx_sumPt','bins':[50,0,100000], 'title': 'vtx_sumPt', 'shift':'+0'}
+    # dict['puWeight']=               {'var':'pu_weight','bins':[50,0,2], 'title': 'PU weight', 'shift':'+0'}#150*(1-1/0.7)'}
+    # dict['actualIntPerXing']=       {'var':'actualIntPerXing','bins':[50,0,100], 'title': '<#mu>', 'shift':'+0'}#150*(1-1/0.7)'}
+    # dict['mt']=                     {'var':'(mt/1000)','bins':[15,0,300], 'title': 'm_{T} [GeV]', 'shift':'+0'}#150*(1-1/0.7)'}
+    # dict['metsig']=                 {'var':'met_tst_sig','bins':[15,0,30], 'title': 'E_{T}^{miss} significance', 'shift':'*1'}#((met_tst_et+50000)/met_tst_et)'}
+    # dict['metsigres']=              {'var':'met_tst_et/met_tst_sig','bins':[50,0,100000], 'title': 'E_{T}^{miss} significance', 'shift':'*1'}
+    # dict['met']=                    {'var':'met_tst_et','bins':[50,0,300000], 'title': 'E_{T}^{miss} [GeV]','shift':'+50000'}
+    # dict['met_noJVT']=              {'var':'met_tst_noJVT_et','bins':[50,0,300000], 'title': 'E_{T}^{miss} [GeV]'}
+    # dict['met_cst']=                {'var':'met_cst_et','bins':[50,0,300000], 'title': 'E_{T}^{miss} CST [GeV]'}
+    # dict['met_track']=              {'var':'met_track_et','bins':[50,0,300000], 'title': 'E_{T}^{miss} Track [GeV]'}
+    # dict['dmet']=                   {'var':'(met_tst_noJVT_et-met_tst_et)','bins':[20,-100000,100000], 'title': 'E_{T,noJVT}^{miss}-E_{T}^{miss} [GeV]', 'shift':'*1'}  
+    # dict['ph_pt']=                  {'var':'ph_pt[0]','bins':[50,0,300000],'title': 'p_{T}^{#gamma} [GeV]', 'shift':'-150000'}
+    # dict['ph_eta']=                 {'var':'abs(ph_eta)[0]','bins':[16,0,4],'title': '#eta^{#gamma}'}
+    # dict['ph_phi']=                 {'var':'ph_phi[0]','bins':[50,-4,4],'title': '#eta^{#gamma}'}
+    # dict['jet_central_eta']=        {'var':'jet_central_eta[0]','bins':[50,-4,4],'title': '#eta^{#jets}'}
+    # dict['jet_central_pt1']=        {'var':'jet_central_pt[0]','bins':[50,0,300000], 'title': 'p_{T}^{j1} [GeV]'}
+    # dict['jet_central_pt2']=        {'var':'jet_central_pt[1]','bins':[50,0,300000], 'title': 'p_{T}^{j2} [GeV]'}
+    # dict['jet_central_pt']=         {'var':'jet_central_pt','bins':[50,0,300000], 'title': 'p_{T}^{j} [GeV]'}
+    # dict['dphi_met_phterm']=        {'var':'acos(cos(met_tst_phi-met_phterm_phi))','bins':[16,0,4], 'title': '#Delta#phi(E_{T}^{miss},E_{T}^{#gamma})','shift':'+0'}
+    # dict['dphi_met_ph']=            {'var':'acos(cos(met_tst_phi-ph_phi[0]))','bins':[50,0,4], 'title': '#Delta#phi(E_{T}^{miss},E_{T}^{#gamma})'}
+    # dict['dphi_met_jetterm']=       {'var':'((met_jetterm_et!=0)*Alt$(acos(cos(met_tst_phi-met_jetterm_phi)),0)+(met_jetterm_et==0)*0)','bins':[16,0,4], 'title': '#Delta#phi(E_{T}^{miss},E_{T}^{#jet})'}
+    # dict['dphi_phterm_jetterm']=    {'var':'((met_jetterm_et>0)*(acos(cos(met_phterm_phi-met_jetterm_phi))) + (met_jetterm_et==0)*4)','bins':[50,0,4], 'title': '#Delta#phi(E_{T}^{#gamma},E_{T}^{jet})'}
+    # dict['dphi_ph_centraljet1']=    {'var':'acos(cos(ph_phi[0]-jet_central_phi[0]))','bins':[50,0,4], 'title': '#Delta#phi(#gamma,j1)'}
+    # dict['dphi_ph_jet1']=           {'var':'acos(cos(ph_phi[0]-jet_central_phi[0]))','bins':[50,0,4], 'title': '#Delta#phi(#gamma,j1)'}
+    # dict['dphi_central_jet1_jet2']= {'var':'acos(cos(jet_central_phi[0]-jet_central_phi[1]))','bins':[50,0,4], 'title': '#Delta#phi(j1,j2)'}
+    # dict['metplusph']=              {'var':'(met_tst_et+ph_pt[0])','bins':[50,0,300000], 'title':'E_{T}^{miss}+p_{T}^{#gamma} [GeV]'}
+    # dict['failJVT_jet_pt']=         {'var':'failJVT_jet_pt','bins':[50,0,300000], 'title':'p_{T}^{noJVT jet} [GeV]'}
+    # dict['failJVT_jet_pt1']=        {'var':'failJVT_jet_pt[0]','bins':[40,20000,60000], 'title':'p_{T}^{noJVT jet1} [GeV]'}
+    # dict['jet_jvt']=                {'var':'jet_jvt','bins':[50,0,300000], 'title':'Jet JVT'}
+    # dict['softerm']=                {'var':'met_softerm_tst_et','bins':[50,0,100000], 'title': 'E_{T}^{soft} [GeV]'}
+    # dict['jetterm']=                {'var':'met_jetterm_et','bins':[50,0,300000], 'title': 'E_{T}^{jet} [GeV]'}
+    # dict['jetterm_sumet']=          {'var':'met_jetterm_sumet','bins':[50,0,300000], 'title': 'E_{T}^{jet} [GeV]'}
+    # dict['n_jet']=                  {'var':'n_jet','bins':[10,0,10], 'title': 'N_{jet}'}
+    # dict['n_jet_central']=          {'var':'n_jet_central','bins':[10,0,10], 'title': 'N_{jet}'}
+    # dict['n_jet_fwd']=              {'var':'n_jet-n_jet_central','bins':[10,0,10], 'title': 'N_{jet}'}
+    # dict['vertex']=                 {'var':'(abs(pv_truth_z[0]-pv_z[0]) == Min$(abs(pv_truth_z[0]-pv_z)))','bins':[2,0,2], 'title': 'good PV'}
+    # dict['goodPV']=                 {'var':'(abs(pv_truth_z[0]-pv_z[0]) <= 0.5)','bins':[2,0,2], 'title': 'good PV'}
+    # dict['dphi_met_central_jet']=   {'var':'acos(cos(met_tst_phi-jet_central_phi[0]))','bins':[50,0,4], 'title': '#Delta#phi(E_{T}^{miss},jet)'}
+    # dict['counts']=                 {'var':'0.5','bins':[1,0,1], 'title': ''}
+    # dict['jet_central_timing1']=    {'var':'jet_central_timing[0]','bins':[50,-40,40], 'title': 'Jet timing'}
+    # dict['jet_central_timing']=     {'var':'jet_central_timing','bins':[50,-40,40], 'title': 'Jet timing'}
+    # dict['jet_central_emfrac']=     {'var':'jet_central_emfrac','bins':[50,-1,2], 'title': 'Jet EM fraction'}
+    # dict['jet_central_emfrac1']=    {'var':'jet_central_emfrac[0]','bins':[50,-1,2], 'title': 'Jet EM fraction'}
+    # dict['balance']=                {'var':'(met_tst_et+ph_pt[0])/Sum$(jet_central_pt)','bins':[100,0,20], 'title': 'balance'}
+    # dict['balance_sumet']=          {'var':'(met_tst_et+ph_pt[0])/met_jetterm_sumet','bins':[80,0,80], 'title': 'balance'}
+    # dict['central_jets_fraction']=  {'var':'(n_jet>0)*(n_jet_central/n_jet)+(n_jet==0)*(-1)','bins':[50,-1,2], 'title': 'Central jets fraction'}#Alt$(Sum$(jet_central_pt)/met_jetterm_sumet,1.5)
+    # dict['trigger'] =               {'var':'trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M','bins':[2,0,2], 'title': 'Pass Trigger'}
+    # dict['dphi_jj']=                {'var':'Alt$(acos(cos(jet_central_phi[1]-jet_central_phi[0])),-1)','bins':[20,-1, 4], 'title': '#Delta#phi(j1,j2)'}
 
     return dict
 
