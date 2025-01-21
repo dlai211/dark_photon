@@ -172,5 +172,5 @@ if __name__ == '__main__':
             Legend.Draw()
             atlas_label.Draw()
 
-            canv.SaveAs('Plots/%s_%s%s_%s.png' %(var,sel, 'Data' if data else '', tag))
+            canv.SaveAs('%s_%s%s_%s.png' %(var,sel, 'Data' if data else '', tag))
         
