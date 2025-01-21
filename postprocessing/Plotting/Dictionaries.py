@@ -4,10 +4,10 @@ import ROOT
 
 def getVarDict():
     dict = {}
-    dict['vtx_sumPt']=              {'var':'vtx_sumPt','bins':[50,0,100000], 'title': 'vtx_sumPt', 'shift':'+0'}
+    dict['vtx_sumPt']=              {'var':'vtx_sumPt','bins':[20,0,100000], 'title': 'vtx_sumPt', 'shift':'+0'}
     # dict['puWeight']=               {'var':'pu_weight','bins':[50,0,2], 'title': 'PU weight', 'shift':'+0'}#150*(1-1/0.7)'}
     # dict['actualIntPerXing']=       {'var':'actualIntPerXing','bins':[50,0,100], 'title': '<#mu>', 'shift':'+0'}#150*(1-1/0.7)'}
-    # dict['mt']=                     {'var':'(mt/1000)','bins':[15,0,300], 'title': 'm_{T} [GeV]', 'shift':'+0'}#150*(1-1/0.7)'}
+    # dict['mt']=                     {'var':'sqrt(2*met_tst_et*ph_pt[0]*(1-cos(met_tst_phi-ph_phi[0])))/1000','bins':[15,0,300], 'title': 'm_{T} [GeV]', 'shift':'+0'}#150*(1-1/0.7)'}
     # dict['metsig']=                 {'var':'met_tst_sig','bins':[15,0,30], 'title': 'E_{T}^{miss} significance', 'shift':'*1'}#((met_tst_et+50000)/met_tst_et)'}
     # dict['metsigres']=              {'var':'met_tst_et/met_tst_sig','bins':[50,0,100000], 'title': 'E_{T}^{miss} significance', 'shift':'*1'}
     # dict['met']=                    {'var':'met_tst_et','bins':[50,0,300000], 'title': 'E_{T}^{miss} [GeV]','shift':'+50000'}
@@ -68,7 +68,7 @@ def getSampleDict():
     dict['gammajet_direct'] =   {'color': ROOT.kBlue+2,     'legend': '#gamma+jets direct',                 'tree': 'gammajets',   'filenames': ['gammajet_direct']}
     dict['gammajet_frag'] =     {'color': ROOT.kBlue-5,     'legend': '#gamma+jets frag',                   'tree': 'gammajets',   'filenames': ['gammajet_frag']}
     dict['dijet'] =             {'color': ROOT.kCyan+1,     'legend': 'multijets',                          'tree': 'dijets',   'filenames': ['dijet']}
-    dict['jj'] =             {'color': ROOT.kCyan+1,     'legend': 'multijets',                          'tree': 'dijets',   'filenames': ['jj']}
+    dict['jj'] =                {'color': ROOT.kCyan+1,     'legend': 'multijets',                          'tree': 'dijets',   'filenames': ['jj']}
     dict['ggHyyd'] =            {'color': ROOT.kRed,        'legend': 'ggH, H#rightarrow#gamma#gamma_{d}',  'tree': 'nominal',   'filenames': ['ggHyyd']}
     dict['VBF'] =               {'color': ROOT.kOrange,     'legend': 'VBF, H#rightarrow#gamma#gamma_{d}',  'tree': 'nominal',   'filenames': ['VBF']}
     dict['ZH'] =                {'color': ROOT.kGreen-2,    'legend': 'ZH, H#rightarrow#gamma#gamma_{d}',   'tree': 'nominal',   'filenames': ['ZH']}

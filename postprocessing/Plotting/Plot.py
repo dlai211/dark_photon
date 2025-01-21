@@ -45,7 +45,8 @@ if __name__ == '__main__':
     args=parser.parse_args()
     dir = args.dir
     vars = args.vars if args.vars!=['all'] else var_dict
-    samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag','dijet']
+    samples = args.samples if args.samples!=['all'] else ['ggHyyd','gammajet_direct','gammajet_frag']
+    # samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag','dijet']
     sels = args.cuts
     year = args.period
     stack = args.stack
@@ -111,6 +112,7 @@ if __name__ == '__main__':
                 if sample == 'data': hdata.Add(h[i])
                 if var == 'vertex': print (sample, h[i].GetBinContent(2)/h[i].Integral())
                 if var == 'goodPV': print(sample,(h[i].GetBinContent(2)/h[i].Integral()))
+
 
             
             # --- Draw THStack if needed --- #

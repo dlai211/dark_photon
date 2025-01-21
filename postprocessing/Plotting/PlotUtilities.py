@@ -140,7 +140,9 @@ def Plot(canv, Legend, file_path, h, sample, var, sel, counter = 1, normalize = 
     legend = samples_dict[sample]['legend'] if leg == '' else leg
     shift = '*1'#var_dict[var]['shift'] if 'met_tst_et > 50000' in sel else '*1' #if var == 'mt' else '*1'
 
-    varstr = var_dict[var]['var'] if var!='mt' or period!='mc23d' else 'mt/1000'
+    #varstr = var_dict[var]['var'] if var!='mt' or period!='mc23d' else 'mt/1000'
+    varstr = var_dict[var]['var'] if var!='mt' or period!='mc23d' else 'sqrt(2*met_tst_et*ph_pt[0]*(1-cos(met_tst_phi-ph_phi[0])))/1000'
+
     
     h.SetLineColor(color)
     if sample != 'data':
