@@ -4,7 +4,7 @@ import ROOT
 
 def getVarDict():
     dict = {}
-    dict['vtx_sumPt']=              {'var':'vtx_sumPt','bins':[20,0,100000], 'title': 'vtx_sumPt', 'shift':'+0'}
+    dict['vtx_sumPt']=              {'var':'vtx_sumPt','bins':[20,0,100], 'title': 'vtx_sumPt', 'shift':'+0'}
     # dict['puWeight']=               {'var':'pu_weight','bins':[50,0,2], 'title': 'PU weight', 'shift':'+0'}#150*(1-1/0.7)'}
     # dict['actualIntPerXing']=       {'var':'actualIntPerXing','bins':[50,0,100], 'title': '<#mu>', 'shift':'+0'}#150*(1-1/0.7)'}
     # dict['mt']=                     {'var':'sqrt(2*met_tst_et*ph_pt[0]*(1-cos(met_tst_phi-ph_phi[0])))/1000','bins':[15,0,300], 'title': 'm_{T} [GeV]', 'shift':'+0'}#150*(1-1/0.7)'}
