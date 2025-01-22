@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mc23d_ratio Plots</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .image-container {
+            text-align: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .filename {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>mc23d --stack --ratio --rsig Plots</h2>
+    <section>
+        <h1> </h1>
+        <div class="wrapper">
+            <!-- Images will be dynamically added here -->
+        </div>
+    </section>
+
+    <script>
+        // List of image filenames in alphabetical order
+        const images = [
+            "mc23d_ratio/actualIntPerXing_met100phPT50_.png",
+            "mc23d_ratio/balance_met100phPT50_.png",
+            "mc23d_ratio/balance_sumet_met100phPT50_.png",
+            "mc23d_ratio/central_jets_fraction_met100phPT50_.png",
+            "mc23d_ratio/counts_met100phPT50_.png",
+            "mc23d_ratio/dmet_met100phPT50_.png",
+            "mc23d_ratio/dphi_central_jet1_jet2_met100phPT50_.png",
+            "mc23d_ratio/dphi_jj_met100phPT50_.png",
+            "mc23d_ratio/dphi_met_central_jet_met100phPT50_.png",
+            "mc23d_ratio/dphi_met_jetterm_met100phPT50_.png",
+            "mc23d_ratio/dphi_met_ph_met100phPT50_.png",
+            "mc23d_ratio/dphi_met_phterm_met100phPT50_.png",
+            "mc23d_ratio/dphi_ph_centraljet1_met100phPT50_.png",
+            "mc23d_ratio/dphi_ph_jet1_met100phPT50_.png",
+            "mc23d_ratio/dphi_phterm_jetterm_met100phPT50_.png",
+            "mc23d_ratio/failJVT_jet_pt1_met100phPT50_.png",
+            "mc23d_ratio/failJVT_jet_pt_met100phPT50_.png",
+            "mc23d_ratio/goodPV_met100phPT50_.png",
+            "mc23d_ratio/jet_central_emfrac1_met100phPT50_.png",
+            "mc23d_ratio/jet_central_emfrac_met100phPT50_.png",
+            "mc23d_ratio/jet_central_eta_met100phPT50_.png",
+            "mc23d_ratio/jet_central_pt1_met100phPT50_.png",
+            "mc23d_ratio/jet_central_pt2_met100phPT50_.png",
+            "mc23d_ratio/jet_central_pt_met100phPT50_.png",
+            "mc23d_ratio/jet_central_timing1_met100phPT50_.png",
+            "mc23d_ratio/jet_central_timing_met100phPT50_.png",
+            "mc23d_ratio/jet_jvt_met100phPT50_.png",
+            "mc23d_ratio/jetterm_met100phPT50_.png",
+            "mc23d_ratio/jetterm_sumet_met100phPT50_.png",
+            "mc23d_ratio/met_cst_met100phPT50_.png",
+            "mc23d_ratio/met_met100phPT50_.png",
+            "mc23d_ratio/met_noJVT_met100phPT50_.png",
+            "mc23d_ratio/metplusph_met100phPT50_.png",
+            "mc23d_ratio/metsig_met100phPT50_.png",
+            "mc23d_ratio/metsigres_met100phPT50_.png",
+            "mc23d_ratio/met_track_met100phPT50_.png",
+            "mc23d_ratio/mt_met100phPT50_.png",
+            "mc23d_ratio/n_jet_central_met100phPT50_.png",
+            "mc23d_ratio/n_jet_fwd_met100phPT50_.png",
+            "mc23d_ratio/n_jet_met100phPT50_.png",
+            "mc23d_ratio/ph_eta_met100phPT50_.png",
+            "mc23d_ratio/ph_phi_met100phPT50_.png",
+            "mc23d_ratio/ph_pt_met100phPT50_.png",
+            "mc23d_ratio/puWeight_met100phPT50_.png",
+            "mc23d_ratio/softerm_met100phPT50_.png",
+            "mc23d_ratio/trigger_met100phPT50_.png",
+            "mc23d_ratio/vertex_met100phPT50_.png"
+        ];
+
+        const wrapper = document.querySelector('.wrapper');
+        images.forEach(img => {
+            // Create a container div for the image and filename
+            const container = document.createElement('div');
+            container.className = 'image-container';
+
+            // Create the image element
+            const imgElement = document.createElement('img');
+            imgElement.src = img;
+            imgElement.alt = img.split('/').pop(); // Use the filename as alt text
+
+            // Create the filename text
+            const filename = document.createElement('p');
+            filename.className = 'filename';
+            filename.textContent = img.split('/').pop(); // Extract the filename
+
+            // Add the image and filename to the container
+            container.appendChild(imgElement);
+            container.appendChild(filename);
+
+            // Add the container to the wrapper
+            wrapper.appendChild(container);
+        });
+    </script>
+</body>
+</html>

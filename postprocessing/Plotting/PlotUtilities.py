@@ -92,7 +92,7 @@ def GetAtlasLabel():
     atlas_label.SetTextSize(0.04)
     return atlas_label
 
-def CreateCanvas(doratio,logy=False):
+def CreateCanvas(doratio,logy=True):
 
     canv = ROOT.TCanvas("c","c",600,600)
 
