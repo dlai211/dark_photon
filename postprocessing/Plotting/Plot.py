@@ -176,5 +176,5 @@ if __name__ == '__main__':
             Legend.Draw()
             atlas_label.Draw()
 
-            canv.SaveAs('mc23d_ratio/%s_%s%s_%s.png' %(var,sel, 'Data' if data else '', tag))
+            canv.SaveAs('mc23d_mtcut/%s_%s%s_%s.png' %(var,sel, 'Data' if data else '', tag))
         
