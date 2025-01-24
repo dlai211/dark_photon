@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mc23d_dphi_met_jettermcut Plots</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .image-container {
+            text-align: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .filename {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>mc23d dphi_met_jettermcut (0-1.5) Plots</h2>
+    <section>
+        <h1> </h1>
+        <div class="wrapper">
+            <!-- Images will be dynamically added here -->
+        </div>
+    </section>
+
+    <script>
+        // List of image filenames in alphabetical order
+        const images = [
+            "mc23d_dphi_met_jettermcut/actualIntPerXing_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/balance_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/balance_sumet_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/central_jets_fraction_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/counts_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/dmet_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/dphi_central_jet1_jet2_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/dphi_jj_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/dphi_met_central_jet_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/dphi_met_jetterm_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/dphi_met_ph_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/dphi_met_phterm_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/dphi_ph_centraljet1_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/dphi_ph_jet1_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/dphi_phterm_jetterm_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/failJVT_jet_pt1_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/failJVT_jet_pt_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/goodPV_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/jet_central_emfrac1_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/jet_central_emfrac_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/jet_central_eta_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/jet_central_pt1_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/jet_central_pt2_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/jet_central_pt_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/jet_central_timing1_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/jet_central_timing_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/jet_jvt_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/jetterm_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/jetterm_sumet_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/met_cst_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/met_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/met_noJVT_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/metplusph_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/metsig_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/metsigres_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/met_track_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/mt_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/n_jet_central_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/n_jet_fwd_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/n_jet_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/ph_eta_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/ph_phi_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/ph_pt_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/puWeight_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/softerm_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/trigger_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/vertex_dphi_met_jettermcut_.png",
+            "mc23d_dphi_met_jettermcut/vtx_sumPt_dphi_met_jettermcut_.png"
+        ];
+
+        const wrapper = document.querySelector('.wrapper');
+        images.forEach(img => {
+            // Create a container div for the image and filename
+            const container = document.createElement('div');
+            container.className = 'image-container';
+
+            // Create the image element
+            const imgElement = document.createElement('img');
+            imgElement.src = img;
+            imgElement.alt = img.split('/').pop(); // Use the filename as alt text
+
+            // Create the filename text
+            const filename = document.createElement('p');
+            filename.className = 'filename';
+            filename.textContent = img.split('/').pop(); // Extract the filename
+
+            // Add the image and filename to the container
+            container.appendChild(imgElement);
+            container.appendChild(filename);
+
+            // Add the container to the wrapper
+            wrapper.appendChild(container);
+        });
+    </script>
+</body>
+</html>

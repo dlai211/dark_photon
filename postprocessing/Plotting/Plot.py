@@ -19,7 +19,7 @@ from BkgEstimate import *
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('-s', '--samples', type=str, nargs='+', help='list of samples', default=['all'])
 parser.add_argument('-v', '--vars', type=str, nargs='+', help='list of variables', default=['all'])
-parser.add_argument('-c', '--cuts', type=str, nargs='+', help='list of selections', default=['met100phPT50'])
+parser.add_argument('-c', '--cuts', type=str, nargs='+', help='list of selections', default=['balancecut'])
 parser.add_argument('--stack', action = 'store_true',  help='do stack plot', default=False)
 parser.add_argument('-p', '--period', type=str, help='period (Run2,mc23d)', default='mc23d')
 parser.add_argument('-d', '--dir', type=str, help='input directory', default='/data/tmathew/ntups/mc23d')
@@ -176,5 +176,5 @@ if __name__ == '__main__':
             Legend.Draw()
             atlas_label.Draw()
 
-            canv.SaveAs('mc23d_ratio/%s_%s%s_%s.png' %(var,sel, 'Data' if data else '', tag))
+            canv.SaveAs('mc23d_balancecut/%s_%s%s_%s.png' %(var,sel, 'Data' if data else '', tag))
         
