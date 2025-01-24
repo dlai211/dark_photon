@@ -240,6 +240,20 @@ def PlotRatio(canv,  h, h0, ratio, var, color, normalize = False, rebin = False,
         refline.SetLineColor(ROOT.kBlack)
         refline.SetLineWidth(1)
         refline.Draw()
+
+    # Calculate and display overall significance
+    total_signal = h.Integral()
+    total_background = h0.Integral()
+    if total_background > 0:
+        overall_significance = total_signal / math.sqrt(total_background)
+        latex = ROOT.TLatex()
+        latex.SetNDC()
+        latex.SetTextSize(0.08)
+        latex.SetTextColor(ROOT.kViolet)
+        latex.DrawLatex(0.72, 0.8, f"S/#sqrt{{B}} = {overall_significance:.5f}")
+    else:
+        print("Warning: Total background is zero, significance cannot be calculated.")
+
     canv.Update()
     return ratio
 

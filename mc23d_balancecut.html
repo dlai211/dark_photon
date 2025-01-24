@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mc23d_balancecut Plots</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .image-container {
+            text-align: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .filename {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>mc23d balancecut (0-12) Plots</h2>
+    <section>
+        <h1> </h1>
+        <div class="wrapper">
+            <!-- Images will be dynamically added here -->
+        </div>
+    </section>
+
+    <script>
+        // List of image filenames in alphabetical order
+        const images = [
+            "mc23d_balancecut/actualIntPerXing_balancecut_.png",
+            "mc23d_balancecut/balancecut_balancecut_.png",
+            "mc23d_balancecut/balancecut_sumet_balancecut_.png",
+            "mc23d_balancecut/central_jets_fraction_balancecut_.png",
+            "mc23d_balancecut/counts_balancecut_.png",
+            "mc23d_balancecut/dmet_balancecut_.png",
+            "mc23d_balancecut/dphi_central_jet1_jet2_balancecut_.png",
+            "mc23d_balancecut/dphi_jj_balancecut_.png",
+            "mc23d_balancecut/dphi_met_central_jet_balancecut_.png",
+            "mc23d_balancecut/dphi_met_jetterm_balancecut_.png",
+            "mc23d_balancecut/dphi_met_ph_balancecut_.png",
+            "mc23d_balancecut/dphi_met_phterm_balancecut_.png",
+            "mc23d_balancecut/dphi_ph_centraljet1_balancecut_.png",
+            "mc23d_balancecut/dphi_ph_jet1_balancecut_.png",
+            "mc23d_balancecut/dphi_phterm_jetterm_balancecut_.png",
+            "mc23d_balancecut/failJVT_jet_pt1_balancecut_.png",
+            "mc23d_balancecut/failJVT_jet_pt_balancecut_.png",
+            "mc23d_balancecut/goodPV_balancecut_.png",
+            "mc23d_balancecut/jet_central_emfrac1_balancecut_.png",
+            "mc23d_balancecut/jet_central_emfrac_balancecut_.png",
+            "mc23d_balancecut/jet_central_eta_balancecut_.png",
+            "mc23d_balancecut/jet_central_pt1_balancecut_.png",
+            "mc23d_balancecut/jet_central_pt2_balancecut_.png",
+            "mc23d_balancecut/jet_central_pt_balancecut_.png",
+            "mc23d_balancecut/jet_central_timing1_balancecut_.png",
+            "mc23d_balancecut/jet_central_timing_balancecut_.png",
+            "mc23d_balancecut/jet_jvt_balancecut_.png",
+            "mc23d_balancecut/jetterm_balancecut_.png",
+            "mc23d_balancecut/jetterm_sumet_balancecut_.png",
+            "mc23d_balancecut/met_cst_balancecut_.png",
+            "mc23d_balancecut/met_balancecut_.png",
+            "mc23d_balancecut/met_noJVT_balancecut_.png",
+            "mc23d_balancecut/metplusph_balancecut_.png",
+            "mc23d_balancecut/metsig_balancecut_.png",
+            "mc23d_balancecut/metsigres_balancecut_.png",
+            "mc23d_balancecut/met_track_balancecut_.png",
+            "mc23d_balancecut/mt_balancecut_.png",
+            "mc23d_balancecut/n_jet_central_balancecut_.png",
+            "mc23d_balancecut/n_jet_fwd_balancecut_.png",
+            "mc23d_balancecut/n_jet_balancecut_.png",
+            "mc23d_balancecut/ph_eta_balancecut_.png",
+            "mc23d_balancecut/ph_phi_balancecut_.png",
+            "mc23d_balancecut/ph_pt_balancecut_.png",
+            "mc23d_balancecut/puWeight_balancecut_.png",
+            "mc23d_balancecut/softerm_balancecut_.png",
+            "mc23d_balancecut/trigger_balancecut_.png",
+            "mc23d_balancecut/vertex_balancecut_.png",
+            "mc23d_balancecut/vtx_sumPt_balancecut_.png"
+        ];
+
+        const wrapper = document.querySelector('.wrapper');
+        images.forEach(img => {
+            // Create a container div for the image and filename
+            const container = document.createElement('div');
+            container.className = 'image-container';
+
+            // Create the image element
+            const imgElement = document.createElement('img');
+            imgElement.src = img;
+            imgElement.alt = img.split('/').pop(); // Use the filename as alt text
+
+            // Create the filename text
+            const filename = document.createElement('p');
+            filename.className = 'filename';
+            filename.textContent = img.split('/').pop(); // Extract the filename
+
+            // Add the image and filename to the container
+            container.appendChild(imgElement);
+            container.appendChild(filename);
+
+            // Add the container to the wrapper
+            wrapper.appendChild(container);
+        });
+    </script>
+</body>
+</html>

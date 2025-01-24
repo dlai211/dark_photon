@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mc23d_dmetcut Plots</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .image-container {
+            text-align: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .filename {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>mc23d dmetcut (-60-60 GeV) Plots</h2>
+    <section>
+        <h1> </h1>
+        <div class="wrapper">
+            <!-- Images will be dynamically added here -->
+        </div>
+    </section>
+
+    <script>
+        // List of image filenames in alphabetical order
+        const images = [
+            "mc23d_dmetcut/actualIntPerXing_dmetcut_.png",
+            "mc23d_dmetcut/balance_dmetcut_.png",
+            "mc23d_dmetcut/balance_sumet_dmetcut_.png",
+            "mc23d_dmetcut/central_jets_fraction_dmetcut_.png",
+            "mc23d_dmetcut/counts_dmetcut_.png",
+            "mc23d_dmetcut/dmet_dmetcut_.png",
+            "mc23d_dmetcut/dphi_central_jet1_jet2_dmetcut_.png",
+            "mc23d_dmetcut/dphi_jj_dmetcut_.png",
+            "mc23d_dmetcut/dphi_met_central_jet_dmetcut_.png",
+            "mc23d_dmetcut/dphi_met_jetterm_dmetcut_.png",
+            "mc23d_dmetcut/dphi_met_ph_dmetcut_.png",
+            "mc23d_dmetcut/dphi_met_phterm_dmetcut_.png",
+            "mc23d_dmetcut/dphi_ph_centraljet1_dmetcut_.png",
+            "mc23d_dmetcut/dphi_ph_jet1_dmetcut_.png",
+            "mc23d_dmetcut/dphi_phterm_jetterm_dmetcut_.png",
+            "mc23d_dmetcut/failJVT_jet_pt1_dmetcut_.png",
+            "mc23d_dmetcut/failJVT_jet_pt_dmetcut_.png",
+            "mc23d_dmetcut/goodPV_dmetcut_.png",
+            "mc23d_dmetcut/jet_central_emfrac1_dmetcut_.png",
+            "mc23d_dmetcut/jet_central_emfrac_dmetcut_.png",
+            "mc23d_dmetcut/jet_central_eta_dmetcut_.png",
+            "mc23d_dmetcut/jet_central_pt1_dmetcut_.png",
+            "mc23d_dmetcut/jet_central_pt2_dmetcut_.png",
+            "mc23d_dmetcut/jet_central_pt_dmetcut_.png",
+            "mc23d_dmetcut/jet_central_timing1_dmetcut_.png",
+            "mc23d_dmetcut/jet_central_timing_dmetcut_.png",
+            "mc23d_dmetcut/jet_jvt_dmetcut_.png",
+            "mc23d_dmetcut/jetterm_dmetcut_.png",
+            "mc23d_dmetcut/jetterm_sumet_dmetcut_.png",
+            "mc23d_dmetcut/met_cst_dmetcut_.png",
+            "mc23d_dmetcut/met_dmetcut_.png",
+            "mc23d_dmetcut/met_noJVT_dmetcut_.png",
+            "mc23d_dmetcut/metplusph_dmetcut_.png",
+            "mc23d_dmetcut/metsig_dmetcut_.png",
+            "mc23d_dmetcut/metsigres_dmetcut_.png",
+            "mc23d_dmetcut/met_track_dmetcut_.png",
+            "mc23d_dmetcut/mt_dmetcut_.png",
+            "mc23d_dmetcut/n_jet_central_dmetcut_.png",
+            "mc23d_dmetcut/n_jet_fwd_dmetcut_.png",
+            "mc23d_dmetcut/n_jet_dmetcut_.png",
+            "mc23d_dmetcut/ph_eta_dmetcut_.png",
+            "mc23d_dmetcut/ph_phi_dmetcut_.png",
+            "mc23d_dmetcut/ph_pt_dmetcut_.png",
+            "mc23d_dmetcut/puWeight_dmetcut_.png",
+            "mc23d_dmetcut/softerm_dmetcut_.png",
+            "mc23d_dmetcut/trigger_dmetcut_.png",
+            "mc23d_dmetcut/vertex_dmetcut_.png",
+            "mc23d_dmetcut/vtx_sumPt_dmetcut_.png"
+        ];
+
+        const wrapper = document.querySelector('.wrapper');
+        images.forEach(img => {
+            // Create a container div for the image and filename
+            const container = document.createElement('div');
+            container.className = 'image-container';
+
+            // Create the image element
+            const imgElement = document.createElement('img');
+            imgElement.src = img;
+            imgElement.alt = img.split('/').pop(); // Use the filename as alt text
+
+            // Create the filename text
+            const filename = document.createElement('p');
+            filename.className = 'filename';
+            filename.textContent = img.split('/').pop(); // Extract the filename
+
+            // Add the image and filename to the container
+            container.appendChild(imgElement);
+            container.appendChild(filename);
+
+            // Add the container to the wrapper
+            wrapper.appendChild(container);
+        });
+    </script>
+</body>
+</html>
