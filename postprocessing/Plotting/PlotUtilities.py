@@ -3,6 +3,7 @@ import ROOT
 import math
 import re
 import sys
+import numpy as np
 
 import argparse
 
@@ -20,6 +21,19 @@ sel_dict = getSelDict()
 var_dict = getVarDict()
 sample_dict = getSampleDict()
 
+def getWeightDict():
+    dict = {}
+    dict['ggHyyd'] = 140.587904214859
+    dict['Zjets'] = 2155.7233924865723
+    dict['Zgamma'] = 11350.253204345703
+    dict['Wgamma'] = 8653.602767944336
+    dict['Wjets'] = 12703.016357421875
+    dict['gammajet_direct'] = 218518.66864013672
+    dict['gammajet_frag'] = 161092.83154296875
+    dict['dijet'] = 171501971.1118164
+    return dict
+weight_dict = getWeightDict()
+
 def GetSelString(sel, addcut = ''):
     cuts_string = []
     if sel in sel_dict: cuts_string.append(sel_dict[sel]['str'])
@@ -35,6 +49,7 @@ def GetCutString(cut):
     if cut not in sel_dict: 
         c = re.split("[>,<,>=,<=,==,!=]", cut)
         var = c[0]
+        print(var)
         cut = cut.replace(var, var_dict[var]['var'])
     else: cut = sel_dict[cut]['str']
     return cut
@@ -123,15 +138,19 @@ def CreateCanvas(doratio,logy=True):
 def Plot(canv, Legend, file_path, h, sample, var, sel, counter = 1, normalize = False, period = 'mc23d', logy = True, rebin = False, stack = None, markersize = 0, markerstyle = 0, linestyle=0, ratio = True, col = '', leg = '', sigGoodPV = False, reweight = '', plot=True):
  
     finalState = getFinalState(sel)
-
     samples_dict = getSampleDict()
+
     chain = ROOT.TChain(samples_dict[sample]['tree'] if period == 'mc23c' else 'nominal')
     fillChain(chain, file_path, period, sample, sel = finalState)
+    # total_events = chain.GetEntries()
+    # print("Sample {}: Total events before cuts = {}".format(sample, total_events))
+
     weight = getWeight(period, sample) if reweight == '' else '(%s*%s)' %(getWeight(period, sample),reweight)
+    # weight = weight_dict[sample]
     doStack = (stack != None and sample not in ['ggHyyd','data'])
 
-    print(sel)
-    print(weight)
+    print('sel: ', sel)
+    print('weight: ', weight)
 
     if sample == 'ggHyyd' and sigGoodPV: weight = weight+'*goodPV' #to show only signal with good PV
 
@@ -160,6 +179,10 @@ def Plot(canv, Legend, file_path, h, sample, var, sel, counter = 1, normalize = 
     if '_j' in sample: sel = sel + '&& ph_truth_origin[0]!=12 &&  ph_truth_origin[0]!=13'
     if '_e' in sample: sel = sel + '&& (ph_truth_origin[0]==12 || ph_truth_origin[0]==13)'
     chain.Draw('(%s%s) >> %s' %(varstr,shift ,h.GetName()), '(%s) * (%s)' %(sel,weight))
+
+    # events_after_cuts = h.Integral()
+    # print("Sample {}: Events after cuts = {}".format(sample, events_after_cuts))
+    
     canv.cd(1) if ratio else canv.cd()
     h.GetYaxis().SetLabelSize(0.05)
     h.GetYaxis().SetTitleSize(0.05)
@@ -195,7 +218,7 @@ def Plot(canv, Legend, file_path, h, sample, var, sel, counter = 1, normalize = 
     return h
 
 
-def PlotRatio(canv,  h, h0, ratio, var, color, normalize = False, rebin = False, significance = False, refline = None):
+def PlotRatio(canv, h, h0, ratio, var, color, normalize = False, rebin = False, significance = False, refline = None):
     canv.cd(2)
 
     # Plot h/h0 in ratio plot
@@ -258,6 +281,180 @@ def PlotRatio(canv,  h, h0, ratio, var, color, normalize = False, rebin = False,
     return ratio
 
 
+def PlotROCStandalone(sig_hist, bkg_hist, output_filename="tmp/ROC_curve.png"):
+    """
+    Plots the ROC curve in a standalone canvas and saves it as an image.
+    """
+
+    # Check if histograms are empty
+    if sig_hist.Integral() == 0 or bkg_hist.Integral() == 0:
+        print("Warning: Empty signal or background histogram. Skipping ROC plot.")
+        return  
+
+    bins = sig_hist.GetNbinsX()
+    sig_eff = []
+    bkg_rej = []
+
+    for i in range(1, bins + 1):
+        signal_integral = sig_hist.Integral(i, bins)
+        background_integral = bkg_hist.Integral(i, bins)
+
+        signal_efficiency = signal_integral / sig_hist.Integral() if sig_hist.Integral() > 0 else 0
+        background_efficiency = background_integral / bkg_hist.Integral() if bkg_hist.Integral() > 0 else 0
+        background_rejection = 1 - background_efficiency
+
+        sig_eff.append(signal_efficiency)
+        bkg_rej.append(background_rejection)
+
+    sig_eff = np.array(sig_eff, dtype=float)
+    bkg_rej = np.array(bkg_rej, dtype=float)
+
+    # values are sorted from (0,0) to (1,1)
+    sorted_indices = np.argsort(sig_eff)
+    sig_eff = sig_eff[sorted_indices]
+    bkg_rej = bkg_rej[sorted_indices]
+
+    auc = np.trapz(bkg_rej, sig_eff)  # Integrate using the trapezoidal rule
+    print(f"AUC (Area Under Curve) = {auc:.4f}")
+
+    # Create the ROC curve graph
+    roc_graph = ROOT.TGraph(len(sig_eff), sig_eff, bkg_rej)
+    roc_graph.SetTitle("ROC Curve;Signal Efficiency;Background Rejection")
+    roc_graph.SetLineColor(ROOT.kViolet)
+    roc_graph.SetLineWidth(2)
+    roc_graph.SetMarkerStyle(20)
+    roc_graph.SetMarkerSize(0.5)
+
+    # Debugging: Print the number of points
+    print("ROC Graph points:", roc_graph.GetN())
+
+    # Ensure X and Y axes are correctly scaled
+    roc_graph.GetXaxis().SetLimits(0, 1)  # Ensure X is [0,1]
+    roc_graph.GetYaxis().SetRangeUser(0, 1)  # Ensure Y is [0,1]
+    roc_graph.GetXaxis().SetTitleSize(0.05)
+    roc_graph.GetYaxis().SetTitleSize(0.05)
+    roc_graph.GetXaxis().SetLabelSize(0.04)
+    roc_graph.GetYaxis().SetLabelSize(0.04)
+
+    # Print ROC graph points for debugging
+    roc_graph.Print()
+
+    # Create standalone canvas
+    canv = ROOT.TCanvas("roc_canvas", "ROC Curve", 600, 600)
+    canv.SetLeftMargin(0.15)
+    canv.SetRightMargin(0.05)
+    canv.SetTopMargin(0.05)
+    canv.SetBottomMargin(0.15)
+
+    # Draw the ROC Curve
+    roc_graph.Draw("APL")  # A: Axis, P: Points, L: Line
+
+    # Add a legend
+    legend = ROOT.TLegend(0.65, 0.8, 0.85, 1.0)
+    legend.SetBorderSize(0)
+    legend.SetFillStyle(0)
+    legend.SetTextSize(0.03)
+    legend.AddEntry(roc_graph, f"AUC = {auc:.4f}", "l")
+    legend.Draw()
+
+    # Add a diagonal line from (0, 1) to (1, 0)
+    diag_line = ROOT.TLine(0, 1, 1, 0)
+    diag_line.SetLineStyle(2)
+    diag_line.SetLineColor(ROOT.kRed)
+    diag_line.Draw()
+
+    canv.SetGrid()
+
+    # Save the canvas as an image
+    canv.SaveAs(output_filename)
+    print(f"ROC curve saved as {output_filename}")
+
+    return roc_graph
+
+def PlotSignificanceVsCut(variable, start, stop, step, base_sel, file_path, period, samples):
+    """
+    Loop over thresholds on 'variable' and compute S/sqrt(B) for each cut.
+    
+    Parameters:
+      variable (str): The branch name on which to apply the cut (e.g. "met_tst_et" or "ph_pt").
+      start (int): The minimum threshold value.
+      stop (int): The maximum threshold value.
+      step (int): The step size between thresholds.
+      base_sel (str): The base selection string (in ROOT syntax) already applied.
+                        (It should not include a condition on 'variable'.)
+      file_path (str): Directory containing the ROOT files.
+      period (str): The period string (e.g. "mc23d").
+      samples (list): List of sample names (e.g. ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag','dijet']).
+    
+    Returns:
+      TGraph: A ROOT.TGraph with the cut threshold on the x-axis and significance on the y-axis.
+    """
+    # Lists to store the threshold values and corresponding significance
+    thresholds = []
+    significances = []
+    
+    # Loop over the thresholds
+    for thresh in range(start, stop + step, step):
+        # Construct a new selection: base_sel && (variable > threshold)
+        # (If you want the cut to be ">" rather than ">=" adjust accordingly.)
+        cut_sel = base_sel + " && " + variable + " > " + str(thresh)
+        print(f"Applying selection: {cut_sel}")
+        
+        sig_yield = 0.0
+        bkg_yield = 0.0
+        
+        # Loop over the samples
+        for sample in samples:
+            # Create a TChain for this sample.
+            # Use the tree name "nominal" (or adjust if needed).
+            chain = ROOT.TChain("nominal")
+            # fillChain is your helper function from PlotUtilities
+            fillChain(chain, file_path, period, sample)
+            
+            # Get the weight factor for this sample (as a string); convert it to a float.
+            weight_str = getWeight(period, sample)
+            try:
+                weight = float(weight_str)
+            except Exception:
+                # For data or unweighted samples, set weight = 1.
+                weight = 1.0
+
+            # Get the number of entries passing the current cut selection.
+            # (Note: This returns the raw number of events. Multiplying by the weight gives an approximate yield.)
+            n_entries = chain.GetEntries(cut_sel)
+            
+            # Accumulate signal and background yields.
+            if sample == "ggHyyd":
+                sig_yield += n_entries * weight
+            else:
+                # Exclude data if present
+                if sample != "data":
+                    bkg_yield += n_entries * weight
+        
+        # Calculate significance as S/sqrt(B) (if B > 0)
+        if bkg_yield > 0:
+            significance = sig_yield / (bkg_yield ** 0.5)
+        else:
+            significance = 0.0
+        
+        thresholds.append(thresh)
+        significances.append(significance)
+        
+        print(f"Threshold: {thresh}, Signal yield: {sig_yield:.1f}, Background yield: {bkg_yield:.1f}, Significance: {significance:.3f}")
+    
+    # Create a TGraph with the results.
+    npoints = len(thresholds)
+    graph = ROOT.TGraph(npoints)
+    for i in range(npoints):
+        graph.SetPoint(i, thresholds[i], significances[i])
+    
+    # Set the graph title and axis labels.
+    graph.SetTitle("Significance vs. Cut on " + variable + ";" + variable + " cut threshold;Significance S/#sqrt{B}")
+    graph.SetMarkerStyle(20)
+    graph.SetMarkerSize(1)
+    
+    return graph
+
 
 def Plot2D(canv,dir, h, sample, var, sel, period = 'mc23d', logy = True, sigGoodPV = False):
     file_path = dir
@@ -267,6 +464,7 @@ def Plot2D(canv,dir, h, sample, var, sel, period = 'mc23d', logy = True, sigGood
 
 
     weight = getWeight(period, sample)
+    # weight = weight_dict[sample]
     if sample == 'ggHyyd' and sigGoodPV: weight = weight+'*goodPV'
 
     v1, v2 = var.split('VS')[0],var.split('VS')[1]
