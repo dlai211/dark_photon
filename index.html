@@ -24,6 +24,7 @@
     th {
       background-color: #f4f4f4;
       font-weight: bold;
+      font-size: 1.2em;
     }
 
     tr:nth-child(even) {
@@ -56,7 +57,7 @@
     <div>
       <nav class="right">
         <ul id="slide-up">
-          <li><a href="mc23d.html">mc23d Plots</a></li>
+          <!-- <li><a href="mc23d.html">mc23d Plots</a></li> -->
           <li><a href="mc23d_ratio.html">mc23d --stack --ratio --rsig Plots</a></li>
           <li><a href="mc23d_mtcut.html">mc23d mtcut (40-200 GeV) Plots</a></li>
           <li><a href="mc23d_dmetcut.html">mc23d dmetcut (-60-60 GeV) Plots</a></li>
@@ -78,16 +79,44 @@
         </thead>
         <tbody>
           <tr class="bold-row">
-            <td>met_tst_et</td>
-            <td>&gt; 100 GeV</td>
+            <td>n_ph && n_ph_baseline</td>
+            <td>1</td>
+          </tr>
+          <tr class="bold-row">
+            <td>n_mu_baseline && n_el_baseline && n_tau_baseline</td>
+            <td>0</td>
           </tr>
           <tr class="bold-row">
             <td>trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M</td>
             <td>true</td>
           </tr>
           <tr class="bold-row">
+            <td>met_tst_et</td>
+            <td>&gt; 100 GeV</td>
+          </tr>
+          <tr class="bold-row">
             <td>ph_pt</td>
             <td>&gt; 50 GeV</td>
+          </tr>
+          <tr class="bold-row">
+            <td>dphi_met_phterm</td>
+            <td>&gt; 1.25</td>
+          </tr>
+          <tr class="bold-row">
+            <td>met_tst_sig</td>
+            <td>&gt; 6</td>
+          </tr>
+          <tr class="bold-row">
+            <td>ph_eta</td>
+            <td>&lt; 1.75</td>
+          </tr>
+          <tr class="bold-row">
+            <td>dmet</td>
+            <td>&gt; -10 GeV</td>
+          </tr>
+          <tr class="bold-row">
+            <td>dphi_met_jetterm</td>
+            <td>&lt; 1.5 (0.75)</td>
           </tr>
           <tr>
             <td>ph_pt</td>
@@ -99,27 +128,11 @@
           </tr>
           <tr>
             <td>dmet</td>
-            <td>-60 to 60 GeV</td>
+            <td>&lt; 60 GeV</td>
           </tr>
           <tr>
             <td>mt</td>
             <td>40 to 200 GeV</td>
-          </tr>
-          <tr>
-            <td>ph_eta</td>
-            <td>No cut</td>
-          </tr>
-          <tr>
-            <td>n_jet_central</td>
-            <td>No cut</td>
-          </tr>
-          <tr>
-            <td>dphi_met_phterm</td>
-            <td>No cut</td>
-          </tr>
-          <tr>
-            <td>dphi_met_jetterm</td>
-            <td>0 to 1.5</td>
           </tr>
           <tr>
             <td>dphi_jj</td>

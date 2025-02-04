@@ -19,7 +19,7 @@ from BkgEstimate import *
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('-s', '--samples', type=str, nargs='+', help='list of samples', default=['all'])
 parser.add_argument('-v', '--vars', type=str, nargs='+', help='list of variables', default=['all'])
-parser.add_argument('-c', '--cuts', type=str, nargs='+', help='list of selections', default=['balancecut'])
+parser.add_argument('-c', '--cuts', type=str, nargs='+', help='list of selections', default=['met100phPT50'])
 parser.add_argument('--stack', action = 'store_true',  help='do stack plot', default=False)
 parser.add_argument('-p', '--period', type=str, help='period (Run2,mc23d)', default='mc23d')
 parser.add_argument('-d', '--dir', type=str, help='input directory', default='/data/tmathew/ntups/mc23d')
@@ -31,6 +31,8 @@ parser.add_argument('--ratio', action = 'store_true',  help='include ratio plot'
 parser.add_argument('--sigGoodPV', action = 'store_true',  help='plot only good vertex signals', default=False)
 parser.add_argument('--blind', action = 'store_true',  help='blind', default=False)
 parser.add_argument('--tag',  type=str, help='tag', default='')
+parser.add_argument('--roc', action = 'store_true',  help='plots ROC curve', default=False)
+
 
 ROOT.gStyle.SetOptStat(0)
 
@@ -45,9 +47,9 @@ if __name__ == '__main__':
     args=parser.parse_args()
     dir = args.dir
     vars = args.vars if args.vars!=['all'] else var_dict
-    # samples = args.samples if args.samples!=['all'] else ['ggHyyd']
+    # samples = args.samples if args.samples!=['all'] else ['ggHyyd', 'gammajet_direct']
     # samples = args.samples if args.samples!=['all'] else ['gammajet_direct','gammajet_frag']
-    # samples = args.samples if args.samples!=['all'] else ['ggHyyd','gammajet_direct','gammajet_frag']
+    # samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zjets']
     samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag','dijet']
     sels = args.cuts
     year = args.period
@@ -58,6 +60,8 @@ if __name__ == '__main__':
     data = args.data
     doratio = args.ratio
     blind = args.blind
+    roc = args.roc
+
 
     tag = args.tag
         
@@ -159,22 +163,30 @@ if __name__ == '__main__':
                 if data:
                     line = ROOT.TLine(minbin,1,maxbin,1)
                     ratio.append(ROOT.TH1F('ratio','ratio',nbin,minbin,maxbin))
-                    PlotRatio(canv, hdata, hbkg,ratio[0], '%s' %var, ROOT.kBlack,normalize=rnorm, significance=rsig, refline = line)
+                    PlotRatio(canv, hdata, hbkg, ratio[0], '%s' %var, ROOT.kBlack,normalize=rnorm, significance=rsig, refline = line)
                 # --- Significance ---#
                 if (rsig and stack):  
                     ratio.append(ROOT.TH1F('ratio','ratio',nbin,minbin,maxbin))
-                    PlotRatio(canv, hsig, hbkg,ratio[0], '%s' %var,  ROOT.kBlack,normalize=rnorm, significance=rsig)
+                    PlotRatio(canv, hsig, hbkg, ratio[0], '%s' %var,  ROOT.kBlack,normalize=rnorm, significance=rsig)
+                    # canv.cd(3)
+                    # PlotROC(canv, hsig, hbkg)
                 # --- ratio among each background and signal ---#
                 else: 
                     if not data:
                         for i,sample in enumerate(samples): 
                             ratio.append(ROOT.TH1F('hratio%i' %i,'hratio%i' %i,nbin,minbin,maxbin))
                             if sample != 'ggHyyd': PlotRatio(canv, hsig, h[i],ratio[i], '%s' %var, samples_dict[sample]['color'], normalize=rnorm, significance=rsig)
-                
+
+                # canv.cd(3)
+                # if roc:
+                    # print("it is drawing roc curve")
+                    # PlotROC(canv, hsig, hbkg)
+                    # PlotROCStandalone(hsig, hbkg)                
+
             canv.cd(1)
 
             Legend.Draw()
             atlas_label.Draw()
 
-            canv.SaveAs('mc23d_balancecut/%s_%s%s_%s.png' %(var,sel, 'Data' if data else '', tag))
+            canv.SaveAs('tmp/%s_%s%s_%s.png' %(var,sel, 'Data' if data else '', tag))
         
