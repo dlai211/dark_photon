@@ -58,12 +58,17 @@
       <nav class="right">
         <ul id="slide-up">
           <!-- <li><a href="mc23d.html">mc23d Plots</a></li> -->
-          <li><a href="mc23d_ratio.html">mc23d --stack --ratio --rsig Plots</a></li>
-          <li><a href="mc23d_mtcut.html">mc23d mtcut (40-200 GeV) Plots</a></li>
+          <li><a href="mc23d_ratio.html">mc23d (Proof of consistency of plots)</a></li>
+          <li><a href="mc23d_sig.html">mc23d significance vs. cut plots</a></li>
+          <li><a href="mc23d_beforecut.html">mc23d with basic cut (before selection cut)</a></li>
+          <li><a href="mc23d_aftercut.html">mc23d after selection cut</a></li>
+
+          <li><a href="old_plot.html">Old Plots</a></li>
+          <!-- <li><a href="mc23d_mtcut.html">mc23d mtcut (40-200 GeV) Plots</a></li>
           <li><a href="mc23d_dmetcut.html">mc23d dmetcut (-60-60 GeV) Plots</a></li>
           <li><a href="mc23d_balancecut.html">mc23d balancecut (0-12) Plots</a></li>
           <li><a href="mc23d_dphi_met_jettermcut.html">mc23d dphi_met_jettermcut (0-1.5) Plots</a></li>
-          <li><a href="mc23d_allcut.html">mc23d allcut Plots</a></li>
+          <li><a href="mc23d_allcut.html">mc23d allcut Plots</a></li> -->
         </ul>
       </nav>
     </div>
@@ -92,7 +97,7 @@
           </tr>
           <tr class="bold-row">
             <td>met_tst_et</td>
-            <td>&gt; 100 GeV</td>
+            <td>&gt; 50 GeV</td>
           </tr>
           <tr class="bold-row">
             <td>ph_pt</td>
@@ -100,15 +105,15 @@
           </tr>
           <tr class="bold-row">
             <td>dphi_met_phterm</td>
-            <td>&gt; 1.25</td>
+            <td>&gt; 0.2</td>
           </tr>
           <tr class="bold-row">
             <td>met_tst_sig</td>
-            <td>&gt; 6</td>
+            <td>&gt; 3</td>
           </tr>
           <tr class="bold-row">
             <td>ph_eta</td>
-            <td>&lt; 1.75</td>
+            <td>no cut</td>
           </tr>
           <tr class="bold-row">
             <td>dmet</td>
@@ -116,27 +121,27 @@
           </tr>
           <tr class="bold-row">
             <td>dphi_met_jetterm</td>
-            <td>&lt; 1.5 (0.75)</td>
+            <td>&gt; 0.2</td>
           </tr>
           <tr>
             <td>ph_pt</td>
-            <td>&lt; 200 GeV</td>
+            <td>&gt; 50 GeV</td>
           </tr>
           <tr>
             <td>met</td>
-            <td>No cut</td>
+            <td>no cut</td>
           </tr>
           <tr>
             <td>dmet</td>
-            <td>&lt; 60 GeV</td>
+            <td>no upper cut</td>
           </tr>
           <tr>
             <td>mt</td>
-            <td>40 to 200 GeV</td>
+            <td>50 to 170 GeV</td>
           </tr>
           <tr>
             <td>dphi_jj</td>
-            <td>No cut</td>
+            <td>no cut</td>
           </tr>
           <tr>
             <td>trigger</td>
@@ -144,11 +149,11 @@
           </tr>
           <tr>
             <td>goodPV</td>
-            <td>No cut</td>
+            <td>only signal</td>
           </tr>
           <tr>
             <td>balance</td>
-            <td>0 to 12</td>
+            <td>no cut</td>
           </tr>
         </tbody>
       </table>
