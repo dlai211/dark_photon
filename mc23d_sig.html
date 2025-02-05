@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mc23d_ratio Plots</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .image-container {
+            text-align: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .filename {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>mc23d --stack --ratio --rsig Plots</h2>
+    <section>
+        <h1> </h1>
+        <div class="wrapper">
+            <!-- Images will be dynamically added here -->
+        </div>
+    </section>
+
+    <script>
+        // List of image filenames in alphabetical order
+        const images = [
+            "before_cut/uproot_dmet_basiccut.png",
+            "before_cut/significance_dmet.png",
+            "before_cut/roc_curve_dmet_basiccut.png",
+
+            "before_cut/uproot_dphi_met_jetterm_basiccut.png",
+            "before_cut/significance_dphi_met_jetterm.png",
+            "before_cut/roc_curve_dphi_met_jetterm_basiccut.png",
+
+            "before_cut/uproot_dphi_met_phterm_basiccut.png",
+            "before_cut/significance_dphi_met_phterm.png",
+            "before_cut/roc_curve_dphi_met_phterm_basiccut.png",
+
+            "before_cut/uproot_met_basiccut.png",
+            "before_cut/significance_met.png",
+            "before_cut/roc_curve_met_basiccut.png",
+
+            "before_cut/uproot_metsig_basiccut.png",
+            "before_cut/significance_metsig.png",
+            "before_cut/roc_curve_metsig_basiccut.png",
+
+            "before_cut/uproot_ph_eta_basiccut.png",
+            "before_cut/significance_ph_eta.png",
+            "before_cut/roc_curve_ph_eta_basiccut.png",
+
+            "before_cut/uproot_ph_pt_basiccut.png",
+            "before_cut/significance_ph_pt.png",
+            "before_cut/roc_curve_ph_pt_basiccut.png",
+
+            "before_cut/uproot_mt_basiccut.png",
+            "before_cut/significance_mt_uppercut.png",
+            "before_cut/significance_mt_lowercut.png",
+            "before_cut/roc_curve_mt_basiccut.png",
+
+
+        ];
+
+        const wrapper = document.querySelector('.wrapper');
+        images.forEach(img => {
+            // Create a container div for the image and filename
+            const container = document.createElement('div');
+            container.className = 'image-container';
+
+            // Create the image element
+            const imgElement = document.createElement('img');
+            imgElement.src = img;
+            imgElement.alt = img.split('/').pop(); // Use the filename as alt text
+
+            // Create the filename text
+            const filename = document.createElement('p');
+            filename.className = 'filename';
+            filename.textContent = img.split('/').pop(); // Extract the filename
+
+            // Add the image and filename to the container
+            container.appendChild(imgElement);
+            container.appendChild(filename);
+
+            // Add the container to the wrapper
+            wrapper.appendChild(container);
+        });
+    </script>
+</body>
+</html>
