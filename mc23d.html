@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>mc23d Plots</title>
+    <title>mc23d Plots (basic cut)</title>
     <style>
         .wrapper {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+            /* grid-template-columns: repeat(3, 1fr); */
             gap: 20px;
         }
         
@@ -25,7 +26,7 @@
     </style>
 </head>
 <body>
-    <h2>mc23d Plots</h2>
+    <h2>mc23d Plots (basic cut)</h2>
     <section>
         <h1> </h1>
         <div class="wrapper">
@@ -35,55 +36,105 @@
 
     <script>
         // List of image filenames in alphabetical order
-        const images = [
-            "mc23d/actualIntPerXing_met100phPT50_.png",
-            "mc23d/balance_met100phPT50_.png",
-            "mc23d/balance_sumet_met100phPT50_.png",
-            "mc23d/central_jets_fraction_met100phPT50_.png",
-            "mc23d/counts_met100phPT50_.png",
-            "mc23d/dmet_met100phPT50_.png",
-            "mc23d/dphi_central_jet1_jet2_met100phPT50_.png",
-            "mc23d/dphi_jj_met100phPT50_.png",
-            "mc23d/dphi_met_central_jet_met100phPT50_.png",
-            "mc23d/dphi_met_jetterm_met100phPT50_.png",
-            "mc23d/dphi_met_ph_met100phPT50_.png",
-            "mc23d/dphi_met_phterm_met100phPT50_.png",
-            "mc23d/dphi_ph_centraljet1_met100phPT50_.png",
-            "mc23d/dphi_ph_jet1_met100phPT50_.png",
-            "mc23d/dphi_phterm_jetterm_met100phPT50_.png",
-            "mc23d/failJVT_jet_pt1_met100phPT50_.png",
-            "mc23d/failJVT_jet_pt_met100phPT50_.png",
-            "mc23d/goodPV_met100phPT50_.png",
-            "mc23d/jet_central_emfrac1_met100phPT50_.png",
-            "mc23d/jet_central_emfrac_met100phPT50_.png",
-            "mc23d/jet_central_eta_met100phPT50_.png",
-            "mc23d/jet_central_pt1_met100phPT50_.png",
-            "mc23d/jet_central_pt2_met100phPT50_.png",
-            "mc23d/jet_central_pt_met100phPT50_.png",
-            "mc23d/jet_central_timing1_met100phPT50_.png",
-            "mc23d/jet_central_timing_met100phPT50_.png",
-            "mc23d/jet_jvt_met100phPT50_.png",
-            "mc23d/jetterm_met100phPT50_.png",
-            "mc23d/jetterm_sumet_met100phPT50_.png",
-            "mc23d/met_cst_met100phPT50_.png",
-            "mc23d/met_met100phPT50_.png",
-            "mc23d/met_noJVT_met100phPT50_.png",
-            "mc23d/metplusph_met100phPT50_.png",
-            "mc23d/metsig_met100phPT50_.png",
-            "mc23d/metsigres_met100phPT50_.png",
-            "mc23d/met_track_met100phPT50_.png",
-            "mc23d/mt_met100phPT50_.png",
-            "mc23d/n_jet_central_met100phPT50_.png",
-            "mc23d/n_jet_fwd_met100phPT50_.png",
-            "mc23d/n_jet_met100phPT50_.png",
-            "mc23d/ph_eta_met100phPT50_.png",
-            "mc23d/ph_phi_met100phPT50_.png",
-            "mc23d/ph_pt_met100phPT50_.png",
-            "mc23d/puWeight_met100phPT50_.png",
-            "mc23d/softerm_met100phPT50_.png",
-            "mc23d/trigger_met100phPT50_.png",
-            "mc23d/vertex_met100phPT50_.png"
-        ];
+        const images = 
+        ['before_cut/vtx_sumPt_nodijet.png',
+ 'before_cut/roc_curve_vtx_sumPt.png',
+ 'before_cut/n_ph_nodijet.png',
+ 'before_cut/roc_curve_n_ph.png',
+ 'before_cut/n_ph_baseline_nodijet.png',
+ 'before_cut/roc_curve_n_ph_baseline.png',
+ 'before_cut/n_el_baseline_nodijet.png',
+ 'before_cut/roc_curve_n_el_baseline.png',
+ 'before_cut/n_mu_baseline_nodijet.png',
+ 'before_cut/roc_curve_n_mu_baseline.png',
+ 'before_cut/n_tau_baseline_nodijet.png',
+ 'before_cut/roc_curve_n_tau_baseline.png',
+ 'before_cut/puWeight_nodijet.png',
+ 'before_cut/roc_curve_puWeight.png',
+ 'before_cut/actualIntPerXing_nodijet.png',
+ 'before_cut/roc_curve_actualIntPerXing.png',
+ 'before_cut/mt_nodijet.png',
+ 'before_cut/roc_curve_mt.png',
+ 'before_cut/metsig_nodijet.png',
+ 'before_cut/roc_curve_metsig.png',
+ 'before_cut/metsigres_nodijet.png',
+ 'before_cut/roc_curve_metsigres.png',
+ 'before_cut/met_nodijet.png',
+ 'before_cut/roc_curve_met.png',
+ 'before_cut/met_noJVT_nodijet.png',
+ 'before_cut/roc_curve_met_noJVT.png',
+ 'before_cut/met_cst_nodijet.png',
+ 'before_cut/roc_curve_met_cst.png',
+ 'before_cut/met_track_nodijet.png',
+ 'before_cut/roc_curve_met_track.png',
+ 'before_cut/dmet_nodijet.png',
+ 'before_cut/roc_curve_dmet.png',
+ 'before_cut/ph_pt_nodijet.png',
+ 'before_cut/roc_curve_ph_pt.png',
+ 'before_cut/ph_eta_nodijet.png',
+ 'before_cut/roc_curve_ph_eta.png',
+ 'before_cut/ph_phi_nodijet.png',
+ 'before_cut/roc_curve_ph_phi.png',
+ 'before_cut/jet_central_eta_nodijet.png',
+ 'before_cut/roc_curve_jet_central_eta.png',
+ 'before_cut/jet_central_pt1_nodijet.png',
+ 'before_cut/roc_curve_jet_central_pt1.png',
+ 'before_cut/jet_central_pt2_nodijet.png',
+ 'before_cut/roc_curve_jet_central_pt2.png',
+ 'before_cut/jet_central_pt_nodijet.png',
+ 'before_cut/roc_curve_jet_central_pt.png',
+ 'before_cut/dphi_met_phterm_nodijet.png',
+ 'before_cut/roc_curve_dphi_met_phterm.png',
+ 'before_cut/dphi_met_ph_nodijet.png',
+ 'before_cut/roc_curve_dphi_met_ph.png',
+ 'before_cut/dphi_met_jetterm_nodijet.png',
+ 'before_cut/roc_curve_dphi_met_jetterm.png',
+ 'before_cut/dphi_phterm_jetterm_nodijet.png',
+ 'before_cut/roc_curve_dphi_phterm_jetterm.png',
+ 'before_cut/dphi_ph_centraljet1_nodijet.png',
+ 'before_cut/roc_curve_dphi_ph_centraljet1.png',
+ 'before_cut/dphi_ph_jet1_nodijet.png',
+ 'before_cut/roc_curve_dphi_ph_jet1.png',
+ 'before_cut/dphi_central_jet1_jet2_nodijet.png',
+ 'before_cut/roc_curve_dphi_central_jet1_jet2.png',
+ 'before_cut/metplusph_nodijet.png',
+ 'before_cut/roc_curve_metplusph.png',
+ 'before_cut/failJVT_jet_pt_nodijet.png',
+ 'before_cut/roc_curve_failJVT_jet_pt.png',
+ 'before_cut/failJVT_jet_pt1_nodijet.png',
+ 'before_cut/roc_curve_failJVT_jet_pt1.png',
+ 'before_cut/softerm_nodijet.png',
+ 'before_cut/roc_curve_softerm.png',
+ 'before_cut/jetterm_nodijet.png',
+ 'before_cut/roc_curve_jetterm.png',
+ 'before_cut/jetterm_sumet_nodijet.png',
+ 'before_cut/roc_curve_jetterm_sumet.png',
+ 'before_cut/n_jet_nodijet.png',
+ 'before_cut/roc_curve_n_jet.png',
+ 'before_cut/n_jet_central_nodijet.png',
+ 'before_cut/roc_curve_n_jet_central.png',
+ 'before_cut/n_jet_fwd_nodijet.png',
+ 'before_cut/roc_curve_n_jet_fwd.png',
+ 'before_cut/goodPV_nodijet.png',
+ 'before_cut/roc_curve_goodPV.png',
+ 'before_cut/dphi_met_central_jet_nodijet.png',
+ 'before_cut/roc_curve_dphi_met_central_jet.png',
+ 'before_cut/jet_central_timing1_nodijet.png',
+ 'before_cut/roc_curve_jet_central_timing1.png',
+ 'before_cut/jet_central_timing_nodijet.png',
+ 'before_cut/roc_curve_jet_central_timing.png',
+ 'before_cut/jet_central_emfrac_nodijet.png',
+ 'before_cut/roc_curve_jet_central_emfrac.png',
+ 'before_cut/balance_nodijet.png',
+ 'before_cut/roc_curve_balance.png',
+ 'before_cut/balance_sumet_nodijet.png',
+ 'before_cut/roc_curve_balance_sumet.png',
+ 'before_cut/central_jets_fraction_nodijet.png',
+ 'before_cut/roc_curve_central_jets_fraction.png',
+ 'before_cut/trigger_nodijet.png',
+ 'before_cut/roc_curve_trigger.png',
+ 'before_cut/dphi_jj_nodijet.png',
+ 'before_cut/roc_curve_dphi_jj.png']
 
         const wrapper = document.querySelector('.wrapper');
         images.forEach(img => {
