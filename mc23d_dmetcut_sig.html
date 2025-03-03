@@ -20,13 +20,13 @@
         }
         
         .filename {
-            font-size: 20px;
+            font-size: 18px;
             margin-top: 5px;
         }
     </style>
 </head>
 <body>
-    <h2>mc23d dmetcut (-10-50 GeV) Plots</h2>
+    <h2>mc23d dmetcut Plots</h2>
     <section>
         <h1> </h1>
         <div class="wrapper">
@@ -39,12 +39,6 @@
         const images = ['mc23d_dmetcut/met_nodijet.png',
  'mc23d_dmetcut/significance_met_lowercut.png',
  'mc23d_dmetcut/significance_met_uppercut.png',
- 'mc23d_dmetcut/met_cst_nodijet.png',
- 'mc23d_dmetcut/significance_met_cst_lowercut.png',
- 'mc23d_dmetcut/significance_met_cst_uppercut.png',
- 'mc23d_dmetcut/met_track_nodijet.png',
- 'mc23d_dmetcut/significance_met_track_lowercut.png',
- 'mc23d_dmetcut/significance_met_track_uppercut.png',
  'mc23d_dmetcut/ph_pt_nodijet.png',
  'mc23d_dmetcut/significance_ph_pt_lowercut.png',
  'mc23d_dmetcut/significance_ph_pt_uppercut.png',
@@ -77,7 +71,11 @@
  'mc23d_dmetcut/significance_dphi_ph_centraljet1_uppercut.png',
  'mc23d_dmetcut/mt_nodijet.png',
  'mc23d_dmetcut/significance_mt_lowercut.png',
- 'mc23d_dmetcut/significance_mt_uppercut.png']
+ 'mc23d_dmetcut/significance_mt_uppercut.png',
+ 'mc23d_dmetcut/BDTScore_nodijet.png',
+ 'mc23d_dmetcut/significance_BDTScore_lowercut.png']
+
+
         const wrapper = document.querySelector('.wrapper');
         images.forEach(img => {
             // Create a container div for the image and filename
