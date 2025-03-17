@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html id="blogs-bg" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="stylesheet" href="index.css">
+  <title>Navigation</title>
+  <style>
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      text-align: left;
+      font-family: Arial, sans-serif;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    caption {
+      margin: 10px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    
+    .bold-row td {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Dark Photon Performance Plots</h1>
+    <hr>
+  </header>
+
+  <main>
+    <div>
+      <nav class="right">
+        <ul id="slide-up">
+          <!-- <li><a href="mc23d.html">mc23d Plots</a></li> -->
+          <li><a href="mc23d_ratio.html">mc23d (Proof of consistency of plots)</a></li>
+          
+          <li><a href="mc23d.html">mc23d (after basic cut)</a></li>
+          <li><a href="mc23d_sig.html">mc23d significance vs. cut plots (after basic cut)</a></li>
+
+          <li><a href="mc23d_BDTScorecut.html">mc23d BDTScore cut Plots</a></li>
+          <li><a href="mc23d_BDTScorecut_sig.html">mc23d BDTScore cut significance Plots</a></li>
+
+          <li><a href="mc23d_metsigcut.html">mc23d metsig cut Plots</a></li>
+          <li><a href="mc23d_metsigcut_sig.html">mc23d metsig cut significance Plots</a></li>
+          
+          <li><a href="mc23d_dphi_met_phtermcut.html">mc23d dphi_met_phterm cut Plots</a></li>
+          <li><a href="mc23d_dphi_met_phtermcut_sig.html">mc23d dphi_met_phterm cut significance Plots</a></li>
+
+          <li><a href="mc23d_dmetcut.html">mc23d dmet cut Plots</a></li>
+          <li><a href="mc23d_dmetcut_sig.html">mc23d dmet cut significance Plots</a></li>
+                    
+          <li><a href="mc23d_dphi_met_jettermcut.html">mc23d dphi_met_jettermcut cut Plots</a></li>
+          <li><a href="mc23d_dphi_met_jettermcut_sig.html">mc23d dphi_met_jettermcut cut significance Plots</a></li>
+
+          <li><a href="mc23d_ph_etacut.html">mc23d ph_eta cut Plots</a></li>
+          <li><a href="mc23d_ph_etacut_sig.html">mc23d ph_eta cut significance Plots</a></li>
+
+
+          <!-- <li><a href="mc23d_metcut.html">mc23d met cut (> 80 GeV) Plots</a></li> -->
+          <!-- <li><a href="mc23d_metcut_sig.html">mc23d met cut (> 80 GeV) significance Plots</a></li> -->
+
+          <li><a href="mc23d_dphi_jjcut.html">mc23d dphi_jj cut Plots</a></li>
+          <li><a href="mc23d_dphi_jjcut_sig.html">mc23d dphi_jj cut significance Plots</a></li>
+
+          <li><a href="mc23d_mt2cut.html">mc23d 2nd mt cut (>95 GeV) Plots</a></li>
+          <li><a href="mc23d_mt2cut_sig.html">mc23d 2nd mt cut (>95 GeV) significance Plots</a></li>
+
+          <li><a href="mc23d_n-1cut_sig.html">mc23d n-1 significance Plots</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div>
+      <table>
+        <caption>All Cuts</caption>
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Cut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bold-row">
+            <td>n_ph && n_ph_baseline</td>
+            <td>1</td>
+          </tr>
+          <tr class="bold-row">
+            <td>n_mu_baseline && n_el_baseline && n_tau_baseline</td>
+            <td>0</td>
+          </tr>
+          <tr class="bold-row">
+            <td>trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M</td>
+            <td>true</td>
+          </tr>
+          <tr class="bold-row">
+            <td>met_tst_et</td>
+            <td>&gt; 50 GeV</td>
+          </tr>
+          <tr class="bold-row">
+            <td>goodPV</td>
+            <td>only signal</td>
+          </tr>
+          <tr class="bold-row">
+            <td>mt</td>
+            <td>&gt; 50 GeV</td>
+          </tr>
+          <tr>
+            <td>ph_eta</td>
+            <td>no cut</td>
+          </tr>
+          <tr>
+            <td>dphi_met_jetterm</td>
+            <td>no cut</td>
+          </tr>
+          <tr>
+            <td>ph_pt</td>
+            <td>no cut</td>
+          </tr>
+          <tr>
+            <td>met_tst_et</td>
+            <td>&gt; 80 GeV</td>
+          </tr>
+          <tr>
+            <td>dmet</td>
+            <td>-5 to 50 GeV</td>
+          </tr>
+          <tr>
+            <td>mt</td>
+            <td>70 to 170 GeV</td>
+          </tr>
+          <tr>
+            <td>metsig</td>
+            <td>5 to 18</td>
+          </tr>
+          <tr>
+            <td>dphi_jj</td>
+            <td>&lt; 2.3</td>
+          </tr>
+          <tr>
+            <td>balance</td>
+            <td>no cut</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+
+</html>
