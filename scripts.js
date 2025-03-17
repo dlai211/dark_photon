@@ -1,7 +1,7 @@
 // Define the cut configurations (same as Python's cut_config)
 const cut_config = {
     'basic': true, 'metsig': true, 'dphi_met_phterm': true, 'dmet': true,
-    'dphi_met_jetterm': true, 'ph_eta': true, 'dphi_jj': true, 'mt2': true
+    'dphi_met_jetterm': true, 'ph_eta': true, 'dphi_jj': true, 'balance': true, 'mt2': true
 };
 
 const var_config = [
@@ -24,12 +24,19 @@ const sig_config = [
     "met", "metsig", "mt", "n_jet_central", "ph_eta", "ph_pt"
 ];
 
+const n_1_config = [
+    "balance", "dmet", "dphi_jj", "dphi_met_jetterm", "dphi_met_phterm", 
+    "metsig", "mt", "ph_eta"
+];
+
+
 // Get references to DOM elements
 const ul = document.getElementById("cut-links");
 const imageContainer = document.getElementById("image-container");
 const cutTitle = document.getElementById("cut-title");
 const performanceBtn = document.getElementById("performance-btn");
 const significanceBtn = document.getElementById("significance-btn");
+const n1Btn = document.getElementById("n-1-btn");
 
 let currentMode = null;
 let currentCut = null;
@@ -39,10 +46,10 @@ let currentLumi = "26fb";
 
 // Function to generate image paths dynamically
 function generateImagePaths(cut_name, mode, lumi) {
-    if (!cut_config[cut_name]) return [];
+    if (!cut_config[cut_name] && mode !== "n-1") return [];
     
     let images = [];
-    let path = (lumi === "26fb") ? `lumi26/` : (lumi === "120fb") ? `lumi120/` : ``;
+    let path = (lumi === "26fb") ? `lumi26/` : (lumi === "135fb") ? `lumi135/` : ``;
 
     if (mode == "performance") {
         var_config.forEach((var_name) => {
@@ -54,6 +61,12 @@ function generateImagePaths(cut_name, mode, lumi) {
             images.push(path + `mc23d_${cut_name}cut/${sig_name}_nodijet.png`);
             images.push(path + `mc23d_${cut_name}cut/significance_${sig_name}_lowercut.png`);
             images.push(path + `mc23d_${cut_name}cut/significance_${sig_name}_uppercut.png`);
+        })
+    } else if (mode == "n-1") {
+        n_1_config.forEach((n_1_name) => {
+            images.push(path + `mc23d_n-1cut/${n_1_name}_nodijet.png`);
+            images.push(path + `mc23d_n-1cut/significance_${n_1_name}_lowercut.png`);
+            images.push(path + `mc23d_n-1cut/significance_${n_1_name}_uppercut.png`);
         })
     }
 
@@ -131,7 +144,11 @@ function switchMode(mode) {
     currentMode = mode;
 
     document.querySelectorAll("#mode-nav a.mode-btn").forEach(a => a.classList.remove("active"));
-    document.getElementById(mode === "performance" ? "performance-btn" : "significance-btn").classList.add("active");
+    // document.getElementById(mode === "performance" ? "performance-btn" : "significance-btn").classList.add("active");
+
+    performanceBtn.classList.toggle("active", mode === "performance");
+    significanceBtn.classList.toggle("active", mode === "significance");
+    n1Btn.classList.toggle("active", mode === "n-1");
 
     updateImages(currentCut, currentMode, currentLumi);
 }
@@ -140,27 +157,16 @@ function switchLumi(lumi) {
     currentLumi = lumi;
 
     document.querySelectorAll("#mode-nav a.lumi-btn").forEach(a => a.classList.remove("active"));
-    document.getElementById(lumi === "26fb" ? "lumi-26-btn" : "lumi-120-btn").classList.add("active");
+    document.getElementById(lumi === "26fb" ? "lumi-26-btn" : "lumi-135-btn").classList.add("active");
 
     updateImages(currentCut, currentMode, currentLumi);
 }
 
-// function switchModeLumi(mode, lumi) {
-//     currentMode = mode;
-//     currentLumi = lumi;
-
-//     document.querySelectorAll("#mode-nav a").forEach(a => a.classList.remove("active"));
-
-//     performanceBtn.classList.toggle("active", mode === "performance");
-//     significanceBtn.classList.toggle("active", mode === "significance");
-
-//     updateImages(currentCut, mode, lumi);
-// }
-
 performanceBtn.onclick = () => switchMode("performance");
 significanceBtn.onclick = () => switchMode("significance");
+n1Btn.onclick = () => switchMode("n-1");
 document.getElementById("lumi-26-btn").onclick = () => switchLumi("26fb");
-document.getElementById("lumi-120-btn").onclick = () => switchLumi("120fb");
+document.getElementById("lumi-135-btn").onclick = () => switchLumi("135fb");
 
 switchLumi("26fb");
 
