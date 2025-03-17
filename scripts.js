@@ -33,25 +33,27 @@ const significanceBtn = document.getElementById("significance-btn");
 
 let currentMode = null;
 let currentCut = null;
+let currentLumi = "26fb";
 // let currentMode = "performance";
 // let currentCut = Object.keys(cut_config)[0];
 
 // Function to generate image paths dynamically
-function generateImagePaths(cut_name, mode) {
+function generateImagePaths(cut_name, mode, lumi) {
     if (!cut_config[cut_name]) return [];
     
     let images = [];
+    let path = (lumi === "26fb") ? `lumi26/` : (lumi === "120fb") ? `lumi120/` : ``;
 
     if (mode == "performance") {
         var_config.forEach((var_name) => {
-            images.push(`mc23d_${cut_name}cut/${var_name}_nodijet.png`);
-            images.push(`mc23d_${cut_name}cut/roc_curve_${var_name}.png`);
+            images.push(path + `mc23d_${cut_name}cut/${var_name}_nodijet.png`);
+            images.push(path + `mc23d_${cut_name}cut/roc_curve_${var_name}.png`);
         })
     } else if (mode == "significance") {
         sig_config.forEach((sig_name) => {
-            images.push(`mc23d_${cut_name}cut/${sig_name}_nodijet.png`);
-            images.push(`mc23d_${cut_name}cut/significance_${sig_name}_lowercut.png`);
-            images.push(`mc23d_${cut_name}cut/significance_${sig_name}_uppercut.png`);
+            images.push(path + `mc23d_${cut_name}cut/${sig_name}_nodijet.png`);
+            images.push(path + `mc23d_${cut_name}cut/significance_${sig_name}_lowercut.png`);
+            images.push(path + `mc23d_${cut_name}cut/significance_${sig_name}_uppercut.png`);
         })
     }
 
@@ -59,7 +61,7 @@ function generateImagePaths(cut_name, mode) {
 }
 
 // Function to update images based on selected cut
-function updateImages(cut_name, mode) {
+function updateImages(cut_name, mode, lumi) {
     cutTitle.textContent = `mc23d ${cut_name} cut ${mode} plots`;
     imageContainer.innerHTML = "";
 
@@ -72,7 +74,7 @@ function updateImages(cut_name, mode) {
     imageContainer.style.display = "grid";
     imageContainer.style.gridTemplateColumns = `repeat(${imagesPerRow}, 1fr)`;
 
-    const images = generateImagePaths(cut_name, mode);
+    const images = generateImagePaths(cut_name, mode, lumi);
     images.forEach((img) => {
         const container = document.createElement('div');
         container.className = 'image-container';
@@ -106,7 +108,7 @@ Object.keys(cut_config).forEach((cut, index, array) => {
     a.dataset.cut = cut;
     a.onclick = () => {
         currentCut = cut;
-        updateImages(currentCut, currentMode);
+        updateImages(currentCut, currentMode, currentLumi);
     }
     a.style.margin = "0 5px"; // Add some spacing
 
@@ -125,38 +127,44 @@ li.appendChild(document.createTextNode(" cut"));
 ul.appendChild(li);
 
 
-
 function switchMode(mode) {
     currentMode = mode;
-    document.querySelectorAll("#mode-nav a").forEach(a => a.classList.remove("active"));
 
-    performanceBtn.classList.toggle("active", mode === "performance");
-    significanceBtn.classList.toggle("active", mode === "significance");
+    document.querySelectorAll("#mode-nav a.mode-btn").forEach(a => a.classList.remove("active"));
+    document.getElementById(mode === "performance" ? "performance-btn" : "significance-btn").classList.add("active");
 
-    updateImages(currentCut, mode);
+    updateImages(currentCut, currentMode, currentLumi);
 }
+
+function switchLumi(lumi) {
+    currentLumi = lumi;
+
+    document.querySelectorAll("#mode-nav a.lumi-btn").forEach(a => a.classList.remove("active"));
+    document.getElementById(lumi === "26fb" ? "lumi-26-btn" : "lumi-120-btn").classList.add("active");
+
+    updateImages(currentCut, currentMode, currentLumi);
+}
+
+// function switchModeLumi(mode, lumi) {
+//     currentMode = mode;
+//     currentLumi = lumi;
+
+//     document.querySelectorAll("#mode-nav a").forEach(a => a.classList.remove("active"));
+
+//     performanceBtn.classList.toggle("active", mode === "performance");
+//     significanceBtn.classList.toggle("active", mode === "significance");
+
+//     updateImages(currentCut, mode, lumi);
+// }
 
 performanceBtn.onclick = () => switchMode("performance");
 significanceBtn.onclick = () => switchMode("significance");
+document.getElementById("lumi-26-btn").onclick = () => switchLumi("26fb");
+document.getElementById("lumi-120-btn").onclick = () => switchLumi("120fb");
 
+switchLumi("26fb");
 
 // // Modal Function
-// function openModal(src) {
-//     document.getElementById("modal-img").src = src;
-//     document.getElementById("image-modal").style.display = "flex";
-// }
-
-// // Close Modal When Clicking Outside Image
-// document.querySelector(".close").onclick = function () {
-//     document.getElementById("image-modal").style.display = "none";
-// };
-
-// document.getElementById("image-modal").onclick = function (event) {
-//     if (event.target === this) {
-//         this.style.display = "none";
-//     }
-// };
-
 function openModal(src) {
     const modal = document.getElementById("image-modal");
     document.getElementById("modal-img").src = src;
