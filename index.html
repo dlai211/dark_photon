@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark Photon Performance Plots</title>
-    <link rel="stylesheet" href="tmp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Dark Photon Performance Plots</h1>
@@ -30,7 +31,6 @@
             <li><a href="#" id="lumi-135-btn" class="lumi-btn">Lumi: 135 fb⁻¹</a></li>
 
 
-
         </ul>
         <!-- <ul id="cut-links"></ul> -->
     </nav>
@@ -49,10 +49,27 @@
         <img class="modal-content" id="modal-img">
     </div>
 
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <h3>Test Plots</h3>
+    <ul>
+        <li><a href="index.html" id="main-btn" class="active">main</a></li>
+        <li><a href="index2.html" id="test-btn">dphi_met_phterm - dphi_met_jetterm</a></li>
+        <li><a href="2dview.html?script=2d" id="test-btn">2D plots</a></li>
+        <li><a href="2dview.html?script=phjet" id="test-btn">ph_jet</a></li>
+    </ul>
+    </div>
+
+    <div id="sidebar-toggle"><i class="fas fa-angle-right"></i></div>
+
+
     <!-- <footer>
         &copy; 2025 Dark Photon Project
     </footer> -->
 
-    <script src="scripts.js"></script>
+    <script src="config.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
