@@ -57,3 +57,38 @@ function generateImagePaths(cut_name, mode, lumi) {
 
     return images;
 }
+
+// Function to update images based on selected cut
+function updateImages(cut_name, mode, lumi) {
+    cutTitle.textContent = `mc23d ${cut_name} cut ${mode} plots`;
+    imageContainer.innerHTML = "";
+
+    // Highlight the selected cut name
+    document.querySelectorAll("#cut-nav a").forEach(a => a.classList.remove("active"));
+    document.querySelectorAll(`a[data-cut='${cut_name}']`).forEach(a => a.classList.add("active"));
+
+    // Determine the number of images per row
+    let imagesPerRow = mode === "performance" ? 4 : 3;
+    imageContainer.style.display = "grid";
+    imageContainer.style.gridTemplateColumns = `repeat(${imagesPerRow}, 1fr)`;
+
+    const images = generateImagePaths(cut_name, mode, lumi);
+    images.forEach((img) => {
+        const container = document.createElement('div');
+        container.className = 'image-container';
+
+        const imgElement = document.createElement('img');
+        imgElement.src = img;
+        imgElement.alt = img.split('/').pop();
+        imgElement.onclick = () => openModal(img); // click to zoom
+
+        const filename = document.createElement('p');
+        filename.className = 'filename';
+        filename.textContent = img.split('/').pop();
+
+        container.appendChild(imgElement);
+        container.appendChild(filename);
+        imageContainer.appendChild(container);
+
+    })
+}
