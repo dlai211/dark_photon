@@ -31,8 +31,24 @@ document.addEventListener("click", function (event) {
 document.querySelectorAll("#sidebar a").forEach(link => {
     const currentUrl = window.location.href;
     const linkHref = new URL(link.href, document.baseURI).href;
-  
+
     if (currentUrl === linkHref) {
       link.classList.add("active");
     }
-  });
+    link.addEventListener("click", () => {
+        // window.location.reload();
+        const href = link.getAttribute("href");
+        window.location.href = href;
+        window.location.reload();
+    });
+});
+// document.querySelectorAll("#sidebar a").forEach(link => {
+//     link.addEventListener("click", (e) => {
+//         e.preventDefault();  // stop default link behavior
+//         const href = link.getAttribute("href");
+
+//         // Set location to force reload even if hash is same
+//         window.location.href = href;
+//         window.location.reload();  // ✅ force full reload
+//     });
+// });

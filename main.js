@@ -1,4 +1,6 @@
-
+// different config.js based on the link
+const hash = window.location.hash.replace('#', '');
+console.log("Hash from URL: ", hash);
 
 // Get references to DOM elements
 const ul = document.getElementById("cut-links");
@@ -10,44 +12,9 @@ const n1Btn = document.getElementById("n-1-btn");
 
 let currentMode = null;
 let currentCut = null;
-let currentLumi = "26fb";
+let currentLumi = "135fb";
 // let currentMode = "performance";
 // let currentCut = Object.keys(cut_config)[0];
-
-// Function to update images based on selected cut
-function updateImages(cut_name, mode, lumi) {
-    cutTitle.textContent = `mc23d ${cut_name} cut ${mode} plots`;
-    imageContainer.innerHTML = "";
-
-    // Highlight the selected cut name
-    document.querySelectorAll("#cut-nav a").forEach(a => a.classList.remove("active"));
-    document.querySelectorAll(`a[data-cut='${cut_name}']`).forEach(a => a.classList.add("active"));
-
-    // Determine the number of images per row
-    let imagesPerRow = mode === "performance" ? 4 : 3;
-    imageContainer.style.display = "grid";
-    imageContainer.style.gridTemplateColumns = `repeat(${imagesPerRow}, 1fr)`;
-
-    const images = generateImagePaths(cut_name, mode, lumi);
-    images.forEach((img) => {
-        const container = document.createElement('div');
-        container.className = 'image-container';
-
-        const imgElement = document.createElement('img');
-        imgElement.src = img;
-        imgElement.alt = img.split('/').pop();
-        imgElement.onclick = () => openModal(img); // click to zoom
-
-        const filename = document.createElement('p');
-        filename.className = 'filename';
-        filename.textContent = img.split('/').pop();
-
-        container.appendChild(imgElement);
-        container.appendChild(filename);
-        imageContainer.appendChild(container);
-
-    })
-}
 
 // Create a single nav entry with all cut names, making each cut name clickable
 const li = document.createElement("li");
@@ -109,7 +76,7 @@ n1Btn.onclick = () => switchMode("n-1");
 document.getElementById("lumi-26-btn").onclick = () => switchLumi("26fb");
 document.getElementById("lumi-135-btn").onclick = () => switchLumi("135fb");
 
-switchLumi("26fb");
+switchLumi("135fb");
 
 // // Modal Function
 function openModal(src) {

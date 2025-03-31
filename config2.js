@@ -1,7 +1,7 @@
 // Define the cut configurations (same as Python's cut_config)
 const cut_config = {
     'basic': true, 'metsig': true, 'dphi_met_phterm': true, 'dmet': true,
-    'dphi_met_jetterm': true, 'ph_eta': true, 'dphi_jj': true, 'balance': true, 'mt2': true
+    'dphi_met_jetterm': true, 'ph_eta': true, 'dphi_jj': true, 'balance': true
 };
 
 const var_config = [
@@ -26,7 +26,7 @@ const sig_config = [
 
 const n_1_config = [
     "balance", "dmet", "dphi_jj", "dphi_met_jetterm", "dphi_met_phterm", 
-    "metsig", "mt", "ph_eta"
+    "metsig", "ph_eta"
 ];
 
 // Function to generate image paths dynamically
@@ -34,7 +34,7 @@ function generateImagePaths(cut_name, mode, lumi) {
     if (!cut_config[cut_name] && mode !== "n-1") return [];
     
     let images = [];
-    let path = (lumi === "26fb") ? `main/lumi26/` : (lumi === "135fb") ? `main/lumi135/` : ``;
+    let path = (lumi === "26fb") ? `test/lumi26/` : (lumi === "135fb") ? `test/lumi135/` : ``;
 
     if (mode == "performance") {
         var_config.forEach((var_name) => {
@@ -56,4 +56,39 @@ function generateImagePaths(cut_name, mode, lumi) {
     }
 
     return images;
+}
+
+// Function to update images based on selected cut
+function updateImages(cut_name, mode, lumi) {
+    cutTitle.textContent = `mc23d ${cut_name} cut ${mode} plots`;
+    imageContainer.innerHTML = "";
+
+    // Highlight the selected cut name
+    document.querySelectorAll("#cut-nav a").forEach(a => a.classList.remove("active"));
+    document.querySelectorAll(`a[data-cut='${cut_name}']`).forEach(a => a.classList.add("active"));
+
+    // Determine the number of images per row
+    let imagesPerRow = mode === "performance" ? 4 : 3;
+    imageContainer.style.display = "grid";
+    imageContainer.style.gridTemplateColumns = `repeat(${imagesPerRow}, 1fr)`;
+
+    const images = generateImagePaths(cut_name, mode, lumi);
+    images.forEach((img) => {
+        const container = document.createElement('div');
+        container.className = 'image-container';
+
+        const imgElement = document.createElement('img');
+        imgElement.src = img;
+        imgElement.alt = img.split('/').pop();
+        imgElement.onclick = () => openModal(img); // click to zoom
+
+        const filename = document.createElement('p');
+        filename.className = 'filename';
+        filename.textContent = img.split('/').pop();
+
+        container.appendChild(imgElement);
+        container.appendChild(filename);
+        imageContainer.appendChild(container);
+
+    })
 }
