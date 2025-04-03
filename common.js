@@ -6,7 +6,7 @@ console.log("Hash from URL: ", hash);
 const imageContainer = document.getElementById("image-container");
 const cutTitle = document.getElementById("cut-title");
 const imageData = imageMap[hash] || { images: [], title: 'No plots found' };
-let imagesPerRow = 2; // Default number of images per row
+let imagesPerRow = imageData.imagesPerRow || 2; // Default to 2 if not set
 
 // Function to update images based on selected cut
 function updateImages() {
@@ -14,7 +14,7 @@ function updateImages() {
     cutTitle.textContent = imageData.title;
 
     imageContainer.style.display = "grid";
-    imageContainer.style.gridTemplateColumns = `repeat(${imagesPerRow}, 1fr)`;
+    imageContainer.style.gridTemplateColumns = `repeat(imagesPerRow, 1fr)`;
 
     const images = imageData.images.map(file => `${imageData.path}/${file}`);
     images.forEach((img) => {
