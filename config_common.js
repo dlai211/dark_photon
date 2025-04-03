@@ -58,11 +58,13 @@ const imageMap = {
     "phjet": {
         images: image1,
         path: 'test/wzstudy',
+        imagesPerRow: 2, // Number of images to display per row
         title: 'Study of dphi_met_ph - dphi_met_central_jet'
     },
     "2d": {
         images: image2,
         path: 'test/2d_plots',
+        imagesPerRow: 3,
         title: '2D plots of dphi_met_phterm, dphi_met_jetterm, dphi_met'
     }
 };  
