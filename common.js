@@ -14,7 +14,7 @@ function updateImages() {
     cutTitle.textContent = imageData.title;
 
     imageContainer.style.display = "grid";
-    imageContainer.style.gridTemplateColumns = `repeat(imagesPerRow, 1fr)`;
+    imageContainer.style.gridTemplateColumns = `repeat(${imagesPerRow}, 1fr)`;
 
     const images = imageData.images.map(file => `${imageData.path}/${file}`);
     images.forEach((img) => {
