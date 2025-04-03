@@ -39,8 +39,17 @@ function updateImages() {
 
 updateImages();
 
+document.querySelectorAll('.mode-btn').forEach(btn => {
+    if (parseInt(btn.textContent) === imagesPerRow) {
+        btn.classList.add('active');
+    } else {
+        btn.classList.remove('active');
+    }
+});
+
 // Change the images per row based on the mode selected 
 document.querySelectorAll('.mode-btn').forEach(btn => {
+
     btn.addEventListener('click', (e) => {
         e.preventDefault();
         imagesPerRow = parseInt(btn.textContent);
