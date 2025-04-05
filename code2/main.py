@@ -1,8 +1,8 @@
 
-# UNFINISHED
+# script to save the signal and background in root file after selection cuts.
 
 # import modules
-import uproot, sys, time
+import uproot, sys, time, ROOT
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -18,39 +18,24 @@ import matplotlib.ticker as ticker
 from config import variables, ntuple_name, ntuple_name_BDT
 from utils import getWeight, getCutDict, getSampleDict, getVarDict, anyNone
 
-# Set up plot defaults
-import matplotlib as mpl
-mpl.rcParams['figure.figsize'] = 14.0,10.0  # Roughly 11 cm wde by 8 cm high
-mpl.rcParams['font.size'] = 20.0 # Use 14 point font
-sns.set(style="whitegrid")
-
-font_size = {
-    "xlabel": 17,
-    "ylabel": 17,
-    "xticks": 15,
-    "yticks": 15,
-    "legend": 18
-}
-
-plt.rcParams.update({
-    "axes.labelsize": font_size["xlabel"],  # X and Y axis labels
-    "xtick.labelsize": font_size["xticks"],  # X ticks
-    "ytick.labelsize": font_size["yticks"],  # Y ticks
-    "legend.fontsize": font_size["legend"]  # Legend
-})
-
-
 if __name__ == '__main__':
 
-    tot = []
-    data = pd.DataFrame()
-    unweighted_bcut, weighted_bcut, unweighted_acut, weighted_acut = [], [], [], []
+    f_signal_out = ROOT.TFile("/data/jlai/ntups/mc23d/ggHyyd_y_selected.root", "RECREATE")
+    f_bkg_out = ROOT.TFile("/data/jlai/ntups/mc23d/background_y_selected.root", "RECREATE")
 
-    for i in range(len(ntuple_name)):
-        cut = []
-        start_time = time.time()
-        path = f"/data/tmathew/ntups/mc23d/{ntuple_name[i]}_y.root" 
+    tree_signal_out = None 
+    tree_bkg_out = None
+
+    for i, name in enumerate(ntuple_name):
+        path = f"/data/tmathew/ntups/mc23d/{name}_y.root" 
+        f_in = ROOT.TFile.Open(path, "READ")
+        t_in = f_in.Get("nominal")
+
         path_BDT = f"/data/fpiazza/ggHyyd/Ntuples/MC23d/withVertexBDT/mc23d_{ntuple_name_BDT[i]}_y_BDT_score.root" 
+        f_in_BDT = ROOT.TFile.Open(path_BDT, "READ")
+        t_in_BDT = f_in_BDT.Get("nominal")
+
+
         print('processing file: ', path)
         f = uproot.open(path)['nominal']
         fb = f.arrays(variables, library="ak")
@@ -97,43 +82,43 @@ if __name__ == '__main__':
         fb = fb[fb['BDTScore'] >= 0.1] # added cut 1
         cut.append(len(fb))
 
-        # metsig_tmp = fb['met_tst_sig'] # added cut 2 
-        # mask1 = metsig_tmp >= 7
-        # mask2 = metsig_tmp <= 16
-        # fb = fb[mask1 * mask2]
-        # cut.append(len(fb))
+        metsig_tmp = fb['met_tst_sig'] # added cut 2 
+        mask1 = metsig_tmp >= 7
+        mask2 = metsig_tmp <= 16
+        fb = fb[mask1 * mask2]
+        cut.append(len(fb))
 
-        # dphi_met_phterm_tmp = np.arccos(np.cos(fb['met_tst_phi'] - fb['met_phterm_phi'])) # added cut 3
-        # fb = fb[dphi_met_phterm_tmp >= 1.3]
-        # cut.append(len(fb))
+        dphi_met_phterm_tmp = np.arccos(np.cos(fb['met_tst_phi'] - fb['met_phterm_phi'])) # added cut 3
+        fb = fb[dphi_met_phterm_tmp >= 1.3]
+        cut.append(len(fb))
 
-        # dmet_tmp = fb['met_tst_noJVT_et'] - fb['met_tst_et'] # added cut 4
-        # mask1 = dmet_tmp >= -20000
-        # mask2 = dmet_tmp <= 50000
-        # fb = fb[mask1 * mask2]
-        # cut.append(len(fb))
+        dmet_tmp = fb['met_tst_noJVT_et'] - fb['met_tst_et'] # added cut 4
+        mask1 = dmet_tmp >= -20000
+        mask2 = dmet_tmp <= 50000
+        fb = fb[mask1 * mask2]
+        cut.append(len(fb))
 
-        # dphi_met_jetterm_tmp = np.where(fb['met_jetterm_et'] != 0,   # added cut 5
-        #                         np.arccos(np.cos(fb['met_tst_phi'] - fb['met_jetterm_phi'])),
-        #                         -999)
-        # fb = fb[dphi_met_jetterm_tmp <= 0.75]
+        dphi_met_jetterm_tmp = np.where(fb['met_jetterm_et'] != 0,   # added cut 5
+                                np.arccos(np.cos(fb['met_tst_phi'] - fb['met_jetterm_phi'])),
+                                -999)
+        fb = fb[dphi_met_jetterm_tmp <= 0.75]
 
-        # ph_eta_tmp = np.abs(ak.firsts(fb['ph_eta'])) # added cut 6
-        # fb = fb[ph_eta_tmp <= 1.75]
+        ph_eta_tmp = np.abs(ak.firsts(fb['ph_eta'])) # added cut 6
+        fb = fb[ph_eta_tmp <= 1.75]
         
-        # # dphi_ph_centraljet1_tmp = np.arccos(np.cos(ak.firsts(fb['ph_phi']) - ak.firsts(fb['jet_central_phi']))) # added cut 4
-        # # dphi_ph_centraljet1_tmp = ak.fill_none(dphi_ph_centraljet1_tmp, -999)
-        # # valid_mask = dphi_ph_centraljet1_tmp != -999 # keeping -999 values
-        # # dphi_ph_centraljet1 = ak.mask(dphi_ph_centraljet1_tmp, (dphi_ph_centraljet1_tmp >= 1.5) | ~valid_mask)
-        # # fb = fb[~ak.is_none(dphi_ph_centraljet1)]
-        # # cut.append(len(fb))
-
-        # phi1_tmp = ak.firsts(fb['jet_central_phi']) # added cut 7
-        # phi2_tmp = ak.mask(fb['jet_central_phi'], ak.num(fb['jet_central_phi']) >= 2)[:, 1] 
-        # dphi_tmp = np.arccos(np.cos(phi1_tmp - phi2_tmp))
-        # dphi_jj_tmp = ak.fill_none(dphi_tmp, -1)
-        # fb = fb[dphi_jj_tmp <= 2.5]
+        # dphi_ph_centraljet1_tmp = np.arccos(np.cos(ak.firsts(fb['ph_phi']) - ak.firsts(fb['jet_central_phi']))) # added cut 4
+        # dphi_ph_centraljet1_tmp = ak.fill_none(dphi_ph_centraljet1_tmp, -999)
+        # valid_mask = dphi_ph_centraljet1_tmp != -999 # keeping -999 values
+        # dphi_ph_centraljet1 = ak.mask(dphi_ph_centraljet1_tmp, (dphi_ph_centraljet1_tmp >= 1.5) | ~valid_mask)
+        # fb = fb[~ak.is_none(dphi_ph_centraljet1)]
         # cut.append(len(fb))
+
+        phi1_tmp = ak.firsts(fb['jet_central_phi']) # added cut 7
+        phi2_tmp = ak.mask(fb['jet_central_phi'], ak.num(fb['jet_central_phi']) >= 2)[:, 1] 
+        dphi_tmp = np.arccos(np.cos(phi1_tmp - phi2_tmp))
+        dphi_jj_tmp = ak.fill_none(dphi_tmp, -1)
+        fb = fb[dphi_jj_tmp <= 2.5]
+        cut.append(len(fb))
 
 
         print("Unweighted Events after cut: ", len(fb))
