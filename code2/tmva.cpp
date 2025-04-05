@@ -35,7 +35,7 @@ int main() {
     // Transofmrations on input variables -> Identity (I), Descorrletation (D), PCA (P), Uniform(U), Gaussian (G)
     // AnalysisType -> Classification, Regression, Multiclass, Auto
     TMVA::Factory* factory = new TMVA::Factory("TMVAClassification", outputFile,
-        "!V:!Silent:Color:DrawProgressBar:AnalysisType=Classification:Transformations=I;D;P;G");
+        "!V:!Silent:Color:DrawProgressBar:AnalysisType=Classification:Transformations=I");
 
     TMVA::DataLoader *dataloader = new TMVA::DataLoader("dataset");
 
