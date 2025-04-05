@@ -4,11 +4,11 @@
     <Info name="TMVA Release" value="4.2.1 [262657]"/>
     <Info name="ROOT Release" value="6.32/08 [401416]"/>
     <Info name="Creator" value="jlai"/>
-    <Info name="Date" value="Fri Apr  4 22:34:24 2025"/>
+    <Info name="Date" value="Fri Apr  4 22:37:27 2025"/>
     <Info name="Host" value="Linux alma9-docker 4.18.0-553.el8_10.x86_64 #1 SMP Fri May 24 08:32:12 EDT 2024 x86_64 x86_64 x86_64 GNU/Linux"/>
     <Info name="Dir" value="/data/jlai/dark_photon/code2"/>
     <Info name="Training events" value="27085"/>
-    <Info name="TrainingTime" value="3.26513600e+00"/>
+    <Info name="TrainingTime" value="3.26510596e+00"/>
     <Info name="AnalysisType" value="Classification"/>
   </GeneralInfo>
   <Options>
