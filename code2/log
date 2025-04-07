@@ -4,7 +4,7 @@ DataSetInfo              : [dataset] : Added class "Signal"
                          : Add Tree nominal of type Signal with 2147 events
 DataSetInfo              : [dataset] : Added class "Background"
                          : Add Tree nominal of type Background with 68591 events
-Factory                  : Booking method: [1mBDT[0m
+Factory                  : Booking method: [1mBDT_Depth2_Trees100[0m
                          : 
                          : Rebuilding Dataset dataset
                          : Building event vectors for type 2 Signal
@@ -101,6 +101,40 @@ DataSetInfo              : Correlation matrix (Background):
                          : -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 DataSetFactory           : [dataset] :  
                          : 
+Booked method: BDT_Depth2_Trees100 with options: !H:!V:NTrees=100:MaxDepth=2:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
+Factory                  : Booking method: [1mBDT_Depth2_Trees200[0m
+                         : 
+Booked method: BDT_Depth2_Trees200 with options: !H:!V:NTrees=200:MaxDepth=2:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
+Factory                  : Booking method: [1mBDT_Depth2_Trees300[0m
+                         : 
+Booked method: BDT_Depth2_Trees300 with options: !H:!V:NTrees=300:MaxDepth=2:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
+Factory                  : Booking method: [1mBDT_Depth3_Trees100[0m
+                         : 
+Booked method: BDT_Depth3_Trees100 with options: !H:!V:NTrees=100:MaxDepth=3:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
+Factory                  : Booking method: [1mBDT_Depth3_Trees200[0m
+                         : 
+Booked method: BDT_Depth3_Trees200 with options: !H:!V:NTrees=200:MaxDepth=3:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
+Factory                  : Booking method: [1mBDT_Depth3_Trees300[0m
+                         : 
+Booked method: BDT_Depth3_Trees300 with options: !H:!V:NTrees=300:MaxDepth=3:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
+Factory                  : Booking method: [1mBDT_Depth4_Trees100[0m
+                         : 
+Booked method: BDT_Depth4_Trees100 with options: !H:!V:NTrees=100:MaxDepth=4:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
+Factory                  : Booking method: [1mBDT_Depth4_Trees200[0m
+                         : 
+Booked method: BDT_Depth4_Trees200 with options: !H:!V:NTrees=200:MaxDepth=4:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
+Factory                  : Booking method: [1mBDT_Depth4_Trees300[0m
+                         : 
+Booked method: BDT_Depth4_Trees300 with options: !H:!V:NTrees=300:MaxDepth=4:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
+Factory                  : Booking method: [1mBDT_Depth5_Trees100[0m
+                         : 
+Booked method: BDT_Depth5_Trees100 with options: !H:!V:NTrees=100:MaxDepth=5:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
+Factory                  : Booking method: [1mBDT_Depth5_Trees200[0m
+                         : 
+Booked method: BDT_Depth5_Trees200 with options: !H:!V:NTrees=200:MaxDepth=5:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
+Factory                  : Booking method: [1mBDT_Depth5_Trees300[0m
+                         : 
+Booked method: BDT_Depth5_Trees300 with options: !H:!V:NTrees=300:MaxDepth=5:BoostType=AdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20
 Factory                  : [1mTrain all methods[0m
 Factory                  : [dataset] : Create Transformation "I" with events from all classes.
                          : 
@@ -200,11 +234,199 @@ IdTransformation         : Ranking result (top variable is best ranked)
                          :   24 : dphi_ph_centraljet1  : 7.775e-04
                          :   25 : jet_central_eta      : 1.974e-04
                          : ---------------------------------------------
-Factory                  : Train method: BDT for Classification
+Factory                  : Train method: BDT_Depth2_Trees100 for Classification
                          : 
 <WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
                          : Events with weight == 0 are going to be simply ignored 
-BDT                      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+BDT_Depth2_Trees100      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+                         : #events: (unweighted) sig: 1050 bkg: 25651
+                         : Training 100 Decision Trees ... patience please
+1%, time left: unknown
+8%, time left: 1 sec
+14%, time left: 0 sec
+20%, time left: 0 sec
+26%, time left: 0 sec
+33%, time left: 0 sec
+39%, time left: 0 sec
+45%, time left: 0 sec
+51%, time left: 0 sec
+58%, time left: 0 sec
+64%, time left: 0 sec
+70%, time left: 0 sec
+76%, time left: 0 sec
+83%, time left: 0 sec
+89%, time left: 0 sec
+95%, time left: 0 sec
+                         : Elapsed time for training with 27085 events: 1.32 sec         
+BDT_Depth2_Trees100      : [dataset] : Evaluation of BDT_Depth2_Trees100 on training sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.0751 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth2_Trees100.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth2_Trees100.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth2_Trees100
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDT_Depth2_Trees200 for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT_Depth2_Trees200      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+                         : #events: (unweighted) sig: 1050 bkg: 25651
+                         : Training 200 Decision Trees ... patience please
+0%, time left: unknown
+7%, time left: 2 sec
+13%, time left: 1 sec
+19%, time left: 1 sec
+25%, time left: 1 sec
+32%, time left: 1 sec
+38%, time left: 1 sec
+44%, time left: 1 sec
+50%, time left: 1 sec
+57%, time left: 0 sec
+63%, time left: 0 sec
+69%, time left: 0 sec
+75%, time left: 0 sec
+82%, time left: 0 sec
+88%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for training with 27085 events: 2.45 sec         
+BDT_Depth2_Trees200      : [dataset] : Evaluation of BDT_Depth2_Trees200 on training sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.165 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth2_Trees200.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth2_Trees200.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth2_Trees200
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDT_Depth2_Trees300 for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT_Depth2_Trees300      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+                         : #events: (unweighted) sig: 1050 bkg: 25651
+                         : Training 300 Decision Trees ... patience please
+0%, time left: unknown
+6%, time left: 3 sec
+13%, time left: 2 sec
+19%, time left: 2 sec
+25%, time left: 2 sec
+31%, time left: 2 sec
+38%, time left: 2 sec
+44%, time left: 1 sec
+50%, time left: 1 sec
+56%, time left: 1 sec
+63%, time left: 1 sec
+69%, time left: 1 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+88%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for training with 27085 events: 3.63 sec         
+BDT_Depth2_Trees300      : [dataset] : Evaluation of BDT_Depth2_Trees300 on training sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.268 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth2_Trees300.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth2_Trees300.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth2_Trees300
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDT_Depth3_Trees100 for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT_Depth3_Trees100      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+                         : #events: (unweighted) sig: 1050 bkg: 25651
+                         : Training 100 Decision Trees ... patience please
+1%, time left: unknown
+8%, time left: 1 sec
+14%, time left: 1 sec
+20%, time left: 1 sec
+26%, time left: 1 sec
+33%, time left: 1 sec
+39%, time left: 0 sec
+45%, time left: 0 sec
+51%, time left: 0 sec
+58%, time left: 0 sec
+64%, time left: 0 sec
+70%, time left: 0 sec
+76%, time left: 0 sec
+83%, time left: 0 sec
+89%, time left: 0 sec
+95%, time left: 0 sec
+                         : Elapsed time for training with 27085 events: 1.75 sec         
+BDT_Depth3_Trees100      : [dataset] : Evaluation of BDT_Depth3_Trees100 on training sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.112 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth3_Trees100.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth3_Trees100.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth3_Trees100
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDT_Depth3_Trees200 for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT_Depth3_Trees200      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
                          : #events: (unweighted) sig: 1050 bkg: 25651
                          : Training 200 Decision Trees ... patience please
 0%, time left: unknown
@@ -223,8 +445,8 @@ BDT                      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
 82%, time left: 0 sec
 88%, time left: 0 sec
 94%, time left: 0 sec
-                         : Elapsed time for training with 27085 events: 3.27 sec         
-BDT                      : [dataset] : Evaluation of BDT on training sample (27085 events)
+                         : Elapsed time for training with 27085 events: 3.34 sec         
+BDT_Depth3_Trees200      : [dataset] : Evaluation of BDT_Depth3_Trees200 on training sample (27085 events)
 0%, time left: unknown
 6%, time left: 0 sec
 12%, time left: 0 sec
@@ -242,13 +464,462 @@ BDT                      : [dataset] : Evaluation of BDT on training sample (270
 87%, time left: 0 sec
 94%, time left: 0 sec
                          : Elapsed time for evaluation of 27085 events: 0.249 sec       
-                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT.weights.xml[0m
-                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT.class.C[0m
-                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth3_Trees200.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth3_Trees200.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth3_Trees200
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDT_Depth3_Trees300 for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT_Depth3_Trees300      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+                         : #events: (unweighted) sig: 1050 bkg: 25651
+                         : Training 300 Decision Trees ... patience please
+0%, time left: unknown
+6%, time left: 4 sec
+13%, time left: 4 sec
+19%, time left: 3 sec
+25%, time left: 3 sec
+31%, time left: 3 sec
+38%, time left: 2 sec
+44%, time left: 2 sec
+50%, time left: 2 sec
+56%, time left: 2 sec
+63%, time left: 1 sec
+69%, time left: 1 sec
+75%, time left: 1 sec
+81%, time left: 0 sec
+88%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for training with 27085 events: 4.94 sec         
+BDT_Depth3_Trees300      : [dataset] : Evaluation of BDT_Depth3_Trees300 on training sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.441 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth3_Trees300.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth3_Trees300.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth3_Trees300
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDT_Depth4_Trees100 for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT_Depth4_Trees100      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+                         : #events: (unweighted) sig: 1050 bkg: 25651
+                         : Training 100 Decision Trees ... patience please
+1%, time left: unknown
+8%, time left: 1 sec
+14%, time left: 1 sec
+20%, time left: 1 sec
+26%, time left: 1 sec
+33%, time left: 1 sec
+39%, time left: 1 sec
+45%, time left: 1 sec
+51%, time left: 0 sec
+58%, time left: 0 sec
+64%, time left: 0 sec
+70%, time left: 0 sec
+76%, time left: 0 sec
+83%, time left: 0 sec
+89%, time left: 0 sec
+95%, time left: 0 sec
+                         : Elapsed time for training with 27085 events: 2.09 sec         
+BDT_Depth4_Trees100      : [dataset] : Evaluation of BDT_Depth4_Trees100 on training sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.146 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth4_Trees100.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth4_Trees100.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth4_Trees100
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDT_Depth4_Trees200 for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT_Depth4_Trees200      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+                         : #events: (unweighted) sig: 1050 bkg: 25651
+                         : Training 200 Decision Trees ... patience please
+0%, time left: unknown
+7%, time left: 3 sec
+13%, time left: 3 sec
+19%, time left: 2 sec
+25%, time left: 2 sec
+32%, time left: 2 sec
+38%, time left: 2 sec
+44%, time left: 2 sec
+50%, time left: 1 sec
+57%, time left: 1 sec
+63%, time left: 1 sec
+69%, time left: 1 sec
+75%, time left: 0 sec
+82%, time left: 0 sec
+88%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for training with 27085 events: 4.07 sec         
+BDT_Depth4_Trees200      : [dataset] : Evaluation of BDT_Depth4_Trees200 on training sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.341 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth4_Trees200.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth4_Trees200.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth4_Trees200
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDT_Depth4_Trees300 for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT_Depth4_Trees300      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+                         : #events: (unweighted) sig: 1050 bkg: 25651
+                         : Training 300 Decision Trees ... patience please
+0%, time left: unknown
+6%, time left: 5 sec
+13%, time left: 4 sec
+19%, time left: 4 sec
+25%, time left: 4 sec
+31%, time left: 3 sec
+38%, time left: 3 sec
+44%, time left: 3 sec
+50%, time left: 2 sec
+56%, time left: 2 sec
+63%, time left: 2 sec
+69%, time left: 1 sec
+75%, time left: 1 sec
+81%, time left: 1 sec
+88%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for training with 27085 events: 5.99 sec         
+BDT_Depth4_Trees300      : [dataset] : Evaluation of BDT_Depth4_Trees300 on training sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.546 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth4_Trees300.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth4_Trees300.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth4_Trees300
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDT_Depth5_Trees100 for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT_Depth5_Trees100      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+                         : #events: (unweighted) sig: 1050 bkg: 25651
+                         : Training 100 Decision Trees ... patience please
+1%, time left: unknown
+8%, time left: 1 sec
+14%, time left: 1 sec
+20%, time left: 1 sec
+26%, time left: 1 sec
+33%, time left: 1 sec
+39%, time left: 1 sec
+45%, time left: 1 sec
+51%, time left: 1 sec
+58%, time left: 0 sec
+64%, time left: 0 sec
+70%, time left: 0 sec
+76%, time left: 0 sec
+83%, time left: 0 sec
+89%, time left: 0 sec
+95%, time left: 0 sec
+                         : Elapsed time for training with 27085 events: 2.3 sec         
+BDT_Depth5_Trees100      : [dataset] : Evaluation of BDT_Depth5_Trees100 on training sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.165 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth5_Trees100.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth5_Trees100.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth5_Trees100
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDT_Depth5_Trees200 for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT_Depth5_Trees200      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+                         : #events: (unweighted) sig: 1050 bkg: 25651
+                         : Training 200 Decision Trees ... patience please
+0%, time left: unknown
+7%, time left: 3 sec
+13%, time left: 3 sec
+19%, time left: 3 sec
+25%, time left: 3 sec
+32%, time left: 2 sec
+38%, time left: 2 sec
+44%, time left: 2 sec
+50%, time left: 2 sec
+57%, time left: 1 sec
+63%, time left: 1 sec
+69%, time left: 1 sec
+75%, time left: 1 sec
+82%, time left: 0 sec
+88%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for training with 27085 events: 4.49 sec         
+BDT_Depth5_Trees200      : [dataset] : Evaluation of BDT_Depth5_Trees200 on training sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.382 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth5_Trees200.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth5_Trees200.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth5_Trees200
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDT_Depth5_Trees300 for Classification
+                         : 
+<WARNING>                : Events with negative event weights are USED during the BDT training. This might cause problems with small node sizes or with the boosting. Please remove negative events from training using the option *IgnoreEventsWithNegWeightsInTraining* in case you observe problems with the boosting
+                         : Events with weight == 0 are going to be simply ignored 
+BDT_Depth5_Trees300      : #events: (reweighted) sig: 13350.5 bkg: 13350.5
+                         : #events: (unweighted) sig: 1050 bkg: 25651
+                         : Training 300 Decision Trees ... patience please
+0%, time left: unknown
+6%, time left: 5 sec
+13%, time left: 5 sec
+19%, time left: 5 sec
+25%, time left: 4 sec
+31%, time left: 4 sec
+38%, time left: 4 sec
+44%, time left: 3 sec
+50%, time left: 3 sec
+56%, time left: 2 sec
+63%, time left: 2 sec
+69%, time left: 2 sec
+75%, time left: 1 sec
+81%, time left: 1 sec
+88%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for training with 27085 events: 6.73 sec         
+BDT_Depth5_Trees300      : [dataset] : Evaluation of BDT_Depth5_Trees300 on training sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.602 sec       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth5_Trees300.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDT_Depth5_Trees300.class.C[0m
+                         : /data/jlai/dark_photon/tmva_output.root:/dataset/Method_BDT/BDT_Depth5_Trees300
 Factory                  : Training finished
                          : 
                          : Ranking input variables (method specific)...
-BDT                      : Ranking result (top variable is best ranked)
+BDT_Depth2_Trees100      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------------------
+                         : Rank : Variable             : Variable Importance
+                         : ------------------------------------------------------
+                         :    1 : metsig               : 9.571e-02
+                         :    2 : dphi_met_jetterm     : 7.465e-02
+                         :    3 : dphi_phterm_jetterm  : 7.304e-02
+                         :    4 : ph_phi               : 7.273e-02
+                         :    5 : ph_eta               : 6.507e-02
+                         :    6 : jet_central_pt1      : 6.421e-02
+                         :    7 : dphi_met_phterm      : 6.276e-02
+                         :    8 : dphi_met_ph          : 5.797e-02
+                         :    9 : n_jet_central        : 5.272e-02
+                         :   10 : metplusph            : 5.240e-02
+                         :   11 : softerm              : 4.924e-02
+                         :   12 : ph_pt                : 3.464e-02
+                         :   13 : failJVT_jet_pt1      : 3.205e-02
+                         :   14 : met                  : 2.833e-02
+                         :   15 : jetterm_sumet        : 2.817e-02
+                         :   16 : jet_central_pt2      : 2.633e-02
+                         :   17 : metsigres            : 2.502e-02
+                         :   18 : met_noJVT            : 2.337e-02
+                         :   19 : jetterm              : 2.316e-02
+                         :   20 : jet_central_eta      : 2.027e-02
+                         :   21 : dphi_ph_centraljet1  : 1.945e-02
+                         :   22 : dmet                 : 1.873e-02
+                         :   23 : dphi_met_central_jet : 0.000e+00
+                         :   24 : balance              : 0.000e+00
+                         :   25 : dphi_jj              : 0.000e+00
+                         : ------------------------------------------------------
+BDT_Depth2_Trees200      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------------------
+                         : Rank : Variable             : Variable Importance
+                         : ------------------------------------------------------
+                         :    1 : metsig               : 8.930e-02
+                         :    2 : ph_phi               : 8.144e-02
+                         :    3 : dphi_met_jetterm     : 7.489e-02
+                         :    4 : ph_eta               : 6.491e-02
+                         :    5 : dphi_phterm_jetterm  : 6.391e-02
+                         :    6 : dphi_met_phterm      : 5.731e-02
+                         :    7 : softerm              : 5.505e-02
+                         :    8 : dphi_met_ph          : 5.234e-02
+                         :    9 : jet_central_pt1      : 4.875e-02
+                         :   10 : n_jet_central        : 4.863e-02
+                         :   11 : metplusph            : 3.819e-02
+                         :   12 : failJVT_jet_pt1      : 3.680e-02
+                         :   13 : metsigres            : 3.414e-02
+                         :   14 : jetterm              : 3.384e-02
+                         :   15 : jet_central_pt2      : 3.351e-02
+                         :   16 : ph_pt                : 2.996e-02
+                         :   17 : met                  : 2.856e-02
+                         :   18 : dmet                 : 2.604e-02
+                         :   19 : jetterm_sumet        : 2.346e-02
+                         :   20 : met_noJVT            : 2.256e-02
+                         :   21 : dphi_jj              : 1.469e-02
+                         :   22 : jet_central_eta      : 1.439e-02
+                         :   23 : dphi_ph_centraljet1  : 1.381e-02
+                         :   24 : dphi_met_central_jet : 1.355e-02
+                         :   25 : balance              : 0.000e+00
+                         : ------------------------------------------------------
+BDT_Depth2_Trees300      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------------------
+                         : Rank : Variable             : Variable Importance
+                         : ------------------------------------------------------
+                         :    1 : metsig               : 8.436e-02
+                         :    2 : ph_phi               : 8.260e-02
+                         :    3 : dphi_met_jetterm     : 7.179e-02
+                         :    4 : ph_eta               : 7.127e-02
+                         :    5 : dphi_phterm_jetterm  : 6.565e-02
+                         :    6 : softerm              : 5.750e-02
+                         :    7 : dphi_met_phterm      : 5.648e-02
+                         :    8 : dphi_met_ph          : 5.038e-02
+                         :    9 : jet_central_pt1      : 4.840e-02
+                         :   10 : n_jet_central        : 4.279e-02
+                         :   11 : failJVT_jet_pt1      : 3.985e-02
+                         :   12 : metplusph            : 3.527e-02
+                         :   13 : jet_central_pt2      : 3.387e-02
+                         :   14 : metsigres            : 3.316e-02
+                         :   15 : met_noJVT            : 3.012e-02
+                         :   16 : jetterm              : 2.985e-02
+                         :   17 : ph_pt                : 2.843e-02
+                         :   18 : met                  : 2.512e-02
+                         :   19 : dmet                 : 2.494e-02
+                         :   20 : jetterm_sumet        : 2.452e-02
+                         :   21 : dphi_jj              : 1.569e-02
+                         :   22 : dphi_met_central_jet : 1.285e-02
+                         :   23 : jet_central_eta      : 1.275e-02
+                         :   24 : dphi_ph_centraljet1  : 1.133e-02
+                         :   25 : balance              : 1.101e-02
+                         : ------------------------------------------------------
+BDT_Depth3_Trees100      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------------------
+                         : Rank : Variable             : Variable Importance
+                         : ------------------------------------------------------
+                         :    1 : metsig               : 8.321e-02
+                         :    2 : dphi_met_jetterm     : 8.252e-02
+                         :    3 : ph_phi               : 8.114e-02
+                         :    4 : ph_eta               : 7.273e-02
+                         :    5 : dphi_phterm_jetterm  : 6.748e-02
+                         :    6 : dphi_met_phterm      : 5.582e-02
+                         :    7 : softerm              : 5.418e-02
+                         :    8 : jetterm_sumet        : 4.309e-02
+                         :    9 : jet_central_pt1      : 4.263e-02
+                         :   10 : dphi_met_ph          : 4.231e-02
+                         :   11 : met                  : 3.718e-02
+                         :   12 : n_jet_central        : 3.701e-02
+                         :   13 : jet_central_pt2      : 3.518e-02
+                         :   14 : metplusph            : 3.265e-02
+                         :   15 : failJVT_jet_pt1      : 3.107e-02
+                         :   16 : jetterm              : 3.024e-02
+                         :   17 : met_noJVT            : 2.864e-02
+                         :   18 : metsigres            : 2.619e-02
+                         :   19 : dphi_jj              : 2.482e-02
+                         :   20 : ph_pt                : 2.422e-02
+                         :   21 : balance              : 1.999e-02
+                         :   22 : dphi_ph_centraljet1  : 1.669e-02
+                         :   23 : jet_central_eta      : 1.613e-02
+                         :   24 : dmet                 : 1.488e-02
+                         :   25 : dphi_met_central_jet : 0.000e+00
+                         : ------------------------------------------------------
+BDT_Depth3_Trees200      : Ranking result (top variable is best ranked)
                          : ------------------------------------------------------
                          : Rank : Variable             : Variable Importance
                          : ------------------------------------------------------
@@ -278,13 +949,234 @@ BDT                      : Ranking result (top variable is best ranked)
                          :   24 : balance              : 1.644e-02
                          :   25 : dmet                 : 1.506e-02
                          : ------------------------------------------------------
+BDT_Depth3_Trees300      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------------------
+                         : Rank : Variable             : Variable Importance
+                         : ------------------------------------------------------
+                         :    1 : ph_phi               : 8.219e-02
+                         :    2 : ph_eta               : 7.713e-02
+                         :    3 : metsig               : 7.558e-02
+                         :    4 : dphi_met_jetterm     : 7.396e-02
+                         :    5 : dphi_phterm_jetterm  : 6.384e-02
+                         :    6 : softerm              : 5.809e-02
+                         :    7 : dphi_met_phterm      : 4.964e-02
+                         :    8 : dphi_met_ph          : 4.823e-02
+                         :    9 : jet_central_pt2      : 4.024e-02
+                         :   10 : n_jet_central        : 3.960e-02
+                         :   11 : failJVT_jet_pt1      : 3.613e-02
+                         :   12 : jet_central_pt1      : 3.610e-02
+                         :   13 : jetterm_sumet        : 3.503e-02
+                         :   14 : met                  : 3.366e-02
+                         :   15 : met_noJVT            : 3.102e-02
+                         :   16 : jetterm              : 3.085e-02
+                         :   17 : metsigres            : 3.052e-02
+                         :   18 : metplusph            : 2.560e-02
+                         :   19 : dphi_jj              : 2.431e-02
+                         :   20 : ph_pt                : 2.220e-02
+                         :   21 : jet_central_eta      : 2.036e-02
+                         :   22 : dphi_ph_centraljet1  : 1.791e-02
+                         :   23 : dphi_met_central_jet : 1.791e-02
+                         :   24 : balance              : 1.741e-02
+                         :   25 : dmet                 : 1.248e-02
+                         : ------------------------------------------------------
+BDT_Depth4_Trees100      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------------------
+                         : Rank : Variable             : Variable Importance
+                         : ------------------------------------------------------
+                         :    1 : metsig               : 8.145e-02
+                         :    2 : ph_phi               : 8.024e-02
+                         :    3 : dphi_met_jetterm     : 7.210e-02
+                         :    4 : ph_eta               : 7.055e-02
+                         :    5 : dphi_phterm_jetterm  : 6.561e-02
+                         :    6 : softerm              : 5.983e-02
+                         :    7 : dphi_met_phterm      : 5.750e-02
+                         :    8 : jet_central_pt1      : 5.613e-02
+                         :    9 : jetterm_sumet        : 5.474e-02
+                         :   10 : dphi_met_ph          : 4.778e-02
+                         :   11 : jet_central_pt2      : 4.111e-02
+                         :   12 : metplusph            : 3.798e-02
+                         :   13 : met_noJVT            : 3.110e-02
+                         :   14 : failJVT_jet_pt1      : 3.087e-02
+                         :   15 : n_jet_central        : 2.931e-02
+                         :   16 : met                  : 2.904e-02
+                         :   17 : ph_pt                : 2.862e-02
+                         :   18 : dphi_ph_centraljet1  : 2.249e-02
+                         :   19 : jetterm              : 2.009e-02
+                         :   20 : metsigres            : 1.958e-02
+                         :   21 : dphi_jj              : 1.525e-02
+                         :   22 : jet_central_eta      : 1.420e-02
+                         :   23 : dmet                 : 1.391e-02
+                         :   24 : dphi_met_central_jet : 1.180e-02
+                         :   25 : balance              : 8.733e-03
+                         : ------------------------------------------------------
+BDT_Depth4_Trees200      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------------------
+                         : Rank : Variable             : Variable Importance
+                         : ------------------------------------------------------
+                         :    1 : ph_phi               : 8.564e-02
+                         :    2 : ph_eta               : 7.706e-02
+                         :    3 : metsig               : 7.605e-02
+                         :    4 : dphi_met_jetterm     : 6.876e-02
+                         :    5 : dphi_phterm_jetterm  : 6.678e-02
+                         :    6 : dphi_met_phterm      : 5.962e-02
+                         :    7 : softerm              : 5.759e-02
+                         :    8 : jet_central_pt1      : 4.964e-02
+                         :    9 : dphi_met_ph          : 4.562e-02
+                         :   10 : jetterm_sumet        : 4.461e-02
+                         :   11 : jet_central_pt2      : 3.897e-02
+                         :   12 : metplusph            : 3.439e-02
+                         :   13 : met_noJVT            : 3.222e-02
+                         :   14 : metsigres            : 3.007e-02
+                         :   15 : n_jet_central        : 2.994e-02
+                         :   16 : failJVT_jet_pt1      : 2.863e-02
+                         :   17 : ph_pt                : 2.653e-02
+                         :   18 : met                  : 2.500e-02
+                         :   19 : jetterm              : 2.295e-02
+                         :   20 : jet_central_eta      : 2.295e-02
+                         :   21 : dphi_met_central_jet : 1.999e-02
+                         :   22 : dphi_jj              : 1.642e-02
+                         :   23 : dphi_ph_centraljet1  : 1.636e-02
+                         :   24 : balance              : 1.268e-02
+                         :   25 : dmet                 : 1.151e-02
+                         : ------------------------------------------------------
+BDT_Depth4_Trees300      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------------------
+                         : Rank : Variable             : Variable Importance
+                         : ------------------------------------------------------
+                         :    1 : ph_phi               : 8.291e-02
+                         :    2 : ph_eta               : 7.674e-02
+                         :    3 : metsig               : 7.327e-02
+                         :    4 : dphi_phterm_jetterm  : 6.945e-02
+                         :    5 : dphi_met_jetterm     : 6.923e-02
+                         :    6 : softerm              : 5.941e-02
+                         :    7 : dphi_met_phterm      : 5.733e-02
+                         :    8 : dphi_met_ph          : 4.881e-02
+                         :    9 : jet_central_pt1      : 4.600e-02
+                         :   10 : jetterm_sumet        : 4.012e-02
+                         :   11 : jet_central_pt2      : 3.812e-02
+                         :   12 : met_noJVT            : 3.395e-02
+                         :   13 : metplusph            : 3.317e-02
+                         :   14 : n_jet_central        : 3.182e-02
+                         :   15 : metsigres            : 2.999e-02
+                         :   16 : failJVT_jet_pt1      : 2.937e-02
+                         :   17 : ph_pt                : 2.890e-02
+                         :   18 : met                  : 2.706e-02
+                         :   19 : jet_central_eta      : 2.429e-02
+                         :   20 : jetterm              : 2.126e-02
+                         :   21 : dphi_met_central_jet : 2.003e-02
+                         :   22 : dphi_jj              : 1.664e-02
+                         :   23 : dphi_ph_centraljet1  : 1.454e-02
+                         :   24 : dmet                 : 1.412e-02
+                         :   25 : balance              : 1.349e-02
+                         : ------------------------------------------------------
+BDT_Depth5_Trees100      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------------------
+                         : Rank : Variable             : Variable Importance
+                         : ------------------------------------------------------
+                         :    1 : metsig               : 7.878e-02
+                         :    2 : ph_eta               : 7.099e-02
+                         :    3 : ph_phi               : 6.835e-02
+                         :    4 : dphi_phterm_jetterm  : 6.667e-02
+                         :    5 : dphi_met_jetterm     : 6.623e-02
+                         :    6 : softerm              : 6.072e-02
+                         :    7 : dphi_met_phterm      : 5.450e-02
+                         :    8 : dphi_met_ph          : 5.151e-02
+                         :    9 : jetterm_sumet        : 4.367e-02
+                         :   10 : jet_central_pt1      : 4.340e-02
+                         :   11 : metplusph            : 4.257e-02
+                         :   12 : jet_central_pt2      : 4.150e-02
+                         :   13 : n_jet_central        : 3.704e-02
+                         :   14 : met_noJVT            : 3.358e-02
+                         :   15 : met                  : 3.297e-02
+                         :   16 : metsigres            : 3.261e-02
+                         :   17 : ph_pt                : 3.254e-02
+                         :   18 : jet_central_eta      : 2.581e-02
+                         :   19 : dphi_jj              : 2.334e-02
+                         :   20 : failJVT_jet_pt1      : 1.954e-02
+                         :   21 : dphi_met_central_jet : 1.909e-02
+                         :   22 : jetterm              : 1.908e-02
+                         :   23 : dphi_ph_centraljet1  : 1.415e-02
+                         :   24 : dmet                 : 1.189e-02
+                         :   25 : balance              : 9.453e-03
+                         : ------------------------------------------------------
+BDT_Depth5_Trees200      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------------------
+                         : Rank : Variable             : Variable Importance
+                         : ------------------------------------------------------
+                         :    1 : ph_phi               : 7.590e-02
+                         :    2 : metsig               : 7.441e-02
+                         :    3 : ph_eta               : 7.409e-02
+                         :    4 : dphi_met_jetterm     : 6.884e-02
+                         :    5 : dphi_phterm_jetterm  : 6.467e-02
+                         :    6 : softerm              : 6.183e-02
+                         :    7 : dphi_met_phterm      : 5.566e-02
+                         :    8 : dphi_met_ph          : 5.241e-02
+                         :    9 : jet_central_pt2      : 3.946e-02
+                         :   10 : jet_central_pt1      : 3.907e-02
+                         :   11 : jetterm_sumet        : 3.630e-02
+                         :   12 : n_jet_central        : 3.556e-02
+                         :   13 : ph_pt                : 3.470e-02
+                         :   14 : metsigres            : 3.438e-02
+                         :   15 : met                  : 3.352e-02
+                         :   16 : met_noJVT            : 3.342e-02
+                         :   17 : metplusph            : 3.316e-02
+                         :   18 : jetterm              : 2.615e-02
+                         :   19 : failJVT_jet_pt1      : 2.477e-02
+                         :   20 : jet_central_eta      : 2.453e-02
+                         :   21 : dphi_jj              : 1.810e-02
+                         :   22 : dphi_met_central_jet : 1.689e-02
+                         :   23 : dphi_ph_centraljet1  : 1.547e-02
+                         :   24 : balance              : 1.486e-02
+                         :   25 : dmet                 : 1.186e-02
+                         : ------------------------------------------------------
+BDT_Depth5_Trees300      : Ranking result (top variable is best ranked)
+                         : ------------------------------------------------------
+                         : Rank : Variable             : Variable Importance
+                         : ------------------------------------------------------
+                         :    1 : ph_phi               : 7.869e-02
+                         :    2 : ph_eta               : 7.511e-02
+                         :    3 : metsig               : 7.187e-02
+                         :    4 : dphi_met_jetterm     : 6.968e-02
+                         :    5 : dphi_phterm_jetterm  : 6.362e-02
+                         :    6 : softerm              : 6.263e-02
+                         :    7 : dphi_met_phterm      : 5.534e-02
+                         :    8 : dphi_met_ph          : 5.158e-02
+                         :    9 : jet_central_pt2      : 3.989e-02
+                         :   10 : jet_central_pt1      : 3.937e-02
+                         :   11 : n_jet_central        : 3.592e-02
+                         :   12 : jetterm_sumet        : 3.504e-02
+                         :   13 : metsigres            : 3.353e-02
+                         :   14 : metplusph            : 3.241e-02
+                         :   15 : ph_pt                : 3.231e-02
+                         :   16 : met                  : 3.199e-02
+                         :   17 : met_noJVT            : 3.112e-02
+                         :   18 : failJVT_jet_pt1      : 2.754e-02
+                         :   19 : jetterm              : 2.449e-02
+                         :   20 : jet_central_eta      : 2.411e-02
+                         :   21 : dphi_jj              : 1.996e-02
+                         :   22 : dphi_ph_centraljet1  : 1.980e-02
+                         :   23 : balance              : 1.650e-02
+                         :   24 : dphi_met_central_jet : 1.567e-02
+                         :   25 : dmet                 : 1.182e-02
+                         : ------------------------------------------------------
 Factory                  : === Destroy and recreate all methods via weight files for testing ===
                          : 
-                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth2_Trees100.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth2_Trees200.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth2_Trees300.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth3_Trees100.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth3_Trees200.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth3_Trees300.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth4_Trees100.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth4_Trees200.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth4_Trees300.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth5_Trees100.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth5_Trees200.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDT_Depth5_Trees300.weights.xml[0m
 Factory                  : [1mTest all methods[0m
-Factory                  : Test method: BDT for Classification performance
+Factory                  : Test method: BDT_Depth2_Trees100 for Classification performance
                          : 
-BDT                      : [dataset] : Evaluation of BDT on testing sample (27085 events)
+BDT_Depth2_Trees100      : [dataset] : Evaluation of BDT_Depth2_Trees100 on testing sample (27085 events)
 0%, time left: unknown
 6%, time left: 0 sec
 12%, time left: 0 sec
@@ -301,13 +1193,706 @@ BDT                      : [dataset] : Evaluation of BDT on testing sample (2708
 81%, time left: 0 sec
 87%, time left: 0 sec
 94%, time left: 0 sec
-                         : Elapsed time for evaluation of 27085 events: 0.212 sec       
+                         : Elapsed time for evaluation of 27085 events: 0.069 sec       
+Factory                  : Test method: BDT_Depth2_Trees200 for Classification performance
+                         : 
+BDT_Depth2_Trees200      : [dataset] : Evaluation of BDT_Depth2_Trees200 on testing sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.155 sec       
+Factory                  : Test method: BDT_Depth2_Trees300 for Classification performance
+                         : 
+BDT_Depth2_Trees300      : [dataset] : Evaluation of BDT_Depth2_Trees300 on testing sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.243 sec       
+Factory                  : Test method: BDT_Depth3_Trees100 for Classification performance
+                         : 
+BDT_Depth3_Trees100      : [dataset] : Evaluation of BDT_Depth3_Trees100 on testing sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.105 sec       
+Factory                  : Test method: BDT_Depth3_Trees200 for Classification performance
+                         : 
+BDT_Depth3_Trees200      : [dataset] : Evaluation of BDT_Depth3_Trees200 on testing sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.228 sec       
+Factory                  : Test method: BDT_Depth3_Trees300 for Classification performance
+                         : 
+BDT_Depth3_Trees300      : [dataset] : Evaluation of BDT_Depth3_Trees300 on testing sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.378 sec       
+Factory                  : Test method: BDT_Depth4_Trees100 for Classification performance
+                         : 
+BDT_Depth4_Trees100      : [dataset] : Evaluation of BDT_Depth4_Trees100 on testing sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.134 sec       
+Factory                  : Test method: BDT_Depth4_Trees200 for Classification performance
+                         : 
+BDT_Depth4_Trees200      : [dataset] : Evaluation of BDT_Depth4_Trees200 on testing sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.295 sec       
+Factory                  : Test method: BDT_Depth4_Trees300 for Classification performance
+                         : 
+BDT_Depth4_Trees300      : [dataset] : Evaluation of BDT_Depth4_Trees300 on testing sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.438 sec       
+Factory                  : Test method: BDT_Depth5_Trees100 for Classification performance
+                         : 
+BDT_Depth5_Trees100      : [dataset] : Evaluation of BDT_Depth5_Trees100 on testing sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.147 sec       
+Factory                  : Test method: BDT_Depth5_Trees200 for Classification performance
+                         : 
+BDT_Depth5_Trees200      : [dataset] : Evaluation of BDT_Depth5_Trees200 on testing sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.31 sec       
+Factory                  : Test method: BDT_Depth5_Trees300 for Classification performance
+                         : 
+BDT_Depth5_Trees300      : [dataset] : Evaluation of BDT_Depth5_Trees300 on testing sample (27085 events)
+0%, time left: unknown
+6%, time left: 0 sec
+12%, time left: 0 sec
+18%, time left: 0 sec
+25%, time left: 0 sec
+31%, time left: 0 sec
+37%, time left: 0 sec
+43%, time left: 0 sec
+50%, time left: 0 sec
+56%, time left: 0 sec
+62%, time left: 0 sec
+68%, time left: 0 sec
+75%, time left: 0 sec
+81%, time left: 0 sec
+87%, time left: 0 sec
+94%, time left: 0 sec
+                         : Elapsed time for evaluation of 27085 events: 0.512 sec       
 Factory                  : [1mEvaluate all methods[0m
-Factory                  : Evaluate classifier: BDT
+Factory                  : Evaluate classifier: BDT_Depth2_Trees100
                          : 
-BDT                      : [dataset] : Loop over test events and fill histograms with classifier response...
+BDT_Depth2_Trees100      : [dataset] : Loop over test events and fill histograms with classifier response...
                          : 
-TFHandler_BDT            :             Variable                    Mean                    RMS            [        Min                    Max ]
+TFHandler_BDT_Depth2_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
+                         :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
+                         :                  met:            1.6241e+05                58051.   [            1.0000e+05            2.0848e+06 ]
+                         :            met_noJVT:            1.6312e+05                58360.   [                83179.            2.0848e+06 ]
+                         :                 dmet:                710.84                5861.5   [               -20000.                49948. ]
+                         :                ph_pt:                96908.                54442.   [                50008.            3.8754e+06 ]
+                         :               ph_eta:               0.83625               0.49472   [            0.00036497                1.7499 ]
+                         :               ph_phi:              0.051643                1.8030   [               -3.1415                3.1415 ]
+                         :      jet_central_eta:               -2.0491                45.073   [               -999.00                2.4991 ]
+                         :      jet_central_pt1:            1.8718e+05                92551.   [               -999.00            4.4227e+06 ]
+                         :      jet_central_pt2:                39203.                41740.   [               -999.00            1.1051e+06 ]
+                         :      dphi_met_phterm:                1.9126               0.32501   [                1.3501                3.0768 ]
+                         :          dphi_met_ph:                1.2290               0.32500   [              0.064831                1.7915 ]
+                         :     dphi_met_jetterm:               0.40872               0.13714   [              0.017750               0.69994 ]
+                         :  dphi_phterm_jetterm:                2.3213               0.29101   [                1.4752                3.1416 ]
+                         :  dphi_ph_centraljet1:               0.26861                45.164   [               -999.00                3.1413 ]
+                         :            metplusph:            2.5932e+05                87501.   [            1.5131e+05            4.3949e+06 ]
+                         :      failJVT_jet_pt1:                5116.9                11833.   [               -999.00                59726. ]
+                         :              softerm:                9611.4                6021.9   [                0.0000                51807. ]
+                         :              jetterm:            2.1711e+05                90464.   [                54389.            4.3835e+06 ]
+                         :        n_jet_central:                2.1161               0.99294   [                0.0000                4.0000 ]
+                         :        jetterm_sumet:            2.5718e+05            1.1600e+05   [                54389.            5.1079e+06 ]
+                         : dphi_met_central_jet:               0.65701                45.181   [               -999.00                3.1416 ]
+                         :              balance:              -0.85889                45.114   [               -999.00                19.686 ]
+                         :              dphi_jj:               -330.27                470.68   [               -999.00                2.4997 ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         : [32m
+                         : <PlotVariables> Will not produce scatter plots ==> 
+                         : |  The number of 25 input variables and 0 target values would require 300 two-dimensional
+                         : |  histograms, which would occupy the computer's memory. Note that this
+                         : |  suppression does not have any consequences for your analysis, other
+                         : |  than not disposing of these scatter plots. You can modify the maximum
+                         : |  number of input variables allowed to generate scatter plots in your
+                         : |  script via the command line:
+                         : |  "(TMVA::gConfig().GetVariablePlotting()).fMaxNumOfAllowedVariablesForScatterPlots = <some int>;"[0m
+                         : 
+                         : Some more output
+Factory                  : Evaluate classifier: BDT_Depth2_Trees200
+                         : 
+BDT_Depth2_Trees200      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT_Depth2_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
+                         :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
+                         :                  met:            1.6241e+05                58051.   [            1.0000e+05            2.0848e+06 ]
+                         :            met_noJVT:            1.6312e+05                58360.   [                83179.            2.0848e+06 ]
+                         :                 dmet:                710.84                5861.5   [               -20000.                49948. ]
+                         :                ph_pt:                96908.                54442.   [                50008.            3.8754e+06 ]
+                         :               ph_eta:               0.83625               0.49472   [            0.00036497                1.7499 ]
+                         :               ph_phi:              0.051643                1.8030   [               -3.1415                3.1415 ]
+                         :      jet_central_eta:               -2.0491                45.073   [               -999.00                2.4991 ]
+                         :      jet_central_pt1:            1.8718e+05                92551.   [               -999.00            4.4227e+06 ]
+                         :      jet_central_pt2:                39203.                41740.   [               -999.00            1.1051e+06 ]
+                         :      dphi_met_phterm:                1.9126               0.32501   [                1.3501                3.0768 ]
+                         :          dphi_met_ph:                1.2290               0.32500   [              0.064831                1.7915 ]
+                         :     dphi_met_jetterm:               0.40872               0.13714   [              0.017750               0.69994 ]
+                         :  dphi_phterm_jetterm:                2.3213               0.29101   [                1.4752                3.1416 ]
+                         :  dphi_ph_centraljet1:               0.26861                45.164   [               -999.00                3.1413 ]
+                         :            metplusph:            2.5932e+05                87501.   [            1.5131e+05            4.3949e+06 ]
+                         :      failJVT_jet_pt1:                5116.9                11833.   [               -999.00                59726. ]
+                         :              softerm:                9611.4                6021.9   [                0.0000                51807. ]
+                         :              jetterm:            2.1711e+05                90464.   [                54389.            4.3835e+06 ]
+                         :        n_jet_central:                2.1161               0.99294   [                0.0000                4.0000 ]
+                         :        jetterm_sumet:            2.5718e+05            1.1600e+05   [                54389.            5.1079e+06 ]
+                         : dphi_met_central_jet:               0.65701                45.181   [               -999.00                3.1416 ]
+                         :              balance:              -0.85889                45.114   [               -999.00                19.686 ]
+                         :              dphi_jj:               -330.27                470.68   [               -999.00                2.4997 ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         : [32m
+                         : <PlotVariables> Will not produce scatter plots ==> 
+                         : |  The number of 25 input variables and 0 target values would require 300 two-dimensional
+                         : |  histograms, which would occupy the computer's memory. Note that this
+                         : |  suppression does not have any consequences for your analysis, other
+                         : |  than not disposing of these scatter plots. You can modify the maximum
+                         : |  number of input variables allowed to generate scatter plots in your
+                         : |  script via the command line:
+                         : |  "(TMVA::gConfig().GetVariablePlotting()).fMaxNumOfAllowedVariablesForScatterPlots = <some int>;"[0m
+                         : 
+                         : Some more output
+Factory                  : Evaluate classifier: BDT_Depth2_Trees300
+                         : 
+BDT_Depth2_Trees300      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT_Depth2_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
+                         :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
+                         :                  met:            1.6241e+05                58051.   [            1.0000e+05            2.0848e+06 ]
+                         :            met_noJVT:            1.6312e+05                58360.   [                83179.            2.0848e+06 ]
+                         :                 dmet:                710.84                5861.5   [               -20000.                49948. ]
+                         :                ph_pt:                96908.                54442.   [                50008.            3.8754e+06 ]
+                         :               ph_eta:               0.83625               0.49472   [            0.00036497                1.7499 ]
+                         :               ph_phi:              0.051643                1.8030   [               -3.1415                3.1415 ]
+                         :      jet_central_eta:               -2.0491                45.073   [               -999.00                2.4991 ]
+                         :      jet_central_pt1:            1.8718e+05                92551.   [               -999.00            4.4227e+06 ]
+                         :      jet_central_pt2:                39203.                41740.   [               -999.00            1.1051e+06 ]
+                         :      dphi_met_phterm:                1.9126               0.32501   [                1.3501                3.0768 ]
+                         :          dphi_met_ph:                1.2290               0.32500   [              0.064831                1.7915 ]
+                         :     dphi_met_jetterm:               0.40872               0.13714   [              0.017750               0.69994 ]
+                         :  dphi_phterm_jetterm:                2.3213               0.29101   [                1.4752                3.1416 ]
+                         :  dphi_ph_centraljet1:               0.26861                45.164   [               -999.00                3.1413 ]
+                         :            metplusph:            2.5932e+05                87501.   [            1.5131e+05            4.3949e+06 ]
+                         :      failJVT_jet_pt1:                5116.9                11833.   [               -999.00                59726. ]
+                         :              softerm:                9611.4                6021.9   [                0.0000                51807. ]
+                         :              jetterm:            2.1711e+05                90464.   [                54389.            4.3835e+06 ]
+                         :        n_jet_central:                2.1161               0.99294   [                0.0000                4.0000 ]
+                         :        jetterm_sumet:            2.5718e+05            1.1600e+05   [                54389.            5.1079e+06 ]
+                         : dphi_met_central_jet:               0.65701                45.181   [               -999.00                3.1416 ]
+                         :              balance:              -0.85889                45.114   [               -999.00                19.686 ]
+                         :              dphi_jj:               -330.27                470.68   [               -999.00                2.4997 ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         : [32m
+                         : <PlotVariables> Will not produce scatter plots ==> 
+                         : |  The number of 25 input variables and 0 target values would require 300 two-dimensional
+                         : |  histograms, which would occupy the computer's memory. Note that this
+                         : |  suppression does not have any consequences for your analysis, other
+                         : |  than not disposing of these scatter plots. You can modify the maximum
+                         : |  number of input variables allowed to generate scatter plots in your
+                         : |  script via the command line:
+                         : |  "(TMVA::gConfig().GetVariablePlotting()).fMaxNumOfAllowedVariablesForScatterPlots = <some int>;"[0m
+                         : 
+                         : Some more output
+Factory                  : Evaluate classifier: BDT_Depth3_Trees100
+                         : 
+BDT_Depth3_Trees100      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT_Depth3_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
+                         :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
+                         :                  met:            1.6241e+05                58051.   [            1.0000e+05            2.0848e+06 ]
+                         :            met_noJVT:            1.6312e+05                58360.   [                83179.            2.0848e+06 ]
+                         :                 dmet:                710.84                5861.5   [               -20000.                49948. ]
+                         :                ph_pt:                96908.                54442.   [                50008.            3.8754e+06 ]
+                         :               ph_eta:               0.83625               0.49472   [            0.00036497                1.7499 ]
+                         :               ph_phi:              0.051643                1.8030   [               -3.1415                3.1415 ]
+                         :      jet_central_eta:               -2.0491                45.073   [               -999.00                2.4991 ]
+                         :      jet_central_pt1:            1.8718e+05                92551.   [               -999.00            4.4227e+06 ]
+                         :      jet_central_pt2:                39203.                41740.   [               -999.00            1.1051e+06 ]
+                         :      dphi_met_phterm:                1.9126               0.32501   [                1.3501                3.0768 ]
+                         :          dphi_met_ph:                1.2290               0.32500   [              0.064831                1.7915 ]
+                         :     dphi_met_jetterm:               0.40872               0.13714   [              0.017750               0.69994 ]
+                         :  dphi_phterm_jetterm:                2.3213               0.29101   [                1.4752                3.1416 ]
+                         :  dphi_ph_centraljet1:               0.26861                45.164   [               -999.00                3.1413 ]
+                         :            metplusph:            2.5932e+05                87501.   [            1.5131e+05            4.3949e+06 ]
+                         :      failJVT_jet_pt1:                5116.9                11833.   [               -999.00                59726. ]
+                         :              softerm:                9611.4                6021.9   [                0.0000                51807. ]
+                         :              jetterm:            2.1711e+05                90464.   [                54389.            4.3835e+06 ]
+                         :        n_jet_central:                2.1161               0.99294   [                0.0000                4.0000 ]
+                         :        jetterm_sumet:            2.5718e+05            1.1600e+05   [                54389.            5.1079e+06 ]
+                         : dphi_met_central_jet:               0.65701                45.181   [               -999.00                3.1416 ]
+                         :              balance:              -0.85889                45.114   [               -999.00                19.686 ]
+                         :              dphi_jj:               -330.27                470.68   [               -999.00                2.4997 ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         : [32m
+                         : <PlotVariables> Will not produce scatter plots ==> 
+                         : |  The number of 25 input variables and 0 target values would require 300 two-dimensional
+                         : |  histograms, which would occupy the computer's memory. Note that this
+                         : |  suppression does not have any consequences for your analysis, other
+                         : |  than not disposing of these scatter plots. You can modify the maximum
+                         : |  number of input variables allowed to generate scatter plots in your
+                         : |  script via the command line:
+                         : |  "(TMVA::gConfig().GetVariablePlotting()).fMaxNumOfAllowedVariablesForScatterPlots = <some int>;"[0m
+                         : 
+                         : Some more output
+Factory                  : Evaluate classifier: BDT_Depth3_Trees200
+                         : 
+BDT_Depth3_Trees200      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT_Depth3_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
+                         :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
+                         :                  met:            1.6241e+05                58051.   [            1.0000e+05            2.0848e+06 ]
+                         :            met_noJVT:            1.6312e+05                58360.   [                83179.            2.0848e+06 ]
+                         :                 dmet:                710.84                5861.5   [               -20000.                49948. ]
+                         :                ph_pt:                96908.                54442.   [                50008.            3.8754e+06 ]
+                         :               ph_eta:               0.83625               0.49472   [            0.00036497                1.7499 ]
+                         :               ph_phi:              0.051643                1.8030   [               -3.1415                3.1415 ]
+                         :      jet_central_eta:               -2.0491                45.073   [               -999.00                2.4991 ]
+                         :      jet_central_pt1:            1.8718e+05                92551.   [               -999.00            4.4227e+06 ]
+                         :      jet_central_pt2:                39203.                41740.   [               -999.00            1.1051e+06 ]
+                         :      dphi_met_phterm:                1.9126               0.32501   [                1.3501                3.0768 ]
+                         :          dphi_met_ph:                1.2290               0.32500   [              0.064831                1.7915 ]
+                         :     dphi_met_jetterm:               0.40872               0.13714   [              0.017750               0.69994 ]
+                         :  dphi_phterm_jetterm:                2.3213               0.29101   [                1.4752                3.1416 ]
+                         :  dphi_ph_centraljet1:               0.26861                45.164   [               -999.00                3.1413 ]
+                         :            metplusph:            2.5932e+05                87501.   [            1.5131e+05            4.3949e+06 ]
+                         :      failJVT_jet_pt1:                5116.9                11833.   [               -999.00                59726. ]
+                         :              softerm:                9611.4                6021.9   [                0.0000                51807. ]
+                         :              jetterm:            2.1711e+05                90464.   [                54389.            4.3835e+06 ]
+                         :        n_jet_central:                2.1161               0.99294   [                0.0000                4.0000 ]
+                         :        jetterm_sumet:            2.5718e+05            1.1600e+05   [                54389.            5.1079e+06 ]
+                         : dphi_met_central_jet:               0.65701                45.181   [               -999.00                3.1416 ]
+                         :              balance:              -0.85889                45.114   [               -999.00                19.686 ]
+                         :              dphi_jj:               -330.27                470.68   [               -999.00                2.4997 ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         : [32m
+                         : <PlotVariables> Will not produce scatter plots ==> 
+                         : |  The number of 25 input variables and 0 target values would require 300 two-dimensional
+                         : |  histograms, which would occupy the computer's memory. Note that this
+                         : |  suppression does not have any consequences for your analysis, other
+                         : |  than not disposing of these scatter plots. You can modify the maximum
+                         : |  number of input variables allowed to generate scatter plots in your
+                         : |  script via the command line:
+                         : |  "(TMVA::gConfig().GetVariablePlotting()).fMaxNumOfAllowedVariablesForScatterPlots = <some int>;"[0m
+                         : 
+                         : Some more output
+Factory                  : Evaluate classifier: BDT_Depth3_Trees300
+                         : 
+BDT_Depth3_Trees300      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT_Depth3_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
+                         :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
+                         :                  met:            1.6241e+05                58051.   [            1.0000e+05            2.0848e+06 ]
+                         :            met_noJVT:            1.6312e+05                58360.   [                83179.            2.0848e+06 ]
+                         :                 dmet:                710.84                5861.5   [               -20000.                49948. ]
+                         :                ph_pt:                96908.                54442.   [                50008.            3.8754e+06 ]
+                         :               ph_eta:               0.83625               0.49472   [            0.00036497                1.7499 ]
+                         :               ph_phi:              0.051643                1.8030   [               -3.1415                3.1415 ]
+                         :      jet_central_eta:               -2.0491                45.073   [               -999.00                2.4991 ]
+                         :      jet_central_pt1:            1.8718e+05                92551.   [               -999.00            4.4227e+06 ]
+                         :      jet_central_pt2:                39203.                41740.   [               -999.00            1.1051e+06 ]
+                         :      dphi_met_phterm:                1.9126               0.32501   [                1.3501                3.0768 ]
+                         :          dphi_met_ph:                1.2290               0.32500   [              0.064831                1.7915 ]
+                         :     dphi_met_jetterm:               0.40872               0.13714   [              0.017750               0.69994 ]
+                         :  dphi_phterm_jetterm:                2.3213               0.29101   [                1.4752                3.1416 ]
+                         :  dphi_ph_centraljet1:               0.26861                45.164   [               -999.00                3.1413 ]
+                         :            metplusph:            2.5932e+05                87501.   [            1.5131e+05            4.3949e+06 ]
+                         :      failJVT_jet_pt1:                5116.9                11833.   [               -999.00                59726. ]
+                         :              softerm:                9611.4                6021.9   [                0.0000                51807. ]
+                         :              jetterm:            2.1711e+05                90464.   [                54389.            4.3835e+06 ]
+                         :        n_jet_central:                2.1161               0.99294   [                0.0000                4.0000 ]
+                         :        jetterm_sumet:            2.5718e+05            1.1600e+05   [                54389.            5.1079e+06 ]
+                         : dphi_met_central_jet:               0.65701                45.181   [               -999.00                3.1416 ]
+                         :              balance:              -0.85889                45.114   [               -999.00                19.686 ]
+                         :              dphi_jj:               -330.27                470.68   [               -999.00                2.4997 ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         : [32m
+                         : <PlotVariables> Will not produce scatter plots ==> 
+                         : |  The number of 25 input variables and 0 target values would require 300 two-dimensional
+                         : |  histograms, which would occupy the computer's memory. Note that this
+                         : |  suppression does not have any consequences for your analysis, other
+                         : |  than not disposing of these scatter plots. You can modify the maximum
+                         : |  number of input variables allowed to generate scatter plots in your
+                         : |  script via the command line:
+                         : |  "(TMVA::gConfig().GetVariablePlotting()).fMaxNumOfAllowedVariablesForScatterPlots = <some int>;"[0m
+                         : 
+                         : Some more output
+Factory                  : Evaluate classifier: BDT_Depth4_Trees100
+                         : 
+BDT_Depth4_Trees100      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT_Depth4_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
+                         :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
+                         :                  met:            1.6241e+05                58051.   [            1.0000e+05            2.0848e+06 ]
+                         :            met_noJVT:            1.6312e+05                58360.   [                83179.            2.0848e+06 ]
+                         :                 dmet:                710.84                5861.5   [               -20000.                49948. ]
+                         :                ph_pt:                96908.                54442.   [                50008.            3.8754e+06 ]
+                         :               ph_eta:               0.83625               0.49472   [            0.00036497                1.7499 ]
+                         :               ph_phi:              0.051643                1.8030   [               -3.1415                3.1415 ]
+                         :      jet_central_eta:               -2.0491                45.073   [               -999.00                2.4991 ]
+                         :      jet_central_pt1:            1.8718e+05                92551.   [               -999.00            4.4227e+06 ]
+                         :      jet_central_pt2:                39203.                41740.   [               -999.00            1.1051e+06 ]
+                         :      dphi_met_phterm:                1.9126               0.32501   [                1.3501                3.0768 ]
+                         :          dphi_met_ph:                1.2290               0.32500   [              0.064831                1.7915 ]
+                         :     dphi_met_jetterm:               0.40872               0.13714   [              0.017750               0.69994 ]
+                         :  dphi_phterm_jetterm:                2.3213               0.29101   [                1.4752                3.1416 ]
+                         :  dphi_ph_centraljet1:               0.26861                45.164   [               -999.00                3.1413 ]
+                         :            metplusph:            2.5932e+05                87501.   [            1.5131e+05            4.3949e+06 ]
+                         :      failJVT_jet_pt1:                5116.9                11833.   [               -999.00                59726. ]
+                         :              softerm:                9611.4                6021.9   [                0.0000                51807. ]
+                         :              jetterm:            2.1711e+05                90464.   [                54389.            4.3835e+06 ]
+                         :        n_jet_central:                2.1161               0.99294   [                0.0000                4.0000 ]
+                         :        jetterm_sumet:            2.5718e+05            1.1600e+05   [                54389.            5.1079e+06 ]
+                         : dphi_met_central_jet:               0.65701                45.181   [               -999.00                3.1416 ]
+                         :              balance:              -0.85889                45.114   [               -999.00                19.686 ]
+                         :              dphi_jj:               -330.27                470.68   [               -999.00                2.4997 ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         : [32m
+                         : <PlotVariables> Will not produce scatter plots ==> 
+                         : |  The number of 25 input variables and 0 target values would require 300 two-dimensional
+                         : |  histograms, which would occupy the computer's memory. Note that this
+                         : |  suppression does not have any consequences for your analysis, other
+                         : |  than not disposing of these scatter plots. You can modify the maximum
+                         : |  number of input variables allowed to generate scatter plots in your
+                         : |  script via the command line:
+                         : |  "(TMVA::gConfig().GetVariablePlotting()).fMaxNumOfAllowedVariablesForScatterPlots = <some int>;"[0m
+                         : 
+                         : Some more output
+Factory                  : Evaluate classifier: BDT_Depth4_Trees200
+                         : 
+BDT_Depth4_Trees200      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT_Depth4_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
+                         :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
+                         :                  met:            1.6241e+05                58051.   [            1.0000e+05            2.0848e+06 ]
+                         :            met_noJVT:            1.6312e+05                58360.   [                83179.            2.0848e+06 ]
+                         :                 dmet:                710.84                5861.5   [               -20000.                49948. ]
+                         :                ph_pt:                96908.                54442.   [                50008.            3.8754e+06 ]
+                         :               ph_eta:               0.83625               0.49472   [            0.00036497                1.7499 ]
+                         :               ph_phi:              0.051643                1.8030   [               -3.1415                3.1415 ]
+                         :      jet_central_eta:               -2.0491                45.073   [               -999.00                2.4991 ]
+                         :      jet_central_pt1:            1.8718e+05                92551.   [               -999.00            4.4227e+06 ]
+                         :      jet_central_pt2:                39203.                41740.   [               -999.00            1.1051e+06 ]
+                         :      dphi_met_phterm:                1.9126               0.32501   [                1.3501                3.0768 ]
+                         :          dphi_met_ph:                1.2290               0.32500   [              0.064831                1.7915 ]
+                         :     dphi_met_jetterm:               0.40872               0.13714   [              0.017750               0.69994 ]
+                         :  dphi_phterm_jetterm:                2.3213               0.29101   [                1.4752                3.1416 ]
+                         :  dphi_ph_centraljet1:               0.26861                45.164   [               -999.00                3.1413 ]
+                         :            metplusph:            2.5932e+05                87501.   [            1.5131e+05            4.3949e+06 ]
+                         :      failJVT_jet_pt1:                5116.9                11833.   [               -999.00                59726. ]
+                         :              softerm:                9611.4                6021.9   [                0.0000                51807. ]
+                         :              jetterm:            2.1711e+05                90464.   [                54389.            4.3835e+06 ]
+                         :        n_jet_central:                2.1161               0.99294   [                0.0000                4.0000 ]
+                         :        jetterm_sumet:            2.5718e+05            1.1600e+05   [                54389.            5.1079e+06 ]
+                         : dphi_met_central_jet:               0.65701                45.181   [               -999.00                3.1416 ]
+                         :              balance:              -0.85889                45.114   [               -999.00                19.686 ]
+                         :              dphi_jj:               -330.27                470.68   [               -999.00                2.4997 ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         : [32m
+                         : <PlotVariables> Will not produce scatter plots ==> 
+                         : |  The number of 25 input variables and 0 target values would require 300 two-dimensional
+                         : |  histograms, which would occupy the computer's memory. Note that this
+                         : |  suppression does not have any consequences for your analysis, other
+                         : |  than not disposing of these scatter plots. You can modify the maximum
+                         : |  number of input variables allowed to generate scatter plots in your
+                         : |  script via the command line:
+                         : |  "(TMVA::gConfig().GetVariablePlotting()).fMaxNumOfAllowedVariablesForScatterPlots = <some int>;"[0m
+                         : 
+                         : Some more output
+Factory                  : Evaluate classifier: BDT_Depth4_Trees300
+                         : 
+BDT_Depth4_Trees300      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT_Depth4_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
+                         :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
+                         :                  met:            1.6241e+05                58051.   [            1.0000e+05            2.0848e+06 ]
+                         :            met_noJVT:            1.6312e+05                58360.   [                83179.            2.0848e+06 ]
+                         :                 dmet:                710.84                5861.5   [               -20000.                49948. ]
+                         :                ph_pt:                96908.                54442.   [                50008.            3.8754e+06 ]
+                         :               ph_eta:               0.83625               0.49472   [            0.00036497                1.7499 ]
+                         :               ph_phi:              0.051643                1.8030   [               -3.1415                3.1415 ]
+                         :      jet_central_eta:               -2.0491                45.073   [               -999.00                2.4991 ]
+                         :      jet_central_pt1:            1.8718e+05                92551.   [               -999.00            4.4227e+06 ]
+                         :      jet_central_pt2:                39203.                41740.   [               -999.00            1.1051e+06 ]
+                         :      dphi_met_phterm:                1.9126               0.32501   [                1.3501                3.0768 ]
+                         :          dphi_met_ph:                1.2290               0.32500   [              0.064831                1.7915 ]
+                         :     dphi_met_jetterm:               0.40872               0.13714   [              0.017750               0.69994 ]
+                         :  dphi_phterm_jetterm:                2.3213               0.29101   [                1.4752                3.1416 ]
+                         :  dphi_ph_centraljet1:               0.26861                45.164   [               -999.00                3.1413 ]
+                         :            metplusph:            2.5932e+05                87501.   [            1.5131e+05            4.3949e+06 ]
+                         :      failJVT_jet_pt1:                5116.9                11833.   [               -999.00                59726. ]
+                         :              softerm:                9611.4                6021.9   [                0.0000                51807. ]
+                         :              jetterm:            2.1711e+05                90464.   [                54389.            4.3835e+06 ]
+                         :        n_jet_central:                2.1161               0.99294   [                0.0000                4.0000 ]
+                         :        jetterm_sumet:            2.5718e+05            1.1600e+05   [                54389.            5.1079e+06 ]
+                         : dphi_met_central_jet:               0.65701                45.181   [               -999.00                3.1416 ]
+                         :              balance:              -0.85889                45.114   [               -999.00                19.686 ]
+                         :              dphi_jj:               -330.27                470.68   [               -999.00                2.4997 ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         : [32m
+                         : <PlotVariables> Will not produce scatter plots ==> 
+                         : |  The number of 25 input variables and 0 target values would require 300 two-dimensional
+                         : |  histograms, which would occupy the computer's memory. Note that this
+                         : |  suppression does not have any consequences for your analysis, other
+                         : |  than not disposing of these scatter plots. You can modify the maximum
+                         : |  number of input variables allowed to generate scatter plots in your
+                         : |  script via the command line:
+                         : |  "(TMVA::gConfig().GetVariablePlotting()).fMaxNumOfAllowedVariablesForScatterPlots = <some int>;"[0m
+                         : 
+                         : Some more output
+Factory                  : Evaluate classifier: BDT_Depth5_Trees100
+                         : 
+BDT_Depth5_Trees100      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT_Depth5_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
+                         :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
+                         :                  met:            1.6241e+05                58051.   [            1.0000e+05            2.0848e+06 ]
+                         :            met_noJVT:            1.6312e+05                58360.   [                83179.            2.0848e+06 ]
+                         :                 dmet:                710.84                5861.5   [               -20000.                49948. ]
+                         :                ph_pt:                96908.                54442.   [                50008.            3.8754e+06 ]
+                         :               ph_eta:               0.83625               0.49472   [            0.00036497                1.7499 ]
+                         :               ph_phi:              0.051643                1.8030   [               -3.1415                3.1415 ]
+                         :      jet_central_eta:               -2.0491                45.073   [               -999.00                2.4991 ]
+                         :      jet_central_pt1:            1.8718e+05                92551.   [               -999.00            4.4227e+06 ]
+                         :      jet_central_pt2:                39203.                41740.   [               -999.00            1.1051e+06 ]
+                         :      dphi_met_phterm:                1.9126               0.32501   [                1.3501                3.0768 ]
+                         :          dphi_met_ph:                1.2290               0.32500   [              0.064831                1.7915 ]
+                         :     dphi_met_jetterm:               0.40872               0.13714   [              0.017750               0.69994 ]
+                         :  dphi_phterm_jetterm:                2.3213               0.29101   [                1.4752                3.1416 ]
+                         :  dphi_ph_centraljet1:               0.26861                45.164   [               -999.00                3.1413 ]
+                         :            metplusph:            2.5932e+05                87501.   [            1.5131e+05            4.3949e+06 ]
+                         :      failJVT_jet_pt1:                5116.9                11833.   [               -999.00                59726. ]
+                         :              softerm:                9611.4                6021.9   [                0.0000                51807. ]
+                         :              jetterm:            2.1711e+05                90464.   [                54389.            4.3835e+06 ]
+                         :        n_jet_central:                2.1161               0.99294   [                0.0000                4.0000 ]
+                         :        jetterm_sumet:            2.5718e+05            1.1600e+05   [                54389.            5.1079e+06 ]
+                         : dphi_met_central_jet:               0.65701                45.181   [               -999.00                3.1416 ]
+                         :              balance:              -0.85889                45.114   [               -999.00                19.686 ]
+                         :              dphi_jj:               -330.27                470.68   [               -999.00                2.4997 ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         : [32m
+                         : <PlotVariables> Will not produce scatter plots ==> 
+                         : |  The number of 25 input variables and 0 target values would require 300 two-dimensional
+                         : |  histograms, which would occupy the computer's memory. Note that this
+                         : |  suppression does not have any consequences for your analysis, other
+                         : |  than not disposing of these scatter plots. You can modify the maximum
+                         : |  number of input variables allowed to generate scatter plots in your
+                         : |  script via the command line:
+                         : |  "(TMVA::gConfig().GetVariablePlotting()).fMaxNumOfAllowedVariablesForScatterPlots = <some int>;"[0m
+                         : 
+                         : Some more output
+Factory                  : Evaluate classifier: BDT_Depth5_Trees200
+                         : 
+BDT_Depth5_Trees200      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT_Depth5_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
+                         :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
+                         :                  met:            1.6241e+05                58051.   [            1.0000e+05            2.0848e+06 ]
+                         :            met_noJVT:            1.6312e+05                58360.   [                83179.            2.0848e+06 ]
+                         :                 dmet:                710.84                5861.5   [               -20000.                49948. ]
+                         :                ph_pt:                96908.                54442.   [                50008.            3.8754e+06 ]
+                         :               ph_eta:               0.83625               0.49472   [            0.00036497                1.7499 ]
+                         :               ph_phi:              0.051643                1.8030   [               -3.1415                3.1415 ]
+                         :      jet_central_eta:               -2.0491                45.073   [               -999.00                2.4991 ]
+                         :      jet_central_pt1:            1.8718e+05                92551.   [               -999.00            4.4227e+06 ]
+                         :      jet_central_pt2:                39203.                41740.   [               -999.00            1.1051e+06 ]
+                         :      dphi_met_phterm:                1.9126               0.32501   [                1.3501                3.0768 ]
+                         :          dphi_met_ph:                1.2290               0.32500   [              0.064831                1.7915 ]
+                         :     dphi_met_jetterm:               0.40872               0.13714   [              0.017750               0.69994 ]
+                         :  dphi_phterm_jetterm:                2.3213               0.29101   [                1.4752                3.1416 ]
+                         :  dphi_ph_centraljet1:               0.26861                45.164   [               -999.00                3.1413 ]
+                         :            metplusph:            2.5932e+05                87501.   [            1.5131e+05            4.3949e+06 ]
+                         :      failJVT_jet_pt1:                5116.9                11833.   [               -999.00                59726. ]
+                         :              softerm:                9611.4                6021.9   [                0.0000                51807. ]
+                         :              jetterm:            2.1711e+05                90464.   [                54389.            4.3835e+06 ]
+                         :        n_jet_central:                2.1161               0.99294   [                0.0000                4.0000 ]
+                         :        jetterm_sumet:            2.5718e+05            1.1600e+05   [                54389.            5.1079e+06 ]
+                         : dphi_met_central_jet:               0.65701                45.181   [               -999.00                3.1416 ]
+                         :              balance:              -0.85889                45.114   [               -999.00                19.686 ]
+                         :              dphi_jj:               -330.27                470.68   [               -999.00                2.4997 ]
+                         : -----------------------------------------------------------------------------------------------------------------------
+                         : [32m
+                         : <PlotVariables> Will not produce scatter plots ==> 
+                         : |  The number of 25 input variables and 0 target values would require 300 two-dimensional
+                         : |  histograms, which would occupy the computer's memory. Note that this
+                         : |  suppression does not have any consequences for your analysis, other
+                         : |  than not disposing of these scatter plots. You can modify the maximum
+                         : |  number of input variables allowed to generate scatter plots in your
+                         : |  script via the command line:
+                         : |  "(TMVA::gConfig().GetVariablePlotting()).fMaxNumOfAllowedVariablesForScatterPlots = <some int>;"[0m
+                         : 
+                         : Some more output
+Factory                  : Evaluate classifier: BDT_Depth5_Trees300
+                         : 
+BDT_Depth5_Trees300      : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT_Depth5_T...:             Variable                    Mean                    RMS            [        Min                    Max ]
                          : -----------------------------------------------------------------------------------------------------------------------
                          :               metsig:                9.9423                1.9890   [                7.0003                15.999 ]
                          :            metsigres:                16223.                4027.8   [                10487.            1.7670e+05 ]
@@ -351,7 +1936,18 @@ TFHandler_BDT            :             Variable                    Mean         
                          : -------------------------------------------------------------------------------------------------------------------
                          : DataSet       MVA                       
                          : Name:         Method:          ROC-integ
-                         : dataset       BDT            : 0.673
+                         : dataset       BDT_Depth4_Trees100: 0.683
+                         : dataset       BDT_Depth3_Trees100: 0.683
+                         : dataset       BDT_Depth4_Trees300: 0.677
+                         : dataset       BDT_Depth3_Trees200: 0.673
+                         : dataset       BDT_Depth4_Trees200: 0.673
+                         : dataset       BDT_Depth5_Trees100: 0.672
+                         : dataset       BDT_Depth5_Trees200: 0.670
+                         : dataset       BDT_Depth3_Trees300: 0.670
+                         : dataset       BDT_Depth2_Trees200: 0.665
+                         : dataset       BDT_Depth2_Trees300: 0.665
+                         : dataset       BDT_Depth5_Trees300: 0.663
+                         : dataset       BDT_Depth2_Trees100: 0.662
                          : -------------------------------------------------------------------------------------------------------------------
                          : 
                          : Testing efficiency compared to training efficiency (overtraining check)
@@ -359,7 +1955,18 @@ TFHandler_BDT            :             Variable                    Mean         
                          : DataSet              MVA              Signal efficiency: from test sample (from training sample) 
                          : Name:                Method:          @B=0.01             @B=0.10            @B=0.30   
                          : -------------------------------------------------------------------------------------------------------------------
-                         : dataset              BDT            : 0.035 (0.038)       0.227 (0.286)      0.496 (0.613)
+                         : dataset              BDT_Depth4_Trees100: 0.039 (0.050)       0.242 (0.298)      0.538 (0.644)
+                         : dataset              BDT_Depth3_Trees100: 0.030 (0.040)       0.223 (0.308)      0.539 (0.629)
+                         : dataset              BDT_Depth4_Trees300: 0.037 (0.070)       0.212 (0.310)      0.516 (0.633)
+                         : dataset              BDT_Depth3_Trees200: 0.035 (0.038)       0.227 (0.286)      0.496 (0.613)
+                         : dataset              BDT_Depth4_Trees200: 0.026 (0.042)       0.224 (0.280)      0.520 (0.624)
+                         : dataset              BDT_Depth5_Trees100: 0.035 (0.044)       0.217 (0.279)      0.525 (0.645)
+                         : dataset              BDT_Depth5_Trees200: 0.038 (0.045)       0.214 (0.280)      0.510 (0.633)
+                         : dataset              BDT_Depth3_Trees300: 0.036 (0.046)       0.220 (0.285)      0.499 (0.599)
+                         : dataset              BDT_Depth2_Trees200: 0.028 (0.041)       0.201 (0.286)      0.510 (0.614)
+                         : dataset              BDT_Depth2_Trees300: 0.035 (0.039)       0.211 (0.279)      0.493 (0.615)
+                         : dataset              BDT_Depth5_Trees300: 0.036 (0.054)       0.201 (0.315)      0.515 (0.630)
+                         : dataset              BDT_Depth2_Trees100: 0.020 (0.032)       0.195 (0.253)      0.526 (0.611)
                          : -------------------------------------------------------------------------------------------------------------------
                          : 
 Dataset:dataset          : Created tree 'TestTree' with 27085 events
