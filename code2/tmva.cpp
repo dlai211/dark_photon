@@ -28,7 +28,7 @@ int main() {
     std::cout << "Background entries: " << tbkg->GetEntries() << std::endl;
 
 
-    TFile *outputFile = TFile::Open("/data/jlai/dark_photon/tmva_output.root", "RECREATE");
+    TFile *outputFile = TFile::Open("/data/jlai/ntups/mc23d/tmva_output.root", "RECREATE");
 
     // !V -> Verbose mode disabled
     // !Silent -> Batch mode disabled
@@ -95,9 +95,23 @@ int main() {
     );
 
     // Classification
-    factory->BookMethod(dataloader, TMVA::Types::kBDT, "BDT",
-        "!H:!V:NTrees=200:MaxDepth=3:BoostType=AdaBoost:AdaBoostBeta=0.5:"
-        "UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20");
+    // factory->BookMethod(dataloader, TMVA::Types::kBDT, "BDT",
+    //     "!H:!V:NTrees=200:MaxDepth=3:BoostType=AdaBoost:AdaBoostBeta=0.5:"
+    //     "UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20");
+
+    std::vector<int> depths = {2, 3, 4, 5}; // Different depths for BDT
+    std::vector<int> nTrees = {100, 200, 300}; // Different number of trees for BDT
+    for (int depth: depths) {
+        for (int ntree: nTrees) {
+            TString methodName = Form("BDT_Depth%d_Trees%d", depth, ntree);
+            TString options = Form(
+                "!H:!V:NTrees=%d:MaxDepth=%d:BoostType=AdaBoost:AdaBoostBeta=0.5:"
+                "UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=20",
+                ntree, depth);
+            factory->BookMethod(dataloader, TMVA::Types::kBDT, methodName.Data(), options);
+            std::cout << "Booked method: " << methodName.Data() << " with options: " << options.Data() << std::endl;
+        }
+    }
 
     factory->TrainAllMethods();
     factory->TestAllMethods();
