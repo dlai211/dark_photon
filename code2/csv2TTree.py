@@ -13,28 +13,28 @@ def parse_CSV_file_with_TTree_ReadStream():
         'dmet'                  : ('dmet',                  float),
         'ph_pt'                 : ('ph_pt',                 float),
         'ph_eta'                : ('ph_eta',                float),
-        'ph_phi'                : ('ph_phi',                float),
-        'jet_central_eta'       : ('jet_central_eta',       float),
-        'jet_central_pt1'       : ('jet_central_pt1',       float),
-        'jet_central_pt2'       : ('jet_central_pt2',       float),
+        # 'ph_phi'                : ('ph_phi',                float),
+        # 'jet_central_eta'       : ('jet_central_eta',       float),
+        # 'jet_central_pt1'       : ('jet_central_pt1',       float),
+        # 'jet_central_pt2'       : ('jet_central_pt2',       float),
         'dphi_met_phterm'       : ('dphi_met_phterm',       float),
-        'dphi_met_ph'           : ('dphi_met_ph',           float),
+        # 'dphi_met_ph'           : ('dphi_met_ph',           float),
         'dphi_met_jetterm'      : ('dphi_met_jetterm',      float),
         'dphi_phterm_jetterm'   : ('dphi_phterm_jetterm',   float),
         'dphi_ph_centraljet1'   : ('dphi_ph_centraljet1',   float),
-        'metplusph'             : ('metplusph',             float),
+        # 'metplusph'             : ('metplusph',             float),
         'failJVT_jet_pt1'       : ('failJVT_jet_pt1',       float),
-        'softerm'               : ('softerm',               float),
+        # 'softerm'               : ('softerm',               float),
         'jetterm'               : ('jetterm',               float),
-        'jetterm_sumet'         : ('jetterm_sumet',         float),
-        'n_jet_central'         : ('n_jet_central',         int),
+        # 'jetterm_sumet'         : ('jetterm_sumet',         float),
+        'n_jet_central'         : ('n_jet_central',         float),
         'dphi_met_central_jet'  : ('dphi_met_central_jet',  float),
         'balance'               : ('balance',               float),
         'dphi_jj'               : ('dphi_jj',               float),
         'BDTScore'              : ('BDTScore',              float),
         'mt'                    : ('mt',                    float),
         'weights'               : ('weights',               float),
-        'process'               : ('process',               str), 
+        # 'process'               : ('process',               str), 
         'label'                 : ('label',                 int)
     }
 
@@ -45,7 +45,7 @@ def parse_CSV_file_with_TTree_ReadStream():
     }
     
     tree_name = "nominal"
-    csv_file_name = "/data/jlai/dark_photon/code2/BDT_input_background.csv"
+    csv_file_name = "/data/jlai/dark_photon/code2/BDT_input_signal.csv"
     header_row = open(csv_file_name).readline().strip().split(',')
     print(header_row)
 
@@ -54,7 +54,7 @@ def parse_CSV_file_with_TTree_ReadStream():
                            type_mapping_dictionary[header_mapping_dictionary[row][1]]
                            for row in header_row if row in header_mapping_dictionary])
 
-    output_ROOT_file_name = "/data/jlai/ntups/mc23d/tmva_input_background.root"
+    output_ROOT_file_name = "/data/jlai/ntups/mc23d/tmva_input_signal.root"
     output_file = ROOT.TFile(output_ROOT_file_name, "recreate")
     print("Outputting %s -> %s" % (csv_file_name, output_ROOT_file_name))
 
