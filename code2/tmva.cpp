@@ -45,24 +45,24 @@ int main() {
     dataloader->AddVariable("met_noJVT", 'F');
     dataloader->AddVariable("dmet", 'F');
     dataloader->AddVariable("ph_pt", 'F');
-    dataloader->AddVariable("ph_eta", 'F');
-    dataloader->AddVariable("ph_phi", 'F');
-    dataloader->AddVariable("jet_central_eta", 'F');
-    dataloader->AddVariable("jet_central_pt1", 'F');
-    dataloader->AddVariable("jet_central_pt2", 'F');
+    // dataloader->AddVariable("ph_eta", 'F');
+    // dataloader->AddVariable("ph_phi", 'F');
+    // dataloader->AddVariable("jet_central_eta", 'F');
+    // dataloader->AddVariable("jet_central_pt1", 'F');
+    // dataloader->AddVariable("jet_central_pt2", 'F');
     dataloader->AddVariable("dphi_met_phterm", 'F');
-    dataloader->AddVariable("dphi_met_ph", 'F');
+    // dataloader->AddVariable("dphi_met_ph", 'F');
     dataloader->AddVariable("dphi_met_jetterm", 'F');
     dataloader->AddVariable("dphi_phterm_jetterm", 'F');
     dataloader->AddVariable("dphi_ph_centraljet1", 'F');
-    dataloader->AddVariable("metplusph", 'F');
+    // dataloader->AddVariable("metplusph", 'F');
     dataloader->AddVariable("failJVT_jet_pt1", 'F');
-    dataloader->AddVariable("softerm", 'F');
+    // dataloader->AddVariable("softerm", 'F');
     dataloader->AddVariable("jetterm", 'F');
     dataloader->AddVariable("n_jet_central", 'F'); 
-    dataloader->AddVariable("jetterm_sumet", 'F');
+    // dataloader->AddVariable("jetterm_sumet", 'F');
     dataloader->AddVariable("dphi_met_central_jet", 'F');
-    dataloader->AddVariable("balance", 'F');
+    // dataloader->AddVariable("balance", 'F');
     dataloader->AddVariable("dphi_jj", 'F');
     // dataloader->AddVariable("BDTScore", 'F');
 
@@ -80,8 +80,10 @@ int main() {
     dataloader->SetWeightExpression("weights");
 
     // Apply additional cuts on the samples
-    TCut mycuts = "metsig<=16";
-    TCut mycutb = "metsig<=16";
+    // TCut mycuts = "metsig<=16";
+    // TCut mycutb = "metsig<=16";
+    TCut mycuts = "";
+    TCut mycutb = "";
 
     // Creating Training and Test Trees
     // If nTrain_Signal and nTrain_Background are both 0, the total sample is split in half for training and testing.
