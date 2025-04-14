@@ -19,7 +19,7 @@ from BkgEstimate import *
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('-s', '--samples', type=str, nargs='+', help='list of samples', default=['all'])
 parser.add_argument('-v', '--vars', type=str, nargs='+', help='list of variables', default=['all'])
-parser.add_argument('-c', '--cuts', type=str, nargs='+', help='list of selections', default=['met100phPT50'])
+parser.add_argument('-c', '--cuts', type=str, nargs='+', help='list of selections', default=['basic'])
 parser.add_argument('--stack', action = 'store_true',  help='do stack plot', default=False)
 parser.add_argument('-p', '--period', type=str, help='period (Run2,mc23d)', default='mc23d')
 parser.add_argument('-d', '--dir', type=str, help='input directory', default='/data/tmathew/ntups/mc23d')
@@ -49,8 +49,8 @@ if __name__ == '__main__':
     vars = args.vars if args.vars!=['all'] else var_dict
     # samples = args.samples if args.samples!=['all'] else ['ggHyyd', 'gammajet_direct']
     # samples = args.samples if args.samples!=['all'] else ['gammajet_direct','gammajet_frag']
-    # samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zjets']
-    samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag','dijet']
+    samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zgamma', 'Wgamma']
+    # samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag','dijet']
     sels = args.cuts
     year = args.period
     stack = args.stack
