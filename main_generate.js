@@ -1,40 +1,21 @@
-// Define the cut configurations (same as Python's cut_config)
-const cut_config = {
-    'basic': true, 'metsig': true, 'dphi_met_phterm': true, 'dmet': true,
-    'dphi_met_jetterm': true, 'ph_eta': true, 'dphi_jj': true, 'balance': true
-};
+// different config.js based on the link
+const hash = window.location.hash.replace('#', '');
+console.log("Hash from URL: ", hash);
 
-const var_config = [
-    "actualIntPerXing", "balance", "balance_sumet", "BDTScore",
-    "central_jets_fraction", "dmet", "dphi_jj", "dphi_met_central_jet", 
-    "dphi_met_jetterm", "dphi_met_ph", "dphi_met_phterm", "dphi_ph_jet1", 
-    "dphi_ph_centraljet1", "dphi_phterm_jetterm", "failJVT_jet_pt", 
-    "failJVT_jet_pt1", "goodPV", "jet_central_emfrac", "jet_central_eta", 
-    "jet_central_pt", "jet_central_pt1", "jet_central_pt2", "jet_central_timing", 
-    "jet_central_timing1", "jetterm", "jetterm_sumet", "met", "met_cst", 
-    "met_noJVT", "met_track", "metplusph", "metsig", "metsigres", 
-    "mt", "n_jet", "n_jet_central", "n_jet_fwd", "n_el_baseline", 
-    "n_mu_baseline", "n_ph", "n_ph_baseline", "n_tau_baseline", "ph_eta", 
-    "ph_phi", "ph_pt", "puWeight", "softerm", "trigger", "vtx_sumPt"
-];
-
-const sig_config = [
-    "BDTScore", "balance", "dmet", "dphi_jj", "dphi_met_jetterm", 
-    "dphi_met_phterm", "dphi_ph_centraljet1", "dphi_phterm_jetterm", 
-    "met", "metsig", "mt", "n_jet_central", "ph_eta", "ph_pt"
-];
-
-const n_1_config = [
-    "balance", "dmet", "dphi_jj", "dphi_met_jetterm", "dphi_met_phterm", 
-    "metsig", "ph_eta"
-];
+// Get imageData dict
+const imageData = imageMap_index[hash] || { images: [], title: 'No plots found' };
+let imagesPerRow = imageData.imagesPerRow || 4; // Default to 4 if not set
+const cut_config = imageData.cut_config;
+const var_config = imageData.var_config;
+const sig_config = imageData.sig_config;
+const n_1_config = imageData.n_1_config;
 
 // Function to generate image paths dynamically
 function generateImagePaths(cut_name, mode, lumi) {
     if (!cut_config[cut_name] && mode !== "n-1") return [];
     
     let images = [];
-    let path = (lumi === "26fb") ? `test/lumi26/` : (lumi === "135fb") ? `test/lumi135/` : ``;
+    let path = (lumi === "26fb") ? imageData.path[0] : (lumi === "135fb") ? imageData.path[1] : ``;
 
     if (mode == "performance") {
         var_config.forEach((var_name) => {
