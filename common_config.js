@@ -15,8 +15,27 @@ const wzstudy_images = [
 ];
 
 const d_images = [
+    ['ggHyyd_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_basic.png',
+    'Wgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_basic.png',
+    'Zgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_basic.png',
+    'ggHyyd_dphi_met_phterm_vs_dphi_met_jetterm_logZ_basic.png',
+    'Wgamma_dphi_met_phterm_vs_dphi_met_jetterm_logZ_basic.png',
+    'Zgamma_dphi_met_phterm_vs_dphi_met_jetterm_logZ_basic.png',
+    'ggHyyd_dphi_met_phterm_vs_dphi_phterm_jetterm_logZ_basic.png',
+    'Wgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_logZ_basic.png',
+    'Zgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_logZ_basic.png',],
 
-    'ggHyyd_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_selection.png',
+    ['ggHyyd_dphi_met_jetterm_vs_dphi_phterm_jetterm_noLogZ_basic.png',
+    'Wgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_noLogZ_basic.png',
+    'Zgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_noLogZ_basic.png',
+    'ggHyyd_dphi_met_phterm_vs_dphi_met_jetterm_noLogZ_basic.png',
+    'Wgamma_dphi_met_phterm_vs_dphi_met_jetterm_noLogZ_basic.png',
+    'Zgamma_dphi_met_phterm_vs_dphi_met_jetterm_noLogZ_basic.png',
+    'ggHyyd_dphi_met_phterm_vs_dphi_phterm_jetterm_noLogZ_basic.png',
+    'Wgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_noLogZ_basic.png',
+    'Zgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_noLogZ_basic.png',],
+
+    ['ggHyyd_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_selection.png',
     'Wgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_selection.png',
     'Zgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_selection.png',
     'ggHyyd_dphi_met_phterm_vs_dphi_met_jetterm_logZ_selection.png',
@@ -27,8 +46,9 @@ const d_images = [
     'Zgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_logZ_selection.png',
     'dphi_met_jetterm_vs_dphi_phterm_jetterm_scatter_selection.png',
     'dphi_met_phterm_vs_dphi_met_jetterm_scatter_selection.png',
-    'dphi_met_phterm_vs_dphi_phterm_jetterm_scatter_selection.png',
-    'ggHyyd_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_n-2.png',
+    'dphi_met_phterm_vs_dphi_phterm_jetterm_scatter_selection.png'],
+
+    ['ggHyyd_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_n-2.png',
     'Wgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_n-2.png',
     'Zgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_n-2.png',
     'ggHyyd_dphi_met_phterm_vs_dphi_met_jetterm_logZ_n-2.png',
@@ -39,9 +59,48 @@ const d_images = [
     'Zgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_logZ_n-2.png',
     'dphi_met_jetterm_vs_dphi_phterm_jetterm_scatter_n-2.png',
     'dphi_met_phterm_vs_dphi_met_jetterm_scatter_n-2.png',
-    'dphi_met_phterm_vs_dphi_phterm_jetterm_scatter_n-2.png',
-    'vector_plot_met_ph_jet.png',
-    'vector_plot_met_phterm_jetterm.png',
+    'dphi_met_phterm_vs_dphi_phterm_jetterm_scatter_n-2.png'],
+
+    ['vector_plot_met_ph_jet_ggHyyd_event1.png',
+    'vector_plot_met_phterm_jetterm_ggHyyd_event1.png',
+    'vector_plot_met_ph_jet_ggHyyd_event2.png',
+    'vector_plot_met_phterm_jetterm_ggHyyd_event2.png',
+    'vector_plot_met_ph_jet_ggHyyd_event3.png',
+    'vector_plot_met_phterm_jetterm_ggHyyd_event3.png',
+    'vector_plot_met_ph_jet_ggHyyd_event4.png',
+    'vector_plot_met_phterm_jetterm_ggHyyd_event5.png',
+    'vector_plot_met_ph_jet_ggHyyd_event6.png',
+    'vector_plot_met_phterm_jetterm_ggHyyd_event6.png',
+    'vector_plot_met_ph_jet_ggHyyd_event7.png',
+    'vector_plot_met_phterm_jetterm_ggHyyd_event7.png',
+    'vector_plot_met_ph_jet_ggHyyd_event8.png',
+    'vector_plot_met_phterm_jetterm_ggHyyd_event8.png',
+    'vector_plot_met_ph_jet_ggHyyd_event9.png',
+    'vector_plot_met_phterm_jetterm_ggHyyd_event9.png',
+    'vector_plot_met_ph_jet_ggHyyd_event10.png',
+    'vector_plot_met_phterm_jetterm_ggHyyd_event10.png'],
+
+    ['vector_plot_met_ph_jet_Wgamma_event0.png',   'vector_plot_met_phterm_jetterm_Wgamma_event0.png',
+        'vector_plot_met_ph_jet_Wgamma_event10.png',  'vector_plot_met_phterm_jetterm_Wgamma_event10.png',
+        'vector_plot_met_ph_jet_Wgamma_event1.png',   'vector_plot_met_phterm_jetterm_Wgamma_event1.png',
+        'vector_plot_met_ph_jet_Wgamma_event2.png',   'vector_plot_met_phterm_jetterm_Wgamma_event2.png',
+        'vector_plot_met_ph_jet_Wgamma_event4.png',   'vector_plot_met_phterm_jetterm_Wgamma_event4.png',
+        'vector_plot_met_ph_jet_Wgamma_event5.png',   'vector_plot_met_phterm_jetterm_Wgamma_event5.png',
+        'vector_plot_met_ph_jet_Wgamma_event6.png',   'vector_plot_met_phterm_jetterm_Wgamma_event6.png',
+        'vector_plot_met_ph_jet_Wgamma_event7.png',   'vector_plot_met_phterm_jetterm_Wgamma_event7.png',
+        'vector_plot_met_ph_jet_Wgamma_event8.png',   'vector_plot_met_phterm_jetterm_Wgamma_event8.png',
+        'vector_plot_met_ph_jet_Wgamma_event9.png',   'vector_plot_met_phterm_jetterm_Wgamma_event9.png',],
+
+    ['vector_plot_met_ph_jet_Zgamma_event0.png',  'vector_plot_met_phterm_jetterm_Zgamma_event0.png',
+        'vector_plot_met_ph_jet_Zgamma_event1.png',  'vector_plot_met_phterm_jetterm_Zgamma_event1.png',
+        'vector_plot_met_ph_jet_Zgamma_event2.png',  'vector_plot_met_phterm_jetterm_Zgamma_event2.png',
+        'vector_plot_met_ph_jet_Zgamma_event3.png',  'vector_plot_met_phterm_jetterm_Zgamma_event3.png',
+        'vector_plot_met_ph_jet_Zgamma_event4.png',  'vector_plot_met_phterm_jetterm_Zgamma_event4.png',
+        'vector_plot_met_ph_jet_Zgamma_event5.png',  'vector_plot_met_phterm_jetterm_Zgamma_event5.png',
+        'vector_plot_met_ph_jet_Zgamma_event6.png',  'vector_plot_met_phterm_jetterm_Zgamma_event6.png',
+        'vector_plot_met_ph_jet_Zgamma_event7.png',  'vector_plot_met_phterm_jetterm_Zgamma_event7.png',
+        'vector_plot_met_ph_jet_Zgamma_event8.png',  'vector_plot_met_phterm_jetterm_Zgamma_event8.png',
+        'vector_plot_met_ph_jet_Zgamma_event9.png',  'vector_plot_met_phterm_jetterm_Zgamma_event9.png',]
 ];
 
 const abs_weight_selection_images = [
@@ -257,7 +316,8 @@ const imageMap = {
         images: d_images,
         path: 'test/2d_plots',
         imagesPerRow: 3,
-        title: '2D plots of dphi_met_phterm, dphi_met_jetterm, dphi_met'
+        title: '2D plots of dphi_met_phterm, dphi_met_jetterm, dphi_met',
+        buttons: ['basic_logZ', 'basic', 'selection_logZ', 'n-2_logZ', 'vector_ggHyyd', 'vector_Wgamma', 'vector_Zgamma']
     },
     "absWeightBasic": {
         images: abs_weight_basic_images, 

@@ -21,19 +21,6 @@ sel_dict = getSelDict()
 var_dict = getVarDict()
 sample_dict = getSampleDict()
 
-def getWeightDict():
-    dict = {}
-    dict['ggHyyd'] = 140.587904214859
-    dict['Zjets'] = 2155.7233924865723
-    dict['Zgamma'] = 11350.253204345703
-    dict['Wgamma'] = 8653.602767944336
-    dict['Wjets'] = 12703.016357421875
-    dict['gammajet_direct'] = 218518.66864013672
-    dict['gammajet_frag'] = 161092.83154296875
-    dict['dijet'] = 171501971.1118164
-    return dict
-weight_dict = getWeightDict()
-
 def GetSelString(sel, addcut = ''):
     cuts_string = []
     if sel in sel_dict: cuts_string.append(sel_dict[sel]['str'])
@@ -146,7 +133,6 @@ def Plot(canv, Legend, file_path, h, sample, var, sel, counter = 1, normalize = 
     # print("Sample {}: Total events before cuts = {}".format(sample, total_events))
 
     weight = getWeight(period, sample) if reweight == '' else '(%s*%s)' %(getWeight(period, sample),reweight)
-    # weight = weight_dict[sample]
     doStack = (stack != None and sample not in ['ggHyyd','data'])
 
     print('sel: ', sel)

@@ -131,18 +131,18 @@ def getSelDict():
             '((met_jetterm_et!=0)*Alt$(acos(cos(met_tst_phi-met_jetterm_phi)),0)+(met_jetterm_et==0)*0) < 1.5' # dphi_met_jetterm
         )}
 
-    dict['allcut'] = {
+    dict['basic'] = {
         'str': (
-            'met_tst_et > 100000 && '
+            'n_ph_baseline == 1 && '
+            'n_ph == 1 && '
+            'n_mu_baseline == 0 && '
+            'n_el_baseline == 0 && '
+            'n_tau_baseline == 0 && '
             'trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M && '
+            'met_tst_et > 100000 && '
             'ph_pt[0] > 50000 && ' 
-            'ph_pt[0] < 200000 && '
-            '(met_tst_noJVT_et-met_tst_et) > -60000 && ' # dmet
-            '(met_tst_noJVT_et-met_tst_et) < 60000 && '
-            'sqrt(2*met_tst_et*ph_pt[0]*(1-cos(met_tst_phi-ph_phi[0])))/1000 > 40 && ' # mt
-            'sqrt(2*met_tst_et*ph_pt[0]*(1-cos(met_tst_phi-ph_phi[0])))/1000 < 200 && '
-            '((met_jetterm_et!=0)*Alt$(acos(cos(met_tst_phi-met_jetterm_phi)),0)+(met_jetterm_et==0)*0) < 1.5 && ' # dphi_met_jetterm
-            '(met_tst_et+ph_pt[0])/Sum$(jet_central_pt) <= 12' # balance
+            'n_jet_central <= 4 && '
+            'sqrt(2*met_tst_et*ph_pt[0]*(1-cos(met_tst_phi-ph_phi[0])))/1000 > 100' # mt
         )}
     
     dict['dmetcut'] = {
