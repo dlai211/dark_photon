@@ -61,7 +61,9 @@ const d_images = [
     'dphi_met_phterm_vs_dphi_met_jetterm_scatter_n-2.png',
     'dphi_met_phterm_vs_dphi_phterm_jetterm_scatter_n-2.png'],
 
-    ['vector_plot_met_ph_jet_ggHyyd_event1.png',
+    ['vector_plot_met_ph_jet_ggHyyd_event0.png',
+    'vector_plot_met_phterm_jetterm_ggHyyd_event0.png',
+    'vector_plot_met_ph_jet_ggHyyd_event1.png',
     'vector_plot_met_phterm_jetterm_ggHyyd_event1.png',
     'vector_plot_met_ph_jet_ggHyyd_event2.png',
     'vector_plot_met_phterm_jetterm_ggHyyd_event2.png',
@@ -76,20 +78,18 @@ const d_images = [
     'vector_plot_met_ph_jet_ggHyyd_event8.png',
     'vector_plot_met_phterm_jetterm_ggHyyd_event8.png',
     'vector_plot_met_ph_jet_ggHyyd_event9.png',
-    'vector_plot_met_phterm_jetterm_ggHyyd_event9.png',
-    'vector_plot_met_ph_jet_ggHyyd_event10.png',
-    'vector_plot_met_phterm_jetterm_ggHyyd_event10.png'],
+    'vector_plot_met_phterm_jetterm_ggHyyd_event9.png'],
 
-    ['vector_plot_met_ph_jet_Wgamma_event0.png',   'vector_plot_met_phterm_jetterm_Wgamma_event0.png',
-        'vector_plot_met_ph_jet_Wgamma_event10.png',  'vector_plot_met_phterm_jetterm_Wgamma_event10.png',
-        'vector_plot_met_ph_jet_Wgamma_event1.png',   'vector_plot_met_phterm_jetterm_Wgamma_event1.png',
-        'vector_plot_met_ph_jet_Wgamma_event2.png',   'vector_plot_met_phterm_jetterm_Wgamma_event2.png',
-        'vector_plot_met_ph_jet_Wgamma_event4.png',   'vector_plot_met_phterm_jetterm_Wgamma_event4.png',
+    ['vector_plot_met_ph_jet_Wgamma_event1.png',   'vector_plot_met_phterm_jetterm_Wgamma_event1.png',
+        'vector_plot_met_ph_jet_Wgamma_event2.png',  'vector_plot_met_phterm_jetterm_Wgamma_event2.png',
+        'vector_plot_met_ph_jet_Wgamma_event3.png',   'vector_plot_met_phterm_jetterm_Wgamma_event3.png',
         'vector_plot_met_ph_jet_Wgamma_event5.png',   'vector_plot_met_phterm_jetterm_Wgamma_event5.png',
         'vector_plot_met_ph_jet_Wgamma_event6.png',   'vector_plot_met_phterm_jetterm_Wgamma_event6.png',
         'vector_plot_met_ph_jet_Wgamma_event7.png',   'vector_plot_met_phterm_jetterm_Wgamma_event7.png',
         'vector_plot_met_ph_jet_Wgamma_event8.png',   'vector_plot_met_phterm_jetterm_Wgamma_event8.png',
-        'vector_plot_met_ph_jet_Wgamma_event9.png',   'vector_plot_met_phterm_jetterm_Wgamma_event9.png',],
+        'vector_plot_met_ph_jet_Wgamma_event9.png',   'vector_plot_met_phterm_jetterm_Wgamma_event9.png',
+        'vector_plot_met_ph_jet_Wgamma_event10.png',   'vector_plot_met_phterm_jetterm_Wgamma_event10.png',
+        'vector_plot_met_ph_jet_Wgamma_event11.png',   'vector_plot_met_phterm_jetterm_Wgamma_event11.png'],
 
     ['vector_plot_met_ph_jet_Zgamma_event0.png',  'vector_plot_met_phterm_jetterm_Zgamma_event0.png',
         'vector_plot_met_ph_jet_Zgamma_event1.png',  'vector_plot_met_phterm_jetterm_Zgamma_event1.png',
@@ -100,7 +100,7 @@ const d_images = [
         'vector_plot_met_ph_jet_Zgamma_event6.png',  'vector_plot_met_phterm_jetterm_Zgamma_event6.png',
         'vector_plot_met_ph_jet_Zgamma_event7.png',  'vector_plot_met_phterm_jetterm_Zgamma_event7.png',
         'vector_plot_met_ph_jet_Zgamma_event8.png',  'vector_plot_met_phterm_jetterm_Zgamma_event8.png',
-        'vector_plot_met_ph_jet_Zgamma_event9.png',  'vector_plot_met_phterm_jetterm_Zgamma_event9.png',]
+        'vector_plot_met_ph_jet_Zgamma_event9.png',  'vector_plot_met_phterm_jetterm_Zgamma_event9.png']
 ];
 
 const abs_weight_selection_images = [
