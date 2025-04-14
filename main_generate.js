@@ -1,6 +1,7 @@
 // different config.js based on the link
-const hash = window.location.hash.replace('#', '');
+let hash = window.location.hash.replace('#', '');
 console.log("Hash from URL: ", hash);
+if (!hash) {hash = "main"};
 
 // Get imageData dict
 const imageData = imageMap_index[hash] || { images: [], title: 'No plots found' };

@@ -1,5 +1,5 @@
 // different config.js based on the link
-const hash = window.location.hash.replace('#', '');
+let hash = window.location.hash.replace('#', '');
 console.log("Hash from URL: ", hash);
 
 // Get references to DOM elements

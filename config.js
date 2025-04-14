@@ -9,7 +9,7 @@ const cut_config_mt100 = {
 };
 const cut_config_dphi_diff = {
     'basic': true, 'dphi_met_phterm_minus_dphi_met_jetterm': true, 'balance': true, 'metsig': true, 
-    'ph_eta': true, 'dmet': true,  'dphi_jj': true,
+    'ph_eta': true, 'dmet': true,  'dphi_jj': true, 'metsig2': true, 'dphi_met_jetterm': true
 };
 
 const var_config_main = [
@@ -45,6 +45,8 @@ const n_1_config_mt100 = [
     "balance", "dmet", "dphi_jj", "dphi_met_jetterm", "dphi_met_phterm", 
     "metsig", "ph_eta"
 ];
+const n_1_config_dphi_diff = ["dphi_met_phterm_minus_dphi_met_jetterm", 
+    "balance", "metsig", "ph_eta", "dmet",  "dphi_jj", "dphi_met_jetterm"];
 
 
 const imageMap_index = {
@@ -68,7 +70,7 @@ const imageMap_index = {
         cut_config: cut_config_dphi_diff,
         var_config: var_config_main,
         sig_config: sig_config_dphi_diff,
-        n_1_config: n_1_config_mt100,
+        n_1_config: n_1_config_dphi_diff,
         path: [``, `test/dphi_diff/`],
         imagesPerRow: 4
     }
