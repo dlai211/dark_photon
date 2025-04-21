@@ -35,6 +35,26 @@ const d_images = [
     'Wgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_noLogZ_basic.png',
     'Zgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_noLogZ_basic.png',],
 
+    ['ggHyyd_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_basic_80.png',
+    'Wgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_basic_80.png',
+    'Zgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_basic_80.png',
+    'ggHyyd_dphi_met_phterm_vs_dphi_met_jetterm_logZ_basic_80.png',
+    'Wgamma_dphi_met_phterm_vs_dphi_met_jetterm_logZ_basic_80.png',
+    'Zgamma_dphi_met_phterm_vs_dphi_met_jetterm_logZ_basic_80.png',
+    'ggHyyd_dphi_met_phterm_vs_dphi_phterm_jetterm_logZ_basic_80.png',
+    'Wgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_logZ_basic_80.png',
+    'Zgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_logZ_basic_80.png',],
+
+    ['ggHyyd_dphi_met_jetterm_vs_dphi_phterm_jetterm_noLogZ_basic_80.png',
+    'Wgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_noLogZ_basic_80.png',
+    'Zgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_noLogZ_basic_80.png',
+    'ggHyyd_dphi_met_phterm_vs_dphi_met_jetterm_noLogZ_basic_80.png',
+    'Wgamma_dphi_met_phterm_vs_dphi_met_jetterm_noLogZ_basic_80.png',
+    'Zgamma_dphi_met_phterm_vs_dphi_met_jetterm_noLogZ_basic_80.png',
+    'ggHyyd_dphi_met_phterm_vs_dphi_phterm_jetterm_noLogZ_basic_80.png',
+    'Wgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_noLogZ_basic_80.png',
+    'Zgamma_dphi_met_phterm_vs_dphi_phterm_jetterm_noLogZ_basic_80.png',],
+
     ['ggHyyd_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_selection.png',
     'Wgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_selection.png',
     'Zgamma_dphi_met_jetterm_vs_dphi_phterm_jetterm_logZ_selection.png',
@@ -317,7 +337,7 @@ const imageMap = {
         path: 'test/2d_plots',
         imagesPerRow: 3,
         title: '2D plots of dphi_met_phterm, dphi_met_jetterm, dphi_met',
-        buttons: ['basic_logZ', 'basic', 'selection_logZ', 'n-2_logZ', 'vector_ggHyyd', 'vector_Wgamma', 'vector_Zgamma']
+        buttons: ['basic_logZ mT>100', 'basic mT>100', 'basic_logZ mT>80', 'basic mT>80', 'selection_logZ', 'n-2_logZ', 'vector_ggHyyd', 'vector_Wgamma', 'vector_Zgamma']
     },
     "absWeightBasic": {
         images: abs_weight_basic_images, 
