@@ -49,8 +49,9 @@ if __name__ == '__main__':
     vars = args.vars if args.vars!=['all'] else var_dict
     # samples = args.samples if args.samples!=['all'] else ['ggHyyd', 'gammajet_direct']
     # samples = args.samples if args.samples!=['all'] else ['gammajet_direct','gammajet_frag']
-    samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zgamma', 'Wgamma']
+    # samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zgamma', 'Wgamma']
     # samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag','dijet']
+    samples = args.samples if args.samples!=['all'] else ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag']
     sels = args.cuts
     year = args.period
     stack = args.stack
@@ -188,5 +189,5 @@ if __name__ == '__main__':
             Legend.Draw()
             atlas_label.Draw()
 
-            canv.SaveAs('tmp/%s_%s%s_%s.png' %(var,sel, 'Data' if data else '', tag))
+            canv.SaveAs('test/compare/%s_%s%s_%s.png' %(var,sel, 'Data' if data else '', tag))
         
