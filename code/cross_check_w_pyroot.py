@@ -31,7 +31,12 @@ total_events = tree.GetEntries()
 print(f"\nTotal events before any cut: {total_events}")
 
 # Define the three separate cuts
-cut1 = "met_tst_et > 50000"
+cut1 =  'n_ph == 1 && n_ph_baseline == 1 && n_tau_baseline == 0 && n_mu_baseline == 0 && n_el_baseline == 0 && ' + \
+        'trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M == 1 && ' + \
+        'met_tst_et >= 100000 && ' + \
+        'ph_pt[0] >= 50000 && ' + \
+        'n_jet_central <= 4 && ' + \
+        'sqrt(2*met_tst_et*ph_pt[0]*(1-cos(met_tst_phi-ph_phi[0])))/1000 >= 100' # mt
 cut2 = "trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M"
 cut3 = "ph_pt[0] > 50000"
 

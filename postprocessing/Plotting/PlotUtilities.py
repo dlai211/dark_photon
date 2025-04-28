@@ -46,7 +46,8 @@ def GetBinning(var):
     return nbin,minbin,maxbin
 
 def getLumi(period):
-    if period == "mc23d" in period: return '25767.5'
+    # if period == "mc23d" in period: return '25767.5'
+    if period == "mc23d" in period: return '135000'
     if period == 'Run2' : return '((year<=2016)*36640+(year==2017)*44630 +(year==2018)*58790)'
 
 def getWeight(period, sample):
@@ -227,10 +228,29 @@ def PlotRatio(canv, h, h0, ratio, var, color, normalize = False, rebin = False, 
             if h0.GetBinContent(b+1)>0: ratio.SetBinContent(b+1, h.GetBinContent(b+1)/math.sqrt(h0.GetBinContent(b+1)))
             else: ratio.SetBinContent(b+1,0)
 
+    # --- Add: Create second hisotgram for Binomial Expected Z ---
+    ratio_binomial = ratio.Clone("ratio_binomial")
+    ratio_binomial.Reset()
+
+    for b in range(bins):
+        s = h.GetBinContent(b + 1)
+        bkg = h0.GetBinContent(b + 1)
+        if bkg > 0:
+            significance_binomial = ROOT.RooStats.NumberCountingUtils.BinomialExpZ(s, bkg, 0.3)
+            ratio_binomial.SetBinContent(b + 1, significance_binomial)
+        else:
+            ratio_binomial.SetBinContent(b + 1, 0)
+
+        # Set style for binomial curve
+        ratio_binomial.SetLineColor(ROOT.kRed)
+        ratio_binomial.SetLineStyle(2)  # dashed
+        ratio_binomial.SetMarkerSize(0)
+
     ratio.SetLineColor(color)
     ratio.SetMarkerSize(0)
     ratio.SetMarkerColor(color)
-    ratio.GetYaxis().SetTitle('data/MC' if not significance else 's/#sqrt{b}')
+    ratio.SetLineWidth(1)
+    ratio.GetYaxis().SetTitle('data/MC' if not significance else 'significance')
     ratio.GetYaxis().SetTitleSize(0.05*65./35.)
     ratio.GetYaxis().SetNdivisions(505)
     ratio.GetYaxis().SetTitleOffset(1/65.*35.)
@@ -243,6 +263,11 @@ def PlotRatio(canv, h, h0, ratio, var, color, normalize = False, rebin = False, 
     ratio.GetYaxis().SetLabelSize(0.05*65./35.)
     ratio.GetYaxis().SetTitleSize(0.05*65./35.)
     ratio.Draw('same')
+    for i in range(ratio_binomial.GetNbinsX()):
+        print(f"Bin {i+1}: {ratio_binomial.GetBinContent(i+1)}")
+    if significance: 
+        ratio_binomial.Draw('same')
+
     if refline != None:
         print('draw line')
         refline.SetLineStyle(2)
@@ -254,12 +279,21 @@ def PlotRatio(canv, h, h0, ratio, var, color, normalize = False, rebin = False, 
     total_signal = h.Integral()
     total_background = h0.Integral()
     if total_background > 0:
-        overall_significance = total_signal / math.sqrt(total_background)
+        overall_simple_significance = total_signal / math.sqrt(total_background)
+        overall_binomial_significance = ROOT.RooStats.NumberCountingUtils.BinomialExpZ(total_signal, total_background, 0.3)
+        
         latex = ROOT.TLatex()
         latex.SetNDC()
-        latex.SetTextSize(0.08)
-        latex.SetTextColor(ROOT.kViolet)
-        latex.DrawLatex(0.72, 0.8, f"S/#sqrt{{B}} = {overall_significance:.5f}")
+        latex.SetTextSize(0.07)
+        latex.SetTextColor(ROOT.kViolet+1)
+        latex.DrawLatex(0.68, 0.85, f"S/#sqrt{{B}} = {overall_simple_significance:.4f}")
+
+        latex2 = ROOT.TLatex()
+        latex2.SetNDC()
+        latex2.SetTextSize(0.07)
+        latex2.SetTextColor(ROOT.kAzure+2)
+        latex2.DrawLatex(0.68, 0.77, f"Binomial ExpZ = {overall_binomial_significance:.4f}")
+
     else:
         print("Warning: Total background is zero, significance cannot be calculated.")
 
