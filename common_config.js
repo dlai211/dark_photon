@@ -424,6 +424,7 @@ const compare_images = [
 "vtx_sumPt_nodijet.png",
 ]
 
+
 const imageMap = {
     "phjet": {
         images: wzstudy_images,

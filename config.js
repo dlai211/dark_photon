@@ -11,7 +11,13 @@ const cut_config_dphi_diff = {
     'basic': true, 'dphi_met_phterm_minus_dphi_met_jetterm': true, 'balance': true, 'metsig': true, 
     'ph_eta': true, 'dmet': true,  'dphi_jj': true, 'metsig2': true, 'dphi_met_jetterm': true
 };
+const cut_config_sig = {
+    'basic': true, 'selection': true
+}
 
+
+
+// Define the variable configurations
 const var_config_main = [
     "actualIntPerXing", "balance", "balance_sumet", "BDTScore",
     "central_jets_fraction", "dmet", "dphi_jj", "dphi_met_central_jet", 
@@ -26,6 +32,9 @@ const var_config_main = [
     "ph_phi", "ph_pt", "puWeight", "softerm", "trigger", "vtx_sumPt"
 ];
 
+
+
+// Define the significance configurations
 const sig_config_main = [
     "BDTScore", "balance", "dmet", "dphi_jj", "dphi_met_jetterm", 
     "dphi_met_phterm", "dphi_ph_centraljet1", "dphi_phterm_jetterm", 
@@ -37,6 +46,9 @@ const sig_config_dphi_diff = [
     "met", "metsig", "mt", "n_jet_central", "ph_eta", "ph_pt"
 ];
 
+
+
+// Define the n-1 configureations
 const n_1_config_main = [
     "balance", "dmet", "dphi_jj", "dphi_met_jetterm", "dphi_met_phterm", 
     "metsig", "mt", "ph_eta"
@@ -47,6 +59,8 @@ const n_1_config_mt100 = [
 ];
 const n_1_config_dphi_diff = ["dphi_met_phterm_minus_dphi_met_jetterm", 
     "balance", "metsig", "ph_eta", "dmet",  "dphi_jj", "dphi_met_jetterm"];
+
+
 
 
 const imageMap_index = {
@@ -72,6 +86,14 @@ const imageMap_index = {
         sig_config: sig_config_dphi_diff,
         n_1_config: n_1_config_dphi_diff,
         path: [``, `test/dphi_diff/`],
+        imagesPerRow: 4
+    },
+    "significance": {
+        cut_config: cut_config_sig,
+        var_config: var_config_main,
+        sig_config: sig_config_main,
+        n_1_config: n_1_config_mt100,
+        path: [``, `test/sigstudy/`],
         imagesPerRow: 4
     }
 };
