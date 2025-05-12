@@ -8,7 +8,7 @@ variables = [
     "ph_phi", "ph_pt", "pu_weight", "pv_truth_z", "pv_z",
     "trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M", "vtx_sumPt",
     "mconly_weight", "mc_weight_sum", "xsec_ami", "filter_eff_ami", "kfactor_ami",
-    "pu_weight", "jvt_weight", "event"
+    "pu_weight", "jvt_weight", "event", "ph_topoetcone40"
 ]
 ntuple_name = ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag','dijet']
 ntuple_name_BDT = ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag','dijets']
