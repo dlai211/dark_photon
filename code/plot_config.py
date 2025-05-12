@@ -3,8 +3,7 @@ import awkward as ak
 from scipy.stats import norm
 from scipy.special import betainc
 
-
-def getWeight(fb, sample):
+def getWeight(fb, sample, jet_faking=False, electron_faking=False):
     # lumi = 25767.5
     lumi = 135000
     weight = fb['mconly_weight']/fb['mc_weight_sum']*fb['xsec_ami']*fb['filter_eff_ami']*fb['kfactor_ami']*fb['pu_weight']*fb['jvt_weight']*1000*lumi
@@ -13,6 +12,50 @@ def getWeight(fb, sample):
         # if sample != 'ggHyyd' : xsec_sig = fb['xsec_ami']
         br = 0.01
         weight = fb['mconly_weight']/fb['mc_weight_sum']*xsec_sig*fb['pu_weight']*fb['jvt_weight']*fb['filter_eff_ami']*fb['kfactor_ami']*1000*lumi*br
+
+    # reweighting for data-driven 
+    if jet_faking:
+        abs_eta = ak.abs(ak.firsts(fb['ph_eta'])) # leading photon per event
+        sf = ak.full_like(abs_eta, 0.0)
+
+        sf = ak.where((abs_eta > 0.0) & (abs_eta <= 0.6), 1.84, sf)
+        sf = ak.where((abs_eta > 0.6) & (abs_eta <= 1.37), 2.14, sf)
+        sf = ak.where((abs_eta > 1.37) & (abs_eta <= 1.52), 0.0, sf)
+        sf = ak.where((abs_eta > 1.52) & (abs_eta <= 1.81), 1.99, sf)
+        sf = ak.where((abs_eta > 1.81) & (abs_eta <= 2.37), 2.21, sf)
+        return sf
+
+    if electron_faking:
+        el_pt_GeV = ak.firsts(fb['el_pt']) * 0.001  # leading electron pt in GeV
+        abs_eta = abs(ak.firsts(fb['el_eta']))   # leading electron |eta|
+
+        # pt-dependent scale factor
+        scale = ak.full_like(el_pt_GeV, 1.0)
+
+        scale = ak.where((el_pt_GeV > 50) & (el_pt_GeV <= 52), 1.08, scale)
+        scale = ak.where((el_pt_GeV > 52) & (el_pt_GeV <= 54), 1.22, scale)
+        scale = ak.where((el_pt_GeV > 54) & (el_pt_GeV <= 56), 1.14, scale)
+        scale = ak.where((el_pt_GeV > 56) & (el_pt_GeV <= 58), 1.11, scale)
+        scale = ak.where((el_pt_GeV > 58) & (el_pt_GeV <= 60), 1.13, scale)
+        scale = ak.where((el_pt_GeV > 60) & (el_pt_GeV <= 62), 1.16, scale)
+        scale = ak.where((el_pt_GeV > 62) & (el_pt_GeV <= 65), 1.12, scale)
+        scale = ak.where((el_pt_GeV > 65) & (el_pt_GeV <= 70), 1.10, scale)
+        scale = ak.where((el_pt_GeV > 70) & (el_pt_GeV <= 80), 1.05, scale)
+        scale = ak.where((el_pt_GeV > 80) & (el_pt_GeV <= 100), 1.09, scale)
+        scale = ak.where((el_pt_GeV > 100) & (el_pt_GeV <= 200), 1.02, scale)
+
+        # eta-bin normalization factors
+        norm = ak.full_like(abs_eta, 0.0)
+
+        norm = ak.where((abs_eta > 0.0) & (abs_eta <= 0.6), 0.02808, norm)
+        norm = ak.where((abs_eta > 0.6) & (abs_eta <= 1.37), 0.02975, norm)
+        norm = ak.where((abs_eta > 1.37) & (abs_eta <= 1.52), 0.0, norm)  # crack region
+        norm = ak.where((abs_eta > 1.52) & (abs_eta <= 1.81), 0.05631, norm)
+        norm = ak.where((abs_eta > 1.81) & (abs_eta <= 2.37), 0.09524, norm)
+
+        return scale * norm
+        
+
     return weight
 
 def zbi(s, b, sigma_b_frac=0.3):
