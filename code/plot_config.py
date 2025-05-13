@@ -13,9 +13,9 @@ def getWeight(fb, sample, jet_faking=False, electron_faking=False):
         br = 0.01
         weight = fb['mconly_weight']/fb['mc_weight_sum']*xsec_sig*fb['pu_weight']*fb['jvt_weight']*fb['filter_eff_ami']*fb['kfactor_ami']*1000*lumi*br
 
-    # reweighting for data-driven 
+    # reweighting for jet faking photons
     if jet_faking:
-        abs_eta = ak.abs(ak.firsts(fb['ph_eta'])) # leading photon per event
+        abs_eta = abs(ak.firsts(fb['ph_eta'])) # leading photon per event
         sf = ak.full_like(abs_eta, 0.0)
 
         sf = ak.where((abs_eta > 0.0) & (abs_eta <= 0.6), 1.84, sf)
@@ -25,6 +25,7 @@ def getWeight(fb, sample, jet_faking=False, electron_faking=False):
         sf = ak.where((abs_eta > 1.81) & (abs_eta <= 2.37), 2.21, sf)
         return sf
 
+    # reweighting for electron faking photons
     if electron_faking:
         el_pt_GeV = ak.firsts(fb['el_pt']) * 0.001  # leading electron pt in GeV
         abs_eta = abs(ak.firsts(fb['el_eta']))   # leading electron |eta|
@@ -54,7 +55,6 @@ def getWeight(fb, sample, jet_faking=False, electron_faking=False):
         norm = ak.where((abs_eta > 1.81) & (abs_eta <= 2.37), 0.09524, norm)
 
         return scale * norm
-        
 
     return weight
 
