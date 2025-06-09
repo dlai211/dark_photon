@@ -21,7 +21,6 @@ const cut_config_jets_faking_photons = {
 
 
 
-
 // Define the variable configurations
 const var_config_main = [
     "actualIntPerXing", "balance", "balance_sumet", "BDTScore",
@@ -74,7 +73,8 @@ const n_1_config_mt100 = [
 ];
 const n_1_config_dphi_diff = ["dphi_met_phterm_minus_dphi_met_jetterm", 
     "balance", "metsig", "ph_eta", "dmet",  "dphi_jj", "dphi_met_jetterm"];
-
+const n_1_config_jets_faking_photons = [
+    "dphi_met_phterm", "metsig", "ph_eta", "dmet", "dphi_met_jetterm",  "dphi_ph_centraljet1"];
 
 
 
@@ -115,7 +115,7 @@ const imageMap_index = {
         cut_config: cut_config_jets_faking_photons,
         var_config: var_config_jets_faking_photons,
         sig_config: sig_config_main,
-        n_1_config: n_1_config_main,
+        n_1_config: n_1_config_jets_faking_photons,
         path: [`jets_faking_photons/lumi26/`, `jets_faking_photons/lumi135/`],
         imagesPerRow: 4
     }, 
