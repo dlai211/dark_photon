@@ -74,7 +74,7 @@ const n_1_config_mt100 = [
 const n_1_config_dphi_diff = ["dphi_met_phterm_minus_dphi_met_jetterm", 
     "balance", "metsig", "ph_eta", "dmet",  "dphi_jj", "dphi_met_jetterm"];
 const n_1_config_jets_faking_photons = [
-    "dphi_met_phterm", "metsig", "ph_eta", "dmet", "dphi_met_jetterm",  "dphi_ph_centraljet1", "balance", "dphi_jj"];
+    "BDTScore", "dphi_met_phterm", "metsig", "ph_eta", "dmet", "dphi_met_jetterm",  "dphi_ph_centraljet1", "balance", "dphi_jj"];
 
 
 
