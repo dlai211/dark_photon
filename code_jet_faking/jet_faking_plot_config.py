@@ -500,11 +500,10 @@ def getVarDict(fb, process, var_name=None):
     # dphi_jj: Use Alt$ logic – if jet_central_phi has at least two entries, compute the difference; else -1.
     # Here we use a Python conditional (this assumes fb['jet_central_phi'] is an array with shape information).
     if var_name is None or var_name == 'dphi_jj':
-        phi1_tmp = ak.firsts(fb['jet_central_phi'])
-        phi2_tmp = ak.mask(fb['jet_central_phi'], ak.num(fb['jet_central_phi']) >= 2)[:, 1]
-        dphi_tmp = np.arccos(np.cos(phi1_tmp - phi2_tmp))
+        dphi_jj_tmp = fb['dphi_central_jj']
+        dphi_jj_tmp = ak.where(dphi_jj_tmp == -10, -999, dphi_jj_tmp)
         var_dict['dphi_jj'] = {
-            'var': ak.fill_none(dphi_tmp, -999),
+            'var': dphi_jj_tmp,
             'bins': np.linspace(-1, 4, 20+1),
             'title': r'$\Delta\phi(j1,\, j2)$'
         }
