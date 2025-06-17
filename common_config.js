@@ -547,6 +547,36 @@ const ml_images = [
 'mlstudy/mc23d_bdt_nocorrelationcut/roc_curve_dphi_jj.png',
 'mlstudy/mc23d_bdt_correlationcut/bdtscore2_nodijet.png',
 'mlstudy/mc23d_bdt_nocorrelationcut/bdtscore2_nodijet.png',
+];
+
+const jets_faking_images = [
+    'mc23d_basiccut/balance_nodijet.png',
+    'mc23d_dphi_jjcut/balance_nodijet.png',
+    'mc23d_mlcut/balance_nodijet.png',
+        'mc23d_basiccut/dmet_nodijet.png',
+    'mc23d_dphi_jjcut/dmet_nodijet.png',
+    'mc23d_mlcut/dmet_nodijet.png',
+        'mc23d_basiccut/dphi_jj_nodijet.png',
+    'mc23d_dphi_jjcut/dphi_jj_nodijet.png',
+    'mc23d_mlcut/dphi_jj_nodijet.png',
+            'mc23d_basiccut/dphi_met_jetterm_nodijet.png',
+    'mc23d_dphi_jjcut/dphi_met_jetterm_nodijet.png',
+    'mc23d_mlcut/dphi_met_jetterm_nodijet.png',
+            'mc23d_basiccut/dphi_met_phterm_nodijet.png',
+    'mc23d_dphi_jjcut/dphi_met_phterm_nodijet.png',
+    'mc23d_mlcut/dphi_met_phterm_nodijet.png',
+                'mc23d_basiccut/met_nodijet.png',
+    'mc23d_dphi_jjcut/met_nodijet.png',
+    'mc23d_mlcut/met_nodijet.png',
+                'mc23d_basiccut/metsig_nodijet.png',
+    'mc23d_dphi_jjcut/metsig_nodijet.png',
+    'mc23d_mlcut/metsig_nodijet.png',
+                'mc23d_basiccut/ph_eta_nodijet.png',
+    'mc23d_dphi_jjcut/ph_eta_nodijet.png',
+    'mc23d_mlcut/ph_eta_nodijet.png',
+                'mc23d_basiccut/ph_pt_nodijet.png',
+    'mc23d_dphi_jjcut/ph_pt_nodijet.png',
+    'mc23d_mlcut/ph_pt_nodijet.png',
 ]
 
 const imageMap = {
@@ -586,5 +616,11 @@ const imageMap = {
         path: 'test',
         imagesPerRow: 4,
         title: "Image 1: basic cut |  Image 2: selection cut | Image 3: BDTscore (correlation) cut |   Image 4: BDTscore (uncorrelation) cut"
-    }
+    },
+    "jets_faking": {
+        images: jets_faking_images,
+        path: 'jets_faking_photons/lumi135',
+        imagesPerRow: 3,
+        title: ""
+    },
 };  
