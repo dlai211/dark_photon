@@ -5,7 +5,7 @@ from scipy.special import betainc
 
 def getWeight(fb, sample, jet_faking=False, electron_faking=False):
     # reweighting for jet faking photons
-    if sample == "data23":
+    if sample == 'data23':
         abs_eta = abs(ak.firsts(fb['ph_eta'])) # leading photon per event
         sf = ak.full_like(abs_eta, 0.0)
 
