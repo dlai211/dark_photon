@@ -5,7 +5,10 @@ from scipy.special import betainc
 
 def getWeight(fb, sample, jet_faking=False, electron_faking=False):
     # reweighting for jet faking photons
-    if sample == "data23":
+    # if sample == 'data23':
+    if jet_faking:
+        scale = 135000/25767.5
+
         abs_eta = abs(ak.firsts(fb['ph_eta'])) # leading photon per event
         sf = ak.full_like(abs_eta, 0.0)
 
@@ -14,10 +17,10 @@ def getWeight(fb, sample, jet_faking=False, electron_faking=False):
         sf = ak.where((abs_eta > 1.37) & (abs_eta <= 1.52), 0.0, sf)
         sf = ak.where((abs_eta > 1.52) & (abs_eta <= 1.81), 1.99, sf)
         sf = ak.where((abs_eta > 1.81) & (abs_eta <= 2.37), 2.21, sf)
-        return sf
+        return sf * scale
 
     # reweighting for electron faking photons
-    if electron_faking:
+    if sample == "data23":
         el_pt_GeV = ak.firsts(fb['el_pt']) * 0.001  # leading electron pt in GeV
         abs_eta = abs(ak.firsts(fb['el_eta']))   # leading electron |eta|
 
@@ -55,8 +58,6 @@ def getWeight(fb, sample, jet_faking=False, electron_faking=False):
         # if sample != 'ggHyyd' : xsec_sig = fb['xsec_ami']
         br = 0.01
         weight = fb['mconly_weight']/fb['mc_weight_sum']*xsec_sig*fb['pu_weight']*fb['jvt_weight']*fb['filter_eff_ami']*fb['kfactor_ami']*1000*lumi*br
-
-
 
     return weight
 
@@ -500,11 +501,10 @@ def getVarDict(fb, process, var_name=None):
     # dphi_jj: Use Alt$ logic – if jet_central_phi has at least two entries, compute the difference; else -1.
     # Here we use a Python conditional (this assumes fb['jet_central_phi'] is an array with shape information).
     if var_name is None or var_name == 'dphi_jj':
-        phi1_tmp = ak.firsts(fb['jet_central_phi'])
-        phi2_tmp = ak.mask(fb['jet_central_phi'], ak.num(fb['jet_central_phi']) >= 2)[:, 1]
-        dphi_tmp = np.arccos(np.cos(phi1_tmp - phi2_tmp))
+        dphi_jj_tmp = fb['dphi_central_jj']
+        dphi_jj_tmp = ak.where(dphi_jj_tmp == -10, -999, dphi_jj_tmp)
         var_dict['dphi_jj'] = {
-            'var': ak.fill_none(dphi_tmp, -999),
+            'var': dphi_jj_tmp,
             'bins': np.linspace(-1, 4, 20+1),
             'title': r'$\Delta\phi(j1,\, j2)$'
         }
