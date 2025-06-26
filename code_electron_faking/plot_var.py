@@ -1,5 +1,5 @@
 variables = [
-    "actualIntPerXing", "failJVT_jet_pt", "jet_central_emfrac", "jet_central_eta",
+    "actualIntPerXing", "dphi_central_jj", "failJVT_jet_pt", "jet_central_emfrac", "jet_central_eta",
     "jet_central_phi", "jet_central_pt", "jet_central_timing", "met_cst_et",
     "met_jetterm_et", "met_jetterm_phi", "met_jetterm_sumet", "met_phterm_phi",
     "met_softerm_tst_et", "met_tst_et", "met_tst_noJVT_et", "met_tst_phi",
@@ -11,7 +11,7 @@ variables = [
     "pu_weight", "jvt_weight", "event", "ph_topoetcone40", "el_pt", "el_eta", "ph_truth_type", "run"
 ]
 variables_data = [
-    "actualIntPerXing", "failJVT_jet_pt", "jet_central_emfrac", "jet_central_eta",
+    "actualIntPerXing", "dphi_central_jj", "failJVT_jet_pt", "jet_central_emfrac", "jet_central_eta",
     "jet_central_phi", "jet_central_pt", "jet_central_timing", "met_cst_et",
     "met_jetterm_et", "met_jetterm_phi", "met_jetterm_sumet", "met_phterm_phi",
     "met_softerm_tst_et", "met_tst_et", "met_tst_noJVT_et", "met_tst_phi",
