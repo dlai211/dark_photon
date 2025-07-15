@@ -1,0 +1,44 @@
+Exception ignored on calling ctypes callback function: <bound method DataIter._next_wrapper of <xgboost.data.SingleBatchInternalIter object at 0x7f0cdff29580>>
+Traceback (most recent call last):
+  File "/home/jlai/.local/lib/python3.8/site-packages/xgboost/core.py", line 582, in _next_wrapper
+    def _next_wrapper(self, this: None) -> int:  # pylint: disable=unused-argument
+KeyboardInterrupt:
+Exception ignored on calling ctypes callback function: <bound method DataIter._next_wrapper of <xgboost.data.SingleBatchInternalIter object at 0x7fc3a15f4580>>
+Traceback (most recent call last):
+  File "/home/jlai/.local/lib/python3.8/site-packages/xgboost/core.py", line 582, in _next_wrapper
+    def _next_wrapper(self, this: None) -> int:  # pylint: disable=unused-argument
+KeyboardInterrupt:
+Exception ignored on calling ctypes callback function: <bound method DataIter._next_wrapper of <xgboost.data.SingleBatchInternalIter object at 0x7f9344841580>>
+Traceback (most recent call last):
+  File "/home/jlai/.local/lib/python3.8/site-packages/xgboost/core.py", line 582, in _next_wrapper
+    def _next_wrapper(self, this: None) -> int:  # pylint: disable=unused-argument
+KeyboardInterrupt:
+Exception ignored on calling ctypes callback function: <bound method DataIter._next_wrapper of <xgboost.data.SingleBatchInternalIter object at 0x7f6df7363580>>
+Traceback (most recent call last):
+  File "/home/jlai/.local/lib/python3.8/site-packages/xgboost/core.py", line 582, in _next_wrapper
+    def _next_wrapper(self, this: None) -> int:  # pylint: disable=unused-argument
+KeyboardInterrupt:
+Number of event with negative weights : 85906
+Number of nan in each variable:
+metsig                        0
+met                           0
+met_noJVT                     0
+dmet                          1
+dphi_met_phterm               0
+dphi_ph_centraljet1       23182
+dphi_phterm_jetterm       17242
+jetterm                       0
+dphi_met_central_jet      23182
+BDTScore                      0
+weights                       0
+label                         0
+process                       0
+metsigres                     0
+ph_pt                         0
+ph_eta                        0
+dphi_met_jetterm          17420
+failJVT_jet_pt1         1743225
+n_jet_central             22719
+dphi_jj                  522407
+dtype: int64
+random number:  54

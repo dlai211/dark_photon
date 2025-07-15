@@ -1,0 +1,25 @@
+Best parameters found: {'gamma': 0.1168549954328543, 'learning_rate': 0.060310915607232646, 'max_depth': 7, 'n_estimators': 449, 'subsample': 0.9003723287899323}
+Number of event with negative weights : 84162
+Number of nan in each variable:
+metsig                        0
+met                           0
+met_noJVT                     0
+dmet                          1
+dphi_met_phterm               0
+dphi_ph_centraljet1       38443
+dphi_phterm_jetterm       17705
+jetterm                       0
+dphi_met_central_jet      38443
+BDTScore                      0
+weights                       0
+label                         0
+process                       0
+metsigres                     0
+ph_pt                         0
+ph_eta                        0
+dphi_met_jetterm          17882
+failJVT_jet_pt1         1503884
+n_jet_central             24611
+dphi_jj                  576288
+dtype: int64
+random number:  47

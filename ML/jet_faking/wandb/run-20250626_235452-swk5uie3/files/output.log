@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/tmp/ipykernel_65/3695109217.py", line 48, in sweep_train
+    df_ml_input["bdtscore2"] = model.predict_proba(df_ml_input.drop(Vars_drop, axis=1))[:, 1]
+  File "/home/jlai/.local/lib/python3.8/site-packages/xgboost/sklearn.py", line 1712, in predict_proba
+    class_probs = super().predict(
+  File "/home/jlai/.local/lib/python3.8/site-packages/xgboost/sklearn.py", line 1248, in predict
+    predts = self.get_booster().inplace_predict(
+  File "/home/jlai/.local/lib/python3.8/site-packages/xgboost/core.py", line 2514, in inplace_predict
+    self._validate_features(fns)
+  File "/home/jlai/.local/lib/python3.8/site-packages/xgboost/core.py", line 3079, in _validate_features
+    raise ValueError(msg.format(self.feature_names, feature_names))
+ValueError: feature_names mismatch: ['balance', 'BDTScore', 'dmet', 'dphi_jj', 'dphi_met_central_jet', 'dphi_met_phterm', 'dphi_phterm_jetterm', 'ph_phi', 'jet_central_eta', 'jet_central_pt2', 'jetterm', 'metsig', 'metsigres', 'met_noJVT', 'softerm', 'n_jet_central', 'failJVT_jet_pt1', 'ph_eta', 'ph_pt'] ['balance', 'BDTScore', 'dmet', 'dphi_jj', 'dphi_met_central_jet', 'dphi_met_phterm', 'dphi_phterm_jetterm', 'ph_phi', 'jet_central_eta', 'jet_central_pt2', 'jetterm', 'metsig', 'metsigres', 'met_noJVT', 'softerm', 'n_jet_central', 'failJVT_jet_pt1', 'ph_eta', 'ph_pt', 'bdtscore2']
+training data did not have the following fields: bdtscore2
