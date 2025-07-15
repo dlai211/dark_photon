@@ -1,0 +1,20 @@
+{"time":"2025-06-17T22:50:34.486152089Z","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/home/jlai/ML/jet_faking/wandb/run-20250617_225034-gh8nq099/logs/debug-core.log"}
+{"time":"2025-06-17T22:50:34.598873313Z","level":"INFO","msg":"created new stream","id":"gh8nq099"}
+{"time":"2025-06-17T22:50:34.598905072Z","level":"INFO","msg":"stream: started","id":"gh8nq099"}
+{"time":"2025-06-17T22:50:34.598964192Z","level":"INFO","msg":"writer: Do: started","stream_id":"gh8nq099"}
+{"time":"2025-06-17T22:50:34.599025705Z","level":"INFO","msg":"handler: started","stream_id":"gh8nq099"}
+{"time":"2025-06-17T22:50:34.599054727Z","level":"INFO","msg":"sender: started","stream_id":"gh8nq099"}
+{"time":"2025-06-17T22:50:34.788488313Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-17T22:55:31.51883222Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-06-17T23:07:43.498386813Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-06-17T23:07:43.864501644Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-06-17T23:08:28.690694815Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-06-17T23:08:33.205321842Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-17T23:08:33.20597659Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-17T23:08:33.579676693Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-17T23:08:33.688728618Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-06-17T23:08:34.696078041Z","level":"INFO","msg":"stream: closing","id":"gh8nq099"}
+{"time":"2025-06-17T23:08:34.696096266Z","level":"INFO","msg":"handler: closed","stream_id":"gh8nq099"}
+{"time":"2025-06-17T23:08:34.696107106Z","level":"INFO","msg":"writer: Close: closed","stream_id":"gh8nq099"}
+{"time":"2025-06-17T23:08:34.696161549Z","level":"INFO","msg":"sender: closed","stream_id":"gh8nq099"}
+{"time":"2025-06-17T23:08:34.696479874Z","level":"INFO","msg":"stream: closed","id":"gh8nq099"}

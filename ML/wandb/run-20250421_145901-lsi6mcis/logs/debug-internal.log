@@ -1,0 +1,18 @@
+{"time":"2025-04-21T14:59:01.172416227Z","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/home/jlai/ML/wandb/run-20250421_145901-lsi6mcis/logs/debug-core.log"}
+{"time":"2025-04-21T14:59:01.287821389Z","level":"INFO","msg":"created new stream","id":"lsi6mcis"}
+{"time":"2025-04-21T14:59:01.287856075Z","level":"INFO","msg":"stream: started","id":"lsi6mcis"}
+{"time":"2025-04-21T14:59:01.287870424Z","level":"INFO","msg":"writer: Do: started","stream_id":"lsi6mcis"}
+{"time":"2025-04-21T14:59:01.287891033Z","level":"INFO","msg":"sender: started","stream_id":"lsi6mcis"}
+{"time":"2025-04-21T14:59:01.287942789Z","level":"INFO","msg":"handler: started","stream_id":"lsi6mcis"}
+{"time":"2025-04-21T14:59:01.507421022Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-21T15:03:00.276047994Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-21T15:10:00.973279771Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-21T15:10:02.347802885Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-21T15:10:02.348378961Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-21T15:10:02.782642482Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-21T15:10:02.866553073Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-21T15:10:03.877738618Z","level":"INFO","msg":"stream: closing","id":"lsi6mcis"}
+{"time":"2025-04-21T15:10:03.877757465Z","level":"INFO","msg":"handler: closed","stream_id":"lsi6mcis"}
+{"time":"2025-04-21T15:10:03.877766614Z","level":"INFO","msg":"writer: Close: closed","stream_id":"lsi6mcis"}
+{"time":"2025-04-21T15:10:03.877779366Z","level":"INFO","msg":"sender: closed","stream_id":"lsi6mcis"}
+{"time":"2025-04-21T15:10:03.878240985Z","level":"INFO","msg":"stream: closed","id":"lsi6mcis"}
