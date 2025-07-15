@@ -1,0 +1,7 @@
+Best parameters found: {'gamma': 0.26399794093637874, 'learning_rate': 0.04845291095040173, 'max_depth': 9, 'n_estimators': 763, 'subsample': 0.9564983338575894}
+[21:35:08] WARNING: /workspace/src/common/error_msg.cc:58: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
+Potential solutions:
+- Use a data structure that matches the device ordinal in the booster.
+- Set the device for booster before call to inplace_predict.
+
+This warning will only be shown once.

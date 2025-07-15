@@ -1,0 +1,40 @@
+2025-06-09 05:29:09,647 INFO    MainThread:2433 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /home/jlai/ML/jet_faking/wandb/run-20250609_052909-qs1jafrz/logs/debug.log
+2025-06-09 05:29:09,648 INFO    MainThread:2433 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /home/jlai/ML/jet_faking/wandb/run-20250609_052909-qs1jafrz/logs/debug-internal.log
+2025-06-09 05:29:09,648 INFO    MainThread:2433 [wandb_init.py:init():761] calling init triggers
+2025-06-09 05:29:09,648 INFO    MainThread:2433 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-06-09 05:29:09,648 INFO    MainThread:2433 [wandb_init.py:init():773] finishing previous run: xvtey6v2
+2025-06-09 05:29:09,648 INFO    MainThread:2433 [wandb_run.py:_finish():2112] finishing run dlai211/Dark_ph BDT Random/xvtey6v2
+2025-06-09 05:29:09,648 INFO    MainThread:2433 [jupyter.py:save_history():458] not saving jupyter history
+2025-06-09 05:29:09,648 INFO    MainThread:2433 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-06-09 05:29:09,648 INFO    MainThread:2433 [wandb_init.py:_jupyter_teardown():581] cleaning up jupyter logic
+2025-06-09 05:29:09,648 INFO    MainThread:2433 [wandb_run.py:_atexit_cleanup():2342] got exitcode: 0
+2025-06-09 05:29:09,648 INFO    MainThread:2433 [wandb_run.py:_restore():2324] restore
+2025-06-09 05:29:09,649 INFO    MainThread:2433 [wandb_run.py:_restore():2330] restore done
+2025-06-09 05:29:11,160 INFO    MsgRouterThr:2433 [mailbox.py:close():115] Closing mailbox, abandoning 1 handles.
+2025-06-09 05:29:11,160 INFO    MainThread:2433 [wandb_run.py:_footer_history_summary_info():3958] rendering history
+2025-06-09 05:29:11,161 INFO    MainThread:2433 [wandb_run.py:_footer_history_summary_info():3990] rendering summary
+2025-06-09 05:29:11,162 INFO    MainThread:2433 [wandb_run.py:_footer_sync_info():3919] logging synced files
+2025-06-09 05:29:11,164 INFO    MainThread:2433 [wandb_init.py:init():784] starting backend
+2025-06-09 05:29:11,165 INFO    MainThread:2433 [wandb_init.py:init():788] sending inform_init request
+2025-06-09 05:29:11,165 INFO    MainThread:2433 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-06-09 05:29:11,166 INFO    MainThread:2433 [wandb_init.py:init():803] backend started and connected
+2025-06-09 05:29:11,170 INFO    MainThread:2433 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2025-06-09 05:29:11,170 INFO    MainThread:2433 [wandb_run.py:_label_probe_notebook():1214] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-06-09 05:29:11,170 INFO    MainThread:2433 [wandb_init.py:init():896] updated telemetry
+2025-06-09 05:29:11,172 INFO    MainThread:2433 [wandb_init.py:init():920] communicating run to backend with 90.0 second timeout
+2025-06-09 05:29:11,410 INFO    MainThread:2433 [wandb_init.py:init():995] starting run threads in backend
+2025-06-09 05:29:11,531 INFO    MainThread:2433 [wandb_run.py:_console_start():2377] atexit reg
+2025-06-09 05:29:11,531 INFO    MainThread:2433 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-06-09 05:29:11,531 INFO    MainThread:2433 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-06-09 05:29:11,531 INFO    MainThread:2433 [wandb_run.py:_redirect():2317] Redirects installed.
+2025-06-09 05:29:11,532 INFO    MainThread:2433 [wandb_init.py:init():1037] run started, returning control to user process
+2025-06-09 05:33:49,331 INFO    MainThread:2433 [wandb_run.py:_config_callback():1261] config_cb None None {'gamma': 0.1787534413399318, 'learning_rate': 0.044361690748905724, 'max_depth': 5, 'n_estimators': 278, 'subsample': 0.9592484136003889}
+2025-06-09 05:40:50,469 INFO    MainThread:2433 [wandb_run.py:_finish():2112] finishing run dlai211/Dark_ph BDT Random/qs1jafrz
+2025-06-09 05:40:50,470 INFO    MainThread:2433 [wandb_run.py:_atexit_cleanup():2342] got exitcode: 0
+2025-06-09 05:40:50,470 INFO    MainThread:2433 [wandb_run.py:_restore():2324] restore
+2025-06-09 05:40:50,470 INFO    MainThread:2433 [wandb_run.py:_restore():2330] restore done
+2025-06-09 05:40:52,063 INFO    MsgRouterThr:2433 [mailbox.py:close():115] Closing mailbox, abandoning 1 handles.
+2025-06-09 05:40:52,064 INFO    MainThread:2433 [wandb_run.py:_footer_history_summary_info():3958] rendering history
+2025-06-09 05:40:52,065 INFO    MainThread:2433 [wandb_run.py:_footer_history_summary_info():3990] rendering summary
+2025-06-09 05:40:52,066 INFO    MainThread:2433 [wandb_run.py:_footer_sync_info():3919] logging synced files

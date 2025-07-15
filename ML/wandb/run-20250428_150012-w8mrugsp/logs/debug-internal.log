@@ -1,0 +1,24 @@
+{"time":"2025-04-28T15:00:12.345091539Z","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/home/jlai/ML/wandb/run-20250428_150012-w8mrugsp/logs/debug-core.log"}
+{"time":"2025-04-28T15:00:12.457409782Z","level":"INFO","msg":"created new stream","id":"w8mrugsp"}
+{"time":"2025-04-28T15:00:12.457432867Z","level":"INFO","msg":"stream: started","id":"w8mrugsp"}
+{"time":"2025-04-28T15:00:12.457485474Z","level":"INFO","msg":"sender: started","stream_id":"w8mrugsp"}
+{"time":"2025-04-28T15:00:12.457501669Z","level":"INFO","msg":"handler: started","stream_id":"w8mrugsp"}
+{"time":"2025-04-28T15:00:12.457492729Z","level":"INFO","msg":"writer: Do: started","stream_id":"w8mrugsp"}
+{"time":"2025-04-28T15:00:12.600798948Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-28T15:00:13.341488037Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-28T15:06:24.081206245Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-28T15:06:24.121837878Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-28T15:06:32.778811666Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-28T15:06:34.26603087Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-28T15:06:38.98693143Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-28T15:06:39.574260651Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-28T15:07:00.418509628Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-28T15:07:04.668020707Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-28T15:07:04.668588449Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-28T15:07:04.926424827Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-28T15:07:05.045021358Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-28T15:07:06.051004167Z","level":"INFO","msg":"stream: closing","id":"w8mrugsp"}
+{"time":"2025-04-28T15:07:06.051022789Z","level":"INFO","msg":"handler: closed","stream_id":"w8mrugsp"}
+{"time":"2025-04-28T15:07:06.051031039Z","level":"INFO","msg":"writer: Close: closed","stream_id":"w8mrugsp"}
+{"time":"2025-04-28T15:07:06.051038286Z","level":"INFO","msg":"sender: closed","stream_id":"w8mrugsp"}
+{"time":"2025-04-28T15:07:06.051426867Z","level":"INFO","msg":"stream: closed","id":"w8mrugsp"}

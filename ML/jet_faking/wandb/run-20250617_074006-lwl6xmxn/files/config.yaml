@@ -1,0 +1,39 @@
+_wandb:
+    value:
+        cli_version: 0.19.7
+        m: []
+        python_version: 3.8.10
+        t:
+            "1":
+                - 5
+                - 6
+                - 8
+                - 53
+                - 55
+            "2":
+                - 5
+                - 6
+                - 8
+                - 53
+                - 55
+            "3":
+                - 2
+                - 23
+                - 55
+            "4": 3.8.10
+            "5": 0.19.7
+            "8":
+                - 1
+                - 5
+            "12": 0.19.7
+            "13": linux-x86_64
+gamma:
+    value: 0.5067925380882937
+learning_rate:
+    value: 0.08468294504320564
+max_depth:
+    value: 6
+n_estimators:
+    value: 388
+subsample:
+    value: 0.8466262766084562
