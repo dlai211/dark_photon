@@ -1,0 +1,44 @@
+2025-06-17 22:50:34,482 INFO    MainThread:2054 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /home/jlai/ML/jet_faking/wandb/run-20250617_225034-gh8nq099/logs/debug.log
+2025-06-17 22:50:34,482 INFO    MainThread:2054 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /home/jlai/ML/jet_faking/wandb/run-20250617_225034-gh8nq099/logs/debug-internal.log
+2025-06-17 22:50:34,482 INFO    MainThread:2054 [wandb_init.py:monkeypatch_ipython():599] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7fb712b38880>
+2025-06-17 22:50:34,482 INFO    MainThread:2054 [wandb_init.py:init():761] calling init triggers
+2025-06-17 22:50:34,482 INFO    MainThread:2054 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-06-17 22:50:34,482 INFO    MainThread:2054 [wandb_init.py:init():784] starting backend
+2025-06-17 22:50:34,482 INFO    MainThread:2054 [wandb_init.py:init():788] sending inform_init request
+2025-06-17 22:50:34,483 INFO    MainThread:2054 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-06-17 22:50:34,484 INFO    MainThread:2054 [wandb_init.py:init():803] backend started and connected
+2025-06-17 22:50:34,490 INFO    MainThread:2054 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2025-06-17 22:50:34,490 INFO    MainThread:2054 [wandb_run.py:_label_probe_notebook():1214] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-06-17 22:50:34,490 INFO    MainThread:2054 [wandb_init.py:init():896] updated telemetry
+2025-06-17 22:50:34,492 INFO    MainThread:2054 [wandb_init.py:init():920] communicating run to backend with 90.0 second timeout
+2025-06-17 22:50:34,786 INFO    MainThread:2054 [wandb_init.py:init():995] starting run threads in backend
+2025-06-17 22:50:34,907 INFO    MainThread:2054 [wandb_run.py:_console_start():2377] atexit reg
+2025-06-17 22:50:34,908 INFO    MainThread:2054 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-06-17 22:50:34,908 INFO    MainThread:2054 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-06-17 22:50:34,908 INFO    MainThread:2054 [wandb_run.py:_redirect():2317] Redirects installed.
+2025-06-17 22:50:34,908 INFO    MainThread:2054 [wandb_init.py:init():1037] run started, returning control to user process
+2025-06-17 22:55:29,913 INFO    MainThread:2054 [wandb_run.py:_config_callback():1261] config_cb None None {'gamma': 0.30581944708599185, 'learning_rate': 0.09972648767632904, 'max_depth': 7, 'n_estimators': 741, 'subsample': 0.8914469750889682}
+2025-06-17 22:55:31,518 INFO    MainThread:2054 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-06-17 22:55:31,518 INFO    MainThread:2054 [wandb_init.py:_pause_backend():564] pausing backend
+2025-06-17 23:07:43,497 INFO    MainThread:2054 [wandb_init.py:_resume_backend():569] resuming backend
+2025-06-17 23:07:43,863 INFO    MainThread:2054 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-06-17 23:07:43,864 INFO    MainThread:2054 [wandb_init.py:_pause_backend():564] pausing backend
+2025-06-17 23:08:28,690 INFO    MainThread:2054 [wandb_init.py:_resume_backend():569] resuming backend
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /home/jlai/ML/jet_faking/wandb/run-20250617_230833-keznk3gy/logs/debug.log
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /home/jlai/ML/jet_faking/wandb/run-20250617_230833-keznk3gy/logs/debug-internal.log
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [wandb_init.py:init():761] calling init triggers
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [wandb_init.py:init():773] finishing previous run: gh8nq099
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [wandb_run.py:_finish():2112] finishing run dlai211/Dark_ph BDT Random/gh8nq099
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [jupyter.py:save_history():458] not saving jupyter history
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [wandb_init.py:_jupyter_teardown():581] cleaning up jupyter logic
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [wandb_run.py:_atexit_cleanup():2342] got exitcode: 0
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [wandb_run.py:_restore():2324] restore
+2025-06-17 23:08:33,204 INFO    MainThread:2054 [wandb_run.py:_restore():2330] restore done
+2025-06-17 23:08:34,690 INFO    MsgRouterThr:2054 [mailbox.py:close():115] Closing mailbox, abandoning 1 handles.
+2025-06-17 23:08:34,691 INFO    MainThread:2054 [wandb_run.py:_footer_history_summary_info():3958] rendering history
+2025-06-17 23:08:34,691 INFO    MainThread:2054 [wandb_run.py:_footer_history_summary_info():3990] rendering summary
+2025-06-17 23:08:34,692 INFO    MainThread:2054 [wandb_run.py:_footer_sync_info():3919] logging synced files

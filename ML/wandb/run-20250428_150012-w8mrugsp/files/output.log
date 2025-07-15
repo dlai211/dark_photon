@@ -1,0 +1,38 @@
+Defaulting to user installation because normal site-packages is not writeable
+Collecting lightgbm
+  Downloading lightgbm-4.6.0-py3-none-manylinux_2_28_x86_64.whl.metadata (17 kB)
+Requirement already satisfied: numpy>=1.17.0 in /usr/local/lib/python3.8/dist-packages (from lightgbm) (1.24.3)
+Requirement already satisfied: scipy in /usr/local/lib/python3.8/dist-packages (from lightgbm) (1.10.1)
+Downloading lightgbm-4.6.0-py3-none-manylinux_2_28_x86_64.whl (3.6 MB)
+[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.6/3.6 MB[0m [31m152.0 MB/s[0m eta [36m0:00:00[0m
+[?25hInstalling collected packages: lightgbm
+Successfully installed lightgbm-4.6.0
+
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m25.0.1[0m[39;49m -> [0m[32;49m25.1[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpython3.8 -m pip install --upgrade pip[0m
+Number of event with negative weights : 85906
+Number of nan in each variable:
+metsig                        0
+met                           0
+met_noJVT                     0
+dmet                          1
+dphi_met_phterm               0
+dphi_ph_centraljet1       23182
+dphi_phterm_jetterm       17242
+jetterm                       0
+dphi_met_central_jet      23182
+BDTScore                      0
+weights                       0
+label                         0
+process                       0
+metsigres                     0
+ph_pt                         0
+ph_eta                        0
+dphi_met_jetterm          17420
+failJVT_jet_pt1         1743225
+n_jet_central             22719
+dphi_jj                  522407
+dtype: int64
+random number:  95
+
+Training BDT...
