@@ -48,6 +48,11 @@ const var_config_jets_faking_photons = [
     "n_mu_baseline", "n_ph", "n_ph_baseline", "n_tau_baseline", "ph_eta", 
     "ph_phi", "ph_pt", "softerm", "trigger", "vtx_sumPt"
 ];
+const var_config_jets_faking_photons2 = [
+    'dphi_jj', 'dphi_phterm_jetterm', 'ph_phi',
+    'jet_central_eta', 'jet_central_pt2', 'metsigres',
+    'met_noJVT', 'softerm', 'n_jet_central'
+];
 
 // Define the significance configurations
 const sig_config_main = [
@@ -117,6 +122,14 @@ const imageMap_index = {
         sig_config: sig_config_main,
         n_1_config: n_1_config_jets_faking_photons,
         path: [`jets_faking_photons/lumi26/`, `jets_faking_photons/lumi135/`],
+        imagesPerRow: 4
+    }, 
+    "jets_faking_photons2": {
+        cut_config: cut_config_jets_faking_photons,
+        var_config: var_config_jets_faking_photons2,
+        sig_config: sig_config_main,
+        n_1_config: n_1_config_jets_faking_photons,
+        path: [`jets_faking_photons2/lumi26/`, `jets_faking_photons2/lumi135/`],
         imagesPerRow: 4
     }, 
     "electrons_faking_photons": {
