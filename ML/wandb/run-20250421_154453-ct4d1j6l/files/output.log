@@ -1,1 +1,0 @@
-Best parameters found: {'gamma': 0.3751563231355429, 'learning_rate': 0.07736589445712627, 'max_depth': 7, 'n_estimators': 164, 'subsample': 0.9773464330890118}
