@@ -503,7 +503,9 @@ def getVarDict(fb, process, var_name=None):
     # Here we use a Python conditional (this assumes fb['jet_central_phi'] is an array with shape information).
     if var_name is None or var_name == 'dphi_jj':
         dphi_jj_tmp = fb['dphi_central_jj']
-        dphi_jj_tmp = ak.where(dphi_jj_tmp == -10, -999, dphi_jj_tmp)
+        dphi_jj_tmp = ak.where(dphi_jj_tmp == -10, np.nan, dphi_jj_tmp)
+        dphi_jj_tmp = np.arccos(np.cos(dphi_jj_tmp))
+        dphi_jj_tmp = ak.where(dphi_jj_tmp == np.nan, -999, dphi_jj_tmp)
         var_dict['dphi_jj'] = {
             'var': dphi_jj_tmp,
             'bins': np.linspace(-1, 4, 20+1),
