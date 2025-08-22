@@ -657,7 +657,7 @@ const imageMap = {
     "jets_faking": {
         images: jets_faking_images,
         path: 'jets_faking_photons/lumi135',
-        imagesPerRow: 3,
+        imagesPerRow: 4,
         title: "Image 1: basic cut  |  Image 2: selection cut  |  Image 3: ML BDTscore > 0.04 cut   |   Image 4: ML BDTscore < 0.04 cut"
     },
 };  
