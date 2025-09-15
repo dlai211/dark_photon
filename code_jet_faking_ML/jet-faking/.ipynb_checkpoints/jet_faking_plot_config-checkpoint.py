@@ -58,8 +58,6 @@ def getWeight(fb, sample, jet_faking=False, electron_faking=False):
         br = 0.01
         weight = fb['mconly_weight']/fb['mc_weight_sum']*xsec_sig*fb['pu_weight']*fb['jvt_weight']*fb['filter_eff_ami']*fb['kfactor_ami']*1000*lumi*br
 
-
-
     return weight
 
 def zbi(s, b, sigma_b_frac=0.3):

@@ -6,7 +6,8 @@ from scipy.special import betainc
 def getWeight(fb, sample, jet_faking=False, electron_faking=False):
     # reweighting for jet faking photons
     if sample == 'data23':
-        scale = 135000/25767.5 # so that data23 is normalized to 135000 pb-1
+        scale = 1
+        # scale = 135000/25767.5 # so that data23 is normalized to 135000 pb-1
 
         abs_eta = abs(ak.firsts(fb['ph_eta'])) # leading photon per event
         sf = ak.full_like(abs_eta, 0.0)
@@ -49,8 +50,8 @@ def getWeight(fb, sample, jet_faking=False, electron_faking=False):
 
         return scale * norm
     
-    # lumi = 25767.5
-    lumi = 135000
+    lumi = 25767.5
+    # lumi = 135000
     weight = fb['mconly_weight']/fb['mc_weight_sum']*fb['xsec_ami']*fb['filter_eff_ami']*fb['kfactor_ami']*fb['pu_weight']*fb['jvt_weight']*1000*lumi
     if sample in ['ggHyyd','WH','VBF','ZH'] : 
         xsec_sig = 0.052 #if ( period == 'Run3' or 'mc23' in period ) else 0.048

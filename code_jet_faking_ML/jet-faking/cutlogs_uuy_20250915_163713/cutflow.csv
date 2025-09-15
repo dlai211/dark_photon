@@ -1,0 +1,90 @@
+sample,step_idx,step,events,weighted,elapsed_s
+ggHyyd,0,loaded,0,0,0.255826
+ggHyyd,1,has>=1 photon,0,0,0.266390
+ggHyyd,2,n_ph==1,0,0,0.276080
+ggHyyd,3,pv_z exists,0,0,0.285735
+ggHyyd,4,goodPV,0,0,0.300722
+ggHyyd,5,n_mu==2,0,0,0.314262
+ggHyyd,6,n_el_baseline==0,0,0,0.335693
+ggHyyd,7,n_tau_baseline==0,0,0,0.349794
+ggHyyd,8,trigger==1,0,0,0.363228
+ggHyyd,9,ph_pt exists,0,0,0.377191
+ggHyyd,10,ph_pt>=50GeV,0,0,0.390730
+ggHyyd,11,MET>=100GeV,0,0,0.404290
+ggHyyd,12,n_jet_central<=3,0,0,0.417805
+ggHyyd,13,mT>=100GeV,0,0,0.436327
+Zjets,0,loaded,229988,92.6827926636,1.662502
+Zjets,1,has>=1 photon,229988,92.6827926636,1.676064
+Zjets,2,n_ph==1,134061,67.5023651123,1.687175
+Zjets,3,truth e->gamma,0,0,1.699841
+Zjets,4,n_mu==2,0,0,1.710968
+Zjets,5,n_el_baseline==0,0,0,1.723294
+Zjets,6,n_tau_baseline==0,0,0,1.732499
+Zjets,7,trigger==1,0,0,1.741341
+Zjets,8,ph_pt exists,0,0,1.750998
+Zjets,9,ph_pt>=50GeV,0,0,1.760917
+Zjets,10,MET>=100GeV,0,0,1.772567
+Zjets,11,n_jet_central<=3,0,0,1.780174
+Zjets,12,mT>=100GeV,0,0,1.796618
+Zgamma,0,loaded,674425,36459.078125,2.588406
+Zgamma,1,has>=1 photon,674425,36459.078125,2.613610
+Zgamma,2,n_ph==1,547990,30236.8222656,2.638806
+Zgamma,3,n_mu==2,547990,30236.8222656,2.659469
+Zgamma,4,n_el_baseline==0,547990,30236.8222656,2.679798
+Zgamma,5,n_tau_baseline==0,528668,29152.9140625,2.700481
+Zgamma,6,trigger==1,377644,12784.9794922,2.719154
+Zgamma,7,ph_pt exists,377644,12784.9794922,2.740059
+Zgamma,8,ph_pt>=50GeV,377336,12766.8378906,2.803902
+Zgamma,9,MET>=100GeV,299043,6598.40283203,2.854857
+Zgamma,10,n_jet_central<=3,275721,6230.34326172,2.900361
+Zgamma,11,mT>=100GeV,273873,6163.26269531,2.982779
+Wgamma,0,loaded,144,34.8125762939,0.243903
+Wgamma,1,has>=1 photon,144,34.8125762939,0.250517
+Wgamma,2,n_ph==1,119,28.8675727844,0.256822
+Wgamma,3,n_mu==2,119,28.8675727844,0.263065
+Wgamma,4,n_el_baseline==0,119,28.8675727844,0.269442
+Wgamma,5,n_tau_baseline==0,110,28.0614910126,0.275799
+Wgamma,6,trigger==1,73,9.14771747589,0.282178
+Wgamma,7,ph_pt exists,73,9.14771747589,0.289665
+Wgamma,8,ph_pt>=50GeV,72,9.1243724823,0.298924
+Wgamma,9,MET>=100GeV,56,4.39882993698,0.307780
+Wgamma,10,n_jet_central<=3,46,2.0499753952,0.316585
+Wgamma,11,mT>=100GeV,45,1.8917042017,0.331802
+Wjets,0,loaded,17,5.8639497757,0.446351
+Wjets,1,has>=1 photon,17,5.8639497757,0.453014
+Wjets,2,n_ph==1,6,4.61858510971,0.459306
+Wjets,3,truth e->gamma,0,0,0.468395
+Wjets,4,n_mu==2,0,0,0.477023
+Wjets,5,n_el_baseline==0,0,0,0.485700
+Wjets,6,n_tau_baseline==0,0,0,0.494507
+Wjets,7,trigger==1,0,0,0.503239
+Wjets,8,ph_pt exists,0,0,0.512132
+Wjets,9,ph_pt>=50GeV,0,0,0.521039
+Wjets,10,MET>=100GeV,0,0,0.529820
+Wjets,11,n_jet_central<=3,0,0,0.540141
+Wjets,12,mT>=100GeV,0,0,0.554850
+gammajet_direct,0,loaded,45,193.729858398,0.264039
+gammajet_direct,1,has>=1 photon,45,193.729858398,0.270716
+gammajet_direct,2,n_ph==1,43,165.370315552,0.280065
+gammajet_direct,3,n_mu==2,43,165.370315552,0.286349
+gammajet_direct,4,n_el_baseline==0,43,165.370315552,0.292552
+gammajet_direct,5,n_tau_baseline==0,43,165.370315552,0.298858
+gammajet_direct,6,trigger==1,24,2.27710652351,0.305161
+gammajet_direct,7,ph_pt exists,24,2.27710652351,0.319396
+gammajet_direct,8,ph_pt>=50GeV,24,2.27710652351,0.328506
+gammajet_direct,9,MET>=100GeV,8,0.0272153504193,0.337328
+gammajet_direct,10,n_jet_central<=3,4,0.0139355845749,0.346151
+gammajet_direct,11,mT>=100GeV,4,0.0139355845749,0.361109
+data23,0,loaded,8758,93588.0197924,0.221843
+data23,1,has>=1 photon,8758,93588.0197924,0.246356
+data23,2,jet_faking_photon,1128,12053.6780829,0.276652
+data23,3,n_ph_baseline==1,1118,11946.6944795,0.299108
+data23,4,n_mu==2,1118,11946.6944795,0.320965
+data23,5,n_el_baseline==0,1118,11946.6944795,0.343076
+data23,6,n_tau_baseline==0,1077,11507.6006597,0.365952
+data23,7,trigger==1,534,5681.08081886,0.388142
+data23,8,ph_pt exists,534,5681.08081886,0.410661
+data23,9,ph_pt>=50GeV,531,5647.44542544,0.433169
+data23,10,MET>=100GeV,384,4086.07160182,0.455407
+data23,11,n_jet_central<=3,350,3725.40797516,0.477553
+data23,12,mT>=100GeV,345,3671.70660716,0.505921
