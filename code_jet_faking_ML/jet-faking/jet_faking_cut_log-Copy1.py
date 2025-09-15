@@ -166,20 +166,20 @@ for ntuple_name in ntuple_names:
     log_step(ntuple_name, step, "trigger==1", fb, start_time); step += 1
 
     fb = fb[ak.num(fb['ph_pt']) > 0]
-    fb = fb[ak.firsts(fb['ph_pt']) >= 50_000]
-    log_step(ntuple_name, step, "ph_pt>=50GeV", fb, start_time); step += 1
+    fb = fb[ak.firsts(fb['ph_pt']) > 50_000]
+    log_step(ntuple_name, step, "ph_pt>50GeV", fb, start_time); step += 1
 
-    fb = fb[fb['met_tst_et'] >= 100_000]
-    log_step(ntuple_name, step, "MET>=100GeV", fb, start_time); step += 1
+    fb = fb[fb['met_tst_et'] > 100_000]
+    log_step(ntuple_name, step, "MET>100GeV", fb, start_time); step += 1
 
     fb = fb[fb['n_jet_central'] <= 3]
     log_step(ntuple_name, step, "n_jet_central<=3", fb, start_time); step += 1
 
     mt_tmp = np.sqrt(2 * fb['met_tst_et'] * ak.firsts(fb['ph_pt']) *
                      (1 - np.cos(fb['met_tst_phi'] - ak.firsts(fb['ph_phi'])))) / 1000.0
-    fb = fb[mt_tmp >= 100]
+    fb = fb[mt_tmp >= 80]
     # fb = fb[mt_tmp <= 140]
-    log_step(ntuple_name, step, "mT>=100GeV", fb, start_time); step += 1
+    log_step(ntuple_name, step, "mT>80GeV", fb, start_time); step += 1
 
     fb = fb[fb['VertexBDTScore'] > 0.1]
     log_step(ntuple_name, step, "VertexBDTScore>0.1", fb, start_time); step += 1
