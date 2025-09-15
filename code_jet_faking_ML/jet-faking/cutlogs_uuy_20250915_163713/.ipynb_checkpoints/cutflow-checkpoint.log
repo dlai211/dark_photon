@@ -1,0 +1,98 @@
+
+==== Cutflow run 20250915_163713 ====
+[ggHyyd      ] 00  loaded                          events=       0  weighted=0  dt=0.256s
+[ggHyyd      ] 01  has>=1 photon                   events=       0  weighted=0  dt=0.266s
+[ggHyyd      ] 02  n_ph==1                         events=       0  weighted=0  dt=0.276s
+[ggHyyd      ] 03  pv_z exists                     events=       0  weighted=0  dt=0.286s
+[ggHyyd      ] 04  goodPV                          events=       0  weighted=0  dt=0.301s
+[ggHyyd      ] 05  n_mu==2                         events=       0  weighted=0  dt=0.314s
+[ggHyyd      ] 06  n_el_baseline==0                events=       0  weighted=0  dt=0.336s
+[ggHyyd      ] 07  n_tau_baseline==0               events=       0  weighted=0  dt=0.350s
+[ggHyyd      ] 08  trigger==1                      events=       0  weighted=0  dt=0.363s
+[ggHyyd      ] 09  ph_pt exists                    events=       0  weighted=0  dt=0.377s
+[ggHyyd      ] 10  ph_pt>=50GeV                    events=       0  weighted=0  dt=0.391s
+[ggHyyd      ] 11  MET>=100GeV                     events=       0  weighted=0  dt=0.404s
+[ggHyyd      ] 12  n_jet_central<=3                events=       0  weighted=0  dt=0.418s
+[ggHyyd      ] 13  mT>=100GeV                      events=       0  weighted=0  dt=0.436s
+[ggHyyd      ] None-check met_tst_et: 0
+[Zjets       ] 00  loaded                          events=  229988  weighted=92.6828  dt=1.663s
+[Zjets       ] 01  has>=1 photon                   events=  229988  weighted=92.6828  dt=1.676s
+[Zjets       ] 02  n_ph==1                         events=  134061  weighted=67.5024  dt=1.687s
+[Zjets       ] 03  truth e->gamma                  events=       0  weighted=0  dt=1.700s
+[Zjets       ] 04  n_mu==2                         events=       0  weighted=0  dt=1.711s
+[Zjets       ] 05  n_el_baseline==0                events=       0  weighted=0  dt=1.723s
+[Zjets       ] 06  n_tau_baseline==0               events=       0  weighted=0  dt=1.732s
+[Zjets       ] 07  trigger==1                      events=       0  weighted=0  dt=1.741s
+[Zjets       ] 08  ph_pt exists                    events=       0  weighted=0  dt=1.751s
+[Zjets       ] 09  ph_pt>=50GeV                    events=       0  weighted=0  dt=1.761s
+[Zjets       ] 10  MET>=100GeV                     events=       0  weighted=0  dt=1.773s
+[Zjets       ] 11  n_jet_central<=3                events=       0  weighted=0  dt=1.780s
+[Zjets       ] 12  mT>=100GeV                      events=       0  weighted=0  dt=1.797s
+[Zjets       ] None-check met_tst_et: 0
+[Zgamma      ] 00  loaded                          events=  674425  weighted=36459.1  dt=2.588s
+[Zgamma      ] 01  has>=1 photon                   events=  674425  weighted=36459.1  dt=2.614s
+[Zgamma      ] 02  n_ph==1                         events=  547990  weighted=30236.8  dt=2.639s
+[Zgamma      ] 03  n_mu==2                         events=  547990  weighted=30236.8  dt=2.659s
+[Zgamma      ] 04  n_el_baseline==0                events=  547990  weighted=30236.8  dt=2.680s
+[Zgamma      ] 05  n_tau_baseline==0               events=  528668  weighted=29152.9  dt=2.700s
+[Zgamma      ] 06  trigger==1                      events=  377644  weighted=12785  dt=2.719s
+[Zgamma      ] 07  ph_pt exists                    events=  377644  weighted=12785  dt=2.740s
+[Zgamma      ] 08  ph_pt>=50GeV                    events=  377336  weighted=12766.8  dt=2.804s
+[Zgamma      ] 09  MET>=100GeV                     events=  299043  weighted=6598.4  dt=2.855s
+[Zgamma      ] 10  n_jet_central<=3                events=  275721  weighted=6230.34  dt=2.900s
+[Zgamma      ] 11  mT>=100GeV                      events=  273873  weighted=6163.26  dt=2.983s
+[Zgamma      ] None-check met_tst_et: 0
+[Wgamma      ] 00  loaded                          events=     144  weighted=34.8126  dt=0.244s
+[Wgamma      ] 01  has>=1 photon                   events=     144  weighted=34.8126  dt=0.251s
+[Wgamma      ] 02  n_ph==1                         events=     119  weighted=28.8676  dt=0.257s
+[Wgamma      ] 03  n_mu==2                         events=     119  weighted=28.8676  dt=0.263s
+[Wgamma      ] 04  n_el_baseline==0                events=     119  weighted=28.8676  dt=0.269s
+[Wgamma      ] 05  n_tau_baseline==0               events=     110  weighted=28.0615  dt=0.276s
+[Wgamma      ] 06  trigger==1                      events=      73  weighted=9.14772  dt=0.282s
+[Wgamma      ] 07  ph_pt exists                    events=      73  weighted=9.14772  dt=0.290s
+[Wgamma      ] 08  ph_pt>=50GeV                    events=      72  weighted=9.12437  dt=0.299s
+[Wgamma      ] 09  MET>=100GeV                     events=      56  weighted=4.39883  dt=0.308s
+[Wgamma      ] 10  n_jet_central<=3                events=      46  weighted=2.04998  dt=0.317s
+[Wgamma      ] 11  mT>=100GeV                      events=      45  weighted=1.8917  dt=0.332s
+[Wgamma      ] None-check met_tst_et: 0
+[Wjets       ] 00  loaded                          events=      17  weighted=5.86395  dt=0.446s
+[Wjets       ] 01  has>=1 photon                   events=      17  weighted=5.86395  dt=0.453s
+[Wjets       ] 02  n_ph==1                         events=       6  weighted=4.61859  dt=0.459s
+[Wjets       ] 03  truth e->gamma                  events=       0  weighted=0  dt=0.468s
+[Wjets       ] 04  n_mu==2                         events=       0  weighted=0  dt=0.477s
+[Wjets       ] 05  n_el_baseline==0                events=       0  weighted=0  dt=0.486s
+[Wjets       ] 06  n_tau_baseline==0               events=       0  weighted=0  dt=0.495s
+[Wjets       ] 07  trigger==1                      events=       0  weighted=0  dt=0.503s
+[Wjets       ] 08  ph_pt exists                    events=       0  weighted=0  dt=0.512s
+[Wjets       ] 09  ph_pt>=50GeV                    events=       0  weighted=0  dt=0.521s
+[Wjets       ] 10  MET>=100GeV                     events=       0  weighted=0  dt=0.530s
+[Wjets       ] 11  n_jet_central<=3                events=       0  weighted=0  dt=0.540s
+[Wjets       ] 12  mT>=100GeV                      events=       0  weighted=0  dt=0.555s
+[Wjets       ] None-check met_tst_et: 0
+[gammajet_direct] 00  loaded                          events=      45  weighted=193.73  dt=0.264s
+[gammajet_direct] 01  has>=1 photon                   events=      45  weighted=193.73  dt=0.271s
+[gammajet_direct] 02  n_ph==1                         events=      43  weighted=165.37  dt=0.280s
+[gammajet_direct] 03  n_mu==2                         events=      43  weighted=165.37  dt=0.286s
+[gammajet_direct] 04  n_el_baseline==0                events=      43  weighted=165.37  dt=0.293s
+[gammajet_direct] 05  n_tau_baseline==0               events=      43  weighted=165.37  dt=0.299s
+[gammajet_direct] 06  trigger==1                      events=      24  weighted=2.27711  dt=0.305s
+[gammajet_direct] 07  ph_pt exists                    events=      24  weighted=2.27711  dt=0.319s
+[gammajet_direct] 08  ph_pt>=50GeV                    events=      24  weighted=2.27711  dt=0.329s
+[gammajet_direct] 09  MET>=100GeV                     events=       8  weighted=0.0272154  dt=0.337s
+[gammajet_direct] 10  n_jet_central<=3                events=       4  weighted=0.0139356  dt=0.346s
+[gammajet_direct] 11  mT>=100GeV                      events=       4  weighted=0.0139356  dt=0.361s
+[gammajet_direct] None-check met_tst_et: 0
+[data23      ] 00  loaded                          events=    8758  weighted=93588  dt=0.222s
+[data23      ] 01  has>=1 photon                   events=    8758  weighted=93588  dt=0.246s
+[data23      ] 02  jet_faking_photon               events=    1128  weighted=12053.7  dt=0.277s
+[data23      ] 03  n_ph_baseline==1                events=    1118  weighted=11946.7  dt=0.299s
+[data23      ] 04  n_mu==2                         events=    1118  weighted=11946.7  dt=0.321s
+[data23      ] 05  n_el_baseline==0                events=    1118  weighted=11946.7  dt=0.343s
+[data23      ] 06  n_tau_baseline==0               events=    1077  weighted=11507.6  dt=0.366s
+[data23      ] 07  trigger==1                      events=     534  weighted=5681.08  dt=0.388s
+[data23      ] 08  ph_pt exists                    events=     534  weighted=5681.08  dt=0.411s
+[data23      ] 09  ph_pt>=50GeV                    events=     531  weighted=5647.45  dt=0.433s
+[data23      ] 10  MET>=100GeV                     events=     384  weighted=4086.07  dt=0.455s
+[data23      ] 11  n_jet_central<=3                events=     350  weighted=3725.41  dt=0.478s
+[data23      ] 12  mT>=100GeV                      events=     345  weighted=3671.71  dt=0.506s
+[data23      ] None-check met_tst_et: 0
