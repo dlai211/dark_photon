@@ -14,6 +14,7 @@ from scipy.special import betainc
 from scipy.stats import norm
 
 # import config functions
+sys.path.append("/home/jlai/jet-faking/config")
 from jet_faking_plot_config import getWeight, zbi, sample_dict, getVarDict
 from plot_var import variables, variables_data, ntuple_names, ntuple_names_BDT
 
@@ -45,7 +46,6 @@ plt.rcParams.update({
 print(' < -- Reading nTuples files & Applying basic cuts -- > ')
 tot = []
 data = pd.DataFrame()
-unweighted_bcut, weighted_bcut, unweighted_acut, weighted_acut = [], [], [], []
 ntuple_names = ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct', 'data23']
 
 def test(fb):
@@ -65,7 +65,6 @@ def print_cut(ntuple_name, fb, label):
         print(f"Weighted Events {label}: ", sum(getWeight(fb, ntuple_name)))
 
 for i in range(len(ntuple_names)):
-    ucut, wcut = [], []
     start_time = time.time()
     ntuple_name = ntuple_names[i]
     if ntuple_name == 'data23': # data
@@ -112,42 +111,27 @@ for i in range(len(ntuple_names)):
             fb = fb[good_pv_tmp]
 
     print_cut(ntuple_name, fb, 'before cut')
-    wcut.append(sum(getWeight(fb, ntuple_name)))
 
     fb = fb[fb['n_mu_baseline'] == 0]
-    wcut.append(sum(getWeight(fb, ntuple_name)))
     fb = fb[fb['n_el_baseline'] == 0]
-    wcut.append(sum(getWeight(fb, ntuple_name)))
     fb = fb[fb['n_tau_baseline'] == 0]
-    wcut.append(sum(getWeight(fb, ntuple_name)))
     fb = fb[fb['trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M']==1]
-    wcut.append(sum(getWeight(fb, ntuple_name)))
     fb = fb[ak.num(fb['ph_pt']) > 0] # prevent none values in Tbranch
     fb = fb[ak.firsts(fb['ph_pt']) >= 50000] # ph_pt cut (basic cut)
-    wcut.append(sum(getWeight(fb, ntuple_name)))
     fb = fb[fb['met_tst_et'] >= 100000] # MET cut (basic cut)
-    wcut.append(sum(getWeight(fb, ntuple_name)))
-    fb = fb[fb['n_jet_central'] <= 4] # n_jet_central cut (basic cut)
-    wcut.append(sum(getWeight(fb, ntuple_name)))
+    fb = fb[fb['n_jet_central'] <= 3] # n_jet_central cut (basic cut)
 
     mt_tmp = np.sqrt(2 * fb['met_tst_et'] * ak.firsts(fb['ph_pt']) * 
                             (1 - np.cos(fb['met_tst_phi'] - ak.firsts(fb['ph_phi'])))) / 1000
-    mask1 = mt_tmp >= 100 # trigger cut
-    fb = fb[mask1]
-    wcut.append(sum(getWeight(fb, ntuple_name)))
+    mask1 = mt_tmp > 100 # trigger cut
+    mask2 = mt_tmp < 140
+    fb = fb[mask1 * mask2]
+
+    fb = fb[fb['VertexBDTScore'] > 0.1]
 
     print_cut(ntuple_name, fb, 'after basic cut')
 
-
-    ucut.append(len(fb))
-
-    unweighted_acut.append(ucut)
-    weighted_acut.append(wcut)
-    test(fb) # check for none value
-
     print(f"Reading Time for {ntuple_name}: {(time.time()-start_time)} seconds\n")
-
-
 
     tot.append(fb)
 
