@@ -22,20 +22,16 @@ def calculate_significance(cut_var, cut_type, cut_values, tot2, ntuple_names, si
             process = ntuple_names[i]
             var_config = getVarDict(fb, process, var_name=cut_var)
             x = var_config[cut_var]['var']
-            mask = x != -999
-            x = x[mask]
-
+            mask_nan = x != -999
+            
             if process == signal_name:
                 sig_events = getWeight(fb, process)
-                sig_events = sig_events[mask]
-                mask = x >= cut if cut_type == 'lowercut' else x <= cut
-                sig_after_cut = ak.sum(sig_events[mask])
+                mask_cut = x >= cut if cut_type == 'lowercut' else x <= cut
+                sig_after_cut = ak.sum(sig_events[mask_nan * mask_cut])
             else:
                 bkg_events = getWeight(fb, process)
-                bkg_events = bkg_events[mask]
-                mask = x >= cut if cut_type == 'lowercut' else x <= cut
-                bkg_after_cut.append(ak.sum(bkg_events[mask]))
-
+                mask_cut = x >= cut if cut_type == 'lowercut' else x <= cut
+                bkg_after_cut.append(ak.sum(bkg_events[mask_nan * mask_cut]))
             
             tot_tmp.append(fb)
 
@@ -54,12 +50,12 @@ def calculate_significance(cut_var, cut_type, cut_values, tot2, ntuple_names, si
 def apply_cut_to_fb(fb, process, var, cut_val, cut_type, getVarDict):
     var_config = getVarDict(fb, process, var_name=var)
     x = var_config[var]['var']
-    mask = x != -999
+    mask = x == -999
 
     if cut_type == 'lowercut':
-        mask = mask & (x >= cut_val)
+        mask = mask | (x > cut_val)
     elif cut_type == 'uppercut':
-        mask = mask & (x <= cut_val)
+        mask = mask | (x < cut_val)
 
     return fb[mask]
 
