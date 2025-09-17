@@ -18,6 +18,9 @@ const cut_config_jets_faking_photons = {
     'basic': true, 'BDTScore': true, 'dphi_met_phterm': true, 'metsig': true, 'ph_eta': true,
     'dmet': true, 'dphi_met_jetterm': true, "balance": true, 'dphi_jj': true
 }
+const cut_config_jets_faking_photons3 = {
+    'basic': true
+}
 
 
 
@@ -132,6 +135,14 @@ const imageMap_index = {
         path: [`jets_faking_photons2/lumi26/`, `jets_faking_photons2/lumi135/`],
         imagesPerRow: 4
     }, 
+    "jets_faking_photons3": {
+        cut_config: cut_config_jets_faking_photons3,
+        var_config: var_config_jets_faking_photons,
+        sig_config: sig_config_main,
+        n_1_config: n_1_config_jets_faking_photons,
+        path: [`jets_faking_photons3/lumi26/`, `jets_faking_photons3/lumi135/`],
+        imagesPerRow: 4
+    },
     "electrons_faking_photons": {
         cut_config: cut_config_jets_faking_photons,
         var_config: var_config_jets_faking_photons,
