@@ -1,3 +1,4 @@
+
 // different config.js based on the link
 let hash = window.location.hash.replace('#', '');
 console.log("Hash from URL: ", hash);
