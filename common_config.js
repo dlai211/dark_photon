@@ -616,6 +616,10 @@ const jets_faking_images = [
 'mc23d_bdt0mu_lesscut/mt_nodijet.png',
 ]
 
+const jets_faking_images3 = [
+    
+]
+
 const imageMap = {
     "phjet": {
         images: wzstudy_images,
