@@ -50,7 +50,7 @@
 
                 <!-- ===== Basic cut rows ===== -->
                 <tr>
-                <th><span class="var" data-tip="Transverse mass: mT = √(2·pT·MET·(1 − cosΔφ)). Unit: GeV">mT</span></th>
+                <th><span class="var" data-tip="Transverse mass: mT = √(2·pT·MET·(1 − cosΔφ)). Unit: GeV.">mT</span></th>
                 <td class="basic0" colspan="4">140 &gt; mT &gt; 100 GeV</td>
                 </tr>
 
@@ -94,7 +94,7 @@
                 <!-- ===== Selection cut rows ===== -->
                 <tr>
                 <th>
-                    <span class="var" data-tip="Missing-ET significance. Integer value.">
+                    <span class="var" data-tip="Iteration Range: [0, 10], with step of 1. Missing-ET significance. Float.">
                     metsig
                     </span>
                 </th>
@@ -105,7 +105,7 @@
 
                 <tr>
                 <th>
-                    <span class="var" data-tip="Absolute value of pseudorapidity of the leading photon. abs(η) = |−ln[tan(θ/2)]|; [0] indexes the leading-pT photon.">
+                    <span class="var" data-tip="Iteration Range: [1, 2.5], with step of 0.05. Absolute value of pseudorapidity of the leading photon. abs(η) = |−ln[tan(θ/2)]|; [0] indexes the leading-pT photon.">
                     abs(ph_eta[0])
                     </span>
                 </th>
@@ -116,7 +116,7 @@
 
                 <tr>
                 <th>
-                    <span class="var" data-tip="Δφ between MET and photon term (π - photon direction): Δφ = |φ(MET) − φ(phterm)| wrapped to [0, π].">
+                    <span class="var" data-tip="Iteration Range:[1, 2], with step of 0.05. Δφ between MET and photon term (π - photon direction): Δφ = |φ(MET) − φ(phterm)| wrapped to [0, π].">
                     dphi_met_phterm
                     </span>
                 </th>
@@ -127,7 +127,7 @@
 
                 <tr>
                 <th>
-                    <span class="var" data-tip="MET_noJVT (Missing Transverse Energy without Jet Vertex Tagging) - MET. Units: GeV.">
+                    <span class="var" data-tip="Iteration Range: [-30, 10]GeV, with step of 5GeV. MET_noJVT (Missing Transverse Energy without Jet Vertex Tagging) - MET. Units: GeV.">
                     dmet
                     </span>
                 </th>
@@ -138,7 +138,7 @@
 
                 <tr>
                 <th>
-                    <span class="var" data-tip="Δφ between leading jets and subleading jets: Δφ = |φ(jet1) − φ(jet2)| in [0, π].">
+                    <span class="var" data-tip="Iteration Range: [1, 3.1], with step of 0.05. Δφ between leading jets and subleading jets: Δφ = |φ(jet1) − φ(jet2)| in [0, π].">
                     dphi_jj_central
                     </span>
                 </th>
@@ -149,7 +149,7 @@
 
                 <tr>
                 <th>
-                    <span class="var" data-tip="Δφ between MET and jet term (π - leading jet direction) vector: Δφ = |φ(MET) − φ(jeterm)| in [0, π].">
+                    <span class="var" data-tip="Iteration Range: [0.5, 1], with step of 0.05. Δφ between MET and jet term (π - leading jet direction) vector: Δφ = |φ(MET) − φ(jeterm)| in [0, π].">
                     dphi_met_jetterm
                     </span>
                 </th>
@@ -161,7 +161,7 @@
                 <!-- ===== Selection cut 2 rows ===== -->
                 <tr>
                 <th>
-                    <span class="var" data-tip="Balance = (MET + ph_pt[0]) / Σ pT(jet_central). If ΣpT(jets)=0, set the value to -999.">
+                    <span class="var" data-tip="Iteration Range: [0.3, 1.5], with step of 0.05. Balance = (MET + ph_pt[0]) / Σ pT(jet_central). If ΣpT(jets)=0, set the value to -999.">
                     balance
                     </span>
                 </th>
@@ -172,7 +172,7 @@
 
                 <tr>
                 <th>
-                    <span class="var" data-tip="met_jetterm_et. Unit: GeV">
+                    <span class="var" data-tip="Iteration Range: [0, 150]GeV, with step of 10GeV. met_jetterm_et. Unit: GeV">
                     jetterm
                     </span>
                 </th>
@@ -183,7 +183,7 @@
 
                 <tr>
                 <th>
-                    <span class="var" data-tip="Δφ between the photon term and jet term: |φ(phterm) − φ(jeterm)| ∈ [0, π].">
+                    <span class="var" data-tip="Iteration Range: [1, 4], with step of 0.1. Δφ between the photon term and jet term: |φ(phterm) − φ(jeterm)| ∈ [0, π].">
                     dphi_phterm_jetterm
                     </span>
                 </th>
@@ -194,7 +194,7 @@
 
                 <tr>
                 <th>
-                    <span class="var" data-tip="MET / MET significance. Unit: GeV">
+                    <span class="var" data-tip="Iteration Range: [12, 60]GeV, with step of 10GeV. MET / MET significance. Unit: GeV">
                     metsigres
                     </span>
                 </th>
@@ -205,7 +205,7 @@
 
                 <tr>
                 <th>
-                    <span class="var" data-tip="Missing transverse energy without Jet Vertex Tagging. Unit: GeV">
+                    <span class="var" data-tip="Iteration Range: [50, 120]GeV, with step of 10GeV. Missing transverse energy without Jet Vertex Tagging. Unit: GeV">
                     met_noJVT
                     </span>
                 </th>
