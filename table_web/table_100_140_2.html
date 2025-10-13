@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="table_web/style_table.css">
     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
+
+<!-- Variable definition modal -->
+<div id="var-modal" class="var-modal" aria-hidden="true">
+  <div class="var-modal__backdrop" data-close="true"></div>
+  <figure class="var-modal__dialog" role="dialog" aria-modal="true">
+    <button class="var-modal__close" aria-label="Close" data-close="true">&times;</button>
+    <img id="var-modal-img" alt="Variable definition">
+    <figcaption id="var-modal-cap"></figcaption>
+  </figure>
+</div>
+
+
 <body>
     <h1>Dark Photon Performance Plots</h1>
 
@@ -161,7 +173,9 @@
                 <!-- ===== Selection cut 2 rows ===== -->
                 <tr>
                 <th>
-                    <span class="var" data-tip="Iteration Range: [0.3, 1.5], with step of 0.05. Balance = (MET + ph_pt[0]) / Σ pT(jet_central). If ΣpT(jets)=0, set the value to -999.">
+                    <span class="var" 
+                        data-img="balance_def.png"
+                        data-tip="Iteration Range: [0.3, 1.5], with step of 0.05.">
                     balance
                     </span>
                 </th>
@@ -599,6 +613,7 @@
         &copy; 2025 Dark Photon Project
     </footer> -->
 
+    <script src="table_web/modal.js"></script>
     <script src="table_web/overtable.js"></script>
     <script src="sidebar.js"></script>
 </body>
