@@ -103,39 +103,6 @@ position: relative;
 cursor: help;
 border-bottom: 1px dashed rgba(0,0,0,.25);
 }
-.var[data-tip]:hover::after,
-.var[data-tip]:focus::after {
-content: attr(data-tip);
-position: absolute;
-left: 0;
-top: calc(100% + 8px);
-min-width: 260px;
-max-width: 560px;
-padding: 10px 12px;
-background: #111827;
-color: #f9fafb;
-font-size: 13px;
-line-height: 1.35;
-border-radius: 10px;
-box-shadow: 0 6px 22px rgba(0,0,0,.25);
-z-index: 5;
-white-space: normal;
-}
-.var[data-tip]:hover::before,
-.var[data-tip]:focus::before {
-content: "";
-position: absolute;
-left: 12px;
-top: 100%;
-border: 7px solid transparent;
-border-bottom-color: #111827;
-}
-
-/* make tooltip sit above everything */
-.var[data-tip]::after,
-.var[data-tip]::before {
-z-index: 9999;
-}
 
 /* Optional tiny footnote text */
 .small-note {
@@ -169,4 +136,98 @@ pointer-events: none;   /* ignore mouse */
 }
 #dp-tooltip[data-hidden="true"] { display: none; }
 
-    
+
+/* prevent background scroll when modal is open */
+html.no-scroll, html.no-scroll body { overflow: hidden; }
+
+/* small floating preview near cursor */
+.img-tip {
+  position: absolute;
+  z-index: 2000;
+  background: rgba(0,0,0,0.85);
+  padding: 8px;
+  border-radius: 8px;
+  max-width: min(50vw, 420px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  color: #fff;
+  pointer-events: none; /* so hover target doesn't lose focus */
+}
+.img-tip img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.img-tip-cap {
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 1.3;
+  opacity: 0.85;
+}
+
+/* fullscreen modal */
+.var-modal[aria-hidden="true"] { display: none; }
+.var-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  padding: 4vh 4vw;
+}
+.var-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+.var-modal__dialog {
+  position: relative;
+  z-index: 1;
+  background: #111;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  display: grid;
+  grid-template-rows: 1fr auto;  /* image, then caption */
+  max-width: min(1000px, 92vw);  /* cap width */
+  max-height: 90vh;              /* cap height */
+  overflow: hidden;
+}
+.var-modal__close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.var-modal__close:hover {
+  background: rgba(255,255,255,0.22);
+}
+/* responsive image */
+#var-modal-img {
+  display: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  max-height: calc(10vh - 44px); /* dialog height minus caption area */
+  object-fit: contain;           /* keep aspect ratio and fit */
+  background: white;
+}
+
+/* caption */
+#var-modal-cap {
+  color: #ddd;
+  font-size: 18px;
+  padding: 8px 12px 10px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  white-space: pre-line;
+}
