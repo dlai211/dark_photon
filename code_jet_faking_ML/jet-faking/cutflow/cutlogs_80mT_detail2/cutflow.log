@@ -1,0 +1,161 @@
+
+==== Cutflow run 20251014_113217 ====
+[ggHyyd      ] 00  loaded                          events=  225374  weighted=22918.5  dt=1.137s
+[ggHyyd      ] 01  n_ph==1                         events=  195671  weighted=19979.1  dt=1.166s
+[ggHyyd      ] 02  pv_z exists                     events=  195671  weighted=19979.1  dt=1.192s
+[ggHyyd      ] 03  goodPV                          events=   86910  weighted=8732.76  dt=1.271s
+[ggHyyd      ] 04  n_mu_baseline==0                events=   86910  weighted=8732.76  dt=1.334s
+[ggHyyd      ] 05  n_el_baseline==0                events=   86910  weighted=8732.76  dt=1.378s
+[ggHyyd      ] 06  n_tau_baseline==0               events=   85912  weighted=8630.4  dt=1.446s
+[ggHyyd      ] 07  trigger==1                      events=   25430  weighted=2584.31  dt=1.472s
+[ggHyyd      ] 08  ph_pt>50GeV                     events=   25370  weighted=2578.16  dt=1.502s
+[ggHyyd      ] 09  MET>100GeV                      events=    5628  weighted=568.633  dt=1.527s
+[ggHyyd      ] 10  n_jet_central<=3                events=    4858  weighted=491.889  dt=1.566s
+[ggHyyd      ] 11  mT>80GeV                        events=    4730  weighted=479.373  dt=1.602s
+[ggHyyd      ] 12  VertexBDTScore>0.1              events=    3886  weighted=394.525  dt=1.639s
+[ggHyyd      ] 13  met_tst_sig>7                   events=    3138  weighted=319.535  dt=1.659s
+[ggHyyd      ] 14  ph_eta<1.75                     events=    2755  weighted=280.689  dt=1.679s
+[ggHyyd      ] 15  dphi_met_phterm>1.35            events=    2411  weighted=245.393  dt=1.710s
+[ggHyyd      ] 16  dmet>-20GeV                     events=    2390  weighted=243.593  dt=1.742s
+[ggHyyd      ] 17  dphi_jj_central<2.5             events=    2294  weighted=233.812  dt=1.765s
+[ggHyyd      ] 18  dphi_met_jetterm<0.75           events=    2265  weighted=231.234  dt=1.786s
+[ggHyyd      ] 19  balance>0.90                    events=    2085  weighted=213.478  dt=1.839s
+[ggHyyd      ] 20  jetterm>80GeV                   events=    2085  weighted=213.478  dt=1.857s
+[ggHyyd      ] 21  3.1>dphi_phterm_jetterm>1.8     events=    2063  weighted=211.177  dt=1.880s
+[ggHyyd      ] 22  met_noJVT>90GeV                 events=    2063  weighted=211.177  dt=1.906s
+[ggHyyd      ] None-check met_tst_et: 0
+[Zjets       ] 00  loaded                          events=11544081  weighted=1.7391e+06  dt=70.276s
+[Zjets       ] 01  n_ph==1                         events= 4463818  weighted=828876  dt=70.624s
+[Zjets       ] 02  truth e->gamma                  events= 3242488  weighted=674498  dt=71.420s
+[Zjets       ] 03  n_mu_baseline==0                events= 3229462  weighted=673847  dt=72.026s
+[Zjets       ] 04  n_el_baseline==0                events=  770339  weighted=199436  dt=72.252s
+[Zjets       ] 05  n_tau_baseline==0               events=  729391  weighted=196129  dt=72.420s
+[Zjets       ] 06  trigger==1                      events=   95006  weighted=6059.2  dt=72.467s
+[Zjets       ] 07  ph_pt>50GeV                     events=   94607  weighted=6016.87  dt=72.667s
+[Zjets       ] 08  MET>100GeV                      events=   14813  weighted=775.327  dt=72.685s
+[Zjets       ] 09  n_jet_central<=3                events=    7940  weighted=681.041  dt=72.710s
+[Zjets       ] 10  mT>80GeV                        events=    7481  weighted=669.827  dt=72.939s
+[Zjets       ] 11  VertexBDTScore>0.1              events=    3638  weighted=103.815  dt=72.950s
+[Zjets       ] 12  met_tst_sig>7                   events=     554  weighted=29.2636  dt=72.959s
+[Zjets       ] 13  ph_eta<1.75                     events=     271  weighted=11.5614  dt=73.064s
+[Zjets       ] 14  dphi_met_phterm>1.35            events=     123  weighted=5.79972  dt=73.075s
+[Zjets       ] 15  dmet>-20GeV                     events=     116  weighted=4.54978  dt=73.087s
+[Zjets       ] 16  dphi_jj_central<2.5             events=      77  weighted=3.8872  dt=73.111s
+[Zjets       ] 17  dphi_met_jetterm<0.75           events=      75  weighted=3.81902  dt=73.140s
+[Zjets       ] 18  balance>0.90                    events=      47  weighted=3.03206  dt=73.257s
+[Zjets       ] 19  jetterm>80GeV                   events=      47  weighted=3.03206  dt=73.267s
+[Zjets       ] 20  3.1>dphi_phterm_jetterm>1.8     events=      45  weighted=2.98556  dt=73.287s
+[Zjets       ] 21  met_noJVT>90GeV                 events=      45  weighted=2.98556  dt=73.306s
+[Zjets       ] None-check met_tst_et: 0
+[Zgamma      ] 00  loaded                          events= 4341141  weighted=310120  dt=16.795s
+[Zgamma      ] 01  n_ph==1                         events= 3423357  weighted=249516  dt=17.001s
+[Zgamma      ] 02  n_mu_baseline==0                events= 3423357  weighted=249516  dt=17.158s
+[Zgamma      ] 03  n_el_baseline==0                events= 3423357  weighted=249516  dt=17.322s
+[Zgamma      ] 04  n_tau_baseline==0               events= 3233457  weighted=239841  dt=17.467s
+[Zgamma      ] 05  trigger==1                      events= 2358497  weighted=109967  dt=17.601s
+[Zgamma      ] 06  ph_pt>50GeV                     events= 2356368  weighted=109794  dt=18.167s
+[Zgamma      ] 07  MET>100GeV                      events= 1789816  weighted=54244.5  dt=18.599s
+[Zgamma      ] 08  n_jet_central<=3                events= 1639302  weighted=51087.4  dt=19.001s
+[Zgamma      ] 09  mT>80GeV                        events= 1637543  weighted=51015.9  dt=19.596s
+[Zgamma      ] 10  VertexBDTScore>0.1              events=  636216  weighted=15452.6  dt=19.760s
+[Zgamma      ] 11  met_tst_sig>7                   events=  597527  weighted=14214  dt=19.899s
+[Zgamma      ] 12  ph_eta<1.75                     events=  481060  weighted=11097.8  dt=20.055s
+[Zgamma      ] 13  dphi_met_phterm>1.35            events=   53008  weighted=1434.6  dt=20.124s
+[Zgamma      ] 14  dmet>-20GeV                     events=   52107  weighted=1416.28  dt=20.146s
+[Zgamma      ] 15  dphi_jj_central<2.5             events=   45417  weighted=1258.73  dt=20.187s
+[Zgamma      ] 16  dphi_met_jetterm<0.75           events=   38719  weighted=1103.24  dt=20.218s
+[Zgamma      ] 17  balance>0.90                    events=   33668  weighted=974.704  dt=20.298s
+[Zgamma      ] 18  jetterm>80GeV                   events=   33663  weighted=974.371  dt=20.314s
+[Zgamma      ] 19  3.1>dphi_phterm_jetterm>1.8     events=   29485  weighted=912.415  dt=20.341s
+[Zgamma      ] 20  met_noJVT>90GeV                 events=   29469  weighted=910.851  dt=20.361s
+[Zgamma      ] None-check met_tst_et: 0
+[Wgamma      ] 00  loaded                          events= 1772654  weighted=567687  dt=8.341s
+[Wgamma      ] 01  n_ph==1                         events= 1308982  weighted=427790  dt=8.437s
+[Wgamma      ] 02  n_mu_baseline==0                events= 1308982  weighted=427790  dt=8.495s
+[Wgamma      ] 03  n_el_baseline==0                events= 1308982  weighted=427790  dt=8.556s
+[Wgamma      ] 04  n_tau_baseline==0               events= 1109250  weighted=395396  dt=8.635s
+[Wgamma      ] 05  trigger==1                      events=  521828  weighted=97547.7  dt=8.667s
+[Wgamma      ] 06  ph_pt>50GeV                     events=  520958  weighted=97216.3  dt=8.817s
+[Wgamma      ] 07  MET>100GeV                      events=  342184  weighted=40247.3  dt=8.910s
+[Wgamma      ] 08  n_jet_central<=3                events=  282073  weighted=35614.7  dt=8.973s
+[Wgamma      ] 09  mT>80GeV                        events=  278201  weighted=35147  dt=9.127s
+[Wgamma      ] 10  VertexBDTScore>0.1              events=  150346  weighted=14461.9  dt=9.168s
+[Wgamma      ] 11  met_tst_sig>7                   events=  130382  weighted=12351.2  dt=9.206s
+[Wgamma      ] 12  ph_eta<1.75                     events=  104914  weighted=9615.96  dt=9.272s
+[Wgamma      ] 13  dphi_met_phterm>1.35            events=   29859  weighted=2707.79  dt=9.329s
+[Wgamma      ] 14  dmet>-20GeV                     events=   28912  weighted=2625.64  dt=9.346s
+[Wgamma      ] 15  dphi_jj_central<2.5             events=   24381  weighted=2344.96  dt=9.371s
+[Wgamma      ] 16  dphi_met_jetterm<0.75           events=   21006  weighted=2093.44  dt=9.414s
+[Wgamma      ] 17  balance>0.90                    events=   17737  weighted=1799.82  dt=9.452s
+[Wgamma      ] 18  jetterm>80GeV                   events=   17737  weighted=1799.82  dt=9.465s
+[Wgamma      ] 19  3.1>dphi_phterm_jetterm>1.8     events=   16676  weighted=1741.6  dt=9.504s
+[Wgamma      ] 20  met_noJVT>90GeV                 events=   16660  weighted=1739.39  dt=9.524s
+[Wgamma      ] None-check met_tst_et: 0
+[Wjets       ] 00  loaded                          events= 3041984  weighted=3.97429e+06  dt=18.266s
+[Wjets       ] 01  n_ph==1                         events= 2230309  weighted=3.094e+06  dt=18.423s
+[Wjets       ] 02  truth e->gamma                  events= 1962593  weighted=2.81157e+06  dt=18.895s
+[Wjets       ] 03  n_mu_baseline==0                events= 1962593  weighted=2.81157e+06  dt=19.293s
+[Wjets       ] 04  n_el_baseline==0                events= 1962593  weighted=2.81157e+06  dt=19.668s
+[Wjets       ] 05  n_tau_baseline==0               events= 1937580  weighted=2.77947e+06  dt=20.072s
+[Wjets       ] 06  trigger==1                      events=  287662  weighted=273664  dt=20.204s
+[Wjets       ] 07  ph_pt>50GeV                     events=  286760  weighted=272169  dt=20.324s
+[Wjets       ] 08  MET>100GeV                      events=  119227  weighted=50452.8  dt=20.381s
+[Wjets       ] 09  n_jet_central<=3                events=   73933  weighted=46210.5  dt=20.414s
+[Wjets       ] 10  mT>80GeV                        events=   56398  weighted=43051.9  dt=20.505s
+[Wjets       ] 11  VertexBDTScore>0.1              events=   48111  weighted=18166  dt=20.525s
+[Wjets       ] 12  met_tst_sig>7                   events=   32166  weighted=14647.9  dt=20.541s
+[Wjets       ] 13  ph_eta<1.75                     events=   18199  weighted=7279.96  dt=20.579s
+[Wjets       ] 14  dphi_met_phterm>1.35            events=   15222  weighted=3187.35  dt=20.615s
+[Wjets       ] 15  dmet>-20GeV                     events=   14912  weighted=3123.42  dt=20.639s
+[Wjets       ] 16  dphi_jj_central<2.5             events=   12545  weighted=2914.2  dt=20.682s
+[Wjets       ] 17  dphi_met_jetterm<0.75           events=   12350  weighted=2871.84  dt=20.711s
+[Wjets       ] 18  balance>0.90                    events=    9127  weighted=2426.38  dt=20.751s
+[Wjets       ] 19  jetterm>80GeV                   events=    9127  weighted=2426.38  dt=20.776s
+[Wjets       ] 20  3.1>dphi_phterm_jetterm>1.8     events=    9092  weighted=2411.77  dt=20.802s
+[Wjets       ] 21  met_noJVT>90GeV                 events=    9076  weighted=2400.21  dt=20.815s
+[Wjets       ] None-check met_tst_et: 0
+[gammajet_direct] 00  loaded                          events=13721741  weighted=1.7273e+08  dt=54.401s
+[gammajet_direct] 01  n_ph==1                         events=12921098  weighted=1.45885e+08  dt=55.089s
+[gammajet_direct] 02  n_mu_baseline==0                events=12921098  weighted=1.45885e+08  dt=55.626s
+[gammajet_direct] 03  n_el_baseline==0                events=12921098  weighted=1.45885e+08  dt=56.175s
+[gammajet_direct] 04  n_tau_baseline==0               events=12807272  weighted=1.43291e+08  dt=56.701s
+[gammajet_direct] 05  trigger==1                      events= 6956099  weighted=6.36735e+06  dt=57.090s
+[gammajet_direct] 06  ph_pt>50GeV                     events= 6955806  weighted=6.34557e+06  dt=58.658s
+[gammajet_direct] 07  MET>100GeV                      events= 1489230  weighted=947646  dt=59.189s
+[gammajet_direct] 08  n_jet_central<=3                events= 1031214  weighted=905971  dt=59.434s
+[gammajet_direct] 09  mT>80GeV                        events=  945796  weighted=902751  dt=59.983s
+[gammajet_direct] 10  VertexBDTScore>0.1              events=  877581  weighted=52135.1  dt=60.226s
+[gammajet_direct] 11  met_tst_sig>7                   events=   61107  weighted=13516.2  dt=60.291s
+[gammajet_direct] 12  ph_eta<1.75                     events=   57849  weighted=10583  dt=60.389s
+[gammajet_direct] 13  dphi_met_phterm>1.35            events=    1256  weighted=268.93  dt=60.410s
+[gammajet_direct] 14  dmet>-20GeV                     events=    1067  weighted=194.272  dt=60.420s
+[gammajet_direct] 15  dphi_jj_central<2.5             events=     957  weighted=187.061  dt=60.444s
+[gammajet_direct] 16  dphi_met_jetterm<0.75           events=     301  weighted=86.0588  dt=60.472s
+[gammajet_direct] 17  balance>0.90                    events=     286  weighted=85.2857  dt=60.541s
+[gammajet_direct] 18  jetterm>80GeV                   events=     286  weighted=85.2857  dt=60.559s
+[gammajet_direct] 19  3.1>dphi_phterm_jetterm>1.8     events=     175  weighted=85.0913  dt=60.576s
+[gammajet_direct] 20  met_noJVT>90GeV                 events=     174  weighted=85.0903  dt=60.586s
+[gammajet_direct] None-check met_tst_et: 0
+[data23      ] 00  loaded                          events=19779010  weighted=2.1317e+08  dt=68.587s
+[data23      ] 01  jet_faking_photon               events= 3384689  weighted=3.64932e+07  dt=72.366s
+[data23      ] 02  n_ph_baseline==1                events= 3354286  weighted=3.61658e+07  dt=74.062s
+[data23      ] 03  n_mu_baseline==0                events= 3354286  weighted=3.61658e+07  dt=75.759s
+[data23      ] 04  n_el_baseline==0                events= 3354286  weighted=3.61658e+07  dt=77.414s
+[data23      ] 05  n_tau_baseline==0               events= 3294169  weighted=3.55194e+07  dt=79.085s
+[data23      ] 06  trigger==1                      events=  719136  weighted=7.73395e+06  dt=79.646s
+[data23      ] 07  ph_pt>50GeV                     events=  713598  weighted=7.67279e+06  dt=80.374s
+[data23      ] 08  MET>100GeV                      events=   93925  weighted=1.00948e+06  dt=80.564s
+[data23      ] 09  n_jet_central<=3                events=   79778  weighted=857115  dt=80.755s
+[data23      ] 10  mT>80GeV                        events=   79409  weighted=853096  dt=81.179s
+[data23      ] 11  VertexBDTScore>0.1              events=   17148  weighted=184316  dt=81.388s
+[data23      ] 12  met_tst_sig>7                   events=    2753  weighted=29491.2  dt=81.534s
+[data23      ] 13  ph_eta<1.75                     events=    2161  weighted=22725.5  dt=81.784s
+[data23      ] 14  dphi_met_phterm>1.35            events=     298  weighted=3139.15  dt=81.914s
+[data23      ] 15  dmet>-20GeV                     events=     275  weighted=2900.14  dt=82.044s
+[data23      ] 16  dphi_jj_central<2.5             events=     241  weighted=2540.15  dt=82.175s
+[data23      ] 17  dphi_met_jetterm<0.75           events=     222  weighted=2338.92  dt=82.305s
+[data23      ] 18  balance>0.90                    events=     132  weighted=1391.94  dt=82.571s
+[data23      ] 19  jetterm>80GeV                   events=     132  weighted=1391.94  dt=82.694s
+[data23      ] 20  3.1>dphi_phterm_jetterm>1.8     events=     127  weighted=1339.02  dt=82.841s
+[data23      ] 21  met_noJVT>90GeV                 events=     126  weighted=1327.81  dt=82.975s
+[data23      ] None-check met_tst_et: 0
