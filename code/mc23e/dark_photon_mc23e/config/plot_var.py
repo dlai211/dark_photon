@@ -1,34 +1,4 @@
-variables = [
-    "actualIntPerXing", "dphi_central_jj", "failJVT_jet_pt", "jet_central_eta",
-    "jet_central_phi", "jet_central_pt",
-    "met_jetterm_et", "met_jetterm_phi", "met_jetterm_sumet",
-    "met_softerm_tst_et", "met_tst_et", "met_tst_noJVT_et", "met_tst_phi",
-    "met_tst_sig", "met_tst_noJVT_sig", "n_ph", "n_ph_baseline", "n_el_baseline", "n_mu",
-    "n_mu_baseline", "n_jet", "n_jet_central", "n_tau_baseline", "ph_eta",
-    "ph_phi", "ph_pt", "pu_weight", "pv_truth_z", "pv_z",
-    "trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M", "vtx_sumPt",
-    "mconly_weight", "mc_weight_sum", "xsec_ami", "filter_eff_ami", "kfactor_ami",
-    "pu_weight", "jvt_weight", "event", "ph_topoetcone40", "el_pt", "el_eta", "ph_truth_type", "run",
-    "failJVT_jet_vecSumPt", "failJVT_jet_vecSumPhi", "failJVT_jet_vecSumEta", "jet_sumPt", "failJVT_jet_sumPT",
-    "vtx_sumPt", "vtx_sumPt2", "vtx_Phi", 
-]
-variables_data = [
-    "actualIntPerXing", "dphi_central_jj", "failJVT_jet_pt", "jet_central_emfrac", "jet_central_eta",
-    "jet_central_phi", "jet_central_pt", "jet_central_timing", "met_cst_et",
-    "met_jetterm_et", "met_jetterm_phi", "met_jetterm_sumet", "met_phterm_phi",
-    "met_softerm_tst_et", "met_tst_et", "met_tst_noJVT_et", "met_tst_phi",
-    "met_tst_sig", "met_track_et", "n_ph", "n_ph_baseline", "n_el_baseline",
-    "n_mu_baseline", "n_mu", "n_jet", "n_jet_central", "n_tau_baseline", "ph_eta",
-    "ph_phi", "ph_pt", "pv_z", "BDTScore",
-    "trigger_HLT_g50_tight_xe40_cell_xe70_pfopufit_80mTAC_L1eEM26M", "vtx_sumPt",
-    "event", "ph_topoetcone40", "el_pt", "el_eta", "run"
-]
-ntuple_names = ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag','dijet']
-ntuple_names_BDT = ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct','gammajet_frag','dijets']
-
-
-
-['run',
+variables = ['run',
  'event',
  'year',
  'averageIntPerXing',
@@ -92,6 +62,13 @@ ntuple_names_BDT = ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct'
  'met_tst_noJVT_et',
  'met_tst_noJVT_phi',
  'met_tst_noJVT_sumet',
+ 'mu_pt',
+ 'mu_eta',
+ 'mu_phi',
+ 'mu_charge',
+ 'el_pt',
+ 'el_eta',
+ 'el_phi',
  'failJVT_jet_pt',
  'failJVT_jet_eta',
  'failJVT_jet_phi',
@@ -127,3 +104,5 @@ ntuple_names_BDT = ['ggHyyd','Zjets','Zgamma','Wgamma','Wjets','gammajet_direct'
  'jet_central_phi',
  'jet_central_m',
  'BDTScore']
+
+ntuple_names = ['ggHyyd','Zgamma','Wgamma','gammajet_direct', "data23"]
