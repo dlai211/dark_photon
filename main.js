@@ -15,7 +15,7 @@ let currentLumi = "135fb";
 
 // Create a single nav entry with all cut names, making each cut name clickable
 const li = document.createElement("li");
-const mainNavText = document.createTextNode("mc23d ");
+const mainNavText = document.createTextNode("mc23e ");
 li.appendChild(mainNavText);
 
 Object.keys(cut_config).forEach((cut, index, array) => {

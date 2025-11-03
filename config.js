@@ -11,17 +11,38 @@ const cut_config_jets_faking_photons3 = {
 
 // Define the variable configurations
 const var_config_main = [
-    "actualIntPerXing", "balance", "balance_sumet", "BDTScore",
-    "central_jets_fraction", "dmet", "dphi_jj", "dphi_met_central_jet", 
-    "dphi_met_jetterm", "dphi_met_ph", "dphi_met_phterm", "dphi_ph_jet1", 
-    "dphi_ph_centraljet1", "dphi_phterm_jetterm", "failJVT_jet_pt", 
-    "failJVT_jet_pt1", "goodPV", "jet_central_emfrac", "jet_central_eta", 
-    "jet_central_pt", "jet_central_pt1", "jet_central_pt2", "jet_central_timing", 
-    "jet_central_timing1", "jetterm", "jetterm_sumet", "met", "met_cst", 
-    "met_noJVT", "met_track", "metplusph", "metsig", "metsigres", 
-    "mt", "n_jet", "n_jet_central", "n_jet_fwd", "n_el_baseline", 
-    "n_mu_baseline", "n_ph", "n_ph_baseline", "n_tau_baseline", "ph_eta", 
-    "ph_phi", "ph_pt", "puWeight", "softerm", "trigger", "vtx_sumPt"
+    'n_ph',
+    'n_ph_baseline',
+    'n_el_baseline',
+    'n_mu_baseline',
+    'n_tau_baseline',
+    'mt',
+    'metsig',
+    'metsigres',
+    'met',
+    'met_noJVT',
+    'dmet',
+    'ph_pt',
+    'ph_eta',
+    'ph_phi',
+    'pv_ntracks',
+    'jet_central_eta',
+    'jet_central_pt1',
+    'jet_central_pt2',
+    'dphi_met_phterm',
+    'dphi_met_jetterm',
+    'dphi_phterm_jetterm',
+    'failJVT_jet_pt1',
+    'softerm',
+    'jetterm',
+    'jetterm_sumet',
+    'n_jet',
+    'n_jet_central',
+    'n_jet_fwd',
+    'central_jets_fraction',
+    'balance',
+    'dphi_jj',
+    'VertexBDTScore',
 ];
 const var_config_jets_faking_photons3 = [
     "balance", "balance_sumet", "VertexBDTScore",
@@ -56,11 +77,11 @@ const n_1_config_jets_faking_photons = [
 
 const imageMap_index = {
     "main": {
-        cut_config: cut_config_main,
+        cut_config: cut_config_jets_faking_photons3,
         var_config: var_config_main,
         sig_config: sig_config_main,
         n_1_config: n_1_config_main,
-        path: [`main/lumi26/`, `main/lumi135/`],
+        path: [`mc23e/lumi26/`, `mc23e/lumi135/`],
         imagesPerRow: 4
     }, 
     "jets_faking_photons3": {

@@ -20,20 +20,20 @@ function generateImagePaths(cut_name, mode, lumi) {
 
     if (mode == "performance") {
         var_config.forEach((var_name) => {
-            images.push(path + `mc23d_${cut_name}cut/${var_name}_nodijet.png`);
-            images.push(path + `mc23d_${cut_name}cut/roc_curve_${var_name}.png`);
+            images.push(path + `mc23e_${cut_name}cut/${var_name}.png`);
+            images.push(path + `mc23e_${cut_name}cut/roc_curve_${var_name}.png`);
         })
     } else if (mode == "significance") {
         sig_config.forEach((sig_name) => {
-            images.push(path + `mc23d_${cut_name}cut/${sig_name}_nodijet.png`);
-            images.push(path + `mc23d_${cut_name}cut/significance_${sig_name}_lowercut.png`);
-            images.push(path + `mc23d_${cut_name}cut/significance_${sig_name}_uppercut.png`);
+            images.push(path + `mc23e_${cut_name}cut/${sig_name}.png`);
+            images.push(path + `mc23e_${cut_name}cut/significance_${sig_name}_lowercut.png`);
+            images.push(path + `mc23e_${cut_name}cut/significance_${sig_name}_uppercut.png`);
         })
     } else if (mode == "n-1") {
         n_1_config.forEach((n_1_name) => {
-            images.push(path + `mc23d_n-1cut/${n_1_name}_nodijet.png`);
-            images.push(path + `mc23d_n-1cut/significance_${n_1_name}_lowercut.png`);
-            images.push(path + `mc23d_n-1cut/significance_${n_1_name}_uppercut.png`);
+            images.push(path + `mc23e_n-1cut/${n_1_name}.png`);
+            images.push(path + `mc23e_n-1cut/significance_${n_1_name}_lowercut.png`);
+            images.push(path + `mc23e_n-1cut/significance_${n_1_name}_uppercut.png`);
         })
     }
 
@@ -42,7 +42,7 @@ function generateImagePaths(cut_name, mode, lumi) {
 
 // Function to update images based on selected cut
 function updateImages(cut_name, mode, lumi) {
-    cutTitle.textContent = `mc23d ${cut_name} cut ${mode} plots`;
+    cutTitle.textContent = `mc23d & mc23e ${cut_name} cut ${mode} plots`;
     imageContainer.innerHTML = "";
 
     // Highlight the selected cut name
