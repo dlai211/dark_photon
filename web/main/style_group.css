@@ -8,32 +8,32 @@ html { scroll-behavior: smooth; }
     max-height: 75vh;
     overflow: auto;
     padding: 12px 14px;
-    background: #fff;
+    background: rgba(0,0,0,0.2);
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    z-index: 1000;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    z-index: 1001;
 }
-#group-toc h3 { margin: 0 0 8px; font-size: 16px; }
+#group-toc h3 { margin: 0 0 8px; font-size: 20px; color: #005252;}
 #group-toc ul { list-style: none; margin: 0; padding: 0; }
 #group-toc li { margin: 6px 0; }
 #group-toc a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     padding: 6px 8px;
     display: block;
     border-radius: 6px;
 }
 #group-toc a.active {
-    background: #eef4ff;
-    color: #2457f5;
+    background: rgba(255,255,255,0.5);
+    color: #b1ffff;
     font-weight: 600;
 }
-/* give room on the right for the TOC */
-.wrapper { margin-right: 290px; }
+/* give room on the right for the TOC
+.wrapper { margin-right: 12rem; } */
 /* section headings styling */
 .group-section h3 {
     margin: 24px 0 8px;
-    border-left: 4px solid #2457f5;
+    border-left: 4px solid #b0fdfd;
     padding-left: 8px;
 }

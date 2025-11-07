@@ -12,10 +12,10 @@ const cut_config_jets_faking_photons3 = {
 // Define the variable configurations
 const var_config_main = [
     ['mt', 'balance', 'VertexBDTScore'],
-    ['n_ph', 'n_ph_baseline', 'n_el_baseline', 'n_mu_baseline', 'n_tau_baseline', 'pv_ntracks', 'n_jet', 
+    ['n_ph', 'n_ph_baseline', 'n_el', 'n_el_baseline', 'n_mu_baseline', 'n_tau_baseline', 'pv_ntracks', 'n_jet', 
      'n_jet_central', 'n_jet_fwd', 'central_jets_fraction'],
     ['ph_pt', 'ph_eta', 'ph_phi'],
-    ['jet_central_eta', 'jet_central_pt1', 'jet_central_pt2', 'jet_central_vecSumPt', 'failJVT_jet_pt1'],
+    ['jet_central_eta', 'jet_central_pt1', 'jet_central_pt2', 'jet_central_vecSumPt', 'failJVT_jet_pt1', 'failJVT_jet_vecSumPt'],
     ['met', 'met_noJVT', 'metsig', 'metsigres', 'dmet', 'softerm', 'jetterm', 'jetterm_sumet'], 
     ['dphi_met_phterm', 'dphi_met_jetterm', 'dphi_phterm_jetterm', 'dphi_jj']
 ];
@@ -67,7 +67,7 @@ const imageMap_index = {
         var_config: var_config_main,
         sig_config: sig_config_main,
         n_1_config: n_1_config_main,
-        path: [`main/lumi26/`, `main/lumi135/`],
+        path: [`main/mt80/`, `main/mt100_140/`],
         imagesPerRow: 4
     }, 
     "jets_faking_photons3": {
