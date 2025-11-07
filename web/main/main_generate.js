@@ -93,20 +93,20 @@ function imagePathsForVars(vars, cut_name, mode, lumi) {
   const out = [];
   if (mode === "performance") {
     vars.forEach(v => {
-      out.push(base + `mc23e_${cut_name}cut/${v}.png`);
-      out.push(base + `mc23e_${cut_name}cut/roc_curve_${v}.png`);
+      out.push(base + `${cut_name}cut/${v}.png`);
+      out.push(base + `${cut_name}cut/roc_curve_${v}.png`);
     });
   } else if (mode === "significance") {
     sig_config.forEach(s => {
-      out.push(base + `mc23e_${cut_name}cut/${s}.png`);
-      out.push(base + `mc23e_${cut_name}cut/significance_${s}_lowercut.png`);
-      out.push(base + `mc23e_${cut_name}cut/significance_${s}_uppercut.png`);
+      out.push(base + `${cut_name}cut/${s}.png`);
+      out.push(base + `${cut_name}cut/significance_${s}_lowercut.png`);
+      out.push(base + `${cut_name}cut/significance_${s}_uppercut.png`);
     });
   } else if (mode === "n-1") {
     n_1_config.forEach(n1 => {
-      out.push(base + `mc23e_n-1cut/${n1}.png`);
-      out.push(base + `mc23e_n-1cut/significance_${n1}_lowercut.png`);
-      out.push(base + `mc23e_n-1cut/significance_${n1}_uppercut.png`);
+      out.push(base + `n-1cut/${n1}.png`);
+      out.push(base + `n-1cut/significance_${n1}_lowercut.png`);
+      out.push(base + `n-1cut/significance_${n1}_uppercut.png`);
     });
   }
   return out;

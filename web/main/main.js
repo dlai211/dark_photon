@@ -9,7 +9,7 @@ const n1Btn = document.getElementById("n-1-btn");
 
 // let currentMode = null;
 // let currentCut = null;
-let currentLumi = "135fb";
+let currentLumi = "26fb";
 let currentMode = "performance";
 let currentCut = Object.keys(cut_config)[0];
 
@@ -73,9 +73,8 @@ n1Btn.onclick = () => switchMode("n-1");
 document.getElementById("lumi-26-btn").onclick = () => switchLumi("26fb");
 document.getElementById("lumi-135-btn").onclick = () => switchLumi("135fb");
 
-// switchMode("performance");
-switchLumi("135fb");
-// updateImages(currentCut, currentMode, currentLumi);
+switchMode("performance");
+switchLumi("26fb");
 
 // // Modal Function
 function openModal(src) {
