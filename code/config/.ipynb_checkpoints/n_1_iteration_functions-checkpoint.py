@@ -6,7 +6,7 @@ def get_best_cut(cut_values, significance_list):
     best_sig = significance_list[max_idx]
     return best_cut, best_sig, max_idx
 
-def calculate_significance(cut_var, cut_type, cut_values, tot2, ntuple_names, signal_name, getVarDict, getWeight):
+def calculate_significance(cut_var, cut_type, cut_values, tot2, ntuple_names, signal_name, getVarDict):
     sig_simple_list = []
     sigacc_simple_list = []
     acceptance_values = []
@@ -25,12 +25,12 @@ def calculate_significance(cut_var, cut_type, cut_values, tot2, ntuple_names, si
             mask_nan = x == -999
             
             if process == signal_name:
-                sig_events = getWeight(fb, process)
+                sig_events = fb['weights']
                 mask_cut = x > cut if cut_type == 'lowercut' else x < cut
                 mask = mask_nan | mask_cut
                 sig_after_cut = ak.sum(sig_events[mask])
             else:
-                bkg_events = getWeight(fb, process)
+                bkg_events = fb['weights']
                 mask_cut = x > cut if cut_type == 'lowercut' else x < cut
                 mask = mask_nan | mask_cut
                 bkg_after_cut.append(ak.sum(bkg_events[mask]))
@@ -70,13 +70,13 @@ def apply_all_cuts(tot2, ntuple_names, cut_list, getVarDict):
         new_tot2.append(fb)
     return new_tot2
     
-def compute_total_significance(tot2, ntuple_names, signal_name, getVarDict, getWeight):
+def compute_total_significance(tot2, ntuple_names, signal_name, getVarDict):
     signal_sum = 0
     bkg_sum = 0
     for i in range(len(ntuple_names)):
         fb = tot2[i]
         process = ntuple_names[i]
-        weights = getWeight(fb, process)
+        weights = fb['weights']
         if process == signal_name:
             signal_sum += ak.sum(weights)
         else:
@@ -90,7 +90,6 @@ def n_minus_1_optimizer(
     ntuple_names,
     signal_name,
     getVarDict,
-    getWeight,
     final_significance,
     max_iter=10,
     tolerance=1e-4,
@@ -117,7 +116,7 @@ def n_minus_1_optimizer(
 
             # Significance WITHOUT this cut
             sig_without = compute_total_significance(
-                tot2_cut, ntuple_names, signal_name, getVarDict, getWeight
+                tot2_cut, ntuple_names, signal_name, getVarDict
             )
 
             # Re-scan this variable ON TOP of N-1
@@ -127,7 +126,7 @@ def n_minus_1_optimizer(
 
             sig_simple_list, sigacc_simple_list, _ = calculate_significance(
                 cut_var, cut_type, scan_vals, tot2_cut, ntuple_names,
-                signal_name, getVarDict, getWeight
+                signal_name, getVarDict
             )
             best_cut_val, best_sig, best_idx = get_best_cut(scan_vals, sig_simple_list)
 
@@ -161,7 +160,7 @@ def n_minus_1_optimizer(
     # Recompute final significance with the surviving cuts
     tot2_final = apply_all_cuts(tot2, ntuple_names, best_cuts, getVarDict)
     final_significance = compute_total_significance(
-        tot2_final, ntuple_names, signal_name, getVarDict, getWeight
+        tot2_final, ntuple_names, signal_name, getVarDict
     )
 
     print('optimized cuts, end of iteration')

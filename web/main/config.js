@@ -4,7 +4,7 @@ const cut_config_main = {
     'dphi_met_jetterm': true, 'ph_eta': true, 'dphi_jj': true, 'balance': true, 'mt2': true
 };
 const cut_config_jets_faking_photons3 = {
-    'basic': true
+    'basic': true, 'selection': true
 }
 
 
