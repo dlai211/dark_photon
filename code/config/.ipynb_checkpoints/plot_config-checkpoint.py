@@ -91,6 +91,7 @@ def getWeight(fb, sample):
     weight = fb['mconly_weight']/fb['mc_weight_sum']*fb['xsec_ami']*fb['filter_eff_ami']*fb['kfactor_ami']*fb['pu_weight']*fb['jvt_weight']*1000*lumi
 
     if any(signal in sample for signal in ["ggHyyd", "WH", "VBF", "ZH"]):
+        lumi = 36000 + 109000
         xsec_sig = 0.052 #if ( period == 'Run3' or 'mc23' in period ) else 0.048
         # if sample != 'ggHyyd' : xsec_sig = fb['xsec_ami']
         br = 0.01
