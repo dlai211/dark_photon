@@ -355,7 +355,7 @@ def getVarDict(fb, process, var_name=None):
     if var_name is None or var_name == 'failJVT_jet_vecSumPt':
         var_dict['failJVT_jet_vecSumPt'] = {
             'var': ak.fill_none(fb['failJVT_jet_vecSumPt'], -999),
-            'bins': np.linspace(20000, 60000, 40+1),
+            'bins': np.linspace(0, 100000, 50+1),
             'title': r'$\vec{\sum}p_T^{\mathrm{jet,\,failJVT}}\ [\mathrm{MeV}]$'
         }
 
