@@ -43,8 +43,8 @@ const sig_config_main = [
 
 // Define the n-1 configureations
 const n_1_config_main = [
-    "balance", "dmet", "dphi_jj", "dphi_met_jetterm", "dphi_met_phterm", 
-    "metsig", "mt", "ph_eta"
+    "dmet", "dphi_jj", "dphi_met_jetterm", "VertexBDTScore", 
+    "metsig", "ph_eta"
 ];
 const n_1_config_jets_faking_photons = [
     "BDTScore", "dphi_met_phterm", "metsig", "ph_eta", "dmet", "dphi_met_jetterm", "balance", "dphi_jj"];
