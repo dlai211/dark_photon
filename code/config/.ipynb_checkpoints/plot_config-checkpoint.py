@@ -330,7 +330,7 @@ def getVarDict(fb, process, var_name=None):
         var_dict['dphi_met_jetterm'] = {
             'var': fb['dphi_met_jetterm'],
             'bins': np.linspace(0, 4, 16+1),
-            'title': r'$\Delta\phi(E_T^{miss},\, E_T^{jet})\;mathrm{or}\;\Delta\phi(E_T^{miss},\, E_T^{e})\; (e\to\gamma)$'
+            'title': r'$\Delta\phi(E_T^{miss},\, E_T^{jet})\;\mathrm{or}\;\Delta\phi(E_T^{miss},\, E_T^{e})\; (e\to\gamma)$'
         }
 
     if var_name is None or var_name == 'dphi_phterm_jetterm':
@@ -340,7 +340,7 @@ def getVarDict(fb, process, var_name=None):
             'var': np.arctan2(np.sin(dphi_met_jetterm - dphi_met_phterm),
                               np.cos(dphi_met_jetterm - dphi_met_phterm)),
             'bins': np.linspace(0, 4, 50+1),
-            'title': r'$\Delta\phi(E_T^{\gamma},\, E_T^{jet})\;mathrm{or}\;\Delta\phi(E_T^{e},\, E_T^{jet})\; (e\to\gamma)$'
+            'title': r'$\Delta\phi(E_T^{\gamma},\, E_T^{jet})\;\mathrm{or}\;\Delta\phi(E_T^{e},\, E_T^{jet})\; (e\to\gamma)$'
         }
 
     # # Fail JVT jet pt1 (first element)
