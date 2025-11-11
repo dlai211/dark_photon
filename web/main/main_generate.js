@@ -117,53 +117,117 @@ function updateImages(cut_name, mode, lumi) {
   cutTitle.textContent = `mc23d & mc23e ${cut_name} cut ${mode} plots`;
   imageContainer.innerHTML = "";
 
+  // Show/hide the group TOC (aside) depending on mode. Only show for performance.
+  const groupToc = document.getElementById("group-toc");
+  const groupLinksUl = document.getElementById("group-links");
+  if (groupToc) {
+    if (mode === "performance") {
+      groupToc.style.display = ""; // use default from CSS
+    } else {
+      groupToc.style.display = "none";
+      if (groupLinksUl) groupLinksUl.innerHTML = ""; // clear stale links
+    }
+  }
+
   // Highlight the selected cut name
   document.querySelectorAll("#cut-nav a").forEach(a => a.classList.remove("active"));
   document.querySelectorAll(`a[data-cut='${cut_name}']`).forEach(a => a.classList.add("active"));
 
   // Number of images per row
   let columns = (mode === "performance") ? 4 : 3;
-  imageContainer.style.display = "block"; // parent holds multiple sections now
+  // Only use grouping / per-group sections for performance plots.
+  if (mode === "performance") {
+    imageContainer.style.display = "block"; // parent holds multiple sections now
 
-  const { groups, titles } = getGroupsAndTitles();
+    const { groups, titles } = getGroupsAndTitles();
 
-  // Build the right-side TOC
-  const toc = document.getElementById("group-links");
-  if (toc) toc.innerHTML = "";
-  groups.forEach((_, i) => {
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = `#group-${i}`;
-    a.textContent = titles[i];
-    a.dataset.target = `group-${i}`;
-    // click-to-scroll (smooth via CSS)
-    a.onclick = (e) => {
-      e.preventDefault();
-      document.getElementById(`group-${i}`).scrollIntoView({ behavior: "smooth", block: "start" });
-    };
-    li.appendChild(a);
-    if (toc) toc.appendChild(li);
-  });
+    // Build the right-side TOC
+    const toc = document.getElementById("group-links");
+    if (toc) toc.innerHTML = "";
+    groups.forEach((_, i) => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = `#group-${i}`;
+      a.textContent = titles[i];
+      a.dataset.target = `group-${i}`;
+      // click-to-scroll (smooth via CSS)
+      a.onclick = (e) => {
+        e.preventDefault();
+        document.getElementById(`group-${i}`).scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+      li.appendChild(a);
+      if (toc) toc.appendChild(li);
+    });
 
-  // Render each group as its own section
-  groups.forEach((vars, i) => {
-    const section = document.createElement("section");
-    section.className = "group-section";
-    section.id = `group-${i}`;
+    // Render each group as its own section
+    groups.forEach((vars, i) => {
+      const section = document.createElement("section");
+      section.className = "group-section";
+      section.id = `group-${i}`;
 
-    const h = document.createElement("h3");
-    h.textContent = titles[i];
-    section.appendChild(h);
+      const h = document.createElement("h3");
+      h.textContent = titles[i];
+      section.appendChild(h);
 
-    // grid container per group
-    const grid = document.createElement("div");
-    grid.className = "wrapper";
-    grid.style.display = "grid";
-    grid.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
-    grid.style.gap = "10px";
+      // grid container per group
+      const grid = document.createElement("div");
+      grid.className = "wrapper";
+      grid.style.display = "grid";
+      grid.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+      grid.style.gap = "10px";
 
-    const imgs = imagePathsForVars(vars, cut_name, mode, lumi);
-    imgs.forEach((img) => {
+      const imgs = imagePathsForVars(vars, cut_name, mode, lumi);
+      imgs.forEach((img) => {
+        const container = document.createElement('div');
+        container.className = 'image-container';
+
+        const imgElement = document.createElement('img');
+        imgElement.src = img;
+        imgElement.alt = img.split('/').pop();
+        imgElement.onclick = () => openModal(img);
+
+        const filename = document.createElement('p');
+        filename.className = 'filename';
+        filename.textContent = img.split('/').pop();
+
+        container.appendChild(imgElement);
+        container.appendChild(filename);
+        grid.appendChild(container);
+      });
+
+      section.appendChild(grid);
+      imageContainer.appendChild(section);
+    });
+
+    // Auto-highlight current group in TOC while scrolling
+    if (typeof IntersectionObserver !== "undefined") {
+      const links = document.querySelectorAll("#group-toc a");
+      const sections = [...document.querySelectorAll(".group-section")];
+      const obs = new IntersectionObserver((entries) => {
+        // find the most visible section
+        let topMost = null, topY = Infinity;
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const y = e.target.getBoundingClientRect().top;
+            if (y >= 0 && y < topY) { topY = y; topMost = e.target; }
+          }
+        });
+        if (topMost) {
+          const id = topMost.id;
+          links.forEach(a => a.classList.toggle("active", a.dataset.target === id));
+        }
+      }, { rootMargin: "-20% 0px -60% 0px", threshold: [0, 0.2, 0.6, 1] });
+
+      sections.forEach(s => obs.observe(s));
+    }
+  } else {
+    // For significance and n-1 modes, do a single flat grid (no grouping)
+    imageContainer.style.display = "grid";
+    imageContainer.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+    imageContainer.style.gap = "10px";
+
+    const images = generateImagePaths(cut_name, mode, lumi);
+    images.forEach((img) => {
       const container = document.createElement('div');
       container.className = 'image-container';
 
@@ -178,32 +242,7 @@ function updateImages(cut_name, mode, lumi) {
 
       container.appendChild(imgElement);
       container.appendChild(filename);
-      grid.appendChild(container);
+      imageContainer.appendChild(container);
     });
-
-    section.appendChild(grid);
-    imageContainer.appendChild(section);
-  });
-
-  // Auto-highlight current group in TOC while scrolling
-  if (typeof IntersectionObserver !== "undefined") {
-    const links = document.querySelectorAll("#group-toc a");
-    const sections = [...document.querySelectorAll(".group-section")];
-    const obs = new IntersectionObserver((entries) => {
-      // find the most visible section
-      let topMost = null, topY = Infinity;
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          const y = e.target.getBoundingClientRect().top;
-          if (y >= 0 && y < topY) { topY = y; topMost = e.target; }
-        }
-      });
-      if (topMost) {
-        const id = topMost.id;
-        links.forEach(a => a.classList.toggle("active", a.dataset.target === id));
-      }
-    }, { rootMargin: "-20% 0px -60% 0px", threshold: [0, 0.2, 0.6, 1] });
-
-    sections.forEach(s => obs.observe(s));
   }
 }
