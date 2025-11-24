@@ -1,0 +1,22 @@
+
+==== Cutflow run 20251113_215438 ====
+[ggHyyd      ] 00  loaded                          events=  225374  weighted=22918.5  dt=2.644s
+[ggHyyd      ] 01  n_ph==1                         events=  195671  weighted=19979.1  dt=2.663s
+[ggHyyd      ] 02  pv_z exists                     events=  195671  weighted=19979.1  dt=2.680s
+[ggHyyd      ] 03  goodPV                          events=   86910  weighted=8732.76  dt=2.718s
+[ggHyyd      ] 04  n_mu_baseline==0                events=   86910  weighted=8732.76  dt=2.746s
+[ggHyyd      ] 05  n_el_baseline==0                events=   86910  weighted=8732.76  dt=2.774s
+[ggHyyd      ] 06  n_tau_baseline==0               events=   85912  weighted=8630.4  dt=2.802s
+[ggHyyd      ] 07  trigger==1                      events=   25430  weighted=2584.31  dt=2.822s
+[ggHyyd      ] 08  ph_pt>50GeV                     events=   25370  weighted=2578.16  dt=2.845s
+[ggHyyd      ] 09  MET>100GeV                      events=    5628  weighted=568.633  dt=2.868s
+[ggHyyd      ] 10  n_jet_central<=3                events=    4858  weighted=491.889  dt=2.884s
+[ggHyyd      ] 11  mT>80GeV                        events=    4730  weighted=479.373  dt=2.907s
+[ggHyyd      ] 12  VertexBDTScore>0.1              events=    3886  weighted=394.525  dt=2.925s
+[ggHyyd      ] 13  met_tst_sig>7                   events=    3138  weighted=319.535  dt=2.940s
+[ggHyyd      ] 14  ph_eta<1.75                     events=    2755  weighted=280.689  dt=2.956s
+[ggHyyd      ] 15  dphi_met_phterm>1.35            events=    2411  weighted=245.393  dt=2.973s
+[ggHyyd      ] 16  dmet>-20GeV                     events=    2390  weighted=243.593  dt=2.988s
+[ggHyyd      ] 17  dphi_jj_central<2.5             events=    2294  weighted=233.812  dt=3.009s
+[ggHyyd      ] 18  dphi_met_jetterm<0.75           events=    2265  weighted=231.234  dt=3.027s
+[ggHyyd      ] None-check met_tst_et: 0

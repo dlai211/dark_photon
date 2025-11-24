@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Photon Performance Plots</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <base href="/dark_photon/">
+</head>
+<body>
+    <h1>Dark Photon Performance Plots</h1>
+
+    <nav id="cut-nav">
+        <ul>
+            <li>Images per row:</li>
+            <li><a href="#" id="2-btn" class="cut-btn">2</a></li>
+            <li><a href="#" id="3-btn" class="cut-btn">3</a></li>
+            <li><a href="#" id="4-btn" class="cut-btn">4</a></li>
+        </ul>
+    </nav>
+
+    <!-- performance or selection plots -->
+    <nav id="mode-nav">
+        <ul id="mode-list"></ul>
+    </nav>
+
+    <!-- Section to display images -->
+    <section>
+        <h2 id="cut-title">Select a cut to view plots</h2>
+        <div class="wrapper" id="image-container">
+            <!-- Images will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Modal for Fullscreen Image -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <h3>Test Plots</h3>
+    <ul>
+        <li><a href="index.html#main" id="main-btn"><b>Selection Cut study 1:</b> Main </a></li>
+        <li><a href="common.html#jets_faking_photons3" id="test-btn"><b>Selection Cut Study 5.5.5:</b> Jets-faking Photons (new)</a></li>
+        <li><a href="common.html#2d" id="test-btn">2D plots of met_ph_jet</a></li>
+        <li><a href="common.html#phjet" id="test-btn">ph - jet study</a></li>
+        <li><a href="common.html#absWeightBasic" id="test-btn">abs(weight) Study (basic cut)</a></li>
+        <li><a href="common.html#absWeightSelection" id="test-btn">abs(weight) study (selection cut)</a></li>
+        <li><a href="common.html#compare" id="test-btn">compare binomial exp z</a></li>
+        <li><a href="common.html#jets_faking" id="test-btn">jets_faking Comparison Study</a></li>
+        <li><a href="table_web/table_100_140_2.html" id="test-btn">Table of Basic + Selection cuts (140 > mT > 100 GeV)</a></li>
+    </ul>
+    </div>
+
+
+    <div id="sidebar-toggle"><i class="fas fa-angle-right"></i></div>
+
+    <!-- <footer>
+        &copy; 2025 Dark Photon Project
+    </footer> -->
+
+    <script src="web/common/common_config.js"></script>
+    <script src="web/common/common.js"></script>
+    <script src="sidebar.js"></script>
+</body>
+</html>

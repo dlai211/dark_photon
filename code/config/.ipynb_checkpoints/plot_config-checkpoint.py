@@ -9,9 +9,9 @@ def getWeight(fb, sample):
         abs_eta = abs(ak.firsts(fb['ph_eta'])) # leading photon per event
         sf = ak.full_like(abs_eta, 0.0)
 
-        sf = ak.where((abs_eta > 0.0) & (abs_eta <= 0.6), 1.841, sf)
-        sf = ak.where((abs_eta > 0.6) & (abs_eta <= 1.37), 2.102, sf)
-        sf = ak.where((abs_eta > 1.37) & (abs_eta <= 1.52), 1.875, sf)
+        sf = ak.where((abs_eta > 0.0) & (abs_eta <= 0.6), 2.102, sf)
+        sf = ak.where((abs_eta > 0.6) & (abs_eta <= 1.37), 1.875, sf)
+        sf = ak.where((abs_eta > 1.37) & (abs_eta <= 1.52), 0., sf)
         sf = ak.where((abs_eta > 1.52) & (abs_eta <= 1.81), 1.911, sf)
         sf = ak.where((abs_eta > 1.81) & (abs_eta <= 2.37), 2.382, sf)
         return sf
@@ -20,9 +20,9 @@ def getWeight(fb, sample):
         abs_eta = abs(ak.firsts(fb['ph_eta']))
         sf = ak.full_like(abs_eta, 0.0)
 
-        sf = ak.where((abs_eta > 0.0) & (abs_eta <= 0.6), 1.865, sf)
-        sf = ak.where((abs_eta > 0.6) & (abs_eta <= 1.37), 1.453, sf)
-        sf = ak.where((abs_eta > 1.37) & (abs_eta <= 1.52), 1.957, sf)
+        sf = ak.where((abs_eta > 0.0) & (abs_eta <= 0.6), 1.453, sf)
+        sf = ak.where((abs_eta > 0.6) & (abs_eta <= 1.37), 1.957, sf)
+        sf = ak.where((abs_eta > 1.37) & (abs_eta <= 1.52), 0., sf)
         sf = ak.where((abs_eta > 1.52) & (abs_eta <= 1.81), 1.894, sf)
         sf = ak.where((abs_eta > 1.81) & (abs_eta <= 2.37), 1.605, sf)
         return sf
@@ -85,13 +85,13 @@ def getWeight(fb, sample):
         return scale * norm
 
     if sample.startswith("mc23d"):
-        lumi = 36000
+        lumi = 26000
     if sample.startswith("mc23e"):
         lumi = 109000
     weight = fb['mconly_weight']/fb['mc_weight_sum']*fb['xsec_ami']*fb['filter_eff_ami']*fb['kfactor_ami']*fb['pu_weight']*fb['jvt_weight']*1000*lumi
 
     if any(signal in sample for signal in ["ggHyyd", "WH", "VBF", "ZH"]):
-        lumi = 36000 + 109000
+        lumi = 26000 + 109000
         xsec_sig = 0.052 #if ( period == 'Run3' or 'mc23' in period ) else 0.048
         # if sample != 'ggHyyd' : xsec_sig = fb['xsec_ami']
         br = 0.01
@@ -417,7 +417,7 @@ def getVarDict(fb, process, var_name=None):
         
         sumet_tmp = fb['jet_central_vecSumPt']
         expr = (fb['met_tst_et'] + ak.firsts(fb['ph_pt'])) / ak.where(sumet_tmp != 0, sumet_tmp, 1)
-        balance = ak.where(sumet_tmp != 0, expr, -10) 
+        balance = ak.where(sumet_tmp != 0, expr, -999) 
 
         var_dict['balance'] = {
             'var': balance,
