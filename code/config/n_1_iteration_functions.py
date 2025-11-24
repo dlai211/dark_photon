@@ -6,11 +6,10 @@ def get_best_cut(cut_values, significance_list):
     best_sig = significance_list[max_idx]
     return best_cut, best_sig, max_idx
 
-def calculate_significance(cut_var, cut_type, cut_values, tot2, ntuple_names, signal_name, getVarDict):
+def calculate_significance(tot2, ntuple_names, getVarDict, cut_var, cut_type, cut_values, signal_name="ggHyyd"):
     sig_simple_list = []
     sigacc_simple_list = []
     acceptance_values = []
-    tot_tmp = []
 
     for cut in cut_values:
         sig_after_cut = 0
@@ -35,7 +34,6 @@ def calculate_significance(cut_var, cut_type, cut_values, tot2, ntuple_names, si
                 mask = mask_nan | mask_cut
                 bkg_after_cut.append(ak.sum(bkg_events[mask]))
             
-            tot_tmp.append(fb)
 
         total_bkg = sum(bkg_after_cut)
         total_signal = sig_after_cut
@@ -125,8 +123,7 @@ def n_minus_1_optimizer(
             scan_vals = cut_config[cut_var][cut_type]
 
             sig_simple_list, sigacc_simple_list, _ = calculate_significance(
-                cut_var, cut_type, scan_vals, tot2_cut, ntuple_names,
-                signal_name, getVarDict
+                tot2_cut, ntuple_names, getVarDict, cut_var, cut_type, scan_vals
             )
             best_cut_val, best_sig, best_idx = get_best_cut(scan_vals, sig_simple_list)
 

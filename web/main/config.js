@@ -4,7 +4,7 @@ const cut_config_main = {
     'dphi_met_jetterm': true, 'ph_eta': true, 'dphi_jj': true, 'balance': true, 'mt2': true
 };
 const cut_config_jets_faking_photons3 = {
-    'basic': true, 'selection': true
+    'basic': true, 'selection': true, 'selection2': true
 }
 
 
@@ -43,9 +43,7 @@ const sig_config_main = [
 
 // Define the n-1 configureations
 const n_1_config_main = [
-    "dmet", "dphi_jj", "dphi_met_jetterm", "VertexBDTScore", 
-    "metsig", "ph_eta"
-];
+"VertexBDTScore", "metsig", "ph_eta", "dmet", "dphi_jj", "dphi_met_phterm", "dphi_met_jetterm", "balance", "jetterm", "metsigres", "met_noJVT"];
 const n_1_config_jets_faking_photons = [
     "BDTScore", "dphi_met_phterm", "metsig", "ph_eta", "dmet", "dphi_met_jetterm", "balance", "dphi_jj"];
 

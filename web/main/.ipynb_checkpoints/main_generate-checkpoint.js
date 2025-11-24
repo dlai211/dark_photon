@@ -1,0 +1,248 @@
+// different config.js based on the link
+let hash = window.location.hash.replace('#', '');
+console.log("Hash from URL: ", hash);
+if (!hash) {hash = "main"};
+
+// Get imageData dict
+const imageData = imageMap_index[hash] || { images: [], title: 'No plots found' };
+let imagesPerRow = imageData.imagesPerRow || 4; // Default to 4 if not set
+const cut_config = imageData.cut_config;
+const var_config = imageData.var_config;
+const sig_config = imageData.sig_config;
+const n_1_config = imageData.n_1_config;
+
+// Function to generate image paths dynamically
+function generateImagePaths(cut_name, mode, lumi) {
+    if (!cut_config[cut_name] && mode !== "n-1") return [];
+    
+    let images = [];
+    let path = (lumi === "26fb") ? imageData.path[0] : (lumi === "135fb") ? imageData.path[1] : ``;
+
+    if (mode == "performance") {
+        var_config.forEach((var_name) => {
+            images.push(path + `${cut_name}cut/${var_name}.png`);
+            images.push(path + `${cut_name}cut/roc_curve_${var_name}.png`);
+        })
+    } else if (mode == "significance") {
+        sig_config.forEach((sig_name) => {
+            images.push(path + `${cut_name}cut/${sig_name}.png`);
+            images.push(path + `${cut_name}cut/significance_${sig_name}_lowercut.png`);
+            images.push(path + `${cut_name}cut/significance_${sig_name}_uppercut.png`);
+        })
+    } else if (mode == "n-1") {
+        n_1_config.forEach((n_1_name) => {
+            images.push(path + `n-1cut/${n_1_name}.png`);
+            images.push(path + `n-1cut/significance_${n_1_name}_lowercut.png`);
+            images.push(path + `n-1cut/significance_${n_1_name}_uppercut.png`);
+        })
+    }
+
+    return images;
+}
+
+// // Function to update images based on selected cut
+// function updateImages(cut_name, mode, lumi) {
+//     cutTitle.textContent = `mc23d + mc23e ${cut_name} cut ${mode} plots`;
+//     imageContainer.innerHTML = "";
+
+//     // Highlight the selected cut name
+//     document.querySelectorAll("#cut-nav a").forEach(a => a.classList.remove("active"));
+//     document.querySelectorAll(`a[data-cut='${cut_name}']`).forEach(a => a.classList.add("active"));
+
+//     // Determine the number of images per row
+//     let imagesPerRow = mode === "performance" ? 4 : 3;
+//     imageContainer.style.display = "grid";
+//     imageContainer.style.gridTemplateColumns = `repeat(${imagesPerRow}, 1fr)`;
+
+//     const images = generateImagePaths(cut_name, mode, lumi);
+//     images.forEach((img) => {
+//         const container = document.createElement('div');
+//         container.className = 'image-container';
+
+//         const imgElement = document.createElement('img');
+//         imgElement.src = img;
+//         imgElement.alt = img.split('/').pop();
+//         imgElement.onclick = () => openModal(img); // click to zoom
+
+//         const filename = document.createElement('p');
+//         filename.className = 'filename';
+//         filename.textContent = img.split('/').pop();
+
+//         container.appendChild(imgElement);
+//         container.appendChild(filename);
+//         imageContainer.appendChild(container);
+
+//     })
+// }
+
+
+// Helper: detect grouped var_config (array of arrays) and normalize
+function getGroupsAndTitles() {
+  const groups = Array.isArray(var_config[0]) ? var_config : [var_config];
+  const titles = (imageData.group_titles && imageData.group_titles.length === groups.length)
+    ? imageData.group_titles
+    : groups.map((_, i) => `Group ${i+1}`);
+  return { groups, titles };
+}
+
+// Helper: build image paths for a list of var names (one group)
+function imagePathsForVars(vars, cut_name, mode, lumi) {
+  if (!cut_config[cut_name] && mode !== "n-1") return [];
+  let base = (lumi === "26fb") ? imageData.path[0] : (lumi === "135fb") ? imageData.path[1] : ``;
+
+  const out = [];
+  if (mode === "performance") {
+    vars.forEach(v => {
+      out.push(base + `${cut_name}cut/${v}.png`);
+      out.push(base + `${cut_name}cut/roc_curve_${v}.png`);
+    });
+  } else if (mode === "significance") {
+    sig_config.forEach(s => {
+      out.push(base + `${cut_name}cut/${s}.png`);
+      out.push(base + `${cut_name}cut/significance_${s}_lowercut.png`);
+      out.push(base + `${cut_name}cut/significance_${s}_uppercut.png`);
+    });
+  } else if (mode === "n-1") {
+    n_1_config.forEach(n1 => {
+      out.push(base + `n-1cut/${n1}.png`);
+      out.push(base + `n-1cut/significance_${n1}_lowercut.png`);
+      out.push(base + `n-1cut/significance_${n1}_uppercut.png`);
+    });
+  }
+  return out;
+}
+
+// Build right TOC and render sections per group
+function updateImages(cut_name, mode, lumi) {
+  cutTitle.textContent = `mc23d & mc23e ${cut_name} cut ${mode} plots`;
+  imageContainer.innerHTML = "";
+
+  // Show/hide the group TOC (aside) depending on mode. Only show for performance.
+  const groupToc = document.getElementById("group-toc");
+  const groupLinksUl = document.getElementById("group-links");
+  if (groupToc) {
+    if (mode === "performance") {
+      groupToc.style.display = ""; // use default from CSS
+    } else {
+      groupToc.style.display = "none";
+      if (groupLinksUl) groupLinksUl.innerHTML = ""; // clear stale links
+    }
+  }
+
+  // Highlight the selected cut name
+  document.querySelectorAll("#cut-nav a").forEach(a => a.classList.remove("active"));
+  document.querySelectorAll(`a[data-cut='${cut_name}']`).forEach(a => a.classList.add("active"));
+
+  // Number of images per row
+  let columns = (mode === "performance") ? 4 : 3;
+  // Only use grouping / per-group sections for performance plots.
+  if (mode === "performance") {
+    imageContainer.style.display = "block"; // parent holds multiple sections now
+
+    const { groups, titles } = getGroupsAndTitles();
+
+    // Build the right-side TOC
+    const toc = document.getElementById("group-links");
+    if (toc) toc.innerHTML = "";
+    groups.forEach((_, i) => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = `#group-${i}`;
+      a.textContent = titles[i];
+      a.dataset.target = `group-${i}`;
+      // click-to-scroll (smooth via CSS)
+      a.onclick = (e) => {
+        e.preventDefault();
+        document.getElementById(`group-${i}`).scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+      li.appendChild(a);
+      if (toc) toc.appendChild(li);
+    });
+
+    // Render each group as its own section
+    groups.forEach((vars, i) => {
+      const section = document.createElement("section");
+      section.className = "group-section";
+      section.id = `group-${i}`;
+
+      const h = document.createElement("h3");
+      h.textContent = titles[i];
+      section.appendChild(h);
+
+      // grid container per group
+      const grid = document.createElement("div");
+      grid.className = "wrapper";
+      grid.style.display = "grid";
+      grid.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+      grid.style.gap = "10px";
+
+      const imgs = imagePathsForVars(vars, cut_name, mode, lumi);
+      imgs.forEach((img) => {
+        const container = document.createElement('div');
+        container.className = 'image-container';
+
+        const imgElement = document.createElement('img');
+        imgElement.src = img;
+        imgElement.alt = img.split('/').pop();
+        imgElement.onclick = () => openModal(img);
+
+        const filename = document.createElement('p');
+        filename.className = 'filename';
+        filename.textContent = img.split('/').pop();
+
+        container.appendChild(imgElement);
+        container.appendChild(filename);
+        grid.appendChild(container);
+      });
+
+      section.appendChild(grid);
+      imageContainer.appendChild(section);
+    });
+
+    // Auto-highlight current group in TOC while scrolling
+    if (typeof IntersectionObserver !== "undefined") {
+      const links = document.querySelectorAll("#group-toc a");
+      const sections = [...document.querySelectorAll(".group-section")];
+      const obs = new IntersectionObserver((entries) => {
+        // find the most visible section
+        let topMost = null, topY = Infinity;
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const y = e.target.getBoundingClientRect().top;
+            if (y >= 0 && y < topY) { topY = y; topMost = e.target; }
+          }
+        });
+        if (topMost) {
+          const id = topMost.id;
+          links.forEach(a => a.classList.toggle("active", a.dataset.target === id));
+        }
+      }, { rootMargin: "-20% 0px -60% 0px", threshold: [0, 0.2, 0.6, 1] });
+
+      sections.forEach(s => obs.observe(s));
+    }
+  } else {
+    // For significance and n-1 modes, do a single flat grid (no grouping)
+    imageContainer.style.display = "grid";
+    imageContainer.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+    imageContainer.style.gap = "10px";
+
+    const images = generateImagePaths(cut_name, mode, lumi);
+    images.forEach((img) => {
+      const container = document.createElement('div');
+      container.className = 'image-container';
+
+      const imgElement = document.createElement('img');
+      imgElement.src = img;
+      imgElement.alt = img.split('/').pop();
+      imgElement.onclick = () => openModal(img);
+
+      const filename = document.createElement('p');
+      filename.className = 'filename';
+      filename.textContent = img.split('/').pop();
+
+      container.appendChild(imgElement);
+      container.appendChild(filename);
+      imageContainer.appendChild(container);
+    });
+  }
+}
