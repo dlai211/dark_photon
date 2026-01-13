@@ -91,7 +91,8 @@ def getWeight(fb, sample):
     weight = fb['mconly_weight']/fb['mc_weight_sum']*fb['xsec_ami']*fb['filter_eff_ami']*fb['kfactor_ami']*fb['pu_weight']*fb['jvt_weight']*1000*lumi
 
     if any(signal in sample for signal in ["ggHyyd", "WH", "VBF", "ZH"]):
-        lumi = 26000 + 109000
+        # print("I am in plot_config.py", sample, lumi)
+        # lumi = 26000 + 109000
         xsec_sig = 0.052 #if ( period == 'Run3' or 'mc23' in period ) else 0.048
         # if sample != 'ggHyyd' : xsec_sig = fb['xsec_ami']
         br = 0.01
@@ -242,13 +243,6 @@ def getVarDict(fb, process, var_name=None):
             'shift': '+50000'
         }
 
-    if var_name is None or var_name == 'met_noJVT':
-        var_dict['met_noJVT'] = {
-            'var': fb['met_tst_noJVT_et'],
-            'bins': np.linspace(0, 300000, 50+1),
-            'title': r'$E_T^{miss}\ [MeV]$'
-        }
-
     if var_name is None or var_name == 'dmet':
         var_dict['dmet'] = {
             'var': fb['dmet'],
@@ -279,13 +273,6 @@ def getVarDict(fb, process, var_name=None):
             'title': r'$\phi^{\gamma}\;\mathrm{or}\;\phi^{e}\;(e\to\gamma)$'
         }
 
-    if var_name is None or var_name == 'pv_ntracks':
-        var_dict['pv_ntracks'] = {
-            'var': ak.firsts(fb['pv_ntracks']),
-            'bins': np.linspace(0, 200, 50+1),
-            'title': 'pv_ntracks'
-        }
-        
     if var_name is None or var_name == "jet_central_eta":
         jet_central_eta_tmp = ak.firsts(fb['jet_central_eta'])
         var_dict['jet_central_eta'] = {
@@ -367,20 +354,6 @@ def getVarDict(fb, process, var_name=None):
             'title': r'$E_T^{soft}\ [MeV]$'
         }
 
-    if var_name is None or var_name == 'jetterm':
-        var_dict['jetterm'] = {
-            'var': fb['met_jetterm_et'],
-            'bins': np.linspace(0, 300000, 50+1),
-            'title': r'$E_T^{jet}\ [MeV]$'
-        }
-
-    if var_name is None or var_name == 'jetterm_sumet':
-        var_dict['jetterm_sumet'] = {
-            'var': fb['met_jetterm_sumet'],
-            'bins': np.linspace(0, 300000, 50+1),
-            'title': r'$E_T^{jet}\ [MeV]$'
-        }
-
     if var_name is None or var_name == 'n_jet':
         var_dict['n_jet'] = {
             'var': fb['n_jet'],
@@ -415,7 +388,7 @@ def getVarDict(fb, process, var_name=None):
         # cond = ak.fill_none(balance_tmp == -10, False)
         # balance = ak.where(cond, -999, balance_tmp)
         
-        sumet_tmp = fb['jet_central_vecSumPt']
+        sumet_tmp = ak.sum(fb['jet_central_pt'])
         expr = (fb['met_tst_et'] + ak.firsts(fb['ph_pt'])) / ak.where(sumet_tmp != 0, sumet_tmp, 1)
         balance = ak.where(sumet_tmp != 0, expr, -999) 
 
