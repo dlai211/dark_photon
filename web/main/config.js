@@ -1,7 +1,6 @@
 // Define the cut configurations (same as Python's cut_config)
 const cut_config_main = {
-    'basic': true, 'metsig': true, 'dphi_met_phterm': true, 'dmet': true,
-    'dphi_met_jetterm': true, 'ph_eta': true, 'dphi_jj': true, 'balance': true, 'mt2': true
+    'basic': true, 'selection': true
 };
 const cut_config_jets_faking_photons3 = {
     'basic': true, 'selection': true, 'selection2': true
@@ -12,11 +11,11 @@ const cut_config_jets_faking_photons3 = {
 // Define the variable configurations
 const var_config_main = [
     ['mt', 'balance', 'VertexBDTScore'],
-    ['n_ph', 'n_ph_baseline', 'n_el', 'n_el_baseline', 'n_mu_baseline', 'n_tau_baseline', 'pv_ntracks', 'n_jet', 
+    ['n_ph', 'n_ph_baseline', 'n_el', 'n_el_baseline', 'n_mu_baseline', 'n_tau_baseline', 'n_jet', 
      'n_jet_central', 'n_jet_fwd', 'central_jets_fraction'],
     ['ph_pt', 'ph_eta', 'ph_phi'],
-    ['jet_central_eta', 'jet_central_pt1', 'jet_central_pt2', 'jet_central_vecSumPt', 'failJVT_jet_pt1', 'failJVT_jet_vecSumPt'],
-    ['met', 'met_noJVT', 'metsig', 'metsigres', 'dmet', 'softerm', 'jetterm', 'jetterm_sumet'], 
+    ['jet_central_eta', 'jet_central_pt1', 'jet_central_pt2', 'jet_central_vecSumPt'],
+    ['met', 'metsig', 'metsigres', 'dmet'], 
     ['dphi_met_phterm', 'dphi_met_jetterm', 'dphi_phterm_jetterm', 'dphi_jj']
 ];
      
@@ -61,7 +60,7 @@ const group_titles_main = [
 
 const imageMap_index = {
     "main": {
-        cut_config: cut_config_jets_faking_photons3,
+        cut_config: cut_config_main,
         var_config: var_config_main,
         sig_config: sig_config_main,
         n_1_config: n_1_config_main,

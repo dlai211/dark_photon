@@ -113,6 +113,9 @@ variables_mc = [
  'dphi_met_jetterm',
  'dphi_met_phterm',
  'dphi_central_jj',
+ 'jet_central_vecSumPt',
+ 'jet_central_sumPt',
+ 'jet_sumPt',
  'central_balance',
  'BDTScore',
  'mconly_weight', 'pu_weight', 'jvt_weight', 'mc_weight_sum', 'xsec_ami', 'filter_eff_ami', 'kfactor_ami', 'pv_truth_z']

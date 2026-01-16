@@ -330,30 +330,6 @@ def getVarDict(fb, process, var_name=None):
             'title': r'$\Delta\phi(E_T^{\gamma},\, E_T^{jet})\;\mathrm{or}\;\Delta\phi(E_T^{e},\, E_T^{jet})\; (e\to\gamma)$'
         }
 
-    # # Fail JVT jet pt1 (first element)
-    if var_name is None or var_name == 'failJVT_jet_pt1':
-        failJVT_jet_pt_tmp = ak.firsts(fb['failJVT_jet_pt'])
-        var_dict['failJVT_jet_pt1'] = {
-            'var': ak.fill_none(failJVT_jet_pt_tmp, -999),
-            'bins': np.linspace(20000, 60000, 40+1),
-            'title': r'$p_T^{\mathrm{noJVT\ jet1}}\ [MeV]$'
-        }
-
-    
-    if var_name is None or var_name == 'failJVT_jet_vecSumPt':
-        var_dict['failJVT_jet_vecSumPt'] = {
-            'var': ak.fill_none(fb['failJVT_jet_vecSumPt'], -999),
-            'bins': np.linspace(0, 100000, 50+1),
-            'title': r'$\vec{\sum}p_T^{\mathrm{jet,\,failJVT}}\ [\mathrm{MeV}]$'
-        }
-
-    if var_name is None or var_name == 'softerm':
-        var_dict['softerm'] = {
-            'var': fb['met_softerm_tst_et'],
-            'bins': np.linspace(0, 100000, 50+1),
-            'title': r'$E_T^{soft}\ [MeV]$'
-        }
-
     if var_name is None or var_name == 'n_jet':
         var_dict['n_jet'] = {
             'var': fb['n_jet'],
@@ -388,7 +364,7 @@ def getVarDict(fb, process, var_name=None):
         # cond = ak.fill_none(balance_tmp == -10, False)
         # balance = ak.where(cond, -999, balance_tmp)
         
-        sumet_tmp = ak.sum(fb['jet_central_pt'])
+        sumet_tmp = ak.sum(fb['jet_central_pt'], axis=-1)
         expr = (fb['met_tst_et'] + ak.firsts(fb['ph_pt'])) / ak.where(sumet_tmp != 0, sumet_tmp, 1)
         balance = ak.where(sumet_tmp != 0, expr, -999) 
 
