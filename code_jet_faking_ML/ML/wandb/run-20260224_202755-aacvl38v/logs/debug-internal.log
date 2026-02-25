@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:27:55.461781354Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:27:55.702789108Z","level":"INFO","msg":"stream: created new stream","id":"aacvl38v"}
+{"time":"2026-02-24T20:27:55.702827553Z","level":"INFO","msg":"stream: started","id":"aacvl38v"}
+{"time":"2026-02-24T20:27:55.702851163Z","level":"INFO","msg":"writer: Do: started","stream_id":"aacvl38v"}
+{"time":"2026-02-24T20:27:55.702867065Z","level":"INFO","msg":"sender: started","stream_id":"aacvl38v"}
+{"time":"2026-02-24T20:27:55.702870605Z","level":"INFO","msg":"handler: started","stream_id":"aacvl38v"}
+{"time":"2026-02-24T20:27:57.421653064Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:27:57.633619022Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:27:57.639198263Z","level":"INFO","msg":"stream: closing","id":"aacvl38v"}
+{"time":"2026-02-24T20:27:57.639216053Z","level":"INFO","msg":"handler: closed","stream_id":"aacvl38v"}
+{"time":"2026-02-24T20:27:57.639226326Z","level":"INFO","msg":"writer: Close: closed","stream_id":"aacvl38v"}
+{"time":"2026-02-24T20:27:57.639233969Z","level":"INFO","msg":"sender: closed","stream_id":"aacvl38v"}
+{"time":"2026-02-24T20:27:57.640127349Z","level":"INFO","msg":"stream: closed","id":"aacvl38v"}

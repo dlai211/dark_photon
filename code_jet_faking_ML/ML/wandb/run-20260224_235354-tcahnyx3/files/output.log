@@ -1,0 +1,20 @@
+/home/jlai/.local/share/mamba/envs/tf-gpu/lib/python3.10/site-packages/keras/src/layers/core/dense.py:93: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Epoch 1/50
+[1m556/556[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m9s[0m 10ms/step - auc: 0.5821 - loss: 0.0074 - weighted_auc: 0.7411 - val_auc: 0.6791 - val_loss: 0.0040 - val_weighted_auc: 0.8735
+Epoch 2/50
+[1m556/556[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 2ms/step - auc: 0.6463 - loss: 0.0041 - weighted_auc: 0.8335 - val_auc: 0.6949 - val_loss: 0.0039 - val_weighted_auc: 0.8773
+Epoch 3/50
+[1m556/556[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 2ms/step - auc: 0.6615 - loss: 0.0041 - weighted_auc: 0.8397 - val_auc: 0.6869 - val_loss: 0.0038 - val_weighted_auc: 0.8787
+Epoch 4/50
+[1m556/556[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 2ms/step - auc: 0.6660 - loss: 0.0040 - weighted_auc: 0.8478 - val_auc: 0.6834 - val_loss: 0.0039 - val_weighted_auc: 0.8611
+Epoch 5/50
+[1m556/556[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 2ms/step - auc: 0.6711 - loss: 0.0040 - weighted_auc: 0.8535 - val_auc: 0.6805 - val_loss: 0.0038 - val_weighted_auc: 0.8588
+Epoch 6/50
+[1m556/556[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 2ms/step - auc: 0.6727 - loss: 0.0040 - weighted_auc: 0.8541 - val_auc: 0.6910 - val_loss: 0.0038 - val_weighted_auc: 0.8739
+Epoch 7/50
+[1m556/556[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 2ms/step - auc: 0.6769 - loss: 0.0040 - weighted_auc: 0.8559 - val_auc: 0.6933 - val_loss: 0.0038 - val_weighted_auc: 0.8659
+Epoch 8/50
+[1m556/556[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 2ms/step - auc: 0.6777 - loss: 0.0040 - weighted_auc: 0.8569 - val_auc: 0.6905 - val_loss: 0.0038 - val_weighted_auc: 0.8687
+[1m3812/3812[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m3s[0m 825us/step
+[1m795/795[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 960us/step

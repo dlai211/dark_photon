@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:19:05.690531748Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:19:05.952532273Z","level":"INFO","msg":"stream: created new stream","id":"ucbwmzio"}
+{"time":"2026-02-24T19:19:05.952564699Z","level":"INFO","msg":"stream: started","id":"ucbwmzio"}
+{"time":"2026-02-24T19:19:05.952578041Z","level":"INFO","msg":"sender: started","stream_id":"ucbwmzio"}
+{"time":"2026-02-24T19:19:05.952574059Z","level":"INFO","msg":"writer: Do: started","stream_id":"ucbwmzio"}
+{"time":"2026-02-24T19:19:05.952607445Z","level":"INFO","msg":"handler: started","stream_id":"ucbwmzio"}
+{"time":"2026-02-24T19:19:08.172411246Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:19:08.528137025Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:19:08.533247731Z","level":"INFO","msg":"stream: closing","id":"ucbwmzio"}
+{"time":"2026-02-24T19:19:08.533263807Z","level":"INFO","msg":"handler: closed","stream_id":"ucbwmzio"}
+{"time":"2026-02-24T19:19:08.533272011Z","level":"INFO","msg":"writer: Close: closed","stream_id":"ucbwmzio"}
+{"time":"2026-02-24T19:19:08.533281394Z","level":"INFO","msg":"sender: closed","stream_id":"ucbwmzio"}
+{"time":"2026-02-24T19:19:08.53401586Z","level":"INFO","msg":"stream: closed","id":"ucbwmzio"}

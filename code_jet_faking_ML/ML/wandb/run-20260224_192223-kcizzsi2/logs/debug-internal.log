@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:22:23.716889847Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:22:23.897297467Z","level":"INFO","msg":"stream: created new stream","id":"kcizzsi2"}
+{"time":"2026-02-24T19:22:23.897323958Z","level":"INFO","msg":"stream: started","id":"kcizzsi2"}
+{"time":"2026-02-24T19:22:23.897337465Z","level":"INFO","msg":"writer: Do: started","stream_id":"kcizzsi2"}
+{"time":"2026-02-24T19:22:23.897363924Z","level":"INFO","msg":"handler: started","stream_id":"kcizzsi2"}
+{"time":"2026-02-24T19:22:23.897381026Z","level":"INFO","msg":"sender: started","stream_id":"kcizzsi2"}
+{"time":"2026-02-24T19:22:25.719276988Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:22:26.073225591Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:22:26.077642297Z","level":"INFO","msg":"stream: closing","id":"kcizzsi2"}
+{"time":"2026-02-24T19:22:26.077657284Z","level":"INFO","msg":"handler: closed","stream_id":"kcizzsi2"}
+{"time":"2026-02-24T19:22:26.07766572Z","level":"INFO","msg":"writer: Close: closed","stream_id":"kcizzsi2"}
+{"time":"2026-02-24T19:22:26.077669756Z","level":"INFO","msg":"sender: closed","stream_id":"kcizzsi2"}
+{"time":"2026-02-24T19:22:26.078348441Z","level":"INFO","msg":"stream: closed","id":"kcizzsi2"}

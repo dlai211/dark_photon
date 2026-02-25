@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:19:45.782890433Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:19:45.964382906Z","level":"INFO","msg":"stream: created new stream","id":"ef70wpfk"}
+{"time":"2026-02-24T19:19:45.96441621Z","level":"INFO","msg":"stream: started","id":"ef70wpfk"}
+{"time":"2026-02-24T19:19:45.964429833Z","level":"INFO","msg":"writer: Do: started","stream_id":"ef70wpfk"}
+{"time":"2026-02-24T19:19:45.964436541Z","level":"INFO","msg":"handler: started","stream_id":"ef70wpfk"}
+{"time":"2026-02-24T19:19:45.964495175Z","level":"INFO","msg":"sender: started","stream_id":"ef70wpfk"}
+{"time":"2026-02-24T19:19:48.544989964Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:19:48.734013611Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:19:48.738674347Z","level":"INFO","msg":"stream: closing","id":"ef70wpfk"}
+{"time":"2026-02-24T19:19:48.738697699Z","level":"INFO","msg":"handler: closed","stream_id":"ef70wpfk"}
+{"time":"2026-02-24T19:19:48.738712132Z","level":"INFO","msg":"writer: Close: closed","stream_id":"ef70wpfk"}
+{"time":"2026-02-24T19:19:48.738723309Z","level":"INFO","msg":"sender: closed","stream_id":"ef70wpfk"}
+{"time":"2026-02-24T19:19:48.740056828Z","level":"INFO","msg":"stream: closed","id":"ef70wpfk"}

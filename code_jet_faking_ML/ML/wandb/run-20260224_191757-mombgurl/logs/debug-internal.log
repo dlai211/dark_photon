@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:17:57.470201982Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:17:57.667519715Z","level":"INFO","msg":"stream: created new stream","id":"mombgurl"}
+{"time":"2026-02-24T19:17:57.667557611Z","level":"INFO","msg":"stream: started","id":"mombgurl"}
+{"time":"2026-02-24T19:17:57.667581051Z","level":"INFO","msg":"writer: Do: started","stream_id":"mombgurl"}
+{"time":"2026-02-24T19:17:57.667598863Z","level":"INFO","msg":"handler: started","stream_id":"mombgurl"}
+{"time":"2026-02-24T19:17:57.667580744Z","level":"INFO","msg":"sender: started","stream_id":"mombgurl"}
+{"time":"2026-02-24T19:17:59.732481981Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:17:59.915944066Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:17:59.920476508Z","level":"INFO","msg":"stream: closing","id":"mombgurl"}
+{"time":"2026-02-24T19:17:59.92048687Z","level":"INFO","msg":"handler: closed","stream_id":"mombgurl"}
+{"time":"2026-02-24T19:17:59.920493368Z","level":"INFO","msg":"writer: Close: closed","stream_id":"mombgurl"}
+{"time":"2026-02-24T19:17:59.920505985Z","level":"INFO","msg":"sender: closed","stream_id":"mombgurl"}
+{"time":"2026-02-24T19:17:59.921311627Z","level":"INFO","msg":"stream: closed","id":"mombgurl"}

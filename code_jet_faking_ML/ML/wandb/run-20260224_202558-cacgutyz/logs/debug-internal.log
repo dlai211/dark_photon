@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:25:59.122869035Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:25:59.306054731Z","level":"INFO","msg":"stream: created new stream","id":"cacgutyz"}
+{"time":"2026-02-24T20:25:59.30608546Z","level":"INFO","msg":"stream: started","id":"cacgutyz"}
+{"time":"2026-02-24T20:25:59.306093323Z","level":"INFO","msg":"handler: started","stream_id":"cacgutyz"}
+{"time":"2026-02-24T20:25:59.306124576Z","level":"INFO","msg":"writer: Do: started","stream_id":"cacgutyz"}
+{"time":"2026-02-24T20:25:59.306119479Z","level":"INFO","msg":"sender: started","stream_id":"cacgutyz"}
+{"time":"2026-02-24T20:26:01.233159744Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:26:01.547366373Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:26:01.551944127Z","level":"INFO","msg":"stream: closing","id":"cacgutyz"}
+{"time":"2026-02-24T20:26:01.551955557Z","level":"INFO","msg":"handler: closed","stream_id":"cacgutyz"}
+{"time":"2026-02-24T20:26:01.551965535Z","level":"INFO","msg":"writer: Close: closed","stream_id":"cacgutyz"}
+{"time":"2026-02-24T20:26:01.551986476Z","level":"INFO","msg":"sender: closed","stream_id":"cacgutyz"}
+{"time":"2026-02-24T20:26:01.552554309Z","level":"INFO","msg":"stream: closed","id":"cacgutyz"}

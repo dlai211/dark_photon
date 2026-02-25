@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:25:15.035777858Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:25:15.220192311Z","level":"INFO","msg":"stream: created new stream","id":"wn21orjd"}
+{"time":"2026-02-24T20:25:15.220237502Z","level":"INFO","msg":"stream: started","id":"wn21orjd"}
+{"time":"2026-02-24T20:25:15.220263475Z","level":"INFO","msg":"sender: started","stream_id":"wn21orjd"}
+{"time":"2026-02-24T20:25:15.220279318Z","level":"INFO","msg":"handler: started","stream_id":"wn21orjd"}
+{"time":"2026-02-24T20:25:15.220257695Z","level":"INFO","msg":"writer: Do: started","stream_id":"wn21orjd"}
+{"time":"2026-02-24T20:25:17.055482368Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:25:17.237179083Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:25:17.241782789Z","level":"INFO","msg":"stream: closing","id":"wn21orjd"}
+{"time":"2026-02-24T20:25:17.241804244Z","level":"INFO","msg":"handler: closed","stream_id":"wn21orjd"}
+{"time":"2026-02-24T20:25:17.241819062Z","level":"INFO","msg":"writer: Close: closed","stream_id":"wn21orjd"}
+{"time":"2026-02-24T20:25:17.241870676Z","level":"INFO","msg":"sender: closed","stream_id":"wn21orjd"}
+{"time":"2026-02-24T20:25:17.242637723Z","level":"INFO","msg":"stream: closed","id":"wn21orjd"}

@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:58:59.657544352Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:58:59.839128156Z","level":"INFO","msg":"stream: created new stream","id":"bhfosy2s"}
+{"time":"2026-02-24T19:58:59.839211352Z","level":"INFO","msg":"stream: started","id":"bhfosy2s"}
+{"time":"2026-02-24T19:58:59.839227333Z","level":"INFO","msg":"writer: Do: started","stream_id":"bhfosy2s"}
+{"time":"2026-02-24T19:58:59.839239096Z","level":"INFO","msg":"handler: started","stream_id":"bhfosy2s"}
+{"time":"2026-02-24T19:58:59.839251989Z","level":"INFO","msg":"sender: started","stream_id":"bhfosy2s"}
+{"time":"2026-02-24T19:59:01.752042018Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:59:02.000314905Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:59:02.005490184Z","level":"INFO","msg":"stream: closing","id":"bhfosy2s"}
+{"time":"2026-02-24T19:59:02.005504159Z","level":"INFO","msg":"handler: closed","stream_id":"bhfosy2s"}
+{"time":"2026-02-24T19:59:02.005516989Z","level":"INFO","msg":"sender: closed","stream_id":"bhfosy2s"}
+{"time":"2026-02-24T19:59:02.005512664Z","level":"INFO","msg":"writer: Close: closed","stream_id":"bhfosy2s"}
+{"time":"2026-02-24T19:59:02.006302752Z","level":"INFO","msg":"stream: closed","id":"bhfosy2s"}

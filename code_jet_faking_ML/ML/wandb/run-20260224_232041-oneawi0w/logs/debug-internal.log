@@ -1,0 +1,13 @@
+{"time":"2026-02-24T23:20:42.037373748Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T23:20:42.217388975Z","level":"INFO","msg":"stream: created new stream","id":"oneawi0w"}
+{"time":"2026-02-24T23:20:42.217417345Z","level":"INFO","msg":"stream: started","id":"oneawi0w"}
+{"time":"2026-02-24T23:20:42.217429505Z","level":"INFO","msg":"writer: Do: started","stream_id":"oneawi0w"}
+{"time":"2026-02-24T23:20:42.217455327Z","level":"INFO","msg":"sender: started","stream_id":"oneawi0w"}
+{"time":"2026-02-24T23:20:42.217433648Z","level":"INFO","msg":"handler: started","stream_id":"oneawi0w"}
+{"time":"2026-02-24T23:21:15.15151041Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T23:21:15.484927516Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T23:21:15.48960776Z","level":"INFO","msg":"stream: closing","id":"oneawi0w"}
+{"time":"2026-02-24T23:21:15.489619356Z","level":"INFO","msg":"handler: closed","stream_id":"oneawi0w"}
+{"time":"2026-02-24T23:21:15.489625116Z","level":"INFO","msg":"writer: Close: closed","stream_id":"oneawi0w"}
+{"time":"2026-02-24T23:21:15.489633317Z","level":"INFO","msg":"sender: closed","stream_id":"oneawi0w"}
+{"time":"2026-02-24T23:21:15.489990656Z","level":"INFO","msg":"stream: closed","id":"oneawi0w"}

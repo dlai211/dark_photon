@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:26:55.410524512Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:26:55.599037834Z","level":"INFO","msg":"stream: created new stream","id":"degi47an"}
+{"time":"2026-02-24T20:26:55.599076309Z","level":"INFO","msg":"stream: started","id":"degi47an"}
+{"time":"2026-02-24T20:26:55.599088023Z","level":"INFO","msg":"writer: Do: started","stream_id":"degi47an"}
+{"time":"2026-02-24T20:26:55.599094551Z","level":"INFO","msg":"sender: started","stream_id":"degi47an"}
+{"time":"2026-02-24T20:26:55.599115594Z","level":"INFO","msg":"handler: started","stream_id":"degi47an"}
+{"time":"2026-02-24T20:26:57.557561492Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:26:57.722693359Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:26:57.727846868Z","level":"INFO","msg":"stream: closing","id":"degi47an"}
+{"time":"2026-02-24T20:26:57.727887755Z","level":"INFO","msg":"handler: closed","stream_id":"degi47an"}
+{"time":"2026-02-24T20:26:57.727903693Z","level":"INFO","msg":"writer: Close: closed","stream_id":"degi47an"}
+{"time":"2026-02-24T20:26:57.727965545Z","level":"INFO","msg":"sender: closed","stream_id":"degi47an"}
+{"time":"2026-02-24T20:26:57.728641202Z","level":"INFO","msg":"stream: closed","id":"degi47an"}

@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:31:10.82133336Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:31:11.002442667Z","level":"INFO","msg":"stream: created new stream","id":"ib5ran35"}
+{"time":"2026-02-24T20:31:11.002491706Z","level":"INFO","msg":"stream: started","id":"ib5ran35"}
+{"time":"2026-02-24T20:31:11.002503647Z","level":"INFO","msg":"handler: started","stream_id":"ib5ran35"}
+{"time":"2026-02-24T20:31:11.002505622Z","level":"INFO","msg":"sender: started","stream_id":"ib5ran35"}
+{"time":"2026-02-24T20:31:11.002522257Z","level":"INFO","msg":"writer: Do: started","stream_id":"ib5ran35"}
+{"time":"2026-02-24T20:31:12.903134128Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:31:13.099602778Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:31:13.104573982Z","level":"INFO","msg":"stream: closing","id":"ib5ran35"}
+{"time":"2026-02-24T20:31:13.104599623Z","level":"INFO","msg":"handler: closed","stream_id":"ib5ran35"}
+{"time":"2026-02-24T20:31:13.104608017Z","level":"INFO","msg":"writer: Close: closed","stream_id":"ib5ran35"}
+{"time":"2026-02-24T20:31:13.104614864Z","level":"INFO","msg":"sender: closed","stream_id":"ib5ran35"}
+{"time":"2026-02-24T20:31:13.105154988Z","level":"INFO","msg":"stream: closed","id":"ib5ran35"}

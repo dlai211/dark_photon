@@ -1,0 +1,89 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        e:
+            k3uxeq3qvk7kygg5tbq90bidciuzzzzd:
+                cpu_count: 24
+                cpu_count_logical: 48
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "470153289728"
+                        used: "128694206464"
+                email: laijianan163@gmail.com
+                executable: /home/jlai/.local/share/mamba/envs/tf-gpu/bin/python
+                git:
+                    commit: bdcf1b95ee556b252e75a6cfecf74f47df77bce6
+                    remote: https://github.com/dlai211/dark_photon.git
+                gpu: NVIDIA GeForce RTX 2080 Ti
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Turing
+                      cudaCores: 4352
+                      memoryTotal: "11811160064"
+                      name: NVIDIA GeForce RTX 2080 Ti
+                      uuid: GPU-fabb2997-2208-1ff1-cf62-5c21e03bd7df
+                host: jlai-notebook-1
+                memory:
+                    total: "200831557632"
+                os: Linux-5.14.0-611.13.1.el9_7.x86_64-x86_64-with-glibc2.39
+                program: dark_photon/code_jet_faking_ML/ML/NN_basic_tensorflow.ipynb
+                python: CPython 3.10.18
+                root: /home/jlai/dark_photon/code_jet_faking_ML/ML
+                startedAt: "2026-02-25T00:16:16.187228Z"
+                writerId: k3uxeq3qvk7kygg5tbq90bidciuzzzzd
+        m:
+            - "1": epoch/epoch
+              "6":
+                - 3
+              "7": []
+            - "2": epoch/*
+              "5": 1
+              "6":
+                - 1
+              "7": []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 2
+                - 3
+                - 5
+                - 6
+                - 8
+                - 53
+            "2":
+                - 2
+                - 3
+                - 5
+                - 6
+                - 8
+                - 53
+            "3":
+                - 2
+                - 7
+                - 14
+                - 38
+            "4": 3.10.18
+            "5": 0.21.0
+            "8":
+                - 1
+            "12": 0.21.0
+            "13": linux-x86_64
+batch_size:
+    value: 768
+dropout:
+    value: 0.12929938180940345
+epochs:
+    value: 50
+layer_1:
+    value: 64
+layer_2:
+    value: 384
+layer_3:
+    value: 512
+layer_4:
+    value: 128
+layer_5:
+    value: 32
+lr:
+    value: 0.002290272094463205

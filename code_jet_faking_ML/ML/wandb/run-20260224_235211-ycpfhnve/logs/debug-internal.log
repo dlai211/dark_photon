@@ -1,0 +1,13 @@
+{"time":"2026-02-24T23:52:12.025698615Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T23:52:12.209003447Z","level":"INFO","msg":"stream: created new stream","id":"ycpfhnve"}
+{"time":"2026-02-24T23:52:12.209030297Z","level":"INFO","msg":"stream: started","id":"ycpfhnve"}
+{"time":"2026-02-24T23:52:12.20903919Z","level":"INFO","msg":"writer: Do: started","stream_id":"ycpfhnve"}
+{"time":"2026-02-24T23:52:12.209067509Z","level":"INFO","msg":"sender: started","stream_id":"ycpfhnve"}
+{"time":"2026-02-24T23:52:12.209076324Z","level":"INFO","msg":"handler: started","stream_id":"ycpfhnve"}
+{"time":"2026-02-24T23:52:47.333042082Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T23:52:48.084413666Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T23:52:49.416978542Z","level":"INFO","msg":"stream: closing","id":"ycpfhnve"}
+{"time":"2026-02-24T23:52:49.416991502Z","level":"INFO","msg":"handler: closed","stream_id":"ycpfhnve"}
+{"time":"2026-02-24T23:52:49.417002154Z","level":"INFO","msg":"sender: closed","stream_id":"ycpfhnve"}
+{"time":"2026-02-24T23:52:49.416997853Z","level":"INFO","msg":"writer: Close: closed","stream_id":"ycpfhnve"}
+{"time":"2026-02-24T23:52:49.417482475Z","level":"INFO","msg":"stream: closed","id":"ycpfhnve"}

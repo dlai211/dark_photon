@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:22:57.352487052Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:22:57.531368808Z","level":"INFO","msg":"stream: created new stream","id":"vvnnrfdc"}
+{"time":"2026-02-24T19:22:57.531398976Z","level":"INFO","msg":"stream: started","id":"vvnnrfdc"}
+{"time":"2026-02-24T19:22:57.531432792Z","level":"INFO","msg":"sender: started","stream_id":"vvnnrfdc"}
+{"time":"2026-02-24T19:22:57.531447168Z","level":"INFO","msg":"handler: started","stream_id":"vvnnrfdc"}
+{"time":"2026-02-24T19:22:57.531438411Z","level":"INFO","msg":"writer: Do: started","stream_id":"vvnnrfdc"}
+{"time":"2026-02-24T19:22:59.853083519Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:23:00.185551803Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:23:00.190470377Z","level":"INFO","msg":"stream: closing","id":"vvnnrfdc"}
+{"time":"2026-02-24T19:23:00.190484237Z","level":"INFO","msg":"handler: closed","stream_id":"vvnnrfdc"}
+{"time":"2026-02-24T19:23:00.19049165Z","level":"INFO","msg":"writer: Close: closed","stream_id":"vvnnrfdc"}
+{"time":"2026-02-24T19:23:00.190497134Z","level":"INFO","msg":"sender: closed","stream_id":"vvnnrfdc"}
+{"time":"2026-02-24T19:23:00.191494333Z","level":"INFO","msg":"stream: closed","id":"vvnnrfdc"}

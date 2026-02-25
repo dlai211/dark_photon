@@ -1,0 +1,13 @@
+{"time":"2026-02-25T00:40:33.552884244Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-25T00:40:33.747914499Z","level":"INFO","msg":"stream: created new stream","id":"pyeariau"}
+{"time":"2026-02-25T00:40:33.74794533Z","level":"INFO","msg":"stream: started","id":"pyeariau"}
+{"time":"2026-02-25T00:40:33.747957484Z","level":"INFO","msg":"writer: Do: started","stream_id":"pyeariau"}
+{"time":"2026-02-25T00:40:33.747969474Z","level":"INFO","msg":"sender: started","stream_id":"pyeariau"}
+{"time":"2026-02-25T00:40:33.74800367Z","level":"INFO","msg":"handler: started","stream_id":"pyeariau"}
+{"time":"2026-02-25T00:41:10.172224171Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-25T00:41:10.405900085Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-25T00:41:10.411295022Z","level":"INFO","msg":"stream: closing","id":"pyeariau"}
+{"time":"2026-02-25T00:41:10.411310629Z","level":"INFO","msg":"handler: closed","stream_id":"pyeariau"}
+{"time":"2026-02-25T00:41:10.411319038Z","level":"INFO","msg":"writer: Close: closed","stream_id":"pyeariau"}
+{"time":"2026-02-25T00:41:10.411329641Z","level":"INFO","msg":"sender: closed","stream_id":"pyeariau"}
+{"time":"2026-02-25T00:41:10.411924326Z","level":"INFO","msg":"stream: closed","id":"pyeariau"}

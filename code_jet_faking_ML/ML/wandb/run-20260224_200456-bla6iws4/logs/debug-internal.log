@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:04:57.227032599Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:04:57.416894057Z","level":"INFO","msg":"stream: created new stream","id":"bla6iws4"}
+{"time":"2026-02-24T20:04:57.416947587Z","level":"INFO","msg":"stream: started","id":"bla6iws4"}
+{"time":"2026-02-24T20:04:57.417028707Z","level":"INFO","msg":"writer: Do: started","stream_id":"bla6iws4"}
+{"time":"2026-02-24T20:04:57.417082704Z","level":"INFO","msg":"handler: started","stream_id":"bla6iws4"}
+{"time":"2026-02-24T20:04:57.417100812Z","level":"INFO","msg":"sender: started","stream_id":"bla6iws4"}
+{"time":"2026-02-24T20:04:59.787608517Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:05:00.130245852Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:05:00.135051608Z","level":"INFO","msg":"stream: closing","id":"bla6iws4"}
+{"time":"2026-02-24T20:05:00.135064348Z","level":"INFO","msg":"handler: closed","stream_id":"bla6iws4"}
+{"time":"2026-02-24T20:05:00.135072386Z","level":"INFO","msg":"writer: Close: closed","stream_id":"bla6iws4"}
+{"time":"2026-02-24T20:05:00.13507827Z","level":"INFO","msg":"sender: closed","stream_id":"bla6iws4"}
+{"time":"2026-02-24T20:05:00.135892594Z","level":"INFO","msg":"stream: closed","id":"bla6iws4"}

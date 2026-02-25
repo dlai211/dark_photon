@@ -1,0 +1,13 @@
+{"time":"2026-02-24T23:21:18.920037848Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T23:21:19.120485042Z","level":"INFO","msg":"stream: created new stream","id":"auk2kdhx"}
+{"time":"2026-02-24T23:21:19.120604392Z","level":"INFO","msg":"stream: started","id":"auk2kdhx"}
+{"time":"2026-02-24T23:21:19.120790407Z","level":"INFO","msg":"handler: started","stream_id":"auk2kdhx"}
+{"time":"2026-02-24T23:21:19.12159647Z","level":"INFO","msg":"writer: Do: started","stream_id":"auk2kdhx"}
+{"time":"2026-02-24T23:21:19.121597206Z","level":"INFO","msg":"sender: started","stream_id":"auk2kdhx"}
+{"time":"2026-02-24T23:22:26.717179851Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T23:22:26.894989996Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T23:22:26.900668118Z","level":"INFO","msg":"stream: closing","id":"auk2kdhx"}
+{"time":"2026-02-24T23:22:26.900695406Z","level":"INFO","msg":"handler: closed","stream_id":"auk2kdhx"}
+{"time":"2026-02-24T23:22:26.900709998Z","level":"INFO","msg":"writer: Close: closed","stream_id":"auk2kdhx"}
+{"time":"2026-02-24T23:22:26.900769257Z","level":"INFO","msg":"sender: closed","stream_id":"auk2kdhx"}
+{"time":"2026-02-24T23:22:26.901228885Z","level":"INFO","msg":"stream: closed","id":"auk2kdhx"}

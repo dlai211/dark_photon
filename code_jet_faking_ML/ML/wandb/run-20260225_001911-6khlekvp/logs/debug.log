@@ -1,0 +1,35 @@
+2026-02-25 00:19:11,857 INFO    Thread-57 (_run_job):348186 [wandb_setup.py:_flush():80] Current SDK version is 0.21.0
+2026-02-25 00:19:11,857 INFO    Thread-57 (_run_job):348186 [wandb_setup.py:_flush():80] Configure stats pid to 348186
+2026-02-25 00:19:11,857 INFO    Thread-57 (_run_job):348186 [wandb_setup.py:_flush():80] Loading settings from /home/jlai/.config/wandb/settings
+2026-02-25 00:19:11,857 INFO    Thread-57 (_run_job):348186 [wandb_setup.py:_flush():80] Loading settings from /home/jlai/dark_photon/code_jet_faking_ML/ML/wandb/settings
+2026-02-25 00:19:11,857 INFO    Thread-57 (_run_job):348186 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2026-02-25 00:19:11,857 INFO    Thread-57 (_run_job):348186 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /home/jlai/dark_photon/code_jet_faking_ML/ML/wandb/run-20260225_001911-6khlekvp/logs/debug.log
+2026-02-25 00:19:11,857 INFO    Thread-57 (_run_job):348186 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /home/jlai/dark_photon/code_jet_faking_ML/ML/wandb/run-20260225_001911-6khlekvp/logs/debug-internal.log
+2026-02-25 00:19:11,857 INFO    Thread-57 (_run_job):348186 [wandb_init.py:monkeypatch_ipython():622] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7f3af0574d00>
+2026-02-25 00:19:11,857 INFO    Thread-57 (_run_job):348186 [wandb_init.py:init():830] calling init triggers
+2026-02-25 00:19:11,857 INFO    Thread-57 (_run_job):348186 [wandb_init.py:init():835] wandb.init called with sweep_config: {'batch_size': 512, 'dropout': 0.10540401312688608, 'epochs': 50, 'layer_1': 128, 'layer_2': 256, 'layer_3': 512, 'layer_4': 384, 'layer_5': 32, 'lr': 1.0236834084897777e-05}
+config: {'_wandb': {}}
+2026-02-25 00:19:11,857 INFO    Thread-57 (_run_job):348186 [wandb_init.py:init():871] starting backend
+2026-02-25 00:19:12,061 INFO    Thread-57 (_run_job):348186 [wandb_init.py:init():874] sending inform_init request
+2026-02-25 00:19:12,062 INFO    Thread-57 (_run_job):348186 [wandb_init.py:init():882] backend started and connected
+2026-02-25 00:19:12,065 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_config_callback():1363] config_cb None None {'batch_size': 512, 'dropout': 0.10540401312688608, 'epochs': 50, 'layer_1': 128, 'layer_2': 256, 'layer_3': 512, 'layer_4': 384, 'layer_5': 32, 'lr': 1.0236834084897777e-05}
+2026-02-25 00:19:12,066 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_label_probe_notebook():1304] probe notebook
+2026-02-25 00:19:12,066 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_label_probe_notebook():1314] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2026-02-25 00:19:12,066 INFO    Thread-57 (_run_job):348186 [wandb_init.py:init():953] updated telemetry
+2026-02-25 00:19:12,073 INFO    Thread-57 (_run_job):348186 [wandb_init.py:init():977] communicating run to backend with 90.0 second timeout
+2026-02-25 00:19:14,659 INFO    Thread-57 (_run_job):348186 [wandb_init.py:init():1029] starting run threads in backend
+2026-02-25 00:19:14,846 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_console_start():2458] atexit reg
+2026-02-25 00:19:14,846 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_redirect():2306] redirect: wrap_raw
+2026-02-25 00:19:14,846 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_redirect():2375] Wrapping output streams.
+2026-02-25 00:19:14,846 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_redirect():2398] Redirects installed.
+2026-02-25 00:19:14,846 INFO    Thread-57 (_run_job):348186 [wandb_init.py:init():1075] run started, returning control to user process
+2026-02-25 00:20:36,271 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_finish():2224] finishing run dlai211/tf-dnn-weighted-classifier/6khlekvp
+2026-02-25 00:20:36,271 INFO    Thread-57 (_run_job):348186 [jupyter.py:save_history():480] not saving jupyter history
+2026-02-25 00:20:36,271 INFO    Thread-57 (_run_job):348186 [jupyter.py:save_ipynb():404] not saving jupyter notebook
+2026-02-25 00:20:36,271 INFO    Thread-57 (_run_job):348186 [wandb_init.py:_jupyter_teardown():607] cleaning up jupyter logic
+2026-02-25 00:20:36,271 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_atexit_cleanup():2423] got exitcode: 0
+2026-02-25 00:20:36,272 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_restore():2405] restore
+2026-02-25 00:20:36,272 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_restore():2411] restore done
+2026-02-25 00:20:36,897 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_footer_history_summary_info():3903] rendering history
+2026-02-25 00:20:36,898 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_footer_history_summary_info():3935] rendering summary
+2026-02-25 00:20:36,899 INFO    Thread-57 (_run_job):348186 [wandb_run.py:_footer_sync_info():3864] logging synced files

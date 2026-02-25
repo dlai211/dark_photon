@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:31:55.528326907Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:31:55.709544699Z","level":"INFO","msg":"stream: created new stream","id":"csmndex4"}
+{"time":"2026-02-24T20:31:55.709611556Z","level":"INFO","msg":"stream: started","id":"csmndex4"}
+{"time":"2026-02-24T20:31:55.709671268Z","level":"INFO","msg":"handler: started","stream_id":"csmndex4"}
+{"time":"2026-02-24T20:31:55.709682454Z","level":"INFO","msg":"sender: started","stream_id":"csmndex4"}
+{"time":"2026-02-24T20:31:55.709675715Z","level":"INFO","msg":"writer: Do: started","stream_id":"csmndex4"}
+{"time":"2026-02-24T20:31:58.21270731Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:31:58.44536899Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:31:58.451353484Z","level":"INFO","msg":"stream: closing","id":"csmndex4"}
+{"time":"2026-02-24T20:31:58.451370879Z","level":"INFO","msg":"handler: closed","stream_id":"csmndex4"}
+{"time":"2026-02-24T20:31:58.451380491Z","level":"INFO","msg":"writer: Close: closed","stream_id":"csmndex4"}
+{"time":"2026-02-24T20:31:58.451400932Z","level":"INFO","msg":"sender: closed","stream_id":"csmndex4"}
+{"time":"2026-02-24T20:31:58.452530722Z","level":"INFO","msg":"stream: closed","id":"csmndex4"}

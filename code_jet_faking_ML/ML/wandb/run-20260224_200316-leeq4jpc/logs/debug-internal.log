@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:03:16.491231977Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:03:16.678601961Z","level":"INFO","msg":"stream: created new stream","id":"leeq4jpc"}
+{"time":"2026-02-24T20:03:16.678637492Z","level":"INFO","msg":"stream: started","id":"leeq4jpc"}
+{"time":"2026-02-24T20:03:16.678659566Z","level":"INFO","msg":"sender: started","stream_id":"leeq4jpc"}
+{"time":"2026-02-24T20:03:16.678654923Z","level":"INFO","msg":"writer: Do: started","stream_id":"leeq4jpc"}
+{"time":"2026-02-24T20:03:16.678671744Z","level":"INFO","msg":"handler: started","stream_id":"leeq4jpc"}
+{"time":"2026-02-24T20:03:20.019341322Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:03:20.237518812Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:03:20.241750482Z","level":"INFO","msg":"stream: closing","id":"leeq4jpc"}
+{"time":"2026-02-24T20:03:20.241764901Z","level":"INFO","msg":"handler: closed","stream_id":"leeq4jpc"}
+{"time":"2026-02-24T20:03:20.241772004Z","level":"INFO","msg":"writer: Close: closed","stream_id":"leeq4jpc"}
+{"time":"2026-02-24T20:03:20.241788872Z","level":"INFO","msg":"sender: closed","stream_id":"leeq4jpc"}
+{"time":"2026-02-24T20:03:20.243026373Z","level":"INFO","msg":"stream: closed","id":"leeq4jpc"}

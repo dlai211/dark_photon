@@ -1,0 +1,13 @@
+{"time":"2026-02-24T18:59:09.898415204Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T18:59:10.117731907Z","level":"INFO","msg":"stream: created new stream","id":"bz5paxip"}
+{"time":"2026-02-24T18:59:10.117769057Z","level":"INFO","msg":"stream: started","id":"bz5paxip"}
+{"time":"2026-02-24T18:59:10.117820851Z","level":"INFO","msg":"handler: started","stream_id":"bz5paxip"}
+{"time":"2026-02-24T18:59:10.117828525Z","level":"INFO","msg":"sender: started","stream_id":"bz5paxip"}
+{"time":"2026-02-24T18:59:10.117828074Z","level":"INFO","msg":"writer: Do: started","stream_id":"bz5paxip"}
+{"time":"2026-02-24T18:59:11.750376037Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T18:59:11.916413697Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T18:59:11.921567816Z","level":"INFO","msg":"stream: closing","id":"bz5paxip"}
+{"time":"2026-02-24T18:59:11.92158025Z","level":"INFO","msg":"handler: closed","stream_id":"bz5paxip"}
+{"time":"2026-02-24T18:59:11.921587682Z","level":"INFO","msg":"writer: Close: closed","stream_id":"bz5paxip"}
+{"time":"2026-02-24T18:59:11.921592724Z","level":"INFO","msg":"sender: closed","stream_id":"bz5paxip"}
+{"time":"2026-02-24T18:59:11.922214823Z","level":"INFO","msg":"stream: closed","id":"bz5paxip"}

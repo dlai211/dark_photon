@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:31:49.974309324Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:31:50.160203539Z","level":"INFO","msg":"stream: created new stream","id":"hackx8tp"}
+{"time":"2026-02-24T20:31:50.160243133Z","level":"INFO","msg":"stream: started","id":"hackx8tp"}
+{"time":"2026-02-24T20:31:50.160254376Z","level":"INFO","msg":"writer: Do: started","stream_id":"hackx8tp"}
+{"time":"2026-02-24T20:31:50.160262004Z","level":"INFO","msg":"handler: started","stream_id":"hackx8tp"}
+{"time":"2026-02-24T20:31:50.160267968Z","level":"INFO","msg":"sender: started","stream_id":"hackx8tp"}
+{"time":"2026-02-24T20:31:51.937722546Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:31:52.085873565Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:31:52.090985243Z","level":"INFO","msg":"stream: closing","id":"hackx8tp"}
+{"time":"2026-02-24T20:31:52.091001666Z","level":"INFO","msg":"handler: closed","stream_id":"hackx8tp"}
+{"time":"2026-02-24T20:31:52.091010029Z","level":"INFO","msg":"writer: Close: closed","stream_id":"hackx8tp"}
+{"time":"2026-02-24T20:31:52.091065744Z","level":"INFO","msg":"sender: closed","stream_id":"hackx8tp"}
+{"time":"2026-02-24T20:31:52.091981302Z","level":"INFO","msg":"stream: closed","id":"hackx8tp"}

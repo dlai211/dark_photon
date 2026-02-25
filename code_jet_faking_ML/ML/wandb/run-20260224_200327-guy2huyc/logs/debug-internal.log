@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:03:27.435726206Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:03:27.619130812Z","level":"INFO","msg":"stream: created new stream","id":"guy2huyc"}
+{"time":"2026-02-24T20:03:27.619158395Z","level":"INFO","msg":"stream: started","id":"guy2huyc"}
+{"time":"2026-02-24T20:03:27.619168676Z","level":"INFO","msg":"writer: Do: started","stream_id":"guy2huyc"}
+{"time":"2026-02-24T20:03:27.61920216Z","level":"INFO","msg":"sender: started","stream_id":"guy2huyc"}
+{"time":"2026-02-24T20:03:27.619197296Z","level":"INFO","msg":"handler: started","stream_id":"guy2huyc"}
+{"time":"2026-02-24T20:03:29.333119945Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:03:29.586900174Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:03:29.592200178Z","level":"INFO","msg":"stream: closing","id":"guy2huyc"}
+{"time":"2026-02-24T20:03:29.592212437Z","level":"INFO","msg":"handler: closed","stream_id":"guy2huyc"}
+{"time":"2026-02-24T20:03:29.592219242Z","level":"INFO","msg":"writer: Close: closed","stream_id":"guy2huyc"}
+{"time":"2026-02-24T20:03:29.592226705Z","level":"INFO","msg":"sender: closed","stream_id":"guy2huyc"}
+{"time":"2026-02-24T20:03:29.59262817Z","level":"INFO","msg":"stream: closed","id":"guy2huyc"}

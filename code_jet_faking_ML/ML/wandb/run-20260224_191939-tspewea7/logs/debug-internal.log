@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:19:39.948414009Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:19:40.135345687Z","level":"INFO","msg":"stream: created new stream","id":"tspewea7"}
+{"time":"2026-02-24T19:19:40.135378151Z","level":"INFO","msg":"stream: started","id":"tspewea7"}
+{"time":"2026-02-24T19:19:40.135399883Z","level":"INFO","msg":"handler: started","stream_id":"tspewea7"}
+{"time":"2026-02-24T19:19:40.135394011Z","level":"INFO","msg":"writer: Do: started","stream_id":"tspewea7"}
+{"time":"2026-02-24T19:19:40.135408696Z","level":"INFO","msg":"sender: started","stream_id":"tspewea7"}
+{"time":"2026-02-24T19:19:42.141407897Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:19:42.376900909Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:19:42.381216777Z","level":"INFO","msg":"stream: closing","id":"tspewea7"}
+{"time":"2026-02-24T19:19:42.381227417Z","level":"INFO","msg":"handler: closed","stream_id":"tspewea7"}
+{"time":"2026-02-24T19:19:42.381234679Z","level":"INFO","msg":"writer: Close: closed","stream_id":"tspewea7"}
+{"time":"2026-02-24T19:19:42.381243342Z","level":"INFO","msg":"sender: closed","stream_id":"tspewea7"}
+{"time":"2026-02-24T19:19:42.3824106Z","level":"INFO","msg":"stream: closed","id":"tspewea7"}

@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:31:44.944231181Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:31:45.154689981Z","level":"INFO","msg":"stream: created new stream","id":"ubkfnavt"}
+{"time":"2026-02-24T20:31:45.15472649Z","level":"INFO","msg":"stream: started","id":"ubkfnavt"}
+{"time":"2026-02-24T20:31:45.154761594Z","level":"INFO","msg":"sender: started","stream_id":"ubkfnavt"}
+{"time":"2026-02-24T20:31:45.154752802Z","level":"INFO","msg":"handler: started","stream_id":"ubkfnavt"}
+{"time":"2026-02-24T20:31:45.154753225Z","level":"INFO","msg":"writer: Do: started","stream_id":"ubkfnavt"}
+{"time":"2026-02-24T20:31:47.213563169Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:31:47.442009307Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:31:47.446570517Z","level":"INFO","msg":"stream: closing","id":"ubkfnavt"}
+{"time":"2026-02-24T20:31:47.446584002Z","level":"INFO","msg":"handler: closed","stream_id":"ubkfnavt"}
+{"time":"2026-02-24T20:31:47.446594293Z","level":"INFO","msg":"writer: Close: closed","stream_id":"ubkfnavt"}
+{"time":"2026-02-24T20:31:47.446606217Z","level":"INFO","msg":"sender: closed","stream_id":"ubkfnavt"}
+{"time":"2026-02-24T20:31:47.447458658Z","level":"INFO","msg":"stream: closed","id":"ubkfnavt"}

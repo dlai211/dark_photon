@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:24:34.782452409Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:24:34.966188241Z","level":"INFO","msg":"stream: created new stream","id":"z30asoxy"}
+{"time":"2026-02-24T20:24:34.966216565Z","level":"INFO","msg":"stream: started","id":"z30asoxy"}
+{"time":"2026-02-24T20:24:34.966230641Z","level":"INFO","msg":"writer: Do: started","stream_id":"z30asoxy"}
+{"time":"2026-02-24T20:24:34.966258773Z","level":"INFO","msg":"handler: started","stream_id":"z30asoxy"}
+{"time":"2026-02-24T20:24:34.966321625Z","level":"INFO","msg":"sender: started","stream_id":"z30asoxy"}
+{"time":"2026-02-24T20:24:36.612361269Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:24:36.849467184Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:24:36.854241395Z","level":"INFO","msg":"stream: closing","id":"z30asoxy"}
+{"time":"2026-02-24T20:24:36.854250804Z","level":"INFO","msg":"handler: closed","stream_id":"z30asoxy"}
+{"time":"2026-02-24T20:24:36.854257103Z","level":"INFO","msg":"writer: Close: closed","stream_id":"z30asoxy"}
+{"time":"2026-02-24T20:24:36.854313383Z","level":"INFO","msg":"sender: closed","stream_id":"z30asoxy"}
+{"time":"2026-02-24T20:24:36.854820375Z","level":"INFO","msg":"stream: closed","id":"z30asoxy"}

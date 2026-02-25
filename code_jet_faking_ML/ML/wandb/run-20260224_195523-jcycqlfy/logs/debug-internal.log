@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:55:23.346182943Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:55:23.566068104Z","level":"INFO","msg":"stream: created new stream","id":"jcycqlfy"}
+{"time":"2026-02-24T19:55:23.566104261Z","level":"INFO","msg":"stream: started","id":"jcycqlfy"}
+{"time":"2026-02-24T19:55:23.566141907Z","level":"INFO","msg":"writer: Do: started","stream_id":"jcycqlfy"}
+{"time":"2026-02-24T19:55:23.566161044Z","level":"INFO","msg":"handler: started","stream_id":"jcycqlfy"}
+{"time":"2026-02-24T19:55:23.566145115Z","level":"INFO","msg":"sender: started","stream_id":"jcycqlfy"}
+{"time":"2026-02-24T19:55:26.199948101Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:55:26.388758867Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:55:26.39360827Z","level":"INFO","msg":"stream: closing","id":"jcycqlfy"}
+{"time":"2026-02-24T19:55:26.393618604Z","level":"INFO","msg":"handler: closed","stream_id":"jcycqlfy"}
+{"time":"2026-02-24T19:55:26.393625462Z","level":"INFO","msg":"writer: Close: closed","stream_id":"jcycqlfy"}
+{"time":"2026-02-24T19:55:26.393629953Z","level":"INFO","msg":"sender: closed","stream_id":"jcycqlfy"}
+{"time":"2026-02-24T19:55:26.394773056Z","level":"INFO","msg":"stream: closed","id":"jcycqlfy"}

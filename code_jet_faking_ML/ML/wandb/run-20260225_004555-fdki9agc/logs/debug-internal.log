@@ -1,0 +1,13 @@
+{"time":"2026-02-25T00:45:56.011286216Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-25T00:45:56.197871483Z","level":"INFO","msg":"stream: created new stream","id":"fdki9agc"}
+{"time":"2026-02-25T00:45:56.197900401Z","level":"INFO","msg":"stream: started","id":"fdki9agc"}
+{"time":"2026-02-25T00:45:56.197911145Z","level":"INFO","msg":"writer: Do: started","stream_id":"fdki9agc"}
+{"time":"2026-02-25T00:45:56.197922085Z","level":"INFO","msg":"handler: started","stream_id":"fdki9agc"}
+{"time":"2026-02-25T00:45:56.197929849Z","level":"INFO","msg":"sender: started","stream_id":"fdki9agc"}
+{"time":"2026-02-25T00:47:23.064634293Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-25T00:47:23.254577018Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-25T00:47:23.277259699Z","level":"INFO","msg":"stream: closing","id":"fdki9agc"}
+{"time":"2026-02-25T00:47:23.277277912Z","level":"INFO","msg":"handler: closed","stream_id":"fdki9agc"}
+{"time":"2026-02-25T00:47:23.277284471Z","level":"INFO","msg":"writer: Close: closed","stream_id":"fdki9agc"}
+{"time":"2026-02-25T00:47:23.27728933Z","level":"INFO","msg":"sender: closed","stream_id":"fdki9agc"}
+{"time":"2026-02-25T00:47:23.277682167Z","level":"INFO","msg":"stream: closed","id":"fdki9agc"}
