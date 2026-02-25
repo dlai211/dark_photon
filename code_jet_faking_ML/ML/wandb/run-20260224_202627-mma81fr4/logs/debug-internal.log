@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:26:27.75884275Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:26:27.939045341Z","level":"INFO","msg":"stream: created new stream","id":"mma81fr4"}
+{"time":"2026-02-24T20:26:27.939077217Z","level":"INFO","msg":"stream: started","id":"mma81fr4"}
+{"time":"2026-02-24T20:26:27.93909818Z","level":"INFO","msg":"handler: started","stream_id":"mma81fr4"}
+{"time":"2026-02-24T20:26:27.939112873Z","level":"INFO","msg":"sender: started","stream_id":"mma81fr4"}
+{"time":"2026-02-24T20:26:27.939096964Z","level":"INFO","msg":"writer: Do: started","stream_id":"mma81fr4"}
+{"time":"2026-02-24T20:26:29.750982667Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:26:29.946186321Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:26:29.951105898Z","level":"INFO","msg":"stream: closing","id":"mma81fr4"}
+{"time":"2026-02-24T20:26:29.951129563Z","level":"INFO","msg":"handler: closed","stream_id":"mma81fr4"}
+{"time":"2026-02-24T20:26:29.951144998Z","level":"INFO","msg":"writer: Close: closed","stream_id":"mma81fr4"}
+{"time":"2026-02-24T20:26:29.951153763Z","level":"INFO","msg":"sender: closed","stream_id":"mma81fr4"}
+{"time":"2026-02-24T20:26:29.951952366Z","level":"INFO","msg":"stream: closed","id":"mma81fr4"}

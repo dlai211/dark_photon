@@ -1,0 +1,12 @@
+wandb_version: 1
+
+gamma:
+  value: 0.917665798669374
+learning_rate:
+  value: 0.0028564683022119395
+max_depth:
+  value: 5
+n_estimators:
+  value: 872
+subsample:
+  value: 0.23136283216123668

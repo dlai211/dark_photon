@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:57:15.895006391Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:57:16.080829492Z","level":"INFO","msg":"stream: created new stream","id":"yweafsp8"}
+{"time":"2026-02-24T19:57:16.080873598Z","level":"INFO","msg":"stream: started","id":"yweafsp8"}
+{"time":"2026-02-24T19:57:16.080976173Z","level":"INFO","msg":"sender: started","stream_id":"yweafsp8"}
+{"time":"2026-02-24T19:57:16.080976047Z","level":"INFO","msg":"writer: Do: started","stream_id":"yweafsp8"}
+{"time":"2026-02-24T19:57:16.081010643Z","level":"INFO","msg":"handler: started","stream_id":"yweafsp8"}
+{"time":"2026-02-24T19:57:18.116985499Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:57:18.250248708Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:57:18.25495618Z","level":"INFO","msg":"stream: closing","id":"yweafsp8"}
+{"time":"2026-02-24T19:57:18.254975252Z","level":"INFO","msg":"handler: closed","stream_id":"yweafsp8"}
+{"time":"2026-02-24T19:57:18.254981928Z","level":"INFO","msg":"writer: Close: closed","stream_id":"yweafsp8"}
+{"time":"2026-02-24T19:57:18.254997321Z","level":"INFO","msg":"sender: closed","stream_id":"yweafsp8"}
+{"time":"2026-02-24T19:57:18.255753723Z","level":"INFO","msg":"stream: closed","id":"yweafsp8"}

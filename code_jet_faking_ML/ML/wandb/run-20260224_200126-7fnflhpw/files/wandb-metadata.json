@@ -1,0 +1,15 @@
+{
+  "os":  "Linux-5.14.0-611.13.1.el9_7.x86_64-x86_64-with-glibc2.39",
+  "python":  "CPython 3.12.0",
+  "startedAt":  "2026-02-24T20:01:26.074884Z",
+  "program":  "dark_photon/code_jet_faking_ML/ML/SweepBDT-Copy1.ipynb",
+  "git":  {
+    "remote":  "https://github.com/dlai211/dark_photon.git",
+    "commit":  "bdcf1b95ee556b252e75a6cfecf74f47df77bce6"
+  },
+  "email":  "laijianan163@gmail.com",
+  "root":  "/home/jlai/dark_photon/code_jet_faking_ML/ML",
+  "host":  "jlai-notebook-1",
+  "executable":  "/app/.pixi/envs/ml/bin/python3.12",
+  "writerId":  "fbt939f6r7aj94ksr5ghpi3dibdsuarw"
+}

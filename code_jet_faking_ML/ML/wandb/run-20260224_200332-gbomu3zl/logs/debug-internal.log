@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:03:33.020293433Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:03:33.202499301Z","level":"INFO","msg":"stream: created new stream","id":"gbomu3zl"}
+{"time":"2026-02-24T20:03:33.202536167Z","level":"INFO","msg":"stream: started","id":"gbomu3zl"}
+{"time":"2026-02-24T20:03:33.202545869Z","level":"INFO","msg":"handler: started","stream_id":"gbomu3zl"}
+{"time":"2026-02-24T20:03:33.202556933Z","level":"INFO","msg":"sender: started","stream_id":"gbomu3zl"}
+{"time":"2026-02-24T20:03:33.202586106Z","level":"INFO","msg":"writer: Do: started","stream_id":"gbomu3zl"}
+{"time":"2026-02-24T20:03:35.00457135Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:03:35.163972105Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:03:35.168629442Z","level":"INFO","msg":"stream: closing","id":"gbomu3zl"}
+{"time":"2026-02-24T20:03:35.168652608Z","level":"INFO","msg":"handler: closed","stream_id":"gbomu3zl"}
+{"time":"2026-02-24T20:03:35.168671743Z","level":"INFO","msg":"sender: closed","stream_id":"gbomu3zl"}
+{"time":"2026-02-24T20:03:35.168667145Z","level":"INFO","msg":"writer: Close: closed","stream_id":"gbomu3zl"}
+{"time":"2026-02-24T20:03:35.169267517Z","level":"INFO","msg":"stream: closed","id":"gbomu3zl"}

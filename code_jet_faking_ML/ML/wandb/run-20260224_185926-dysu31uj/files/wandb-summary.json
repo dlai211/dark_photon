@@ -1,0 +1,1 @@
+{"_runtime":1,"bdtscore2 cut":0.02,"Test ROC AUC":0.9016001283118131,"_timestamp":1.7719595683246608e+09,"test_logloss":0.02632061956884798,"Acceptance":0.617130593111366,"_wandb":{"runtime":1},"Max S/sqrt(B)":2.938991198248776,"iteration":122,"_step":123,"train_logloss":0.02513017650350065}

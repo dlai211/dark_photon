@@ -1,0 +1,20 @@
+wandb_version: 1
+
+batch_size:
+  value: 512
+dropout:
+  value: 0.35322511798345935
+epochs:
+  value: 50
+layer_1:
+  value: 64
+layer_2:
+  value: 512
+layer_3:
+  value: 512
+layer_4:
+  value: 128
+layer_5:
+  value: 128
+lr:
+  value: 0.0002855840684592134

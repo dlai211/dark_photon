@@ -1,0 +1,13 @@
+{"time":"2026-02-25T00:30:05.604746628Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-25T00:30:05.799648732Z","level":"INFO","msg":"stream: created new stream","id":"giqujvdl"}
+{"time":"2026-02-25T00:30:05.79967705Z","level":"INFO","msg":"stream: started","id":"giqujvdl"}
+{"time":"2026-02-25T00:30:05.799689097Z","level":"INFO","msg":"writer: Do: started","stream_id":"giqujvdl"}
+{"time":"2026-02-25T00:30:05.799694048Z","level":"INFO","msg":"sender: started","stream_id":"giqujvdl"}
+{"time":"2026-02-25T00:30:05.79970171Z","level":"INFO","msg":"handler: started","stream_id":"giqujvdl"}
+{"time":"2026-02-25T00:30:58.447546197Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-25T00:30:58.741447697Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-25T00:30:58.746512275Z","level":"INFO","msg":"stream: closing","id":"giqujvdl"}
+{"time":"2026-02-25T00:30:58.746526476Z","level":"INFO","msg":"handler: closed","stream_id":"giqujvdl"}
+{"time":"2026-02-25T00:30:58.746533616Z","level":"INFO","msg":"writer: Close: closed","stream_id":"giqujvdl"}
+{"time":"2026-02-25T00:30:58.746591407Z","level":"INFO","msg":"sender: closed","stream_id":"giqujvdl"}
+{"time":"2026-02-25T00:30:58.747072212Z","level":"INFO","msg":"stream: closed","id":"giqujvdl"}

@@ -1,0 +1,38 @@
+{
+  "os":  "Linux-5.14.0-611.13.1.el9_7.x86_64-x86_64-with-glibc2.39",
+  "python":  "CPython 3.12.0",
+  "startedAt":  "2026-02-24T19:55:40.198989Z",
+  "program":  "dark_photon/code_jet_faking_ML/ML/SweepBDT-Copy1.ipynb",
+  "git":  {
+    "remote":  "https://github.com/dlai211/dark_photon.git",
+    "commit":  "bdcf1b95ee556b252e75a6cfecf74f47df77bce6"
+  },
+  "email":  "laijianan163@gmail.com",
+  "root":  "/home/jlai/dark_photon/code_jet_faking_ML/ML",
+  "host":  "jlai-notebook-1",
+  "executable":  "/app/.pixi/envs/ml/bin/python3.12",
+  "cpu_count":  24,
+  "cpu_count_logical":  48,
+  "gpu":  "NVIDIA GeForce RTX 2080 Ti",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "470153289728",
+      "used":  "128570830848"
+    }
+  },
+  "memory":  {
+    "total":  "200831557632"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 2080 Ti",
+      "memoryTotal":  "11811160064",
+      "cudaCores":  4352,
+      "architecture":  "Turing",
+      "uuid":  "GPU-fabb2997-2208-1ff1-cf62-5c21e03bd7df"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "writerId":  "8sjtxljciqh58mg1go1bdegl24qfc15q"
+}

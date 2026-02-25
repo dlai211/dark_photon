@@ -1,0 +1,13 @@
+{"time":"2026-02-25T00:48:36.163776194Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-25T00:48:36.345025516Z","level":"INFO","msg":"stream: created new stream","id":"x59v48g2"}
+{"time":"2026-02-25T00:48:36.34504893Z","level":"INFO","msg":"stream: started","id":"x59v48g2"}
+{"time":"2026-02-25T00:48:36.34507175Z","level":"INFO","msg":"handler: started","stream_id":"x59v48g2"}
+{"time":"2026-02-25T00:48:36.3450826Z","level":"INFO","msg":"sender: started","stream_id":"x59v48g2"}
+{"time":"2026-02-25T00:48:36.345079903Z","level":"INFO","msg":"writer: Do: started","stream_id":"x59v48g2"}
+{"time":"2026-02-25T00:49:10.67374441Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-25T00:49:11.113840067Z","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 20-22, summary, console lines 42-43","runtime_seconds":0.439904308}],"total_operations":1}}
+{"time":"2026-02-25T00:49:11.12880336Z","level":"INFO","msg":"stream: closing","id":"x59v48g2"}
+{"time":"2026-02-25T00:49:11.128820103Z","level":"INFO","msg":"handler: closed","stream_id":"x59v48g2"}
+{"time":"2026-02-25T00:49:11.128826308Z","level":"INFO","msg":"writer: Close: closed","stream_id":"x59v48g2"}
+{"time":"2026-02-25T00:49:11.128901333Z","level":"INFO","msg":"sender: closed","stream_id":"x59v48g2"}
+{"time":"2026-02-25T00:49:11.129609692Z","level":"INFO","msg":"stream: closed","id":"x59v48g2"}

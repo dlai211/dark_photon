@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:17:30.847976521Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:17:31.02675227Z","level":"INFO","msg":"stream: created new stream","id":"ywfdek40"}
+{"time":"2026-02-24T19:17:31.026778633Z","level":"INFO","msg":"stream: started","id":"ywfdek40"}
+{"time":"2026-02-24T19:17:31.026837564Z","level":"INFO","msg":"writer: Do: started","stream_id":"ywfdek40"}
+{"time":"2026-02-24T19:17:31.026896428Z","level":"INFO","msg":"sender: started","stream_id":"ywfdek40"}
+{"time":"2026-02-24T19:17:31.026938065Z","level":"INFO","msg":"handler: started","stream_id":"ywfdek40"}
+{"time":"2026-02-24T19:17:34.032843051Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:17:34.313763364Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:17:34.318824992Z","level":"INFO","msg":"stream: closing","id":"ywfdek40"}
+{"time":"2026-02-24T19:17:34.318852352Z","level":"INFO","msg":"handler: closed","stream_id":"ywfdek40"}
+{"time":"2026-02-24T19:17:34.318884789Z","level":"INFO","msg":"sender: closed","stream_id":"ywfdek40"}
+{"time":"2026-02-24T19:17:34.31887948Z","level":"INFO","msg":"writer: Close: closed","stream_id":"ywfdek40"}
+{"time":"2026-02-24T19:17:34.320344338Z","level":"INFO","msg":"stream: closed","id":"ywfdek40"}

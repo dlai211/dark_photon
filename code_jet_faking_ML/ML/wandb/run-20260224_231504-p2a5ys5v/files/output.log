@@ -1,0 +1,48 @@
+/home/jlai/.local/share/mamba/envs/tf-gpu/lib/python3.10/site-packages/keras/src/layers/core/dense.py:93: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Epoch 1/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m10s[0m 19ms/step - auc: 0.5847 - loss: 0.0182 - weighted_auc: 0.6661 - val_auc: 0.7783 - val_loss: 0.0034 - val_weighted_auc: 0.9244
+Epoch 2/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.7564 - loss: 0.0035 - weighted_auc: 0.9017 - val_auc: 0.8064 - val_loss: 0.0034 - val_weighted_auc: 0.9324
+Epoch 3/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.7780 - loss: 0.0034 - weighted_auc: 0.9161 - val_auc: 0.8278 - val_loss: 0.0035 - val_weighted_auc: 0.9467
+Epoch 4/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.7840 - loss: 0.0033 - weighted_auc: 0.9203 - val_auc: 0.8355 - val_loss: 0.0033 - val_weighted_auc: 0.9517
+Epoch 5/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.7913 - loss: 0.0032 - weighted_auc: 0.9282 - val_auc: 0.8189 - val_loss: 0.0032 - val_weighted_auc: 0.9511
+Epoch 6/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.7973 - loss: 0.0031 - weighted_auc: 0.9346 - val_auc: 0.8301 - val_loss: 0.0029 - val_weighted_auc: 0.9524
+Epoch 7/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.7992 - loss: 0.0031 - weighted_auc: 0.9347 - val_auc: 0.8154 - val_loss: 0.0032 - val_weighted_auc: 0.9487
+Epoch 8/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.8025 - loss: 0.0031 - weighted_auc: 0.9362 - val_auc: 0.8528 - val_loss: 0.0030 - val_weighted_auc: 0.9601
+Epoch 9/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.8181 - loss: 0.0030 - weighted_auc: 0.9422 - val_auc: 0.8352 - val_loss: 0.0029 - val_weighted_auc: 0.9536
+Epoch 10/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.8192 - loss: 0.0030 - weighted_auc: 0.9420 - val_auc: 0.8539 - val_loss: 0.0029 - val_weighted_auc: 0.9645
+Epoch 11/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.8283 - loss: 0.0029 - weighted_auc: 0.9457 - val_auc: 0.8464 - val_loss: 0.0026 - val_weighted_auc: 0.9516
+Epoch 12/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.8340 - loss: 0.0029 - weighted_auc: 0.9399 - val_auc: 0.9013 - val_loss: 0.0024 - val_weighted_auc: 0.9714
+Epoch 13/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.8574 - loss: 0.0027 - weighted_auc: 0.9480 - val_auc: 0.9073 - val_loss: 0.0023 - val_weighted_auc: 0.9690
+Epoch 14/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.8779 - loss: 0.0026 - weighted_auc: 0.9551 - val_auc: 0.9182 - val_loss: 0.0021 - val_weighted_auc: 0.9650
+Epoch 15/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.8888 - loss: 0.0026 - weighted_auc: 0.9498 - val_auc: 0.9338 - val_loss: 0.0020 - val_weighted_auc: 0.9718
+Epoch 16/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.9091 - loss: 0.0023 - weighted_auc: 0.9600 - val_auc: 0.8916 - val_loss: 0.0023 - val_weighted_auc: 0.9462
+Epoch 17/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.9024 - loss: 0.0024 - weighted_auc: 0.9550 - val_auc: 0.9658 - val_loss: 0.0016 - val_weighted_auc: 0.9810
+Epoch 18/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.9291 - loss: 0.0021 - weighted_auc: 0.9661 - val_auc: 0.9240 - val_loss: 0.0020 - val_weighted_auc: 0.9584
+Epoch 19/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.9232 - loss: 0.0022 - weighted_auc: 0.9621 - val_auc: 0.9614 - val_loss: 0.0016 - val_weighted_auc: 0.9699
+Epoch 20/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.9343 - loss: 0.0020 - weighted_auc: 0.9638 - val_auc: 0.9645 - val_loss: 0.0014 - val_weighted_auc: 0.9789
+Epoch 21/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.9417 - loss: 0.0019 - weighted_auc: 0.9675 - val_auc: 0.9568 - val_loss: 0.0015 - val_weighted_auc: 0.9703
+Epoch 22/50
+[1m278/278[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 3ms/step - auc: 0.9511 - loss: 0.0017 - weighted_auc: 0.9707 - val_auc: 0.8975 - val_loss: 0.0021 - val_weighted_auc: 0.9169
+[1m3812/3812[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m3s[0m 788us/step
+[1m398/398[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 1ms/step  

@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:28:18.571808683Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:28:18.750018008Z","level":"INFO","msg":"stream: created new stream","id":"2cjudlet"}
+{"time":"2026-02-24T20:28:18.750049013Z","level":"INFO","msg":"stream: started","id":"2cjudlet"}
+{"time":"2026-02-24T20:28:18.750063928Z","level":"INFO","msg":"writer: Do: started","stream_id":"2cjudlet"}
+{"time":"2026-02-24T20:28:18.75008317Z","level":"INFO","msg":"sender: started","stream_id":"2cjudlet"}
+{"time":"2026-02-24T20:28:18.750071884Z","level":"INFO","msg":"handler: started","stream_id":"2cjudlet"}
+{"time":"2026-02-24T20:28:20.420279541Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:28:20.608341374Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:28:20.613261698Z","level":"INFO","msg":"stream: closing","id":"2cjudlet"}
+{"time":"2026-02-24T20:28:20.613273008Z","level":"INFO","msg":"handler: closed","stream_id":"2cjudlet"}
+{"time":"2026-02-24T20:28:20.613280107Z","level":"INFO","msg":"writer: Close: closed","stream_id":"2cjudlet"}
+{"time":"2026-02-24T20:28:20.613302031Z","level":"INFO","msg":"sender: closed","stream_id":"2cjudlet"}
+{"time":"2026-02-24T20:28:20.614084581Z","level":"INFO","msg":"stream: closed","id":"2cjudlet"}

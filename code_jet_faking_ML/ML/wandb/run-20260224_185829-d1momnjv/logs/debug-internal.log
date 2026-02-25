@@ -1,0 +1,13 @@
+{"time":"2026-02-24T18:58:29.418801881Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T18:58:29.59895398Z","level":"INFO","msg":"stream: created new stream","id":"d1momnjv"}
+{"time":"2026-02-24T18:58:29.599025985Z","level":"INFO","msg":"stream: started","id":"d1momnjv"}
+{"time":"2026-02-24T18:58:29.599059111Z","level":"INFO","msg":"writer: Do: started","stream_id":"d1momnjv"}
+{"time":"2026-02-24T18:58:29.599075721Z","level":"INFO","msg":"handler: started","stream_id":"d1momnjv"}
+{"time":"2026-02-24T18:58:29.599111964Z","level":"INFO","msg":"sender: started","stream_id":"d1momnjv"}
+{"time":"2026-02-24T18:58:31.819343451Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T18:58:31.941402768Z","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 0-93, summary","runtime_seconds":0.121923646}],"total_operations":1}}
+{"time":"2026-02-24T18:58:32.529873367Z","level":"INFO","msg":"stream: closing","id":"d1momnjv"}
+{"time":"2026-02-24T18:58:32.529905592Z","level":"INFO","msg":"handler: closed","stream_id":"d1momnjv"}
+{"time":"2026-02-24T18:58:32.529933517Z","level":"INFO","msg":"sender: closed","stream_id":"d1momnjv"}
+{"time":"2026-02-24T18:58:32.529927812Z","level":"INFO","msg":"writer: Close: closed","stream_id":"d1momnjv"}
+{"time":"2026-02-24T18:58:32.53073228Z","level":"INFO","msg":"stream: closed","id":"d1momnjv"}

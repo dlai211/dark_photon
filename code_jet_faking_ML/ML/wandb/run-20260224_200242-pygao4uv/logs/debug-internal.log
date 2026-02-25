@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:02:42.971218998Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:02:43.155067327Z","level":"INFO","msg":"stream: created new stream","id":"pygao4uv"}
+{"time":"2026-02-24T20:02:43.155095952Z","level":"INFO","msg":"stream: started","id":"pygao4uv"}
+{"time":"2026-02-24T20:02:43.155160025Z","level":"INFO","msg":"writer: Do: started","stream_id":"pygao4uv"}
+{"time":"2026-02-24T20:02:43.155168149Z","level":"INFO","msg":"sender: started","stream_id":"pygao4uv"}
+{"time":"2026-02-24T20:02:43.155224806Z","level":"INFO","msg":"handler: started","stream_id":"pygao4uv"}
+{"time":"2026-02-24T20:02:45.60456533Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:02:45.816298333Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:02:45.820628507Z","level":"INFO","msg":"stream: closing","id":"pygao4uv"}
+{"time":"2026-02-24T20:02:45.820644583Z","level":"INFO","msg":"handler: closed","stream_id":"pygao4uv"}
+{"time":"2026-02-24T20:02:45.820654129Z","level":"INFO","msg":"writer: Close: closed","stream_id":"pygao4uv"}
+{"time":"2026-02-24T20:02:45.820671368Z","level":"INFO","msg":"sender: closed","stream_id":"pygao4uv"}
+{"time":"2026-02-24T20:02:45.821677486Z","level":"INFO","msg":"stream: closed","id":"pygao4uv"}

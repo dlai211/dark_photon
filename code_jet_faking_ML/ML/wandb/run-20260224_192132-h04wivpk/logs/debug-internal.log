@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:21:32.706141482Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:21:32.886774724Z","level":"INFO","msg":"stream: created new stream","id":"h04wivpk"}
+{"time":"2026-02-24T19:21:32.886805422Z","level":"INFO","msg":"stream: started","id":"h04wivpk"}
+{"time":"2026-02-24T19:21:32.88683754Z","level":"INFO","msg":"handler: started","stream_id":"h04wivpk"}
+{"time":"2026-02-24T19:21:32.886853425Z","level":"INFO","msg":"sender: started","stream_id":"h04wivpk"}
+{"time":"2026-02-24T19:21:32.886839803Z","level":"INFO","msg":"writer: Do: started","stream_id":"h04wivpk"}
+{"time":"2026-02-24T19:21:35.073945566Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:21:35.332039254Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:21:35.336488038Z","level":"INFO","msg":"stream: closing","id":"h04wivpk"}
+{"time":"2026-02-24T19:21:35.336503335Z","level":"INFO","msg":"handler: closed","stream_id":"h04wivpk"}
+{"time":"2026-02-24T19:21:35.336511342Z","level":"INFO","msg":"writer: Close: closed","stream_id":"h04wivpk"}
+{"time":"2026-02-24T19:21:35.336527787Z","level":"INFO","msg":"sender: closed","stream_id":"h04wivpk"}
+{"time":"2026-02-24T19:21:35.337382039Z","level":"INFO","msg":"stream: closed","id":"h04wivpk"}

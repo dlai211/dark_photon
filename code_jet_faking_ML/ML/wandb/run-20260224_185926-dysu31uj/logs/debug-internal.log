@@ -1,0 +1,13 @@
+{"time":"2026-02-24T18:59:26.748753812Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T18:59:26.928087111Z","level":"INFO","msg":"stream: created new stream","id":"dysu31uj"}
+{"time":"2026-02-24T18:59:26.92811482Z","level":"INFO","msg":"stream: started","id":"dysu31uj"}
+{"time":"2026-02-24T18:59:26.928124576Z","level":"INFO","msg":"writer: Do: started","stream_id":"dysu31uj"}
+{"time":"2026-02-24T18:59:26.92813637Z","level":"INFO","msg":"sender: started","stream_id":"dysu31uj"}
+{"time":"2026-02-24T18:59:26.928149218Z","level":"INFO","msg":"handler: started","stream_id":"dysu31uj"}
+{"time":"2026-02-24T18:59:28.752212459Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T18:59:28.948073049Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T18:59:28.95295705Z","level":"INFO","msg":"stream: closing","id":"dysu31uj"}
+{"time":"2026-02-24T18:59:28.952982191Z","level":"INFO","msg":"handler: closed","stream_id":"dysu31uj"}
+{"time":"2026-02-24T18:59:28.952991855Z","level":"INFO","msg":"writer: Close: closed","stream_id":"dysu31uj"}
+{"time":"2026-02-24T18:59:28.953000116Z","level":"INFO","msg":"sender: closed","stream_id":"dysu31uj"}
+{"time":"2026-02-24T18:59:28.953935262Z","level":"INFO","msg":"stream: closed","id":"dysu31uj"}

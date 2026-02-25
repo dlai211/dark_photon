@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:26:44.229043523Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:26:44.411021287Z","level":"INFO","msg":"stream: created new stream","id":"gzjfjuar"}
+{"time":"2026-02-24T20:26:44.411051749Z","level":"INFO","msg":"stream: started","id":"gzjfjuar"}
+{"time":"2026-02-24T20:26:44.411067425Z","level":"INFO","msg":"writer: Do: started","stream_id":"gzjfjuar"}
+{"time":"2026-02-24T20:26:44.411073826Z","level":"INFO","msg":"sender: started","stream_id":"gzjfjuar"}
+{"time":"2026-02-24T20:26:44.411129936Z","level":"INFO","msg":"handler: started","stream_id":"gzjfjuar"}
+{"time":"2026-02-24T20:26:46.24926603Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:26:46.441917146Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:26:46.446945129Z","level":"INFO","msg":"stream: closing","id":"gzjfjuar"}
+{"time":"2026-02-24T20:26:46.446954705Z","level":"INFO","msg":"handler: closed","stream_id":"gzjfjuar"}
+{"time":"2026-02-24T20:26:46.44696053Z","level":"INFO","msg":"writer: Close: closed","stream_id":"gzjfjuar"}
+{"time":"2026-02-24T20:26:46.447017739Z","level":"INFO","msg":"sender: closed","stream_id":"gzjfjuar"}
+{"time":"2026-02-24T20:26:46.447514875Z","level":"INFO","msg":"stream: closed","id":"gzjfjuar"}

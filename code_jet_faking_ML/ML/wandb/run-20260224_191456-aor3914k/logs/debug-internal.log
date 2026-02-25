@@ -1,0 +1,13 @@
+{"time":"2026-02-24T19:14:56.81622605Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T19:14:57.025611956Z","level":"INFO","msg":"stream: created new stream","id":"aor3914k"}
+{"time":"2026-02-24T19:14:57.025675374Z","level":"INFO","msg":"stream: started","id":"aor3914k"}
+{"time":"2026-02-24T19:14:57.025724217Z","level":"INFO","msg":"writer: Do: started","stream_id":"aor3914k"}
+{"time":"2026-02-24T19:14:57.025733044Z","level":"INFO","msg":"handler: started","stream_id":"aor3914k"}
+{"time":"2026-02-24T19:14:57.02580036Z","level":"INFO","msg":"sender: started","stream_id":"aor3914k"}
+{"time":"2026-02-24T19:14:58.797077057Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T19:14:59.029429957Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T19:14:59.034354231Z","level":"INFO","msg":"stream: closing","id":"aor3914k"}
+{"time":"2026-02-24T19:14:59.034365632Z","level":"INFO","msg":"handler: closed","stream_id":"aor3914k"}
+{"time":"2026-02-24T19:14:59.034373837Z","level":"INFO","msg":"writer: Close: closed","stream_id":"aor3914k"}
+{"time":"2026-02-24T19:14:59.034416855Z","level":"INFO","msg":"sender: closed","stream_id":"aor3914k"}
+{"time":"2026-02-24T19:14:59.035104699Z","level":"INFO","msg":"stream: closed","id":"aor3914k"}

@@ -1,0 +1,13 @@
+{"time":"2026-02-24T20:25:47.835174492Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T20:25:48.014164319Z","level":"INFO","msg":"stream: created new stream","id":"mka9ukfo"}
+{"time":"2026-02-24T20:25:48.014218006Z","level":"INFO","msg":"stream: started","id":"mka9ukfo"}
+{"time":"2026-02-24T20:25:48.014232079Z","level":"INFO","msg":"sender: started","stream_id":"mka9ukfo"}
+{"time":"2026-02-24T20:25:48.014229506Z","level":"INFO","msg":"writer: Do: started","stream_id":"mka9ukfo"}
+{"time":"2026-02-24T20:25:48.014250359Z","level":"INFO","msg":"handler: started","stream_id":"mka9ukfo"}
+{"time":"2026-02-24T20:25:49.549778676Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T20:25:49.757480165Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-02-24T20:25:49.768087702Z","level":"INFO","msg":"stream: closing","id":"mka9ukfo"}
+{"time":"2026-02-24T20:25:49.768102467Z","level":"INFO","msg":"handler: closed","stream_id":"mka9ukfo"}
+{"time":"2026-02-24T20:25:49.768111675Z","level":"INFO","msg":"writer: Close: closed","stream_id":"mka9ukfo"}
+{"time":"2026-02-24T20:25:49.768116645Z","level":"INFO","msg":"sender: closed","stream_id":"mka9ukfo"}
+{"time":"2026-02-24T20:25:49.76862533Z","level":"INFO","msg":"stream: closed","id":"mka9ukfo"}

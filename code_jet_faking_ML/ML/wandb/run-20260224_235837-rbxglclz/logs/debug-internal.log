@@ -1,0 +1,13 @@
+{"time":"2026-02-24T23:58:38.217849907Z","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-02-24T23:58:38.399642859Z","level":"INFO","msg":"stream: created new stream","id":"rbxglclz"}
+{"time":"2026-02-24T23:58:38.399670947Z","level":"INFO","msg":"stream: started","id":"rbxglclz"}
+{"time":"2026-02-24T23:58:38.399687543Z","level":"INFO","msg":"handler: started","stream_id":"rbxglclz"}
+{"time":"2026-02-24T23:58:38.399686369Z","level":"INFO","msg":"writer: Do: started","stream_id":"rbxglclz"}
+{"time":"2026-02-24T23:58:38.399713537Z","level":"INFO","msg":"sender: started","stream_id":"rbxglclz"}
+{"time":"2026-02-24T23:58:44.164360021Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-02-24T23:58:44.536318042Z","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary, console lines 0-23","runtime_seconds":0.371768659}],"total_operations":1}}
+{"time":"2026-02-24T23:58:44.602251556Z","level":"INFO","msg":"stream: closing","id":"rbxglclz"}
+{"time":"2026-02-24T23:58:44.602264714Z","level":"INFO","msg":"handler: closed","stream_id":"rbxglclz"}
+{"time":"2026-02-24T23:58:44.602272436Z","level":"INFO","msg":"writer: Close: closed","stream_id":"rbxglclz"}
+{"time":"2026-02-24T23:58:44.602278008Z","level":"INFO","msg":"sender: closed","stream_id":"rbxglclz"}
+{"time":"2026-02-24T23:58:44.602689402Z","level":"INFO","msg":"stream: closed","id":"rbxglclz"}

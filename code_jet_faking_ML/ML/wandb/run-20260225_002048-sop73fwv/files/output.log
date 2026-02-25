@@ -1,0 +1,18 @@
+/home/jlai/.local/share/mamba/envs/tf-gpu/lib/python3.10/site-packages/keras/src/layers/core/dense.py:93: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Epoch 1/50
+[1m1112/1112[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m10s[0m 5ms/step - auc: 0.6084 - loss: 0.0057 - weighted_auc: 0.7705 - val_auc: 0.7011 - val_loss: 0.0039 - val_weighted_auc: 0.8602
+Epoch 2/50
+[1m1112/1112[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m2s[0m 2ms/step - auc: 0.6600 - loss: 0.0041 - weighted_auc: 0.8342 - val_auc: 0.7046 - val_loss: 0.0038 - val_weighted_auc: 0.8731
+Epoch 3/50
+[1m1112/1112[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m2s[0m 2ms/step - auc: 0.6751 - loss: 0.0040 - weighted_auc: 0.8510 - val_auc: 0.7051 - val_loss: 0.0038 - val_weighted_auc: 0.8669
+Epoch 4/50
+[1m1112/1112[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m2s[0m 2ms/step - auc: 0.6817 - loss: 0.0040 - weighted_auc: 0.8579 - val_auc: 0.7103 - val_loss: 0.0038 - val_weighted_auc: 0.8726
+Epoch 5/50
+[1m1112/1112[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m2s[0m 2ms/step - auc: 0.6856 - loss: 0.0039 - weighted_auc: 0.8618 - val_auc: 0.7100 - val_loss: 0.0038 - val_weighted_auc: 0.8688
+Epoch 6/50
+[1m1112/1112[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m2s[0m 2ms/step - auc: 0.6863 - loss: 0.0039 - weighted_auc: 0.8647 - val_auc: 0.7064 - val_loss: 0.0038 - val_weighted_auc: 0.8645
+Epoch 7/50
+[1m1112/1112[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m2s[0m 2ms/step - auc: 0.6861 - loss: 0.0039 - weighted_auc: 0.8665 - val_auc: 0.7034 - val_loss: 0.0038 - val_weighted_auc: 0.8666
+[1m3812/3812[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m3s[0m 694us/step
+[1m1589/1589[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 748us/step
