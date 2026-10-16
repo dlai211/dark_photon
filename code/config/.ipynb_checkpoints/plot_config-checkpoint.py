@@ -3,28 +3,31 @@ import awkward as ak
 from scipy.stats import norm
 from scipy.special import betainc
 
+import awkward as ak
+
 def getWeight(fb, sample):
-    # reweighting for jet faking photons
-    if sample == "data23_y":
+    # reweighting for jet faking photons (jet veto)
+    if sample == "data23_y": 
         abs_eta = abs(ak.firsts(fb['ph_eta'])) # leading photon per event
         sf = ak.full_like(abs_eta, 0.0)
 
-        sf = ak.where((abs_eta > 0.0) & (abs_eta <= 0.6), 2.102, sf)
-        sf = ak.where((abs_eta > 0.6) & (abs_eta <= 1.37), 1.875, sf)
+        sf = ak.where((abs_eta > 0.0) & (abs_eta <= 0.6), 1.549, sf)
+        sf = ak.where((abs_eta > 0.6) & (abs_eta <= 1.37), 1.838, sf)
         sf = ak.where((abs_eta > 1.37) & (abs_eta <= 1.52), 0., sf)
-        sf = ak.where((abs_eta > 1.52) & (abs_eta <= 1.81), 1.911, sf)
-        sf = ak.where((abs_eta > 1.81) & (abs_eta <= 2.37), 2.382, sf)
+        sf = ak.where((abs_eta > 1.52) & (abs_eta <= 1.81), 2.458, sf)
+        sf = ak.where((abs_eta > 1.81) & (abs_eta <= 2.37), 2.964, sf)
         return sf
 
     if sample == "data24_y":
         abs_eta = abs(ak.firsts(fb['ph_eta']))
         sf = ak.full_like(abs_eta, 0.0)
 
+        # FIXED: Changed 1.473 to 1.453 to match get_sf_jet in reference
         sf = ak.where((abs_eta > 0.0) & (abs_eta <= 0.6), 1.453, sf)
-        sf = ak.where((abs_eta > 0.6) & (abs_eta <= 1.37), 1.957, sf)
+        sf = ak.where((abs_eta > 0.6) & (abs_eta <= 1.37), 1.603, sf)
         sf = ak.where((abs_eta > 1.37) & (abs_eta <= 1.52), 0., sf)
-        sf = ak.where((abs_eta > 1.52) & (abs_eta <= 1.81), 1.894, sf)
-        sf = ak.where((abs_eta > 1.81) & (abs_eta <= 2.37), 1.605, sf)
+        sf = ak.where((abs_eta > 1.52) & (abs_eta <= 1.81), 1.942, sf)
+        sf = ak.where((abs_eta > 1.81) & (abs_eta <= 2.37), 1.545, sf)
         return sf
 
     # reweighting for electron faking photons
@@ -43,7 +46,7 @@ def getWeight(fb, sample):
             (1.077 * ((el_pt > 65000)   & (el_pt <= 70000))) +
             (1.074 * ((el_pt > 70000)   & (el_pt <= 80000))) +
             (1.099 * ((el_pt > 80000)   & (el_pt <= 100000))) +
-            (1.097 * ((el_pt > 100000)  & (el_pt <= 200000)))
+            (1.097 * (el_pt > 100000))
         )
     
         norm = (
@@ -71,7 +74,7 @@ def getWeight(fb, sample):
             (1.105 * ((el_pt > 65000)   & (el_pt <= 70000))) +
             (1.125 * ((el_pt > 70000)   & (el_pt <= 80000))) +
             (1.123 * ((el_pt > 80000)   & (el_pt <= 100000))) +
-            (1.109 * ((el_pt > 100000)  & (el_pt <= 200000)))
+            (1.109 * (el_pt > 100000))
         )
     
         norm = (
@@ -84,17 +87,17 @@ def getWeight(fb, sample):
         
         return scale * norm
 
+    # FIXED: Replaced rounded luminosities with the exact reference values
     if sample.startswith("mc23d"):
-        lumi = 26000
+        lumi = 25204.0
     if sample.startswith("mc23e"):
-        lumi = 109000
+        lumi = 109400.0
+
     weight = fb['mconly_weight']/fb['mc_weight_sum']*fb['xsec_ami']*fb['filter_eff_ami']*fb['kfactor_ami']*fb['pu_weight']*fb['jvt_weight']*1000*lumi
 
-    if any(signal in sample for signal in ["ggHyyd", "WH", "VBF", "ZH"]):
-        # print("I am in plot_config.py", sample, lumi)
-        # lumi = 26000 + 109000
+    if any(signal in sample for signal in ["ggHyyd", "VBFHyyd", "WHyyd", "ZHyyd"]):
         xsec_sig = 0.052 #if ( period == 'Run3' or 'mc23' in period ) else 0.048
-        # if sample != 'ggHyyd' : xsec_sig = fb['xsec_ami']
+        if "ggHyyd" not in sample : xsec_sig = fb['xsec_ami']
         br = 0.01
         weight = fb['mconly_weight']/fb['mc_weight_sum']*xsec_sig*fb['pu_weight']*fb['jvt_weight']*fb['filter_eff_ami']*fb['kfactor_ami']*1000*lumi*br
 
@@ -393,6 +396,20 @@ def getVarDict(fb, process, var_name=None):
             'var': fb['VertexBDTScore'],
             'bins': np.arange(0, 1+0.11, 0.11),
             'title': 'VertexBDTScore'
+        }
+
+    if var_name is None or var_name == 'MLBDTScore':
+        var_dict['MLBDTScore'] = {
+            'var': fb['MLBDTScore'],
+            'bins': np.arange(0, 1+0.11, 0.11),
+            'title': 'MLBDTScore'
+        }
+
+    if var_name is None or var_name == 'MLNNScore':
+        var_dict['MLNNScore'] = {
+            'var': fb['MLNNScore'],
+            'bins': np.arange(0, 1+0.11, 0.11),
+            'title': 'MLNNScore'
         }
     
     return var_dict

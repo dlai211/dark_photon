@@ -1,0 +1,58 @@
+Finished processing MC sample:  ggHyyd
+Finished processing MC sample:  VBFHyyd
+Finished processing MC sample:  WHyyd
+Finished processing MC sample:  ZHyyd
+Finished processing MC sample:  Wgamma
+Finished processing MC sample:  Zgamma
+Finished processing MC sample:  gammajet_dir
+Finished processing efy sample:  e->gamma
+Finished processing jfy sample:  j->gamma
+
+--- SIGNAL AND MC BACKGROUNDS ---
+Cut Step             |       ggHyyd |      VBFHyyd |        WHyyd |        ZHyyd |       Wgamma |       Zgamma | gammajet_dir
+-----------------------------------------------------------------------------------------------------------------------------
+Initial              |      1927.36 |     37283.81 |     10702.99 |      9147.93 |     91525.45 |     82112.68 |   7615554.31
+n_bjet == 0          |      1860.07 |     36317.51 |     10343.88 |      8135.96 |     88377.14 |     79766.21 |   7491233.42
+n_ph == 1            |      1548.32 |     31284.97 |      8769.15 |      6998.67 |     62816.23 |     61028.98 |   5532149.45
+Photon Iso           |      1548.32 |     31284.97 |      8769.15 |      6998.67 |     62816.23 |     61028.98 |   5532149.45
+Lepton Veto          |      1548.32 |     31284.97 |      8769.15 |      6998.67 |     62816.23 |     61028.98 |   5532149.45
+Trigger              |       885.21 |     16658.64 |      5548.53 |      5019.67 |     38900.22 |     52289.46 |   1041975.43
+MET > 100            |       885.21 |     16658.64 |      5548.53 |      5019.67 |     38900.22 |     52289.46 |   1041975.43
+ph_pt > 50           |       880.84 |     16555.30 |      5517.54 |      5002.84 |     38770.08 |     52201.25 |   1039316.58
+n_jet <= 3           |       802.23 |     15808.18 |      4748.17 |      4542.91 |     34687.77 |     49395.92 |    994599.62
+Vertex BDT > 0.1     |       389.08 |      9747.55 |      2773.42 |      1831.78 |     13542.95 |     13885.43 |     55461.26
+MT > 80              |       377.01 |      9375.53 |      2693.78 |      1787.66 |     13180.69 |     13823.77 |     54377.11
+ML BDT > 0.02        |       188.84 |      4221.49 |      1131.61 |       574.96 |      1054.64 |       558.82 |        45.81
+
+--- ELECTRON FAKING PHOTON (EFY) ---
+Cut Step             |     e->gamma
+-----------------------------------
+Initial              |    212214.87
+n_bjet == 0          |    156602.64
+n_el == 1            |    156602.64
+Muon & Tau Veto      |    152853.85
+n_ph_bsl == 0        |    152853.85
+Trig Single El       |    143095.15
+Trig MET+G           |     51500.83
+MET > 100            |     51500.83
+el_pt > 50           |     51500.83
+n_jet <= 3           |     45365.49
+Vertex BDT > 0.1     |     39923.99
+MT_el > 80           |     36238.73
+ML BDT > 0.02        |      1534.41
+
+--- JET FAKING PHOTON (JFY) ---
+Cut Step             |     j->gamma
+-----------------------------------
+Initial              |  15851148.27
+n_bjet == 0          |  14887521.11
+n_ph_bsl == 1        |  14887521.11
+Photon Anti-Iso      |   2754280.23
+Lepton Veto          |   2754280.23
+Trigger              |   1040644.82
+MET > 100            |   1040644.82
+ph_pt > 50           |   1028604.51
+n_jet <= 3           |    894996.83
+Vertex BDT > 0.1     |    180553.21
+MT > 80              |    178008.15
+ML BDT > 0.02        |       522.68

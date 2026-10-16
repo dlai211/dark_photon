@@ -3,23 +3,34 @@ import numpy as np
 import pandas as pd
 import ROOT
 
-CSV_PATH = "bdt_output3.csv"
+CSV_PATH = "nn_output.csv"
 
 EVENT_COL = "event"
 PROCESS_COL = "process"
 TREE_NAME = "nominal"
-OUT_DIR = "/data/jlai/df_ntups_w_bdt"
+OUT_DIR = "/data/jlai/df_ntups_w_bdt_new"
 FILL_VALUE = -999.0
 
-# --- NEW: three score columns to import from CSV and write into ROOT ---
-SCORE_COLS = ["MLBDTScore", "MLBDTScore2", "MLNNScore"]
-
+# --- three score columns to import from CSV and write into ROOT ---
+# SCORE_COLS = ["MLBDTScore", "MLBDTScore2", "MLNNScore"]
+# ntuple_names = [
+#     'mc23d_ggHyyd_y', 'mc23d_Zgamma_y', 'mc23d_Wgamma_y', 'mc23d_gammajet_direct_y',
+#     'data23_y', 'data23_eprobe',
+#     'mc23e_ggHyyd_y', 'mc23e_Zgamma_y', 'mc23e_Wgamma_y', 'mc23e_gammajet_direct_y',
+#     'data24_y', 'data24_eprobe'
+# ]
+SCORE_COLS = ["MLNNScore"]
+# ntuple_names = ["mc23d_VBFHyyd_y", "mc23d_WHyyd_y", "mc23d_ZHyyd_y", "mc23e_VBFHyyd_y", "mc23e_WHyyd_y", "mc23e_ZHyyd_y
 ntuple_names = [
     'mc23d_ggHyyd_y', 'mc23d_Zgamma_y', 'mc23d_Wgamma_y', 'mc23d_gammajet_direct_y',
     'data23_y', 'data23_eprobe',
     'mc23e_ggHyyd_y', 'mc23e_Zgamma_y', 'mc23e_Wgamma_y', 'mc23e_gammajet_direct_y',
-    'data24_y', 'data24_eprobe'
+    'data24_y', 'data24_eprobe',
+    "mc23d_VBFHyyd_y", "mc23d_WHyyd_y", "mc23d_ZHyyd_y", 
+    "mc23e_VBFHyyd_y", "mc23e_WHyyd_y", "mc23e_ZHyyd_y"
 ]
+
+
 PROCESS_FILES = {}
 for ntuple_name in ntuple_names:
     PROCESS_FILES[ntuple_name] = [f"/data/fpiazza/ggHyyd/NtuplesWithBDTSkim/{ntuple_name}_nominal_bdt.root"]
@@ -63,12 +74,15 @@ def build_score_lookup(csv_path: str):
 
         events = g[EVENT_COL].to_numpy()
         s1 = g[SCORE_COLS[0]].to_numpy()
-        s2 = g[SCORE_COLS[1]].to_numpy()
-        s3 = g[SCORE_COLS[2]].to_numpy()
+        # s2 = g[SCORE_COLS[1]].to_numpy()
+        # s3 = g[SCORE_COLS[2]].to_numpy()
 
-        # event -> (score1, score2, score3)
-        scores_by_proc[proc_str] = {int(ev): (float(a), float(b), float(c))
-                                    for ev, a, b, c in zip(events, s1, s2, s3)}
+        # # event -> (score1, score2, score3)
+        # scores_by_proc[proc_str] = {int(ev): (float(a), float(b), float(c))
+        #                             for ev, a, b, c in zip(events, s1, s2, s3)}
+        scores_by_proc[proc_str] = {
+            int(ev): float(a) for ev, a in zip(events, s1)
+        }
 
     return scores_by_proc
 
@@ -101,12 +115,12 @@ def add_score_branches_to_file_pyroot(infile: str, outfile: str, process_name: s
 
     # --- NEW: three branch buffers ---
     buf1 = np.array([FILL_VALUE], dtype=np.float32)
-    buf2 = np.array([FILL_VALUE], dtype=np.float32)
-    buf3 = np.array([FILL_VALUE], dtype=np.float32)
+    # buf2 = np.array([FILL_VALUE], dtype=np.float32)
+    # buf3 = np.array([FILL_VALUE], dtype=np.float32)
 
     outtree.Branch(SCORE_COLS[0], buf1, f"{SCORE_COLS[0]}/F")
-    outtree.Branch(SCORE_COLS[1], buf2, f"{SCORE_COLS[1]}/F")
-    outtree.Branch(SCORE_COLS[2], buf3, f"{SCORE_COLS[2]}/F")
+    # outtree.Branch(SCORE_COLS[1], buf2, f"{SCORE_COLS[1]}/F")
+    # outtree.Branch(SCORE_COLS[2], buf3, f"{SCORE_COLS[2]}/F")
 
     # Verify the input has the event branch
     if (not hasattr(tree, EVENT_COL)) and (tree.GetBranch(EVENT_COL) is None):
@@ -123,6 +137,14 @@ def add_score_branches_to_file_pyroot(infile: str, outfile: str, process_name: s
         tree.GetEntry(i)
         ev = int(getattr(tree, EVENT_COL))
 
+        score = proc_scores.get(ev, None)
+        if score is None:
+            buf1[0] = np.float32(FILL_VALUE)
+            missing += 1
+        else:
+            buf1[0] = np.float32(score)
+
+        ''' For 3 elements
         triple = proc_scores.get(ev, None)
         if triple is None:
             # Fill all three as -999 if not found in CSV for this process
@@ -135,7 +157,7 @@ def add_score_branches_to_file_pyroot(infile: str, outfile: str, process_name: s
             buf1[0] = np.float32(a)
             buf2[0] = np.float32(b)
             buf3[0] = np.float32(c)
-
+        '''
         outtree.Fill()
 
         if (i + 1) % 500000 == 0:
@@ -156,6 +178,6 @@ scores_by_proc = build_score_lookup(CSV_PATH)
 for proc, files in PROCESS_FILES.items():
     for path in files:
         base = os.path.basename(path).replace(".root", "")
-        outpath = os.path.join(OUT_DIR, f"{base}_withMLScores.root")
+        outpath = os.path.join(OUT_DIR, f"{base}_withNNScores.root")
         print(f"\nProcessing {proc}: {path}")
         add_score_branches_to_file_pyroot(path, outpath, proc, scores_by_proc)
