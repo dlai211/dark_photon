@@ -1,0 +1,16 @@
+theme: jekyll-theme-primer
+exclude:
+  - code/
+  - code_jet_faking_ML/
+  - code_old/
+  - code_vr/
+  - jets_faking_photons3/
+  - main/
+  - postprocessing/
+  - test/
+  - pixi/
+  - wandb/
+  - "*.py"
+  - "*.ipynb"
+  - "*.csv"
+  - "*.root"
