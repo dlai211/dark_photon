@@ -1,0 +1,17 @@
+code/
+code_jet_faking_ML/
+code_old/
+code_vr/
+jets_faking_photons3/
+main/
+postprocessing/
+test/
+web/
+table_web/
+wandb/
+**/wandb/
+pixi/
+*.py
+*.ipynb
+*.csv
+*.root
