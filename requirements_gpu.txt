@@ -1,0 +1,79 @@
+# =============================================================================
+# dark_photon - GPU (CUDA) Python environment
+# =============================================================================
+# Same package set as requirements.txt, with CUDA-enabled TensorFlow.
+# Versions are pinned to pixi/pixi.lock (the project's locked conda-forge
+# environment, Python 3.12.13); the DNN training runs in
+# code_jet_faking_ML/ML/wandb/*/files/requirements.txt used TensorFlow 2.19.1.
+# numpy, keras and uproot are the exceptions: numpy and keras are pinned to
+# versions compatible with the TensorFlow 2.19.1 wheel on PyPI, and uproot is
+# pinned to 5.7.7 because 5.7.3 (in pixi.lock) was yanked (see comments below).
+#
+# Requirements:
+#   * Python 3.12 (TensorFlow 2.19 supports 3.9-3.12 only)
+#   * Linux or WSL2. Native Windows TensorFlow >= 2.11 has no GPU support.
+#   * NVIDIA driver >= 525.60.13 (Linux) / >= 528.33 (WSL2).
+#     TensorFlow 2.19 is built against CUDA 12.5 and cuDNN 9.3; the
+#     tensorflow[and-cuda] extra installs the matching NVIDIA pip wheels,
+#     so no system-wide CUDA toolkit is required.
+#
+# Install:
+#   python3.12 -m venv .venv
+#   source .venv/bin/activate
+#   pip install -r requirements_gpu.txt
+#
+# Verify the GPU is visible:
+#   python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+#   python -c "import xgboost as xgb; print(xgb.build_info())"
+#
+# PyROOT: `import ROOT` is used by the analysis / post-processing scripts
+# (simple_plot.py, postprocessing/, code/pyroot.py, code/Save*.py, code/test.py,
+# test.ipynb, code_old/cross_check_w_pyroot.py). PyROOT is NOT on PyPI: the
+# PyPI project called "root" is an unrelated package, so do not `pip install
+# root`. Install PyROOT from conda-forge or an LCG/CVMFS stack instead:
+#   conda install -c conda-forge root
+# Everything else in this file installs with pip alone.
+# =============================================================================
+
+# --- Core analysis -----------------------------------------------------------
+numpy==2.1.3                  # TF 2.19.1 requires numpy<2.2.0
+pandas==3.0.2
+scipy==1.17.1
+matplotlib==3.10.8
+seaborn==0.13.2
+uproot==5.7.7
+awkward==2.9.0
+tqdm==4.67.3
+joblib==1.5.3
+psutil==7.2.2
+
+# --- Machine learning --------------------------------------------------------
+scikit-learn==1.8.0
+# The PyPI xgboost wheel includes CUDA support, so `device='cuda'` works
+# without a separate GPU package (use the smaller `xgboost-cpu` package if
+# you ever want a CPU-only install).
+xgboost==3.2.0
+lightgbm==4.7.0               # imported only in code_jet_faking_ML/ML/NN.py
+# GPU build of TensorFlow: pulls nvidia-*-cu12 wheels (CUDA 12.5, cuDNN 9.3).
+tensorflow[and-cuda]==2.19.1
+keras==3.13.2                 # version used with TF 2.19.1 in the W&B runs
+wandb==0.25.1
+# google.protobuf (imported in SweepBDT.ipynb) is installed by TensorFlow.
+
+# --- Notebooks ---------------------------------------------------------------
+ipykernel==7.3.0
+
+# --- Optional ----------------------------------------------------------------
+# PyROOT is conda/LCG-only - see the note in the file header. There is no
+# `pip install root` for ROOT; the PyPI "root" project is unrelated.
+#
+# XRootD: only needed if you open root:// URLs with uproot:
+# xrootd==5.9.1
+#
+# JupyterLab, to run/edit the notebooks outside VS Code:
+# jupyterlab>=4.5
+#
+# PyTorch (CUDA 12.x build): declared in pixi/pixi.toml but not imported by any
+# code (all torch imports are commented out in the notebooks). Uncomment only
+# if needed, installing from the CUDA wheel index:
+#   pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu128
