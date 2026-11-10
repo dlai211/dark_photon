@@ -15,6 +15,10 @@
 #   source .venv/bin/activate        # Windows: .venv\Scripts\activate
 #   pip install -r requirements.txt
 #
+# Binder/repo2docker: the repo-level runtime.txt pins python-3.12. Do not
+# remove it: Binder's default Python 3.10 is too old for several pins below
+# (pandas 3.0, scipy 1.17, scikit-learn 1.8 and keras 3.13 require >= 3.11).
+#
 # PyROOT: `import ROOT` is used by the analysis / post-processing scripts
 # (simple_plot.py, postprocessing/, code/pyroot.py, code/Save*.py, code/test.py,
 # test.ipynb, code_old/cross_check_w_pyroot.py). PyROOT is NOT on PyPI: the
