@@ -6,6 +6,9 @@ from scipy.special import betainc
 import awkward as ak
 
 def getWeight(fb, sample):
+    # adding ratio for 300 fb-1 lumi
+    ratio = 300/135
+    
     # reweighting for jet faking photons (jet veto)
     if sample == "data23_y": 
         abs_eta = abs(ak.firsts(fb['ph_eta'])) # leading photon per event
@@ -57,7 +60,7 @@ def getWeight(fb, sample):
             (0.10188 * ((abs_eta > 1.81) & (abs_eta <= 2.37)))
         )
         
-        return scale * norm
+        return scale * norm * ratio
 
     if sample == "data24_eprobe":
         el_pt  = ak.fill_none(ak.firsts(fb["el_pt"]),  -1)   # MeV
@@ -72,7 +75,6 @@ def getWeight(fb, sample):
             (1.129 * ((el_pt > 60000)   & (el_pt <= 62000))) +
             (1.137 * ((el_pt > 62000)   & (el_pt <= 65000))) +
             (1.105 * ((el_pt > 65000)   & (el_pt <= 70000))) +
-            (1.125 * ((el_pt > 70000)   & (el_pt <= 80000))) +
             (1.123 * ((el_pt > 80000)   & (el_pt <= 100000))) +
             (1.109 * (el_pt > 100000))
         )
@@ -85,14 +87,15 @@ def getWeight(fb, sample):
             (0.09252 * ((abs_eta > 1.81) & (abs_eta <= 2.37)))
         )
         
-        return scale * norm
+        return scale * norm * ratio
 
     # FIXED: Replaced rounded luminosities with the exact reference values
     if sample.startswith("mc23d"):
         lumi = 25204.0
     if sample.startswith("mc23e"):
-        lumi = 109400.0
-
+        # lumi = 109400.0
+        lumi = 274796.0
+        
     weight = fb['mconly_weight']/fb['mc_weight_sum']*fb['xsec_ami']*fb['filter_eff_ami']*fb['kfactor_ami']*fb['pu_weight']*fb['jvt_weight']*1000*lumi
 
     if any(signal in sample for signal in ["ggHyyd", "VBFHyyd", "WHyyd", "ZHyyd"]):
