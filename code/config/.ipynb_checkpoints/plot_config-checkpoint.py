@@ -221,48 +221,42 @@ def getVarDict(fb, process, var_name=None):
             'var': np.sqrt(2 * fb['met_tst_et'] * ak.firsts(fb['ph_pt']) * 
                            (1 - np.cos(fb['met_tst_phi'] - ak.firsts(fb['ph_phi'])))) / 1000,
             'bins': np.linspace(0, 300, 15+1),
-            'title': r'$m_T\ [GeV]$',
-            'shift': '+0'
+            'title': r'$m_T\ [GeV]$'
         }
 
     if var_name is None or var_name == 'metsig':
         var_dict['metsig'] = {
             'var': fb['met_tst_sig'],
             'bins': np.linspace(0, 30, 15+1),
-            'title': r'$E_T^{miss}\ significance$',
-            'shift': '*1'
+            'title': r'$E_T^{miss}\ significance$'
         }
 
     if var_name is None or var_name == 'metsigres':
         var_dict['metsigres'] = {
             'var': fb['met_tst_et'] / fb['met_tst_sig'],
             'bins': np.linspace(0, 100000, 50+1),
-            'title': r'$E_T^{miss}\ significance$',
-            'shift': '*1'
+            'title': r'$E_T^{miss}\ significance$'
         }
 
     if var_name is None or var_name == 'met':
         var_dict['met'] = {
             'var': fb['met_tst_et'],
             'bins': np.linspace(0, 300000, 50+1),
-            'title': r'$E_T^{miss}\ [MeV]$',
-            'shift': '+50000'
+            'title': r'$E_T^{miss}\ [MeV]$'
         }
 
     if var_name is None or var_name == 'dmet':
         var_dict['dmet'] = {
             'var': fb['dmet'],
             'bins': np.linspace(-100000, 100000, 20+1),
-            'title': r'$E_{T,\mathrm{noJVT}}^{miss}-E_T^{miss}\ [MeV]$',
-            'shift': '*1'
+            'title': r'$E_{T,\mathrm{noJVT}}^{miss}-E_T^{miss}\ [MeV]$'
         }
 
     if var_name is None or var_name == 'ph_pt':
         var_dict['ph_pt'] = {
             'var': ak.firsts(fb['ph_pt']),
             'bins': np.linspace(0, 300000, 50+1),
-            'title': r'$p_T^{\gamma}\;\mathrm{or}\;p_T^{e}\;(e\to\gamma)\;[{\rm MeV}]$',
-            'shift': '-150000'
+            'title': r'$p_T^{\gamma}\;\mathrm{or}\;p_T^{e}\;(e\to\gamma)\;[{\rm MeV}]$'
         }
 
     if var_name is None or var_name == 'ph_eta':
