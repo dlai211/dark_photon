@@ -15,9 +15,7 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
-            margin-top: 15px;
-            padding-top: 12px;
-            border-top: 2px dashed rgba(84, 106, 123, 0.25);
+            padding: 6px 0;
         }
 
         .slider-control {
@@ -36,7 +34,7 @@
         .slider-control input[type="range"] {
             accent-color: var(--color-blue);
             cursor: pointer;
-            width: 130px;
+            width: 150px;
         }
 
         .slider-val {
@@ -44,7 +42,7 @@
             color: white;
             padding: 3px 8px;
             border-radius: 5px;
-            min-width: 65px;
+            min-width: 55px;
             display: inline-block;
             text-align: center;
             font-size: 14px;
@@ -62,8 +60,9 @@
     <nav id="cut-nav">
         <ul>
             <li>Images per row:</li>
-            <li><a href="#" id="col-1-btn" class="cut-btn">1</a></li>
-            <li><a href="#" id="col-2-btn" class="cut-btn active">2</a></li>
+            <li><a href="#" id="col-2-btn" class="cut-btn">2</a></li>
+            <li><a href="#" id="col-3-btn" class="cut-btn active">3</a></li>
+            <li><a href="#" id="col-4-btn" class="cut-btn">4</a></li>
 
             <li class="nav-divider"></li>
 
@@ -74,41 +73,27 @@
         </ul>
     </nav>
 
-    <!-- Second Bar: VertexBDTScore Toggle Buttons + Interactive Sliders -->
+    <!-- Second Bar: Separate Signal/Background PV Sliders -->
     <nav id="mode-nav">
-        <ul>
-            <li><a href="#" id="no-bdt-btn" class="mode-btn active">Without VertexBDTScore</a></li>
-            <li><a href="#" id="with-bdt-btn" class="mode-btn">With VertexBDTScore (&gt; 0.1)</a></li>
-        </ul>
-
         <div class="slider-bar">
-            <!-- Slider 1: True Vertex % (0% to 100%, step 10%) -->
             <div class="slider-control">
-                <label for="pv-slider">True Vertex (Good PV):</label>
-                <input type="range" id="pv-slider" min="0" max="100" step="10" value="0">
-                <span id="pv-val" class="slider-val">0%</span>
+                <label for="sig-pv-slider">True Vertex (Good PV) for Signal:</label>
+                <input type="range" id="sig-pv-slider" min="0" max="100" step="10" value="0">
+                <span id="sig-pv-val" class="slider-val">0%</span>
             </div>
 
-            <!-- Slider 2: Lower dMET Cut (GeV) -->
             <div class="slider-control">
-                <label for="low-slider">dMET Lower Cut:</label>
-                <input type="range" id="low-slider" min="-100" max="0" step="10" value="-100">
-                <span id="low-val" class="slider-val">-100 GeV</span>
-            </div>
-
-            <!-- Slider 3: Upper dMET Cut (GeV) -->
-            <div class="slider-control">
-                <label for="high-slider">dMET Upper Cut:</label>
-                <input type="range" id="high-slider" min="0" max="100" step="10" value="100">
-                <span id="high-val" class="slider-val">100 GeV</span>
+                <label for="bkg-pv-slider">True Vertex (Good PV) for Background:</label>
+                <input type="range" id="bkg-pv-slider" min="0" max="100" step="10" value="0">
+                <span id="bkg-pv-val" class="slider-val">0%</span>
             </div>
         </div>
     </nav>
 
     <!-- Section to display images -->
     <section>
-        <h2 id="cut-title">Without VertexBDTScore | Good PV: 0% | Window: [-100, 100] GeV</h2>
-        <div class="wrapper" id="image-container" style="grid-template-columns: repeat(2, 1fr);">
+        <h2 id="cut-title">Both Migration | Signal Good PV: 0% | Background Good PV: 0%</h2>
+        <div class="wrapper" id="image-container" style="grid-template-columns: repeat(3, 1fr);">
             <!-- Images dynamically added here -->
         </div>
     </section>
@@ -141,75 +126,58 @@
     <script src="sidebar.js"></script>
     <script>
         // State variables
-        let withVertexBDT = false;
-        let viewMode = 'both'; // 'both', 'perf', 'roc'
-        let cols = 2;
+        const pvMode = 'both_mig';
+        const plotDir = "/dark_photon/lumi300/plots_migration_overlay";
+        let viewMode = 'both';   // 'both', 'perf', 'roc'
+        let cols = 3;
 
-        // Adjust this base path if your plots folder is in a different relative directory
-        const basePlotDir = "lumi300";
+        const variables = ['dmet', 'met', 'ph_pt', 'dphi_met_phterm', 'metsig'];
 
         // DOM Elements
-        const pvSlider = document.getElementById('pv-slider');
-        const lowSlider = document.getElementById('low-slider');
-        const highSlider = document.getElementById('high-slider');
-
-        const pvVal = document.getElementById('pv-val');
-        const lowVal = document.getElementById('low-val');
-        const highVal = document.getElementById('high-val');
+        const sigPvSlider = document.getElementById('sig-pv-slider');
+        const bkgPvSlider = document.getElementById('bkg-pv-slider');
+        const sigPvVal = document.getElementById('sig-pv-val');
+        const bkgPvVal = document.getElementById('bkg-pv-val');
 
         const cutTitle = document.getElementById('cut-title');
         const imageContainer = document.getElementById('image-container');
-
-        const noBdtBtn = document.getElementById('no-bdt-btn');
-        const withBdtBtn = document.getElementById('with-bdt-btn');
 
         const modal = document.getElementById('image-modal');
         const modalImg = document.getElementById('modal-img');
         const closeModal = document.querySelector('.close');
 
-        function pad3(num) {
-            return String(num).padStart(3, '0');
-        }
-
         function updatePlots() {
-            const pv = parseInt(pvSlider.value, 10);
-            let dLow = parseInt(lowSlider.value, 10);
-            let dHigh = parseInt(highSlider.value, 10);
+            const sigPct = parseInt(sigPvSlider.value, 10);
+            const bkgPct = parseInt(bkgPvSlider.value, 10);
 
-            // Prevent Lower Cut from exceeding or equaling Upper Cut
-            if (dLow >= dHigh) {
-                dLow = dHigh - 10;
-                lowSlider.value = dLow;
-            }
+            sigPvVal.textContent = `${sigPct}%`;
+            bkgPvVal.textContent = `${bkgPct}%`;
 
-            // Update slider badges
-            pvVal.textContent = `${pv}%`;
-            lowVal.textContent = `${dLow} GeV`;
-            highVal.textContent = `${dHigh} GeV`;
-
-            const folderTag = withVertexBDT ? "plots_with_vertexbdt" : "plots_without_vertexbdt";
-            const bdtLabel = withVertexBDT ? "With VertexBDTScore (> 0.1)" : "Without VertexBDTScore";
-
-            cutTitle.textContent = `${bdtLabel} | Good PV Scale: ${pv}% | dMET Window: [${dLow}, ${dHigh}] GeV`;
-
-            // Matches Python naming: dmet_pv030_low-100_high100.png
-            const fileTag = `dmet_pv${pad3(pv)}_low${dLow}_high${dHigh}`;
-            const perfPath = `${basePlotDir}/${folderTag}/${fileTag}.png`;
-            const rocPath  = `${basePlotDir}/${folderTag}/roc_${fileTag}.png`;
+            cutTitle.textContent = `Both Migration | Signal Good PV: ${sigPct}% | Background Good PV: ${bkgPct}%`;
 
             imageContainer.innerHTML = '';
 
             const plotsToShow = [];
+
+            // 1. First push all 5 performance plots
             if (viewMode === 'both' || viewMode === 'perf') {
-                plotsToShow.push({
-                    src: perfPath,
-                    label: `Performance & Significance (${fileTag}.png)`
+                variables.forEach(v => {
+                    const fileTag = `${v}_${pvMode}_sig${sigPct}_bkg${bkgPct}`;
+                    plotsToShow.push({
+                        src: `${plotDir}/${fileTag}.png`,
+                        label: `${v} — Performance & Significance (${fileTag}.png)`
+                    });
                 });
             }
+
+            // 2. Then push all 5 ROC curves
             if (viewMode === 'both' || viewMode === 'roc') {
-                plotsToShow.push({
-                    src: rocPath,
-                    label: `ROC Curve (roc_${fileTag}.png)`
+                variables.forEach(v => {
+                    const fileTag = `${v}_${pvMode}_sig${sigPct}_bkg${bkgPct}`;
+                    plotsToShow.push({
+                        src: `${plotDir}/roc_${fileTag}.png`,
+                        label: `${v} — ROC Curve (roc_${fileTag}.png)`
+                    });
                 });
             }
 
@@ -235,36 +203,21 @@
             });
         }
 
-        // Second Bar: VertexBDTScore Toggle Listeners
-        noBdtBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            withVertexBDT = false;
-            noBdtBtn.classList.add('active');
-            withBdtBtn.classList.remove('active');
-            updatePlots();
-        });
+        // First Bar: Columns per row Listeners (2, 3, and 4, default 3)
+        const colBtns = {
+            2: document.getElementById('col-2-btn'),
+            3: document.getElementById('col-3-btn'),
+            4: document.getElementById('col-4-btn')
+        };
 
-        withBdtBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            withVertexBDT = true;
-            withBdtBtn.classList.add('active');
-            noBdtBtn.classList.remove('active');
-            updatePlots();
-        });
-
-        // First Bar: Columns per row Listeners
-        document.getElementById('col-1-btn').addEventListener('click', (e) => {
-            e.preventDefault();
-            imageContainer.style.gridTemplateColumns = 'repeat(1, 1fr)';
-            document.getElementById('col-1-btn').classList.add('active');
-            document.getElementById('col-2-btn').classList.remove('active');
-        });
-
-        document.getElementById('col-2-btn').addEventListener('click', (e) => {
-            e.preventDefault();
-            imageContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
-            document.getElementById('col-2-btn').classList.add('active');
-            document.getElementById('col-1-btn').classList.remove('active');
+        Object.keys(colBtns).forEach(numCols => {
+            colBtns[numCols].addEventListener('click', (e) => {
+                e.preventDefault();
+                cols = parseInt(numCols, 10);
+                imageContainer.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+                Object.values(colBtns).forEach(btn => btn.classList.remove('active'));
+                colBtns[numCols].classList.add('active');
+            });
         });
 
         // First Bar: View Mode (Both / Perf / ROC) Listeners
@@ -284,10 +237,9 @@
             });
         });
 
-        // Slider Event Listeners
-        pvSlider.addEventListener('input', updatePlots);
-        lowSlider.addEventListener('input', updatePlots);
-        highSlider.addEventListener('input', updatePlots);
+        // Second Bar: Slider Event Listeners
+        sigPvSlider.addEventListener('input', updatePlots);
+        bkgPvSlider.addEventListener('input', updatePlots);
 
         // Modal Close Listeners
         closeModal.addEventListener('click', () => modal.classList.remove('show'));
