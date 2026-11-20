@@ -15,7 +15,9 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
-            padding: 6px 0;
+            margin-top: 15px;
+            padding-top: 12px;
+            border-top: 2px dashed rgba(84, 106, 123, 0.25);
         }
 
         .slider-control {
@@ -61,8 +63,7 @@
         <ul>
             <li>Images per row:</li>
             <li><a href="#" id="col-2-btn" class="cut-btn">2</a></li>
-            <li><a href="#" id="col-3-btn" class="cut-btn active">3</a></li>
-            <li><a href="#" id="col-4-btn" class="cut-btn">4</a></li>
+            <li><a href="#" id="col-4-btn" class="cut-btn active">4</a></li>
 
             <li class="nav-divider"></li>
 
@@ -73,8 +74,19 @@
         </ul>
     </nav>
 
-    <!-- Second Bar: Separate Signal/Background PV Sliders -->
+    <!-- Second Bar: VertexBDTScore & PV Mode Toggles + Third Bar: Separate Signal/Background PV Sliders -->
     <nav id="mode-nav">
+        <ul>
+            <li><a href="#" id="no-bdt-btn" class="mode-btn active">Without VertexBDTScore</a></li>
+            <li><a href="#" id="with-bdt-btn" class="mode-btn">With VertexBDTScore (&gt; 0.1)</a></li>
+
+            <li class="nav-divider"></li>
+
+            <li><a href="#" id="mode-both-mig-btn" class="pv-mode-btn active">Both Migration</a></li>
+            <li><a href="#" id="mode-sig-mig-bkg-rej-btn" class="pv-mode-btn">Signal Migration + Bkg Rejection</a></li>
+        </ul>
+
+        <!-- Third Bar (Final Row): True Vertex (Good PV) for Signal and Background -->
         <div class="slider-bar">
             <div class="slider-control">
                 <label for="sig-pv-slider">True Vertex (Good PV) for Signal:</label>
@@ -92,8 +104,8 @@
 
     <!-- Section to display images -->
     <section>
-        <h2 id="cut-title">Both Migration | Signal Good PV: 0% | Background Good PV: 0%</h2>
-        <div class="wrapper" id="image-container" style="grid-template-columns: repeat(3, 1fr);">
+        <h2 id="cut-title">Without VertexBDTScore | Both Migration | Signal Good PV: 0% | Background Good PV: 0%</h2>
+        <div class="wrapper" id="image-container" style="grid-template-columns: repeat(4, 1fr);">
             <!-- Images dynamically added here -->
         </div>
     </section>
@@ -117,7 +129,9 @@
             <li><a href="common.html#compare" id="test-btn">compare binomial exp z</a></li>
             <li><a href="common.html#jets_faking" id="test-btn">jets_faking Comparison Study</a></li>
             <li><a href="table_web/table_100_140_2.html" id="test-btn">Table of Basic + Selection cuts (140 > mT > 100 GeV)</a></li>
-            <li><a href="dmet_study.html" id="dmet-btn" class="active"><b>dMET &amp; True Vertex Study</b></a></li>
+            <li><a href="lumi300_mig_rej.html" id="lumi300-btn" class="active"><b>Lumi300 True Vertex Study (migration vs. rejection)</b></a></li>
+            <li><a href="lumi300_overlay.html" id="lumi300-btn" class="active"><b>Lumi300 True Vertex Study (overlay)</b></a></li>
+            <li><a href="lumi300_overlay_met.html" id="lumi300-btn" class="active"><b>Lumi300 True Vertex Study (overlay, met cut)</b></a></li>
         </ul>
     </div>
 
@@ -126,12 +140,13 @@
     <script src="sidebar.js"></script>
     <script>
         // State variables
-        const pvMode = 'both_mig';
-        const plotDir = "/dark_photon/lumi300/old_plots_migration_overlay";
+        let withVertexBDT = false;
+        let pvMode = 'both_mig'; // 'both_mig' or 'sig_mig_bkg_rej'
         let viewMode = 'both';   // 'both', 'perf', 'roc'
-        let cols = 3;
+        let cols = 4;
 
-        const variables = ['dmet', 'met', 'ph_pt', 'dphi_met_phterm', 'metsig'];
+        const variables = ['dmet', 'met', 'dphi_met_phterm', 'metsig'];
+        const basePlotDir = "lumi300";
 
         // DOM Elements
         const sigPvSlider = document.getElementById('sig-pv-slider');
@@ -141,6 +156,11 @@
 
         const cutTitle = document.getElementById('cut-title');
         const imageContainer = document.getElementById('image-container');
+
+        const noBdtBtn = document.getElementById('no-bdt-btn');
+        const withBdtBtn = document.getElementById('with-bdt-btn');
+        const bothMigBtn = document.getElementById('mode-both-mig-btn');
+        const sigMigBkgRejBtn = document.getElementById('mode-sig-mig-bkg-rej-btn');
 
         const modal = document.getElementById('image-modal');
         const modalImg = document.getElementById('modal-img');
@@ -153,29 +173,33 @@
             sigPvVal.textContent = `${sigPct}%`;
             bkgPvVal.textContent = `${bkgPct}%`;
 
-            cutTitle.textContent = `Both Migration | Signal Good PV: ${sigPct}% | Background Good PV: ${bkgPct}%`;
+            const folderTag = withVertexBDT ? "plots_with_vertexbdt" : "plots_without_vertexbdt";
+            const bdtLabel = withVertexBDT ? "With VertexBDTScore (> 0.1)" : "Without VertexBDTScore";
+            const modeLabel = pvMode === 'both_mig' ? "Both Migration" : "Signal Migration + Bkg Rejection";
+
+            cutTitle.textContent = `${bdtLabel} | ${modeLabel} | Signal Good PV: ${sigPct}% | Background Good PV: ${bkgPct}%`;
 
             imageContainer.innerHTML = '';
 
             const plotsToShow = [];
 
-            // 1. First push all 5 performance plots
+            // 1. First push all 4 performance plots
             if (viewMode === 'both' || viewMode === 'perf') {
                 variables.forEach(v => {
                     const fileTag = `${v}_${pvMode}_sig${sigPct}_bkg${bkgPct}`;
                     plotsToShow.push({
-                        src: `${plotDir}/${fileTag}.png`,
+                        src: `${basePlotDir}/${folderTag}/${fileTag}.png`,
                         label: `${v} — Performance & Significance (${fileTag}.png)`
                     });
                 });
             }
 
-            // 2. Then push all 5 ROC curves
+            // 2. Then push all 4 ROC curves
             if (viewMode === 'both' || viewMode === 'roc') {
                 variables.forEach(v => {
                     const fileTag = `${v}_${pvMode}_sig${sigPct}_bkg${bkgPct}`;
                     plotsToShow.push({
-                        src: `${plotDir}/roc_${fileTag}.png`,
+                        src: `${basePlotDir}/${folderTag}/roc_${fileTag}.png`,
                         label: `${v} — ROC Curve (roc_${fileTag}.png)`
                     });
                 });
@@ -203,21 +227,55 @@
             });
         }
 
-        // First Bar: Columns per row Listeners (2, 3, and 4, default 3)
-        const colBtns = {
-            2: document.getElementById('col-2-btn'),
-            3: document.getElementById('col-3-btn'),
-            4: document.getElementById('col-4-btn')
-        };
+        // Second Bar: VertexBDTScore Toggle Listeners
+        noBdtBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            withVertexBDT = false;
+            noBdtBtn.classList.add('active');
+            withBdtBtn.classList.remove('active');
+            updatePlots();
+        });
 
-        Object.keys(colBtns).forEach(numCols => {
-            colBtns[numCols].addEventListener('click', (e) => {
-                e.preventDefault();
-                cols = parseInt(numCols, 10);
-                imageContainer.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-                Object.values(colBtns).forEach(btn => btn.classList.remove('active'));
-                colBtns[numCols].classList.add('active');
-            });
+        withBdtBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            withVertexBDT = true;
+            withBdtBtn.classList.add('active');
+            noBdtBtn.classList.remove('active');
+            updatePlots();
+        });
+
+        // Second Bar: Migration / Rejection Mode Toggle Listeners
+        bothMigBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            pvMode = 'both_mig';
+            bothMigBtn.classList.add('active');
+            sigMigBkgRejBtn.classList.remove('active');
+            updatePlots();
+        });
+
+        sigMigBkgRejBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            pvMode = 'sig_mig_bkg_rej';
+            sigMigBkgRejBtn.classList.add('active');
+            bothMigBtn.classList.remove('active');
+            updatePlots();
+        });
+
+        // First Bar: Columns per row Listeners (2 and 4, default 4)
+        document.getElementById('col-2-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            cols = 2;
+            imageContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
+            document.getElementById('col-2-btn').classList.add('active');
+            document.getElementById('col-4-btn').classList.remove('active');
+        });
+
+        document.getElementById('col-4-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            cols = 4;
+            imageContainer.style.gridTemplateColumns = 'repeat(4, 1fr)';
+            document.getElementById('col-4-btn').classList.add('active');
+            document.getElementById('col-2-btn').classList.remove('active');
         });
 
         // First Bar: View Mode (Both / Perf / ROC) Listeners
@@ -237,7 +295,7 @@
             });
         });
 
-        // Second Bar: Slider Event Listeners
+        // Third Bar: Slider Event Listeners
         sigPvSlider.addEventListener('input', updatePlots);
         bkgPvSlider.addEventListener('input', updatePlots);
 
