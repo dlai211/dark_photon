@@ -177,48 +177,41 @@ def getVarDict(fb, process, var_name=None):
     return var_dict
 
 
-def scale_good_bad_weights(w_good, w_bad, pct, mode="migration"):
+def scale_good_bad_weights(w_good, w_bad, pct, w_to_g_ratio, mode="migration"):
     """
     - mode="migration": Preserves total yield. Scales good vertices up and bad vertices down.
     - mode="rejection": Leaves Good PVs untouched. Shrinks bad vertices simulating them failing the MET cut.
-    
-    pct: Percentage of Bad PVs that are successfully fixed (0 to 100).
-         0% = Baseline (no changes).
-         100% = All Bad PVs are fixed.
+        
+    Applies migration rescaling using the pre-selection Wrong/Good ratio (W_{0,tot} / G_{0,tot}):
+      G_X = G_{0,X} * (1 + (1 - f) * (W_{0,tot} / G_{0,tot}))
+      W_X = f * W_{0,X}
+    where P = pct / 100 = (1 - f) is the fraction of Wrong PVs fixed:
+      - pct = 0%   -> P = 0 (f = 1) -> scale_g = 1.0, scale_b = 1.0 (Baseline, no migration)
+      - pct = 100% -> P = 1 (f = 0) -> scale_g = 1 + w_to_g_ratio, scale_b = 0.0 (All Wrong PVs migrated)
     """
-    P = pct / 100.0
-    sum_g = np.sum(w_good)
-    sum_b = np.sum(w_bad)
-    
-    if sum_g + sum_b == 0:
-        return w_good, w_bad
+    P = pct / 100.0  # (1 - f)
+    f = 1.0 - P
 
     if mode == "migration":
-        # We migrate P fraction of Bad PVs into the Good PV bin
-        target_g = sum_g + (sum_b * P)
-        target_b = sum_b * (1.0 - P)
-        
-        scale_g = (target_g / sum_g) if sum_g > 0 else 0.0
-        scale_b = (target_b / sum_b) if sum_b > 0 else 0.0
-        
+        scale_g = 1.0 + P * w_to_g_ratio
+        scale_b = f
     elif mode == "rejection":
-        # The P fraction of Bad PVs loses its fake MET and disappears
-        scale_g = 1.0          
-        scale_b = 1.0 - P      
+        scale_g = 1.0
+        scale_b = f
 
     return w_good * scale_g, w_bad * scale_b
-
 
 def generate_variable_plots(
     tot_array,
     met_cut=100000,  # MeV (100 GeV). Set to None for no MET cut
+    sig_w_to_g_ratio=0.6600,  # Pre-selection W_{0,tot} / G_{0,tot} for ggHyyd (9.32 / 14.12)
+    bkg_w_to_g_ratio=0.3328,  # Pre-selection W_{0,tot} / G_{0,tot} for yj (1313.66 / 3947.53)
     variables_to_plot=['dmet', 'met', 'ph_pt', 'dphi_met_phterm', 'metsig']
 ):
-    # Save to a new directory so existing plots are not overwritten
     if met_cut is not None:
-        base_out_dir = f"/home/jlai/dark_photon/lumi300/plots_migration_overlay_met{int(met_cut/1000)}"
+        base_out_dir = f"/home/jlai/dark_photon/lumi300/plots_migration_overlay_met{int(met_cut/1000)}_ratio"
     else:
-        base_out_dir = "/home/jlai/dark_photon/lumi300/plots_migration_overlay"
+        base_out_dir = "/home/jlai/dark_photon/lumi300/plots_migration_overlay_ratio"
     os.makedirs(base_out_dir, exist_ok=True)
 
     fb_sig = tot_array[0]
@@ -229,9 +222,6 @@ def generate_variable_plots(
     ]
     pcts = range(0, 101, 10)
 
-    # Organized color scheme:
-    # Background = Cool Blue tones + soft blue shaded fill for Total Bkg
-    # Signal     = Warm Red/Orange tones + soft red shaded fill for Total Sig
     colors = {
         "bkg_total": "#9ECAE1",  # Soft Sky Blue (Shaded Total Bkg)
         "bkg_good":  "#08519C",  # Deep Navy Blue (Good PV)
@@ -241,7 +231,6 @@ def generate_variable_plots(
         "sig_bad":   "#FD8D3C",  # Warm Amber Orange (Bad PV)
     }
 
-    # Inclusive masks & baseline weights BEFORE MET cut (used for migration rescaling)
     sig_w_0 = ak.to_numpy(fb_sig['weights'])
     sig_good = ak.to_numpy(fb_sig['is_good_pv'])
     sig_met = ak.to_numpy(fb_sig['met_tst_et'])
@@ -253,7 +242,7 @@ def generate_variable_plots(
     sig_w_good_0, sig_w_bad_0 = sig_w_0[sig_good], sig_w_0[~sig_good]
     bkg_w_good_0, bkg_w_bad_0 = bkg_w_0[bkg_good], bkg_w_0[~bkg_good]
 
-    # Precompute MET > met_cut boolean masks split by Good/Bad PV
+    # MET > met_cut boolean masks split by Good/Bad PV
     if met_cut is not None:
         m_sig_good = sig_met[sig_good] > met_cut
         m_sig_bad  = sig_met[~sig_good] > met_cut
@@ -276,7 +265,6 @@ def generate_variable_plots(
         bkg_config = getVarDict(fb_bkg, 'gammajet_direct', var_name=var)
         bkg_x = ak.to_numpy(bkg_config[var]['var'])
 
-        # Apply MET cut to observables
         sig_x_good_cut = sig_x[sig_good][m_sig_good]
         sig_x_bad_cut  = sig_x[~sig_good][m_sig_bad]
         bkg_x_good_cut = bkg_x[bkg_good][m_bkg_good]
@@ -289,11 +277,15 @@ def generate_variable_plots(
         for (mode_name, sig_mode, bkg_mode) in modes:
             for sig_pct in pcts:
                 for bkg_pct in pcts:
-                    # 1. Rescale for migration FIRST across ALL events (before MET cut)
-                    sig_w_good_all, sig_w_bad_all = scale_good_bad_weights(sig_w_good_0, sig_w_bad_0, sig_pct, mode=sig_mode)
-                    bkg_w_good_all, bkg_w_bad_all = scale_good_bad_weights(bkg_w_good_0, bkg_w_bad_0, bkg_pct, mode=bkg_mode)
+                    # Rescale separately using each sample's pre-selection W_{0,tot}/G_{0,tot} ratio
+                    sig_w_good_all, sig_w_bad_all = scale_good_bad_weights(
+                        sig_w_good_0, sig_w_bad_0, sig_pct, w_to_g_ratio=sig_w_to_g_ratio, mode=sig_mode
+                    )
+                    bkg_w_good_all, bkg_w_bad_all = scale_good_bad_weights(
+                        bkg_w_good_0, bkg_w_bad_0, bkg_pct, w_to_g_ratio=bkg_w_to_g_ratio, mode=bkg_mode
+                    )
 
-                    # 2. Apply MET > 100 GeV cut AFTER migration rescaling
+                    # Apply MET cut AFTER migration rescaling
                     sig_w_good = sig_w_good_all[m_sig_good]
                     sig_w_bad  = sig_w_bad_all[m_sig_bad]
                     bkg_w_good = bkg_w_good_all[m_bkg_good]
@@ -304,7 +296,7 @@ def generate_variable_plots(
 
                     fig, (ax_top, ax_bot) = plt.subplots(2, 1, figsize=(12, 13), gridspec_kw={'height_ratios': [9, 4]})
 
-                    # --- Shaded Total Histograms (Good PV + Bad PV) ---
+                    # Shaded Total Histograms (Good PV + Bad PV)
                     ax_top.hist(
                         bkg_all_x, bins=bins, weights=bkg_all_w,
                         color=colors["bkg_total"], edgecolor=colors["bkg_good"],
@@ -318,7 +310,7 @@ def generate_variable_plots(
                         histtype='stepfilled', alpha=0.35, linewidth=1.2, density=False
                     )
 
-                    # --- 4 Overlaid Step Lines (Individual Good & Bad PV) ---
+                    # 4 Overlaid Step Lines
                     overlays = [
                         (bkg_x_good_cut, bkg_w_good, colors["bkg_good"], "-",  rf'$\gamma$+jets (Good PV) [$\Sigma w$: {np.sum(bkg_w_good):.0f}]'),
                         (bkg_x_bad_cut,  bkg_w_bad,  colors["bkg_bad"],  "--", rf'$\gamma$+jets (Bad PV) [$\Sigma w$: {np.sum(bkg_w_bad):.0f}]'),
@@ -347,7 +339,7 @@ def generate_variable_plots(
                     ax_top.set_title(f"{var} | Sig PV: {sig_pct}% | Bkg PV: {bkg_pct}% | {mode_name}{cut_label}")
                     ax_top.legend(ncol=2)
 
-                    # --- Bottom Panel: Per-Bin & Total Significance ---
+                    # Bottom Panel: Significance
                     S_counts, _ = np.histogram(sig_all_x, bins=bins, weights=sig_all_w)
                     B_counts, _ = np.histogram(bkg_all_x, bins=bins, weights=bkg_all_w)
 
@@ -422,8 +414,8 @@ def generate_variable_plots(
         print(f"Successfully saved all plots for {var} in {base_out_dir}")
 
 
-# 1. Regenerate inclusive plots (no MET cut) WITH the new shaded Total histograms
-generate_variable_plots(tot2, met_cut=None)
+# 1. Inclusive plots (no MET cut) with pre-selection Wrong/Good ratio scaling
+generate_variable_plots(tot2, met_cut=None, sig_w_to_g_ratio=0.6600, bkg_w_to_g_ratio=0.3328)
 
-# 2. Generate NEW plots with MET > 100 GeV applied AFTER migration rescaling
-generate_variable_plots(tot2, met_cut=100000)
+# 2. MET > 100 GeV plots (MET cut applied after migration rescaling)
+generate_variable_plots(tot2, met_cut=100000, sig_w_to_g_ratio=0.6600, bkg_w_to_g_ratio=0.3328)
