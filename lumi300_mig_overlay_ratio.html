@@ -75,12 +75,13 @@
         </ul>
     </nav>
 
-    <!-- Second Bar: MET Cut Toggle + Separate Signal/Background PV Sliders -->
+    <!-- Second Bar: Selection Cut Toggle + Separate Signal/Background PV Sliders -->
     <nav id="mode-nav">
         <ul>
-            <li>MET Selection:</li>
-            <li><a href="#" id="no-met-btn" class="met-btn active">No MET Cut (Inclusive)</a></li>
-            <li><a href="#" id="met-100-btn" class="met-btn">MET &gt; 100 GeV (After Migration)</a></li>
+            <li>Selection:</li>
+            <li><a href="#" id="sel-none-btn" class="sel-btn active">No MET Cut (Inclusive)</a></li>
+            <li><a href="#" id="sel-met100-btn" class="sel-btn">MET &gt; 100 GeV</a></li>
+            <li><a href="#" id="sel-met100-vbdt-btn" class="sel-btn">MET &gt; 100 GeV + vBDT &gt; 0.1</a></li>
         </ul>
 
         <div class="slider-bar">
@@ -125,10 +126,7 @@
             <li><a href="common.html#compare" id="test-btn">compare binomial exp z</a></li>
             <li><a href="common.html#jets_faking" id="test-btn">jets_faking Comparison Study</a></li>
             <li><a href="table_web/table_100_140_2.html" id="test-btn">Table of Basic + Selection cuts (140 > mT > 100 GeV)</a></li>
-            <li><a href="lumi300_mig_rej.html" id="lumi300-btn"><b>Lumi300 True Vertex Study (migration vs. rejection)</b></a></li>
-            <li><a href="lumi300_overlay.html" id="lumi300-btn"><b>Lumi300 True Vertex Study (overlay)</b></a></li>
-            <li><a href="lumi300_overlay_met.html" id="lumi300-btn"><b>Lumi300 True Vertex Study (overlay, met cut)</b></a></li>
-            <li><a href="lumi300_mig_overlay_ratio.html" id="lumi300-btn" class="active"><b>Lumi300 True Vertex Study (migration, overlay, ratio)</b></a></li>
+            <li><a href="dmet_study.html" id="dmet-btn" class="active"><b>dMET &amp; True Vertex Study</b></a></li>
         </ul>
     </div>
 
@@ -138,9 +136,24 @@
     <script>
         // State variables
         const pvMode = 'both_mig';
-        let applyMetCut = false; // false -> plots_migration_overlay_ratio, true -> plots_migration_overlay_met100_ratio
-        let viewMode = 'both';   // 'both', 'perf', 'roc'
+        let selectionMode = 'none'; // 'none', 'met100', 'met100_vbdt'
+        let viewMode = 'both';      // 'both', 'perf', 'roc'
         let cols = 3;
+
+        const selectionConfig = {
+            'none': {
+                folder: 'plots_migration_overlay_ratio',
+                label: 'No MET Cut'
+            },
+            'met100': {
+                folder: 'plots_migration_overlay_met100_ratio',
+                label: 'MET > 100 GeV'
+            },
+            'met100_vbdt': {
+                folder: 'plots_migration_overlay_met100_vbdt_ratio',
+                label: 'MET > 100 GeV + VertexBDTScore > 0.1'
+            }
+        };
 
         const variables = ['dmet', 'met', 'ph_pt', 'dphi_met_phterm', 'metsig'];
         const basePlotDir = "/dark_photon/lumi300";
@@ -150,9 +163,6 @@
         const bkgPvSlider = document.getElementById('bkg-pv-slider');
         const sigPvVal = document.getElementById('sig-pv-val');
         const bkgPvVal = document.getElementById('bkg-pv-val');
-
-        const noMetBtn = document.getElementById('no-met-btn');
-        const met100Btn = document.getElementById('met-100-btn');
 
         const cutTitle = document.getElementById('cut-title');
         const imageContainer = document.getElementById('image-container');
@@ -168,12 +178,11 @@
             sigPvVal.textContent = `${sigPct}%`;
             bkgPvVal.textContent = `${bkgPct}%`;
 
-            const folderTag = applyMetCut
-                ? "plots_migration_overlay_met100_ratio"
-                : "plots_migration_overlay_ratio";
-            const metLabel = applyMetCut ? "MET > 100 GeV" : "No MET Cut";
+            const currentSel = selectionConfig[selectionMode];
+            const folderTag = currentSel.folder;
+            const selLabel = currentSel.label;
 
-            cutTitle.textContent = `${metLabel} | Both Migration (W/G Ratio) | Signal PV: ${sigPct}% | Background PV: ${bkgPct}%`;
+            cutTitle.textContent = `${selLabel} | Both Migration (W/G Ratio) | Signal PV: ${sigPct}% | Background PV: ${bkgPct}%`;
 
             imageContainer.innerHTML = '';
 
@@ -223,21 +232,21 @@
             });
         }
 
-        // Second Bar: MET Cut Toggle Listeners
-        noMetBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            applyMetCut = false;
-            noMetBtn.classList.add('active');
-            met100Btn.classList.remove('active');
-            updatePlots();
-        });
+        // Second Bar: Selection Cut Toggle Listeners
+        const selBtns = {
+            'none':        document.getElementById('sel-none-btn'),
+            'met100':      document.getElementById('sel-met100-btn'),
+            'met100_vbdt': document.getElementById('sel-met100-vbdt-btn')
+        };
 
-        met100Btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            applyMetCut = true;
-            met100Btn.classList.add('active');
-            noMetBtn.classList.remove('active');
-            updatePlots();
+        Object.keys(selBtns).forEach(mode => {
+            selBtns[mode].addEventListener('click', (e) => {
+                e.preventDefault();
+                selectionMode = mode;
+                Object.values(selBtns).forEach(btn => btn.classList.remove('active'));
+                selBtns[mode].classList.add('active');
+                updatePlots();
+            });
         });
 
         // First Bar: Columns per row Listeners (2, 3, and 4, default 3)
